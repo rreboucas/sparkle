@@ -1,0 +1,142 @@
+<apex:page docType="html-5.0" standardController="Interviewer__c" extensions="myControllerExtension" tabStyle="Interview__c">
+
+    
+    <style type="text/css">
+        .mystyle .col-sm-4 {width: 33.33333333%;}
+        .mystyle .col-sm-3 {width: 25%;}
+        .mystyle .col-sm-5 {width: 41.66666667%;}
+        .mystyle .col-sm-1 {width: 8.33333333%; text-align: center}
+        .mystyle textarea {width: 90%; height: 150px;  resize: none;  border: 1px solid gray; }
+        .mystyle table {    border-collapse: collapse;}
+        .mystyle table {border: 1px solid black;}
+        .mystyle .noborder {border-style: none; margin: 0 auto;}
+        .mystyle th  {text-align: center; vertical-align: top; border-collapse: collapse; padding: 0.3em; caption-side: bottom;}
+        .mystyle th {background: #eee;}
+        .styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+
+    </style>
+    <script>
+        function RedirectExternal()
+        {
+          sforce.one.navigateToURL('http://www.salesforce.com');            
+        }
+    
+    	function RedirectInternal()
+        {
+            sforce.one.navigateToURL('/apex/RecruitmentHome_LDS', true);            
+        }
+    
+    	function Back()
+        {
+            sforce.one.navigateToSObject('{!Interviewer__c.id}');            
+        }
+    </script>
+    <apex:form >
+    <div style="padding-bottom: 10px; float:left;width:75%;overflow:hidden;">
+ 	
+    <div class="mystyle">
+    <table>
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Position</th>
+          <th>Interview Type</th>
+          <th>Interviewer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td class="col-sm-1">{!Interviewer__c.testautonumdata__Candidate__c}</td>
+          <td class="col-sm-1">{!Interviewer__c.testautonumdata__Position_Name__c}</td>
+          <td class="col-sm-1">{!Interviewer__c.testautonumdata__Interview_Type__c}</td>
+          <td class="col-sm-1">{!Interviewer__c.testautonumdata__Interviewer__r.Name}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>  
+  		<div style="padding-bottom: 10px; float:right;width:25%;overflow:hidden; text-align:center;">
+        	<apex:commandButton value="External Site" id="theButton" onclick="RedirectExternal()"/>
+            <apex:commandButton value="Visualforce Page" id="theRButton" onclick="RedirectInternal()"/>
+            <apex:commandButton value="Back" id="theBButton" onclick="Back()"/>
+        </div>  
+    
+        
+    <div style="float:left;width:100%;">
+        
+        
+        <div class="mystyle">
+            
+        
+    <table id="demo" border="0" >
+        <thead>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Score</th>
+            <th>Comments</th>
+        </tr>
+        </thead>
+        <tbody>
+		<apex:variable value="{!1}" var="i"/>
+        <apex:repeat var="answers" value="{!Interviewer__c.testautonumdata__Interview_Answers__r}">
+        <tr style="background-color:{!IF(mod(i,2)==0, '#EBEBE6', 'white')}; height: 64px; ">
+
+            <td class="col-sm-4"><div ><apex:outputText style="font-style:italic" value="{!i}.  {!answers.Question__c}"/></div></td>
+
+            <td class="col-sm-3"><apex:inputField value="{!answers.Answer__c}" id="theTextInput"/></td>
+
+            <td class="col-sm-1">
+            
+            	<table class="noborder">
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="0" checked="true"/></td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="1"/></td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="2"/></td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="3"/></td>
+                      <td>3</td>
+                    </tr>
+                	<tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="4"/></td>
+                      <td>4</td>
+                    </tr>
+                	<tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="5"/></td>
+                      <td>5</td>
+                    </tr>
+                </table>
+            
+            
+            </td>
+
+            <td class="col-sm-3"><apex:inputField value="{!answers.Comments__c}" id="theCommentsInput"/></td>
+
+        </tr>
+        <apex:variable value="{!i+1}" var="i" />
+        </apex:repeat> 
+		</tbody>
+
+    </table>
+    </div>
+        </div>
+    </apex:form> 
+</apex:page>

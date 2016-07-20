@@ -1,0 +1,140 @@
+<aura:component controller="InterviewsLCServerController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="lstRecords" type="InterviewsLCServerController" access="global"/>
+    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+    <aura:attribute name="objectName" type="String" default="Object Name" access="global"/>
+    <aura:attribute name="objectApiName" type="String" default="Account" access="global"/>
+    <aura:attribute name="eventIDField" type="String" default="Id" access="global"/>
+    <aura:attribute name="fireListRecordsEvent" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="listName" type="String" default="List Name" access="global"/>
+    <aura:attribute name="column1_headertext" type="String" default="Column 1" access="global"/>
+    <aura:attribute name="column1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column2_headertext" type="String" default="Column 2" access="global"/>
+    <aura:attribute name="column2_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column3_headertext" type="String" default="Column 3" access="global"/>
+    <aura:attribute name="column3_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column4_headertext" type="String" default="Column 4" access="global"/>
+    <aura:attribute name="column4_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
+    <aura:attribute name="sortFieldName" type="String" default="Name" access="global"/>
+    <aura:attribute name="sortDirection" type="String" access="global"/>
+    <aura:attribute name="lastSortFieldName" type="String" access="global"/>
+    <aura:attribute name="lastSortDirection" type="String" access="global"/>
+    <aura:attribute name="showButton" type="Boolean" default="True" access="global"/>
+    <aura:attribute name="buttonLabel" type="String" default="Start" access="global"/>
+    <aura:attribute name="buttonURL" type="String" access="global"/>
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:registerEvent name="appEvent" type="c:CandidateDetailEvent"/>
+    <aura:registerEvent name="recordListEvent" type="c:RecordListIdsEvent"/>
+    <div class="slds tokenPadding" style="">
+      <!-- List LC: Start -->  
+        <div class="slds-page-header" role="banner">
+              <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                  <p class="slds-text-heading--label">{!v.objectName}</p>
+                  <div class="slds-grid">
+                    <div class="slds-grid slds-type-focus slds-no-space">
+                      <h1 class="slds-page-header__title slds-truncate" title="My Leads (truncates)">{!v.listName}</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-align-bottom">
+                  <div class="slds-grid">
+                    <div class="slds-button-space-left">
+                    </div>
+                    <div class="slds-button-group slds-button-space-left" role="group">
+                    </div>
+                    <div class="slds-button-group" role="group">
+                      <div class="slds-button--last">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="slds-text-body--small slds-page-header__info">{!v.listSize} items</p>
+            </div>
+            
+            <!-- End of Header  -->
+            
+            
+            <table class="slds-table slds-table--bordered">
+                <thead>
+                  <tr class="slds-text-heading--label">
+                    <th class="slds-cell-shrink">
+                    </th>
+                    <th class="slds-is-sortable" scope="col" data-record="{!v.column1_fieldapiname}" onclick="{!c.sortGrid}">
+                      <div class="slds-truncate">{!v.column1_headertext}
+                        <button class="slds-button slds-button--icon-bare">
+                          <span class="slds-assistive-text">Sort</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th class="slds-is-sortable sizehidden" aura:id="col2" scope="col" data-record="{!v.column2_fieldapiname}" onclick="{!c.sortGrid}">
+                      <div class="slds-truncate">{!v.column2_headertext}
+                        <button class="slds-button slds-button--icon-bare">
+                          <span class="slds-assistive-text">Sort</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th class="slds-is-sortable sizehidden" aura:id="col3" scope="col" data-record="{!v.column3_fieldapiname}" onclick="{!c.sortGrid}">
+                      <div class="slds-truncate">{!v.column3_headertext}
+                        <button class="slds-button slds-button--icon-bare">
+                          <span class="slds-assistive-text">Sort</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th class="slds-is-sortable sizehidden" aura:id="col4" scope="col" data-record="{!v.column4_fieldapiname}" onclick="{!c.sortGrid}">
+                      <div class="slds-truncate">{!v.column4_headertext}
+                        <button class="slds-button slds-button--icon-bare">
+                          <span class="slds-assistive-text">Sort</span>
+                        </button>
+                      </div>
+                    </th>
+                    <th class="slds-is-sortable" aura:id="colButton" scope="col">
+                      <div class="slds-truncate">Action
+                        <button type="button"  class="slds-button slds-button--icon-bare" >
+                          <span class="slds-assistive-text">Sort</span>
+                        </button>
+                      </div>
+                    </th>
+                    
+                    <th class="slds-cell-shrink"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.lstRecords}" var="rec">
+                      <tr class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
+                        <td class="slds-cell-shrink">
+                        </td>
+                          <th class="slds-truncate" scope="row">{!rec.column1}</th>
+                        <td class="slds-truncate sizehidden" aura:id="col2Row">{!rec.column2}</td>
+                        <td class="sizehidden" aura:id="col3Row" >{!rec.column3}</td>
+                        <td class="sizehidden" aura:id="col4Row" >{!rec.column4}</td>
+                        <aura:renderIf isTrue="{!v.showButton}">
+
+                          <td class="" aura:id="colButtonRow">                    
+                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" onclick="{!c.OpenVisualForce}">
+                            <span class="slds-text-not-selected">{!v.buttonLabel}</span>
+                          </button>
+                        </td>
+                        </aura:renderIf>
+                        <td class="slds-cell-shrink" data-label="Actions">
+                        </td>
+                      </tr>
+                    </aura:iteration>
+                </tbody>
+              </table>
+        
+        <!-- List LC: End -->
+   
+        <!-- Modal LC: Start -->
+
+       
+        <!-- Modal LC: End -->
+        
+    </div>
+	
+</aura:component>

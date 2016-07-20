@@ -1,0 +1,96 @@
+<aura:component access="global" controller="LightningServerController" implements="force:appHostable,flexipage:availableForAllPageTypes" >
+    <!-- Attributes for Records Followed List     -->
+    <aura:attribute name="lstFlwRecords" type="LightningServerController"/>
+    <aura:attribute name="componentName" type="String" default="Top Candidates"/>
+    
+    <aura:attribute name="class" type="String" description="CSS classname for the SVG element" />
+  	<aura:attribute name="xlinkHref" type="String" description="SLDS icon path. Ex: /assets/icons/utility-sprite/svg/symbols.svg#download" />
+  	<aura:attribute name="ariaHidden" type="String" default="true" description="aria-hidden true or false. defaults to true" />
+    
+    <ltng:require styles="/resource/SLDS0101/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <!-- Initialization event handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds">
+    
+        <!--  Start of card -->        
+        
+        
+        <div class="slds-card slds-theme--alt-inverse">
+          <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                
+              </div>
+              <div class="slds-media__body">
+                <h2 class="slds-text-heading--small slds-truncate">Top Candidates: (Lightning Component)</h2>
+              </div>
+            </div>
+            <div class="slds-no-flex">
+              
+            </div>
+          </div>
+          <div class="slds-card__body">
+              
+              <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+                  <thead>
+                    <tr>
+                      <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Name</th>
+                      <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Average Score</th>
+                      <th class="slds-text-heading--label slds-size--1-of-3" scope="col"># Interviews</th>
+                      <th class="slds-row-action" scope="col">
+                        <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                          <span class="slds-assistive-text">Show More</span>
+                        </button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <aura:iteration items="{!v.lstFlwRecords}" var="rec">
+                    <tr class="slds-hint-parent">
+                        <td class="slds-size--1-of-3" data-label="Name">{!rec.recordName}</td>
+                      <td style="text-align:center;" class="slds-size--1-of-3" data-label="Average Score">{!rec.averageScore}</td>
+                      <td style="text-align:center;" class="slds-size--1-of-3" data-label="Interviews">{!rec.numberOfInterviews}</td>
+                      <td>
+                        <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">                   
+                          <span class="slds-assistive-text">Show More</span>
+                        </button>
+                      </td>
+                    </tr>
+                    </aura:iteration>
+                  </tbody>
+    		</table>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <!--<ul>
+                <aura:iteration items="{!v.lstFlwRecords}" var="rec">
+                <li>
+                    <testautonumdata:CandidatesLCard candidaterecord="{!rec}"/>
+                </li>
+            </aura:iteration>
+    	</ul> --> 
+
+          </div>
+          <div class="slds-card__footer"><a href="#">View All <span class="slds-assistive-text">entity type</span></a></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--  End of card -->
+
+        </div>
+</aura:component>

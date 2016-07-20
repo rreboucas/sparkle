@@ -1,0 +1,1636 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000r382IAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000r382IAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 36
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "hasTwitterID",
+            "parameters": [
+                {
+                    "name": "recordID",
+                    "type": "String"
+                },
+                {
+                    "name": "objectApiName",
+                    "type": "String"
+                },
+                {
+                    "name": "twitterIDFieldApiName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 68
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getRecordDetails",
+            "parameters": [
+                {
+                    "name": "recordID",
+                    "type": "String"
+                },
+                {
+                    "name": "objectApiName",
+                    "type": "String"
+                },
+                {
+                    "name": "twitterIDFieldApiName",
+                    "type": "String"
+                },
+                {
+                    "name": "firstName",
+                    "type": "String"
+                },
+                {
+                    "name": "lastName",
+                    "type": "String"
+                },
+                {
+                    "name": "companyName",
+                    "type": "String"
+                },
+                {
+                    "name": "email",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Twitter_Lightning_Controller",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 149
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getTwitterPicture",
+            "parameters": [
+                {
+                    "name": "recordID",
+                    "type": "String"
+                },
+                {
+                    "name": "objectApiName",
+                    "type": "String"
+                },
+                {
+                    "name": "twitterIDFieldApiName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Twitter_Lightning_Controller",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 286
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getTwitterUser",
+            "parameters": [
+                {
+                    "name": "twitterName",
+                    "type": "String"
+                },
+                {
+                    "name": "firstName",
+                    "type": "String"
+                },
+                {
+                    "name": "lastName",
+                    "type": "String"
+                },
+                {
+                    "name": "companyName",
+                    "type": "String"
+                },
+                {
+                    "name": "email",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Twitter_Lightning_Controller",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 427
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "getMonthIntergerValue",
+            "parameters": [
+                {
+                    "name": "monthStringValue",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Integer",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 461
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "getFieldValueFromJson",
+            "parameters": [
+                {
+                    "name": "jsonBody",
+                    "type": "String"
+                },
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 497
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "GetSobjectField",
+            "parameters": [
+                {
+                    "name": "e",
+                    "type": "SObject"
+                },
+                {
+                    "name": "lcfield",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "Twitter_Lightning_Controller",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 4
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "salesforceRecordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 6
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "pictureUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 8
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "twitterName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 10
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "hasTwitterMemberID",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "firstName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "lastName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "companyName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 18
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "email",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 20
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "location",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 22
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "numFollowers",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 24
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "follows",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 26
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "description",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 28
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "tweetDate",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 30
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "tweetText",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 32
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "tweetLink",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Twitter_Lightning_Controller",
+        "references": [],
+        "type": "Twitter_Lightning_Controller"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "objectApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 86,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "twitterIDFieldApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 38
+            },
+            "modifiers": [],
+            "name": "hasTwitterMemberID",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "soql",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 57
+            },
+            "modifiers": [],
+            "name": "lstQueriedRecords",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 72,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 89,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "objectApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 111,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "twitterIDFieldApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 141,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "firstName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 159,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "lastName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 176,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "companyName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 196,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "email",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 70
+            },
+            "modifiers": [],
+            "name": "hasTwitterMemberID",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "returnRec",
+            "references": [],
+            "type": "Twitter_Lightning_Controller"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 75
+            },
+            "modifiers": [],
+            "name": "soql",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 102
+            },
+            "modifiers": [],
+            "name": "lstQueriedRecords",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 106
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 73,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 90,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "objectApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 112,
+                "line": 149
+            },
+            "modifiers": [],
+            "name": "twitterIDFieldApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 151
+            },
+            "modifiers": [],
+            "name": "oauthVersion",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 152
+            },
+            "modifiers": [],
+            "name": "oauthConsumerKey",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 153
+            },
+            "modifiers": [],
+            "name": "oauthConsumerSecret",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 154
+            },
+            "modifiers": [],
+            "name": "baseUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 155
+            },
+            "modifiers": [],
+            "name": "oauthSignatureMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 156
+            },
+            "modifiers": [],
+            "name": "strTwitterId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 157
+            },
+            "modifiers": [],
+            "name": "pictureURL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 158
+            },
+            "modifiers": [],
+            "name": "returnRec",
+            "references": [],
+            "type": "Twitter_Lightning_Controller"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 169
+            },
+            "modifiers": [],
+            "name": "strUserId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 177
+            },
+            "modifiers": [],
+            "name": "soql",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 192
+            },
+            "modifiers": [],
+            "name": "lstQueriedRecords",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 196
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 204
+            },
+            "modifiers": [],
+            "name": "twitterAcct",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 209
+            },
+            "modifiers": [],
+            "name": "keyencoded",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 210
+            },
+            "modifiers": [],
+            "name": "secretkeyencoded",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 213
+            },
+            "modifiers": [],
+            "name": "sFinal",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 215
+            },
+            "modifiers": [],
+            "name": "headerValue",
+            "references": [],
+            "type": "Blob"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 218
+            },
+            "modifiers": [],
+            "name": "req",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 223
+            },
+            "modifiers": [],
+            "name": "authorizationHeader",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 230
+            },
+            "modifiers": [],
+            "name": "http",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 231
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 232
+            },
+            "modifiers": [],
+            "name": "responseBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 234
+            },
+            "modifiers": [],
+            "name": "stoken",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "parser",
+            "references": [],
+            "type": "JSONParser"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 250
+            },
+            "modifiers": [],
+            "name": "req2",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 257
+            },
+            "modifiers": [],
+            "name": "authorizationHeader2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 260
+            },
+            "modifiers": [],
+            "name": "http2",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 261
+            },
+            "modifiers": [],
+            "name": "res2",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 262
+            },
+            "modifiers": [],
+            "name": "sBody2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 263
+            },
+            "modifiers": [],
+            "name": "responseBody2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 267
+            },
+            "modifiers": [],
+            "name": "pictureFullURL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 70,
+                "line": 286
+            },
+            "modifiers": [],
+            "name": "twitterName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 90,
+                "line": 286
+            },
+            "modifiers": [],
+            "name": "firstName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 108,
+                "line": 286
+            },
+            "modifiers": [],
+            "name": "lastName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 125,
+                "line": 286
+            },
+            "modifiers": [],
+            "name": "companyName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 145,
+                "line": 286
+            },
+            "modifiers": [],
+            "name": "email",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 288
+            },
+            "modifiers": [],
+            "name": "oauthVersion",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 289
+            },
+            "modifiers": [],
+            "name": "oauthConsumerKey",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 290
+            },
+            "modifiers": [],
+            "name": "oauthConsumerSecret",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 291
+            },
+            "modifiers": [],
+            "name": "baseUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 292
+            },
+            "modifiers": [],
+            "name": "oauthSignatureMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 293
+            },
+            "modifiers": [],
+            "name": "strTwitterId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 294
+            },
+            "modifiers": [],
+            "name": "pictureURL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 295
+            },
+            "modifiers": [],
+            "name": "returnRec",
+            "references": [],
+            "type": "Twitter_Lightning_Controller"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 301
+            },
+            "modifiers": [],
+            "name": "twitterAcct",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 306
+            },
+            "modifiers": [],
+            "name": "keyencoded",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 307
+            },
+            "modifiers": [],
+            "name": "secretkeyencoded",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 310
+            },
+            "modifiers": [],
+            "name": "sFinal",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 312
+            },
+            "modifiers": [],
+            "name": "headerValue",
+            "references": [],
+            "type": "Blob"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 315
+            },
+            "modifiers": [],
+            "name": "req",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 320
+            },
+            "modifiers": [],
+            "name": "authorizationHeader",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 327
+            },
+            "modifiers": [],
+            "name": "http",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 328
+            },
+            "modifiers": [],
+            "name": "res",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 329
+            },
+            "modifiers": [],
+            "name": "responseBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 331
+            },
+            "modifiers": [],
+            "name": "stoken",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 333
+            },
+            "modifiers": [],
+            "name": "parser",
+            "references": [],
+            "type": "JSONParser"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 345
+            },
+            "modifiers": [],
+            "name": "req2",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 352
+            },
+            "modifiers": [],
+            "name": "authorizationHeader2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 355
+            },
+            "modifiers": [],
+            "name": "http2",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 356
+            },
+            "modifiers": [],
+            "name": "res2",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 357
+            },
+            "modifiers": [],
+            "name": "sBody2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 358
+            },
+            "modifiers": [],
+            "name": "responseBody2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 362
+            },
+            "modifiers": [],
+            "name": "pictureFullURL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 373
+            },
+            "modifiers": [],
+            "name": "lstTweetDate",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 374
+            },
+            "modifiers": [],
+            "name": "weekDay",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 378
+            },
+            "modifiers": [],
+            "name": "month",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 382
+            },
+            "modifiers": [],
+            "name": "day",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 386
+            },
+            "modifiers": [],
+            "name": "hour",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 390
+            },
+            "modifiers": [],
+            "name": "minutes",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 394
+            },
+            "modifiers": [],
+            "name": "seconds",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 398
+            },
+            "modifiers": [],
+            "name": "miliSeconds",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 400
+            },
+            "modifiers": [],
+            "name": "year",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 404
+            },
+            "modifiers": [],
+            "name": "dt",
+            "references": [],
+            "type": "Datetime"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 427
+            },
+            "modifiers": [],
+            "name": "monthStringValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 429
+            },
+            "modifiers": [],
+            "name": "monthValue",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 461
+            },
+            "modifiers": [],
+            "name": "jsonBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 73,
+                "line": 461
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 464
+            },
+            "modifiers": [],
+            "name": "returnValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 465
+            },
+            "modifiers": [],
+            "name": "parser2",
+            "references": [],
+            "type": "JSONParser"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 467
+            },
+            "modifiers": [],
+            "name": "textCount",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 473
+            },
+            "modifiers": [],
+            "name": "jsonValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 497
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 497
+            },
+            "modifiers": [],
+            "name": "lcfield",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 500
+            },
+            "modifiers": [],
+            "name": "returnValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 504
+            },
+            "modifiers": [],
+            "name": "relName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 505
+            },
+            "modifiers": [],
+            "name": "relField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 508
+            },
+            "modifiers": [],
+            "name": "relName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 509
+            },
+            "modifiers": [],
+            "name": "relField2",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

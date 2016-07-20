@@ -1,0 +1,14 @@
+<aura:component controller="TestLSBugServerController" implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="lstRecords" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <table>
+        <aura:iteration items="{!v.lstRecords}" var="rec">
+            <tr data-record="{!rec.Id}" onclick="{!c.fireApplicationEvent}">
+                <td>{!rec.Name}</td>
+            </tr>
+        </aura:iteration>
+    </table>
+	
+</aura:component>

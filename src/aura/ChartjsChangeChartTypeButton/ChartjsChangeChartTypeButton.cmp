@@ -1,0 +1,13 @@
+<aura:component access="global" description="This component display the button to change chart type on Chartjs Component. This component triggers ChartjsChartTypeChange event to notify chart type change to Chartjs Component's Controller.">
+    <aura:attribute name="chartTypeName" type="string" required="true" description="Name of the chart type." />
+    <aura:attribute name="chartTypeLabel" type="string" required="true" description="Label of the chart type. This value is displayed on the button." />
+    <aura:attribute name="componentId" type="string" required="true" description="Global Id of the component where chart type will be changed." />
+    <aura:attribute name="selected" type="boolean" default="false" description="Indicate if this chart type is currently selected. If set to true, the button appearance looks active and the event will not be fired." />
+    <aura:registerEvent name="ChartjsChartTypeChange" type="c:ChartjsChartTypeChange" description="Trigger ChartjsChartTypeChange event on clicking the button." />
+    <aura:if isTrue="{! !v.selected }">
+        <a class="pure-button button-small" onclick="{!c.changeChartType}">{!v.chartTypeLabel}</a>&nbsp;
+    </aura:if>
+    <aura:if isTrue="{! v.selected }">
+        <a class="pure-button pure-button-active button-small">{!v.chartTypeLabel}</a>&nbsp;
+    </aura:if>
+</aura:component>

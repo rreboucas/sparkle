@@ -1,0 +1,17 @@
+<aura:component controller="CandidateDropDownController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	
+<aura:attribute name="candidates" type="Candidate__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}"/>
+
+    <ul>
+        <aura:iteration items="{!v.candidates}" var="candidate">
+            <li>
+                <a href="{! '#/sObject/' + candidate.Id + '/view'}">
+                    <p>{!candidate.Name}</p>
+                </a>
+            </li>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

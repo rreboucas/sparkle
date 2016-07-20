@@ -1,0 +1,6 @@
+<aura:component description="Button to refresh chart. Fire ChartjsChartDataUpdate event and Chartjs Component reload the data and refresh chart.">
+    <aura:attribute name="label" type="string" default="Refresh Charts" description="Label of the button." />
+    <aura:registerEvent name="ChartjsChartDataUpdate" type="c:ChartjsChartDataUpdate" description="Trigger ChartjsChartDataUpdate event on clicking the button." />
+    <link rel="stylesheet" href="/resource/Chartjs_pure_min_css" />
+    <a onclick="{!c.updateChartData}" class="pure-button pure-button-primary">{!v.label}</a>
+</aura:component>

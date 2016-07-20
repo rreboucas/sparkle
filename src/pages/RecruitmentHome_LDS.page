@@ -1,0 +1,293 @@
+<apex:page controller="MyCustomController">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0101, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    
+    <script>
+        $Lightning.use("testautonumdata:CandidatesLAppTest", function() {
+          $Lightning.createComponent("testautonumdata:CandidatesLComponent",
+          "",
+          "lightning1",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    
+    
+    </script>
+    
+    
+    <div class="slds">
+        <div class="slds-grid">
+          <div class="slds-col">
+              <!-- Start of Header Grid -->          
+                        <div class="slds-page-header" role="banner">
+              <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-media">
+                        <div class="slds-media__figure">
+                          <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+                            
+                          </svg>
+                        </div>
+                        <div class="slds-media__body">
+                          <p class="slds-text-heading--label">Control Center</p>
+                          <div class="slds-grid">
+                            <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle" title="Record Title">Recruitment Application</h1>
+                            <div class="slds-col slds-shrink-none">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slds-col slds-no-flex slds-align-bottom">
+                      <div class="slds-button-group" role="group">
+                        <button class="slds-button slds-button--neutral">Positions</button>
+                        <button class="slds-button slds-button--neutral">Candidates</button>
+                        <button class="slds-button slds-button--neutral">Interviews</button>
+                        <button class="slds-button slds-button--neutral">Offers</button>
+                        <div class="slds-button--last">
+                          <button class="slds-button slds-button--icon-border-filled">
+                            <svg aria-hidden="true" class="slds-button__icon">
+                              
+                            </svg>
+                            <span class="slds-assistive-text">More</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>  
+      <!-- End of Header Grid -->
+            
+            
+        </div>
+        <div class="slds-grid slds-grid--align-center" style="padding-top:2%;">
+          <div class="slds-col--padded">
+          
+             <div class="slds-card" style="width: 500.673px;">
+          <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                
+              </div>
+              <div class="slds-media__body">
+                <h2 class="slds-text-heading--small slds-truncate">Top Candidates: (Visualforce Page)</h2>
+              </div>
+            </div>
+            <div class="slds-no-flex">
+              
+            </div>
+          </div>
+          <div class="slds-card__body">
+            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+              <thead>
+                <tr>
+                  <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Name</th>
+                  <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Average Score</th>
+                  <th class="slds-text-heading--label slds-size--1-of-3" scope="col"># Interviews</th>
+                  <th class="slds-row-action" scope="col">
+                    <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                        
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- apex repeater  -->
+                <apex:variable value="{!1}" var="i"/>
+                <apex:repeat var="candidates" value="{!TopCandidates}">
+                <tr class="slds-hint-parent">
+                    <td class="slds-size--1-of-3" data-label="Name"><a href="/{!candidates.id}">{!candidates.Name}</a></td>
+                  <td style="text-align:center;" class="slds-size--1-of-3" data-label="Score">{!candidates.Average_Score__c}</td>
+                  <td style="text-align:center;" class="slds-size--1-of-3" data-label="Interviews">{!candidates.Number_of_Interviews__c}</td>
+                  <td>
+                    <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                        
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                  </td>
+                </tr>
+              <apex:variable value="{!i+1}" var="i" />
+              </apex:repeat> 
+              </tbody>
+            </table>
+          </div>
+          <div class="slds-card__footer"><a href="#">View All <span class="slds-assistive-text">entity type</span></a></div>
+          </div> 
+              
+              
+          </div>
+          <div class="slds-col--padded">
+             
+                        <div id="lightning1" class="slds-col--padded"> </div>  
+          
+          </div>
+          </div> <!----- Grid end --->
+        
+        
+        <div class="slds-grid slds-grid--align-center" style="padding-top:2%;">
+          <div class="slds-col--padded">
+          
+             <div class="slds-card">
+                  <div class="slds-card__header slds-grid">
+                    <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                      <div class="slds-media__figure">
+                        <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                          
+                        </svg>
+                      </div>
+                      <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">Positions Deadline: (Visualforce Page)</h2>
+                      </div>
+                    </div>
+                    <div class="slds-no-flex">
+                    </div>
+                  </div>
+                  <div class="slds-card__body">
+                    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+                      <thead>
+                        <tr>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Position</th>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Hiring Manager</th>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Expiration</th>
+                          <th class="slds-row-action" scope="col">
+                            <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                                
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- apex repeater  -->
+                        <apex:variable value="{!1}" var="i"/>
+                        <apex:repeat var="position" value="{!UpcomingPositions}">
+                        <tr class="slds-hint-parent">
+                            <td class="slds-size--1-of-3" data-label="Position"><a href="/{!position.id}">{!position.Name}</a></td>
+                            <td class="slds-size--1-of-3" data-label="Hiring Manager"><a href="/{!position.Hiring_Manager__c}">{!position.testautonumdata__Hiring_Manager__r.Name}</a></td>
+                          <td class="slds-size--1-of-3" data-label="Expiration">
+                              <apex:outputText value="{0,date,yyyy.MM.dd}"> <apex:param value="{!position.Fullfilment_Date_Limit__c}" /> </apex:outputText>
+                              
+                          </td>
+                          <td>
+                            <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                                
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                          </td>
+                        </tr>
+                      <apex:variable value="{!i+1}" var="i" />
+                      </apex:repeat> 
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="slds-card__footer"><a href="#">View All <span class="slds-assistive-text">entity type</span></a></div>
+                  </div> 
+              
+              
+          </div>
+          <div class="slds-col--padded">
+             
+                  <div class="slds-card" style="width: 428.182px;">
+                  <div class="slds-card__header slds-grid">
+                    <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                      <div class="slds-media__figure">
+                        <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                          
+                        </svg>
+                      </div>
+                      <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">Today's Interviews: (Visualforce Page)</h2>
+                      </div>
+                    </div>
+                    <div class="slds-no-flex">
+                    </div>
+                  </div>
+                  <div class="slds-card__body">
+                    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+                      <thead>
+                        <tr>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Record</th>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Type</th>
+                          <th class="slds-text-heading--label slds-size--1-of-3" scope="col">Candidate</th>
+                          <th class="slds-row-action" scope="col">
+                            <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                                
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- apex repeater  -->
+                        <apex:variable value="{!1}" var="i"/>
+                        <apex:repeat var="interview" value="{!TodaysInterviews}">
+                        <tr class="slds-hint-parent">
+                          <td class="slds-size--1-of-3" data-label="Record"><a href="/{!interview.id}">{!interview.name}</a></td>
+                            <td class="slds-size--1-of-3" data-label="Type">{!interview.Interview_Type__c}</td>
+                            <td class="slds-size--1-of-3" data-label="Candidate"><a href="/{!interview.Candidate__c}">{!interview.testautonumdata__Candidate__r.Name}</a></td>
+                          <td>
+                            <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                              <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                                
+                              </svg>
+                              <span class="slds-assistive-text">Show More</span>
+                            </button>
+                          </td>
+                        </tr>
+                      <apex:variable value="{!i+1}" var="i" />
+                      </apex:repeat> 
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="slds-card__footer"><a href="#">View All <span class="slds-assistive-text">entity type</span></a></div>
+                  </div>
+          
+          </div>
+          </div> <!----- Grid end --->
+        
+        
+        
+        
+        
+        <!--- Lightning Components: Start  --->
+        
+        
+       
+        
+        
+        
+        
+        
+        <!--- Lightning Components: End  --->
+        
+         
+           <!----- Grid end --->  
+            
+        
+          
+              
+              
+            
+          
+            
+            
+            
+            
+            
+          
+    </div>
+</apex:page>

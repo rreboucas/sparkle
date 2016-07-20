@@ -1,0 +1,15 @@
+<aura:component controller="CandidateController" access="global" >
+
+	<aura:attribute name="recordId" type="String" access="GLOBAL"/>
+    <aura:attribute name="candidates" type="Candidate__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="appEvent" type="c:CandidatesLoaded"/>
+	<aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+
+    <ul>
+        <aura:iteration items="{!v.candidates}" var="candidate">
+            <c:CandidateListItem candidate="{!candidate}"/>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

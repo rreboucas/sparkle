@@ -1,0 +1,204 @@
+<apex:page docType="html-5.0" standardController="Interviewer__c" extensions="myControllerExtension" tabStyle="Interview__c">
+<apex:stylesheet value="{!URLFOR($Resource.SLDS0101, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+    <style type="text/css">
+        .slds.custom.publisher {min-height: calc(340px + 2px);
+                            max-height: calc(340px + 2px);
+                            line-height: 34px;
+                            padding: 0px 16px;
+                            resize: none;
+                            width: 100%;
+                            transition: min-height 0.4s ease 0s, max-height 0.4s ease 0s;
+                            background-color: #FFF;
+                            color: #16325C;
+                            border: 1px solid #D8DDE6;
+                            border-radius: 4px;
+                            color: #54698D;
+                            text-overflow: ellipsis;
+                            }
+        
+        .th.aligncenter { text-align: center;}
+        
+        
+
+
+    </style>
+    
+    <script>
+        
+        function isLightningExperienceOrSalesforce1() 
+        {
+            return((typeof sforce != 'undefined') && sforce && (!!sforce.one));
+        }
+
+    
+        function RedirectExternal()
+        {
+          if( isLightningExperienceOrSalesforce1() ) {
+              // Use Redirect Method for Lightning Experience
+              sforce.one.navigateToURL('http://www.salesforce.com'); 
+          }
+          else {
+              // Use Redirect Method for Salesforce Classic
+              window.top.location.href = 'http://www.salesforce.com';
+          }
+
+            
+                     
+        }
+    
+        function RedirectInternal()
+        {
+            sforce.one.navigateToURL('/apex/RecruitmentHome_LDS', true);            
+        }
+    
+        function Back()
+        {
+            sforce.one.back();
+            //sforce.one.navigateToSObject('{!Interviewer__c.id}');            
+        }
+    </script>
+    
+    <div class="slds">
+    <apex:form >
+    
+    <div>    
+    <div style="padding-bottom: 10px; float:left;width:75%;overflow:hidden;">
+    <div class="slds-card">
+    <div class="slds-card__body">
+    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+      <thead>
+        <tr>
+          <th class="slds-text-heading--label slds-size--1-of-4">Candidate</th>
+          <th class="slds-text-heading--label slds-size--1-of-4">Position</th>
+          <th class="slds-text-heading--label slds-size--1-of-4">Interview Type</th>
+          <th class="slds-text-heading--label slds-size--1-of-4">Interviewer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="slds-hint-parent">
+          <td class="slds-size--1-of-4">{!Interviewer__c.Candidate__c}</td>
+          <td class="slds-size--1-of-4">{!Interviewer__c.Position_Name__c}</td>
+          <td class="slds-size--1-of-4">{!Interviewer__c.Interview_Type__c}</td>
+          <td class="slds-size--1-of-4">{!Interviewer__c.testautonumdata__Interviewer__r.Name}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div> 
+  </div>
+        <div style="padding-bottom: 10px; float:right;width:25%;overflow:hidden; text-align:center;">
+            
+            <apex:commandButton styleClass="slds-button slds-button--neutral"  value="External Site" id="theButton" onclick="RedirectExternal()"/>
+            <apex:commandButton styleClass="slds-button slds-button--neutral"  value="Visualforce Page" id="theRButton" onclick="RedirectInternal()"/>
+            <apex:commandButton styleClass="slds-button slds-button--neutral"  value="Back" id="theBButton" onclick="Back()"/>
+        </div> 
+  </div>
+    <!----- -->
+
+    
+
+    <!----- -->
+        
+    <div style="float:left;width:100%;">
+        
+        
+        <div class="mystyle">
+            
+        
+    <table id="demo" class="slds-table slds-table--bordered">
+        <thead>
+        <tr class="slds-text-heading--label">
+            <th scope="col"><span class="slds-truncate">Question</span></th>
+            <th class="th aligncenter" scope="col"><span class="slds-truncate">Answer</span></th>
+            <th class="th aligncenter" scope="col"><span class="slds-truncate">Score</span></th>
+            <th class="th aligncenter" scope="col"><span class="slds-truncate">Comments</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <apex:variable value="{!1}" var="i"/>
+        <apex:repeat var="answers" value="{!Interviewer__c.testautonumdata__Interview_Answers__r}">
+        <tr class="slds-hint-parent">
+
+            <td><div style="display:table-cell;float: left; display: inline; width: 265px; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;word-wrap: break-word; ">{!i}.  {!answers.Question__c}</div></td>
+
+            <td class="slds-row-select">
+            
+            <div class="slds-publisher slds-publisher--discussion">
+              <dl class="slds-list--horizontal slds-publisher__toggle-visibility">
+                <dt class="slds-list__item slds-text-body--small">To: </dt>
+                <dd class="slds-list__item">My Followers</dd>
+              </dl>
+              <textarea class="slds custom publisher" placeholder="Candidate's Answer…"></textarea>              
+            </div>
+            
+            
+            
+            </td>
+
+            <td>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="0" checked="true"/></td>
+                      <td>0</td>
+                    </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="1"/></td>
+                      <td>1</td>
+                    </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="2"/></td>
+                      <td>2</td>
+                    </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="3"/></td>
+                      <td>3</td>
+                    </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="4"/></td>
+                      <td>4</td>
+                    </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td style="text-align: right;"><input type="radio" name="Score{!i}" value="5"/></td>
+                      <td>5</td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="slds-row-select">
+                <div class="slds-publisher slds-publisher--discussion">
+                  <dl class="slds-list--horizontal slds-publisher__toggle-visibility">
+                    <dt class="slds-list__item slds-text-body--small">To: </dt>
+                    <dd class="slds-list__item">My Followers</dd>
+                  </dl>
+                  <textarea class="slds custom publisher" placeholder="Interviewer Comments…"></textarea>              
+                </div>
+            </td>
+
+        </tr>
+        <apex:variable value="{!i+1}" var="i" />
+        </apex:repeat> 
+        </tbody>
+
+    </table>
+    </div>
+        </div>
+    </apex:form> 
+    
+    </div>
+</apex:page>

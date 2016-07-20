@@ -1,0 +1,67 @@
+<aura:component access="global" controller="chartjsController" implements="flexipage:availableForAllPageTypes" description="The component to draw various charts using Chart.js Library. Refer to http://www.chartjs.org/ for the library detail.">
+
+    <aura:attribute name="apexDataProvider" type="String" default="chartjsSampleLineChartDataProvider" required="true" description="Apex Class Name which provides JSON data to draw chart. As for JSON data format, two sample providers are available as chartjsSampleLineChartDataProvider and chartjsSamplePieChartDataProvider. Refer to http://www.chartjs.org/ for more details." />
+    <aura:attribute name="chartTitle" type="String" default="Chart Title" description="Title of the chart."/>
+    <aura:attribute name="showLegend" type="Boolean" default="true" description="If set to false, legend does not show up. Defaut is true."/>
+    <aura:attribute name="legendUnit" type="String" description="Unit for the legend."/>
+    <aura:attribute name="chartType" type="String" description="Type of the chart. Available values are Line, Bar, Radar, Pie, Doughnut, PolarArea. If this is null, default chart type is automatically applied based on the data provided by apex data provider." />
+    <aura:attribute name="showChartTypeSwitch" type="Boolean" default="true" description="If set to false, chart type switch does not show up. Default is true." />
+    <aura:attribute name="componentName" type="String" description="Unique name of the component. Ex.This value will be used by ChartjsChartDataUpdate Event to specify which component should be affected. So this value should be unique amoung the application or component which this component belongs to." />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="Initialization process." />
+    <aura:handler event="c:ChartjsChartTypeChange" action="{!c.changeChartType}" description="Triggered when chart type is changed." />
+    <aura:handler event="c:ChartjsChartDataUpdate" action="{!c.updateChart}" description="Triggered when chart data is updated. Event may include updated chart data." />
+    <aura:registerEvent name="ChartjsChartClick" type="c:ChartjsChartClick" description="Notify that certain segment of the chart is clicked." />
+
+	<ltng:require scripts="/resource/Chartjs_chart_min_js" afterScriptsLoaded="{!c.createChart}" />
+    <link rel="stylesheet" href="/resource/Chartjs_pure_min_css" />
+
+    <div style="background-color: #fff; text-align:center; padding: 20px">
+        <div style="color:#777; font-size:1.2em; margin-bottom:10px;">{!v.chartTitle}</div>
+        <div style="margin-bottom:10px;">
+            <aura:if isTrue="{! !v.isChartDataEmpty }">
+                <div class="pure-g">
+                    
+                    <!-- Chart Container -->
+                    <div class="{!v.chartContainerClass}" id="{!globalId + '_chartContainer'}"><canvas id="{!globalId + '_chart'}" style="width:100%; height:200px;"></canvas></div>
+                    <!-- Chart Container -->
+                    
+                    <!-- Legend -->
+                    <aura:if isTrue="{! v.showLegend }">
+                        <div class="pure-u-1-2">
+                            <ul style="text-align:left; font-size:0.8em; line-height:1.5em;">
+                                <aura:iteration items="{!v.chartLegend}" var="item">
+                                    <li style="{! 'color:' + item.color}">{!item.label}<aura:if isTrue="{!item.amount != null}">&nbsp;({!item.amount}<aura:if isTrue="{!v.legendUnit !=null}">&nbsp;{!v.legendUnit}</aura:if>)</aura:if></li>
+                                </aura:iteration>
+                            </ul>
+                        </div>
+                    </aura:if>
+                    <!-- Legend -->
+                    
+            	</div>
+            </aura:if>
+            
+            <!-- Data Empty Message -->
+            <aura:if isTrue="{! v.isChartDataEmpty }">
+                <div style="width:100%; color:#aaa; margin-top: 10px;">
+                    Data is empty.
+                </div>
+            </aura:if>
+            <!-- Data Empty Message -->
+            
+        </div>
+        
+        <!-- Chart Type Switch -->
+        <aura:if isTrue="{! v.showChartTypeSwitch }">
+        <aura:if isTrue="{! !v.isChartDataEmpty }">
+            <div style="margin-bottom:10px;">
+                <aura:iteration items="{!v.availableChartTypeList}" var="availableChartType">
+                    <c:ChartjsChangeChartTypeButton chartTypeName="{!availableChartType.name}" chartTypeLabel="{!availableChartType.label}" componentId="{!globalId}" />
+                </aura:iteration>
+            </div>
+        </aura:if>
+        </aura:if>
+        <!-- Chart Type Switch -->
+        
+    </div>
+
+</aura:component>

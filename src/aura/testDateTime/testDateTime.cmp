@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="dateDob" type="String" default="0" access="global"/>
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
+    <div class="slds">
+    
+    	<ui:inputDateTime class="inputCustomStyle"  format="MM/dd/yyyy h:mm a" value="{!v.dateDob}" displayDatePicker="false"/>
+        
+        
+		
+       <!-- <ui:inputDate aura:id="dateField" label="Birthday" value="2000-01-01" displayDatePicker="true"/>
+        
+
+        		<ui:inputDateTime aura:id="today" label="Time" class="inputCustomStyle" value="" displayDatePicker="true" />
+        
+        -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    </div>
+	
+</aura:component>

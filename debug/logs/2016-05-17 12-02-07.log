@@ -1,0 +1,428 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+09:02:05.0 (148062)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.0 (1001726)|HEAP_ALLOCATE|[72]|Bytes:3
+09:02:05.0 (1078060)|HEAP_ALLOCATE|[77]|Bytes:152
+09:02:05.0 (1100461)|HEAP_ALLOCATE|[342]|Bytes:408
+09:02:05.0 (1121155)|HEAP_ALLOCATE|[355]|Bytes:408
+09:02:05.0 (1140934)|HEAP_ALLOCATE|[467]|Bytes:48
+09:02:05.3 (3134318)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.3 (3386033)|STATEMENT_EXECUTE|[1]
+09:02:05.3 (3428941)|HEAP_ALLOCATE|[50]|Bytes:5
+09:02:05.3 (3459327)|HEAP_ALLOCATE|[56]|Bytes:5
+09:02:05.3 (3469112)|HEAP_ALLOCATE|[64]|Bytes:7
+09:02:05.3 (3498667)|SYSTEM_MODE_ENTER|false
+09:02:05.3 (3522144)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.3 (3531284)|SYSTEM_MODE_EXIT|false
+09:02:05.3 (3545209)|METHOD_EXIT|[1]|ReferralsServerController
+09:02:05.3 (3573576)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+09:02:05.3 (3576673)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.3 (3585195)|SYSTEM_MODE_ENTER|false
+09:02:05.3 (3596934)|VARIABLE_SCOPE_BEGIN|[18]|rowsLimit|Integer|false|false
+09:02:05.3 (3630643)|VARIABLE_ASSIGNMENT|[18]|rowsLimit|8
+09:02:05.3 (3635899)|VARIABLE_SCOPE_BEGIN|[18]|recordId|String|false|false
+09:02:05.3 (3645354)|VARIABLE_ASSIGNMENT|[18]|recordId|"a0MB0000000cQXFMA2"
+09:02:05.3 (3661203)|HEAP_ALLOCATE|[20]|Bytes:5
+09:02:05.3 (3671355)|STATEMENT_EXECUTE|[18]
+09:02:05.3 (3675081)|STATEMENT_EXECUTE|[20]
+09:02:05.3 (3771629)|HEAP_ALLOCATE|[20]|Bytes:4
+09:02:05.3 (3883339)|ENTERING_MANAGED_PKG|
+09:02:05.3 (3924979)|VARIABLE_SCOPE_BEGIN|[20]|lstReturnRecords|List<testautonumdata.ReferralsServerController>|true|false
+09:02:05.3 (3967078)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:02:05.3 (3993942)|VARIABLE_ASSIGNMENT|[20]|lstReturnRecords|{"s":1,"v":[]}|0x39928b72
+09:02:05.3 (4002734)|STATEMENT_EXECUTE|[22]
+09:02:05.3 (4008772)|HEAP_ALLOCATE|[22]|Bytes:20
+09:02:05.3 (4040429)|ENTERING_MANAGED_PKG|
+09:02:05.3 (4070531)|HEAP_ALLOCATE|[22]|Bytes:1
+09:02:05.3 (4091496)|HEAP_ALLOCATE|[22]|Bytes:21
+09:02:05.3 (4128895)|ENTERING_MANAGED_PKG|
+09:02:05.3 (4141347)|USER_DEBUG|[22]|DEBUG|######## rowsLimit: 8
+09:02:05.3 (4153808)|STATEMENT_EXECUTE|[24]
+09:02:05.3 (4179097)|ENTERING_MANAGED_PKG|
+09:02:05.3 (4214007)|VARIABLE_SCOPE_BEGIN|[24]|rLimit|Integer|false|false
+09:02:05.3 (4219953)|HEAP_ALLOCATE|[24]|Bytes:4
+09:02:05.3 (4227244)|VARIABLE_ASSIGNMENT|[24]|rLimit|8
+09:02:05.3 (4234141)|STATEMENT_EXECUTE|[25]
+09:02:05.3 (4238230)|HEAP_ALLOCATE|[25]|Bytes:17
+09:02:05.3 (4258804)|ENTERING_MANAGED_PKG|
+09:02:05.3 (4281871)|HEAP_ALLOCATE|[25]|Bytes:1
+09:02:05.3 (4295231)|HEAP_ALLOCATE|[25]|Bytes:18
+09:02:05.3 (4312404)|ENTERING_MANAGED_PKG|
+09:02:05.3 (4319243)|USER_DEBUG|[25]|DEBUG|######## rLimit: 8
+09:02:05.3 (4329913)|STATEMENT_EXECUTE|[27]
+09:02:05.3 (4334014)|HEAP_ALLOCATE|[27]|Bytes:177
+09:02:05.3 (4346790)|HEAP_ALLOCATE|[27]|Bytes:4
+09:02:05.3 (4357858)|HEAP_ALLOCATE|[27]|Bytes:7
+09:02:05.3 (4382357)|HEAP_ALLOCATE|[27]|Bytes:7
+09:02:05.3 (4387667)|HEAP_ALLOCATE|[27]|Bytes:4
+09:02:05.3 (5181873)|SOQL_EXECUTE_BEGIN|[27]|Aggregations:0|SELECT Id, OwnerId, Owner.Name, testautonumdata__Referral_Message__c, createddate FROM testautonumdata__Referral__c WHERE testautonumdata__Candidate__c = :tmpVar1 LIMIT :tmpVar2
+09:02:05.3 (13367386)|SOQL_EXECUTE_END|[27]|Rows:2
+09:02:05.3 (13416571)|HEAP_ALLOCATE|[27]|Bytes:12
+09:02:05.3 (13445888)|HEAP_ALLOCATE|[27]|Bytes:416
+09:02:05.3 (13541443)|HEAP_ALLOCATE|[27]|Bytes:12
+09:02:05.3 (13560963)|VARIABLE_SCOPE_BEGIN|[27]|referralsList|List<testautonumdata__Referral__c>|true|false
+09:02:05.3 (13679097)|VARIABLE_ASSIGNMENT|[27]|referralsList|{"s":1,"v":[{"s":2,"v":{"Id":"a0TB0000000YKHIMA4","OwnerId":"005B0000001VpZRIA0","testautonumdata__Ref (16 more) ...":"I recommend John","CreatedDate":"2016-05-12T14:31:58.000Z","Owner":{"s":3,"v":{"Name":"Rodrigo Reboucas","Id":"005B0000001VpZRIA0"}}}},{"s":4,"v":{"Id":"a0TB0000000Y9Q9MAK","OwnerId":"005B00000021dadIAA","testautonumdata__Ref (16 more) ...":"I would like to reco (29 more) ...","CreatedDate":"2016-05-09T14:40:41.000Z","Owner":{"s":5,"v":{"Name":"Lizz Brooks","Id":"005B00000021dadIAA"}}}}]}|0x1a82edf
+09:02:05.3 (13759337)|ENTERING_MANAGED_PKG|
+09:02:05.3 (13802494)|STATEMENT_EXECUTE|[35]
+09:02:05.3 (13807255)|STATEMENT_EXECUTE|[36]
+09:02:05.3 (13812947)|HEAP_ALLOCATE|[36]|Bytes:20
+09:02:05.3 (13832287)|ENTERING_MANAGED_PKG|
+09:02:05.3 (13876176)|ENTERING_MANAGED_PKG|
+09:02:05.3 (13882931)|HEAP_ALLOCATE|[36]|Bytes:1
+09:02:05.3 (13896629)|HEAP_ALLOCATE|[36]|Bytes:21
+09:02:05.3 (13913018)|ENTERING_MANAGED_PKG|
+09:02:05.3 (13920494)|USER_DEBUG|[36]|DEBUG|referralsList.size()2
+09:02:05.3 (13938819)|ENTERING_MANAGED_PKG|
+09:02:05.3 (14213405)|HEAP_ALLOCATE|[37]|Bytes:5
+09:02:05.3 (14264426)|HEAP_ALLOCATE|[37]|Bytes:24
+09:02:05.3 (14281479)|VARIABLE_SCOPE_BEGIN|[37]|e|testautonumdata__Referral__c|true|false
+09:02:05.3 (14326648)|VARIABLE_ASSIGNMENT|[37]|e|{"s":1,"v":{"Id":"a0TB0000000YKHIMA4","OwnerId":"005B0000001VpZRIA0","testautonumdata__Ref (16 more) ...":"I recommend John","CreatedDate":"2016-05-12T14:31:58.000Z","Owner":{"s":2,"v":{"Name":"Rodrigo Reboucas","Id":"005B0000001VpZRIA0"}}}}|0x6d2da1bc
+09:02:05.3 (14338166)|STATEMENT_EXECUTE|[38]
+09:02:05.3 (14341499)|STATEMENT_EXECUTE|[40]
+09:02:05.3 (14349663)|HEAP_ALLOCATE|[40]|Bytes:28
+09:02:05.3 (14371230)|CONSTRUCTOR_ENTRY|[40]|01pB0000000qaYT|<init>()
+09:02:05.3 (14406397)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.ReferralsServerController|true|false
+09:02:05.3 (14472368)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x570db312
+09:02:05.3 (14482237)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.3 (14494156)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+09:02:05.3 (14538770)|STATEMENT_EXECUTE|[1]
+09:02:05.3 (14544692)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.3 (14549605)|STATEMENT_EXECUTE|[4]
+09:02:05.3 (14553354)|STATEMENT_EXECUTE|[6]
+09:02:05.3 (14556426)|STATEMENT_EXECUTE|[8]
+09:02:05.3 (14559474)|STATEMENT_EXECUTE|[10]
+09:02:05.3 (14562485)|STATEMENT_EXECUTE|[12]
+09:02:05.3 (14565312)|STATEMENT_EXECUTE|[14]
+09:02:05.3 (14576735)|CONSTRUCTOR_EXIT|[40]|01pB0000000qaYT|<init>()
+09:02:05.3 (14583885)|VARIABLE_SCOPE_BEGIN|[40]|i|testautonumdata.ReferralsServerController|true|false
+09:02:05.3 (14603329)|VARIABLE_ASSIGNMENT|[40]|i|{}|0x570db312
+09:02:05.3 (14610899)|STATEMENT_EXECUTE|[42]
+09:02:05.3 (14655031)|HEAP_ALLOCATE|[42]|Bytes:18
+09:02:05.3 (14732127)|HEAP_ALLOCATE|[42]|Bytes:133
+09:02:05.3 (14760437)|SYSTEM_METHOD_ENTRY|[5]|ChatterUsers.ChatterUsers()
+09:02:05.3 (14882600)|STATEMENT_EXECUTE|[5]
+09:02:05.3 (14901780)|SYSTEM_METHOD_EXIT|[5]|ChatterUsers
+09:02:05.3 (14928623)|METHOD_ENTRY|[42]||ConnectApi.ChatterUsers.getPhoto(String, String)
+09:02:05.3 (48286302)|SYSTEM_METHOD_EXIT|[5]|Photo
+09:02:05.3 (48319462)|HEAP_ALLOCATE|[38]|Bytes:68
+09:02:05.3 (48330389)|HEAP_ALLOCATE|[38]|Bytes:12
+09:02:05.3 (48334354)|HEAP_ALLOCATE|[38]|Bytes:8
+09:02:05.3 (48347496)|VARIABLE_SCOPE_BEGIN|[35]|this|ConnectApi.Photo|true|false
+09:02:05.3 (48537752)|VARIABLE_ASSIGNMENT|[35]|this|{}|0x575562ce
+09:02:05.3 (48550793)|VARIABLE_SCOPE_BEGIN|[35]|versionIn|Double|false|false
+09:02:05.3 (48559093)|VARIABLE_ASSIGNMENT|[35]|versionIn|33.0
+09:02:05.3 (48566358)|VARIABLE_SCOPE_BEGIN|[35]|javaObj|java:sfdc.chatter.connect.api.output.photo.PhotoRepresentation|true|false
+09:02:05.3 (48675125)|VARIABLE_ASSIGNMENT|[35]|javaObj|"sfdc.chatter.connect.api.output.photo.PhotoRepresentation@53b81398"|0x53b81398
+09:02:05.3 (48997473)|METHOD_EXIT|[42]||ConnectApi.ChatterUsers.getPhoto(String, String)
+09:02:05.3 (49007347)|VARIABLE_SCOPE_BEGIN|[42]|userPhoto|ConnectApi.Photo|true|false
+09:02:05.3 (49050664)|VARIABLE_ASSIGNMENT|[42]|userPhoto|{}|0x575562ce
+09:02:05.3 (49097402)|STATEMENT_EXECUTE|[44]
+09:02:05.3 (49343121)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x570db312
+09:02:05.3 (49356062)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"https://rrlightningo (65 more) ..."
+09:02:05.3 (49370288)|VARIABLE_ASSIGNMENT|[14]|this.iconUrl|"https://rrlightningo (65 more) ..."|0x570db312
+09:02:05.3 (49384279)|STATEMENT_EXECUTE|[48]
+09:02:05.3 (49438691)|HEAP_ALLOCATE|[48]|Bytes:18
+09:02:05.3 (49519160)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (65 more) ..."}|0x570db312
+09:02:05.3 (49528109)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0TB0000000YKHIMA4"
+09:02:05.3 (49538724)|VARIABLE_ASSIGNMENT|[4]|this.recordID|"a0TB0000000YKHIMA4"|0x570db312
+09:02:05.3 (49551786)|STATEMENT_EXECUTE|[50]
+09:02:05.3 (49722525)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (65 more) ...","recordID":"a0TB0000000YKHIMA4"}|0x570db312
+09:02:05.3 (49731605)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Rodrigo Reboucas"
+09:02:05.3 (49741483)|VARIABLE_ASSIGNMENT|[6]|this.OwnerName|"Rodrigo Reboucas"|0x570db312
+09:02:05.3 (49754301)|STATEMENT_EXECUTE|[52]
+09:02:05.3 (49768018)|HEAP_ALLOCATE|[52]|Bytes:18
+09:02:05.3 (49837853)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (65 more) ...","OwnerName":"Rodrigo Reboucas","recordID":"a0TB0000000YKHIMA4"}|0x570db312
+09:02:05.3 (49853996)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"005B0000001VpZRIA0"
+09:02:05.3 (49864491)|VARIABLE_ASSIGNMENT|[8]|this.OwnerID|"005B0000001VpZRIA0"|0x570db312
+09:02:05.3 (49877128)|STATEMENT_EXECUTE|[54]
+09:02:05.3 (49978198)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (65 more) ...","OwnerID":"005B0000001VpZRIA0","OwnerName":"Rodrigo Reboucas","recordID":"a0TB0000000YKHIMA4"}|0x570db312
+09:02:05.3 (49987034)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"I recommend John"
+09:02:05.3 (50018424)|VARIABLE_ASSIGNMENT|[10]|this.ReferralMessage|"I recommend John"|0x570db312
+09:02:05.3 (50037476)|STATEMENT_EXECUTE|[56]
+09:02:05.3 (50180623)|HEAP_ALLOCATE|[56]|Bytes:17
+09:02:05.3 (50246041)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (65 more) ...","OwnerID":"005B0000001VpZRIA0","OwnerName":"Rodrigo Reboucas","recordID":"a0TB0000000YKHIMA4","ReferralMessage":"I recommend John"}|0x570db312
+09:02:05.3 (50255555)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"5/12/2016 7:31 AM"
+09:02:05.3 (50265204)|VARIABLE_ASSIGNMENT|[12]|this.ReferralDate|"5/12/2016 7:31 AM"|0x570db312
+09:02:05.3 (50278025)|STATEMENT_EXECUTE|[60]
+09:02:05.3 (50282517)|HEAP_ALLOCATE|[60]|Bytes:3
+09:02:05.3 (50312609)|ENTERING_MANAGED_PKG|
+09:02:05.3 (50368049)|HEAP_ALLOCATE|[60]|Bytes:272
+09:02:05.3 (50387043)|HEAP_ALLOCATE|[60]|Bytes:275
+09:02:05.3 (50409830)|ENTERING_MANAGED_PKG|
+09:02:05.3 (50421662)|USER_DEBUG|[60]|DEBUG|i: ReferralsServerController:[OwnerID=005B0000001VpZRIA0, OwnerName=Rodrigo Reboucas, ReferralDate=5/12/2016 7:31 AM, ReferralMessage=I recommend John, iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/729B00000000GJc/T, recordID=a0TB0000000YKHIMA4]
+09:02:05.3 (50434959)|STATEMENT_EXECUTE|[61]
+09:02:05.3 (50457152)|ENTERING_MANAGED_PKG|
+09:02:05.3 (50496949)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:02:05.3 (50518606)|HEAP_ALLOCATE|[37]|Bytes:5
+09:02:05.3 (50552548)|HEAP_ALLOCATE|[37]|Bytes:24
+09:02:05.3 (50567877)|VARIABLE_SCOPE_BEGIN|[37]|e|testautonumdata__Referral__c|true|false
+09:02:05.3 (50649493)|VARIABLE_ASSIGNMENT|[37]|e|{"s":1,"v":{"Id":"a0TB0000000Y9Q9MAK","OwnerId":"005B00000021dadIAA","testautonumdata__Ref (16 more) ...":"I would like to reco (29 more) ...","CreatedDate":"2016-05-09T14:40:41.000Z","Owner":{"s":2,"v":{"Name":"Lizz Brooks","Id":"005B00000021dadIAA"}}}}|0x439210df
+09:02:05.3 (50661795)|STATEMENT_EXECUTE|[38]
+09:02:05.3 (50665313)|STATEMENT_EXECUTE|[40]
+09:02:05.3 (50672095)|HEAP_ALLOCATE|[40]|Bytes:28
+09:02:05.3 (50686235)|CONSTRUCTOR_ENTRY|[40]|01pB0000000qaYT|<init>()
+09:02:05.3 (50691598)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.ReferralsServerController|true|false
+09:02:05.3 (50722485)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x53f3366c
+09:02:05.3 (50731960)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.3 (50758035)|STATEMENT_EXECUTE|[1]
+09:02:05.3 (50763019)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.3 (50767839)|STATEMENT_EXECUTE|[4]
+09:02:05.3 (50771337)|STATEMENT_EXECUTE|[6]
+09:02:05.3 (50774354)|STATEMENT_EXECUTE|[8]
+09:02:05.3 (50777357)|STATEMENT_EXECUTE|[10]
+09:02:05.3 (50780428)|STATEMENT_EXECUTE|[12]
+09:02:05.3 (50783255)|STATEMENT_EXECUTE|[14]
+09:02:05.3 (50795049)|CONSTRUCTOR_EXIT|[40]|01pB0000000qaYT|<init>()
+09:02:05.3 (50802348)|VARIABLE_SCOPE_BEGIN|[40]|i|testautonumdata.ReferralsServerController|true|false
+09:02:05.3 (50831679)|VARIABLE_ASSIGNMENT|[40]|i|{}|0x53f3366c
+09:02:05.3 (50845082)|STATEMENT_EXECUTE|[42]
+09:02:05.3 (50859914)|HEAP_ALLOCATE|[42]|Bytes:18
+09:02:05.3 (50869129)|METHOD_ENTRY|[42]||ConnectApi.ChatterUsers.getPhoto(String, String)
+09:02:05.3 (64528049)|METHOD_EXIT|[42]||ConnectApi.ChatterUsers.getPhoto(String, String)
+09:02:05.3 (64538026)|VARIABLE_SCOPE_BEGIN|[42]|userPhoto|ConnectApi.Photo|true|false
+09:02:05.3 (64581301)|VARIABLE_ASSIGNMENT|[42]|userPhoto|{}|0x65312e53
+09:02:05.3 (64592283)|STATEMENT_EXECUTE|[44]
+09:02:05.3 (64685327)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x53f3366c
+09:02:05.3 (64694631)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"https://rrlightningo (53 more) ..."
+09:02:05.3 (64705184)|VARIABLE_ASSIGNMENT|[14]|this.iconUrl|"https://rrlightningo (53 more) ..."|0x53f3366c
+09:02:05.3 (64717515)|STATEMENT_EXECUTE|[48]
+09:02:05.3 (64729438)|HEAP_ALLOCATE|[48]|Bytes:18
+09:02:05.3 (64767726)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (53 more) ..."}|0x53f3366c
+09:02:05.3 (64773593)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0TB0000000Y9Q9MAK"
+09:02:05.3 (64783049)|VARIABLE_ASSIGNMENT|[4]|this.recordID|"a0TB0000000Y9Q9MAK"|0x53f3366c
+09:02:05.3 (64794454)|STATEMENT_EXECUTE|[50]
+09:02:05.3 (64861580)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (53 more) ...","recordID":"a0TB0000000Y9Q9MAK"}|0x53f3366c
+09:02:05.3 (64867976)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Lizz Brooks"
+09:02:05.3 (64877293)|VARIABLE_ASSIGNMENT|[6]|this.OwnerName|"Lizz Brooks"|0x53f3366c
+09:02:05.3 (64888952)|STATEMENT_EXECUTE|[52]
+09:02:05.3 (64900178)|HEAP_ALLOCATE|[52]|Bytes:18
+09:02:05.3 (64938838)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (53 more) ...","OwnerName":"Lizz Brooks","recordID":"a0TB0000000Y9Q9MAK"}|0x53f3366c
+09:02:05.3 (64944596)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"005B00000021dadIAA"
+09:02:05.3 (64953411)|VARIABLE_ASSIGNMENT|[8]|this.OwnerID|"005B00000021dadIAA"|0x53f3366c
+09:02:05.3 (64964254)|STATEMENT_EXECUTE|[54]
+09:02:05.3 (65006328)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (53 more) ...","OwnerID":"005B00000021dadIAA","OwnerName":"Lizz Brooks","recordID":"a0TB0000000Y9Q9MAK"}|0x53f3366c
+09:02:05.3 (65014102)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"I would like to reco (29 more) ..."
+09:02:05.3 (65023645)|VARIABLE_ASSIGNMENT|[10]|this.ReferralMessage|"I would like to reco (29 more) ..."|0x53f3366c
+09:02:05.3 (65034776)|STATEMENT_EXECUTE|[56]
+09:02:05.3 (65070010)|HEAP_ALLOCATE|[56]|Bytes:16
+09:02:05.3 (65118233)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"iconUrl":"https://rrlightningo (53 more) ...","OwnerID":"005B00000021dadIAA","OwnerName":"Lizz Brooks","recordID":"a0TB0000000Y9Q9MAK","ReferralMessage":"I would like to reco (29 more) ..."}|0x53f3366c
+09:02:05.3 (65124562)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"5/9/2016 7:40 AM"
+09:02:05.3 (65133895)|VARIABLE_ASSIGNMENT|[12]|this.ReferralDate|"5/9/2016 7:40 AM"|0x53f3366c
+09:02:05.3 (65145159)|STATEMENT_EXECUTE|[60]
+09:02:05.3 (65168984)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65193260)|HEAP_ALLOCATE|[60]|Bytes:287
+09:02:05.3 (65208108)|HEAP_ALLOCATE|[60]|Bytes:290
+09:02:05.3 (65223844)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65231670)|USER_DEBUG|[60]|DEBUG|i: ReferralsServerController:[OwnerID=005B00000021dadIAA, OwnerName=Lizz Brooks, ReferralDate=5/9/2016 7:40 AM, ReferralMessage=I would like to recommend John for this position., iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/005/T, recordID=a0TB0000000Y9Q9MAK]
+09:02:05.3 (65244336)|STATEMENT_EXECUTE|[61]
+09:02:05.3 (65257164)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65268238)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+09:02:05.3 (65282920)|HEAP_ALLOCATE|[37]|Bytes:5
+09:02:05.3 (65298107)|VARIABLE_ASSIGNMENT|[37]|e|null|
+09:02:05.3 (65306918)|STATEMENT_EXECUTE|[64]
+09:02:05.3 (65310788)|HEAP_ALLOCATE|[64]|Bytes:16
+09:02:05.3 (65331987)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65404694)|HEAP_ALLOCATE|[64]|Bytes:563
+09:02:05.3 (65430845)|HEAP_ALLOCATE|[64]|Bytes:579
+09:02:05.3 (65453234)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65460468)|USER_DEBUG|[64]|DEBUG|lstReturnRecords(ReferralsServerController:[OwnerID=005B0000001VpZRIA0, OwnerName=Rodrigo Reboucas, ReferralDate=5/12/2016 7:31 AM, ReferralMessage=I recommend John, iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/729B00000000GJc/T, recordID=a0TB0000000YKHIMA4], ReferralsServerController:[OwnerID=005B00000021dadIAA, OwnerName=Lizz Brooks, ReferralDate=5/9/2016 7:40 AM, ReferralMessage=I would like to recommend John for this position., iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/005/T, recordID=a0TB0000000Y9Q9MAK])
+09:02:05.3 (65475704)|STATEMENT_EXECUTE|[67]
+09:02:05.3 (65494430)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65548846)|HEAP_ALLOCATE|[67]|Bytes:563
+09:02:05.3 (65564425)|HEAP_ALLOCATE|[67]|Bytes:579
+09:02:05.3 (65582032)|ENTERING_MANAGED_PKG|
+09:02:05.3 (65588692)|USER_DEBUG|[67]|DEBUG|lstReturnRecords(ReferralsServerController:[OwnerID=005B0000001VpZRIA0, OwnerName=Rodrigo Reboucas, ReferralDate=5/12/2016 7:31 AM, ReferralMessage=I recommend John, iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/729B00000000GJc/T, recordID=a0TB0000000YKHIMA4], ReferralsServerController:[OwnerID=005B00000021dadIAA, OwnerName=Lizz Brooks, ReferralDate=5/9/2016 7:40 AM, ReferralMessage=I would like to recommend John for this position., iconUrl=https://rrlightningout-dev-ed--c.gus.content.force.com/profilephoto/005/T, recordID=a0TB0000000Y9Q9MAK])
+09:02:05.3 (65602407)|STATEMENT_EXECUTE|[71]
+09:02:05.3 (65615995)|SYSTEM_MODE_EXIT|false
+09:02:05.65 (65666430)|CUMULATIVE_LIMIT_USAGE
+09:02:05.65 (65666430)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.65 (65666430)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.65 (65666430)|CUMULATIVE_LIMIT_USAGE_END
+
+09:02:05.3 (65747914)|CODE_UNIT_FINISHED|ReferralsServerController.getReferralsForCandidate
+09:02:05.67 (67355701)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.67 (67367723)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+09:02:05.67 (67425881)|CODE_UNIT_FINISHED|Aura
+09:02:05.68 (68672627)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.68 (68682231)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+09:02:05.68 (68731629)|CODE_UNIT_FINISHED|Aura
+09:02:05.0 (139891069)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.0 (139924965)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.142 (142094503)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.142 (142239549)|STATEMENT_EXECUTE|[1]
+09:02:05.142 (142260054)|SYSTEM_MODE_ENTER|false
+09:02:05.142 (142274020)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.142 (142284380)|SYSTEM_MODE_EXIT|false
+09:02:05.142 (142300005)|METHOD_EXIT|[1]|Twitter_Lightning_Controller
+09:02:05.142 (142307101)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.142 (142309055)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+09:02:05.142 (142310968)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:13
+09:02:05.142 (142318006)|SYSTEM_MODE_ENTER|false
+09:02:05.142 (142332304)|VARIABLE_SCOPE_BEGIN|[6]|recordID|String|false|false
+09:02:05.142 (142370231)|VARIABLE_ASSIGNMENT|[6]|recordID|"a0MB0000000cQXFMA2"
+09:02:05.142 (142375819)|VARIABLE_SCOPE_BEGIN|[6]|objectApiName|String|false|false
+09:02:05.142 (142380924)|VARIABLE_ASSIGNMENT|[6]|objectApiName|"Candidate__c"
+09:02:05.142 (142384059)|VARIABLE_SCOPE_BEGIN|[6]|twitterIDFieldApiName|String|false|false
+09:02:05.142 (142387876)|VARIABLE_ASSIGNMENT|[6]|twitterIDFieldApiName|"Twitter_ID__c"
+09:02:05.142 (142400378)|HEAP_ALLOCATE|[8]|Bytes:5
+09:02:05.142 (142410437)|STATEMENT_EXECUTE|[6]
+09:02:05.142 (142414214)|STATEMENT_EXECUTE|[8]
+09:02:05.142 (142419257)|HEAP_ALLOCATE|[8]|Bytes:3
+09:02:05.142 (142433491)|VARIABLE_SCOPE_BEGIN|[8]|oauthVersion|String|false|false
+09:02:05.142 (142439710)|VARIABLE_ASSIGNMENT|[8]|oauthVersion|"1.0"
+09:02:05.142 (142444929)|STATEMENT_EXECUTE|[9]
+09:02:05.142 (142448357)|HEAP_ALLOCATE|[9]|Bytes:25
+09:02:05.142 (142453497)|VARIABLE_SCOPE_BEGIN|[9]|oauthConsumerKey|String|false|false
+09:02:05.142 (142461350)|VARIABLE_ASSIGNMENT|[9]|oauthConsumerKey|"crTSqn98nBWCC8lbj0Ia (5 more) ..."
+09:02:05.142 (142466352)|STATEMENT_EXECUTE|[10]
+09:02:05.142 (142469429)|HEAP_ALLOCATE|[10]|Bytes:50
+09:02:05.142 (142473960)|VARIABLE_SCOPE_BEGIN|[10]|oauthConsumerSecret|String|false|false
+09:02:05.142 (142480627)|VARIABLE_ASSIGNMENT|[10]|oauthConsumerSecret|"LETjbmGTLmKF9tBldLY8 (30 more) ..."
+09:02:05.142 (142485330)|STATEMENT_EXECUTE|[11]
+09:02:05.142 (142488355)|HEAP_ALLOCATE|[11]|Bytes:23
+09:02:05.142 (142492776)|VARIABLE_SCOPE_BEGIN|[11]|baseUrl|String|false|false
+09:02:05.142 (142499060)|VARIABLE_ASSIGNMENT|[11]|baseUrl|"https://api.twitter. (3 more) ..."
+09:02:05.142 (142504053)|STATEMENT_EXECUTE|[12]
+09:02:05.142 (142506979)|HEAP_ALLOCATE|[12]|Bytes:9
+09:02:05.142 (142511516)|VARIABLE_SCOPE_BEGIN|[12]|oauthSignatureMethod|String|false|false
+09:02:05.142 (142516381)|VARIABLE_ASSIGNMENT|[12]|oauthSignatureMethod|"HMAC-SHA1"
+09:02:05.142 (142521137)|STATEMENT_EXECUTE|[14]
+09:02:05.142 (142525945)|VARIABLE_SCOPE_BEGIN|[14]|pictureURL|String|false|false
+09:02:05.142 (142530895)|VARIABLE_ASSIGNMENT|[14]|pictureURL|""
+09:02:05.142 (142567864)|ENTERING_MANAGED_PKG|
+09:02:05.142 (142615225)|STATEMENT_EXECUTE|[16]
+09:02:05.142 (142619737)|STATEMENT_EXECUTE|[20]
+09:02:05.142 (142624304)|HEAP_ALLOCATE|[20]|Bytes:56
+09:02:05.142 (142634953)|HEAP_ALLOCATE|[20]|Bytes:68
+09:02:05.142 (142662204)|ENTERING_MANAGED_PKG|
+09:02:05.142 (142693354)|USER_DEBUG|[20]|DEBUG|######## Twitter_Lightning_Controller -  objectApiName: Candidate__c
+09:02:05.142 (142707313)|STATEMENT_EXECUTE|[24]
+09:02:05.142 (142856864)|HEAP_ALLOCATE|[24]|Bytes:85
+09:02:05.142 (142874821)|SYSTEM_METHOD_ENTRY|[1]|UserInfo.UserInfo()
+09:02:05.142 (142984703)|STATEMENT_EXECUTE|[1]
+09:02:05.142 (143003229)|SYSTEM_METHOD_EXIT|[1]|UserInfo
+09:02:05.142 (143021331)|METHOD_ENTRY|[24]||System.UserInfo.getUserId()
+09:02:05.142 (143069680)|METHOD_EXIT|[24]||System.UserInfo.getUserId()
+09:02:05.142 (143078384)|VARIABLE_SCOPE_BEGIN|[24]|strUserId|String|false|false
+09:02:05.142 (143087186)|VARIABLE_ASSIGNMENT|[24]|strUserId|"005B00000021dadIAA"
+09:02:05.142 (143131844)|STATEMENT_EXECUTE|[27]
+09:02:05.142 (143360877)|ENTERING_MANAGED_PKG|
+09:02:05.142 (144207337)|VARIABLE_SCOPE_BEGIN|[27]|myCS1|testautonumdata__Twitter_User__c|true|false
+09:02:05.142 (144220417)|VARIABLE_ASSIGNMENT|[27]|myCS1|null|
+09:02:05.142 (144229510)|STATEMENT_EXECUTE|[28]
+09:02:05.142 (144273999)|EXCEPTION_THROWN|[28]|System.NullPointerException: Attempt to de-reference a null object
+09:02:05.142 (144386761)|HEAP_ALLOCATE|[28]|Bytes:41
+09:02:05.142 (144464627)|FATAL_ERROR|System.NullPointerException: Attempt to de-reference a null object
+
+Class.testautonumdata.Twitter_Lightning_Controller.getTwitterPicture: line 28, column 1
+09:02:05.142 (144475956)|FATAL_ERROR|System.NullPointerException: Attempt to de-reference a null object
+
+Class.testautonumdata.Twitter_Lightning_Controller.getTwitterPicture: line 28, column 1
+09:02:05.144 (144486715)|CUMULATIVE_LIMIT_USAGE
+09:02:05.144 (144486715)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.144 (144486715)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.144 (144486715)|CUMULATIVE_LIMIT_USAGE_END
+
+09:02:05.142 (144566127)|CODE_UNIT_FINISHED|Twitter_Lightning_Controller.getTwitterPicture
+09:02:05.0 (149873364)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.0 (149887669)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.152 (152227162)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+09:02:05.152 (152372102)|STATEMENT_EXECUTE|[1]
+09:02:05.152 (152380739)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+09:02:05.152 (152394147)|METHOD_EXIT|[1]|CandidateController
+09:02:05.152 (152399609)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+09:02:05.152 (152411635)|VARIABLE_SCOPE_BEGIN|[13]|candidateID|String|false|false
+09:02:05.152 (152431374)|VARIABLE_ASSIGNMENT|[13]|candidateID|"a0MB0000000cQXFMA2"
+09:02:05.152 (152441849)|HEAP_ALLOCATE|[14]|Bytes:5
+09:02:05.152 (152451064)|STATEMENT_EXECUTE|[13]
+09:02:05.152 (152454831)|STATEMENT_EXECUTE|[14]
+09:02:05.152 (152458250)|HEAP_ALLOCATE|[14]|Bytes:276
+09:02:05.152 (152470284)|HEAP_ALLOCATE|[14]|Bytes:4
+09:02:05.152 (153167509)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT Id, Name, testautonumdata__Geolocation__Latitude__s, testautonumdata__Geolocation__Longitude__s FROM testautonumdata__Candidate__c WHERE (testautonumdata__Geolocation__Longitude__s != NULL AND testautonumdata__Geolocation__Latitude__s != NULL AND id = :tmpVar1) LIMIT 1
+09:02:05.152 (156592700)|SOQL_EXECUTE_END|[14]|Rows:1
+09:02:05.152 (156637572)|HEAP_ALLOCATE|[14]|Bytes:8
+09:02:05.152 (156659892)|HEAP_ALLOCATE|[14]|Bytes:209
+09:02:05.152 (156702618)|HEAP_ALLOCATE|[14]|Bytes:8
+09:02:05.156 (156757391)|CUMULATIVE_LIMIT_USAGE
+09:02:05.156 (156757391)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.156 (156757391)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:05.156 (156757391)|CUMULATIVE_LIMIT_USAGE_END
+
+09:02:05.152 (156823332)|CODE_UNIT_FINISHED|CandidateController.findCandidateByID

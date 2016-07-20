@@ -1,0 +1,9 @@
+<aura:component controller="CandidateController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+    <aura:attribute name="candidates" type="Candidate__c[]"/>
+    <aura:registerEvent name="appEvent" type="c:CandidatesLoaded"/>
+    
+	<aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+	
+</aura:component>

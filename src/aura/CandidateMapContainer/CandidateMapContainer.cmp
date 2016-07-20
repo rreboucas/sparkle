@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="City" type="String" default="City"/>
+    <aura:attribute name="State" type="String" default="State"/>
+    <aura:handler name="bubblingEvent" event="c:MapBubblingEvent" action="{!c.handleBubbling}"/>
+    <div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%;">
+
+        <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+                          <h1 class="slds-page-header__title slds-truncate">Map</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info">{!v.City}, {!v.State}</p>
+                </div>
+                
+                <!-- End of Header  -->
+        <div style="height: 40%;max-width: 60%;padding-top: 0.5%;padding-right: 1.0%;padding-bottom: 0.5%; padding-left: 0.5%;">
+           <c:RecordMap />
+        </div>
+        
+        <div>
+           <c:CandidateRecordMarker />
+        </div>
+    </div>
+	
+</aura:component>

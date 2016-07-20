@@ -1,0 +1,49 @@
+<aura:component access="global">
+    	<aura:attribute name="title" type="String" required="true"/>
+        <aura:attribute name="closable" type="Boolean" default="true"/>
+        
+        <aura:attribute name="closeLabel" type="String" default="Close"/>
+        <aura:attribute name="cancelLabel" type="String" default=""/>
+        <aura:attribute name="confirmLabel" type="String" default="OK"/>
+        
+        <aura:attribute name="onclose" type="Aura.Action" default="{!c.defaultCloseAction}"/>
+        <aura:attribute name="oncancel" type="Aura.Action" default="{!c.defaultCloseAction}"/> 
+        <aura:attribute name="onconfirm" type="Aura.Action" default="{!c.defaultCloseAction}"/>
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
+    <div class="slds">
+
+        <div>
+            <div aria-hidden="true" role="dialog" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <h2 class="slds-text-heading--medium">{!v.title}</h2>
+                        <aura:if isTrue="{!v.closable}">
+                            <button class="slds-button slds-modal__close" onclick="{!v.onclose}">
+                                
+                                
+                                <span class="slds-assistive-text">{!v.closeLabel}</span>
+                            </button>
+                        </aura:if>
+                    </div>
+                    <div class="slds-modal__content">
+                        <div>
+                            {!v.body}
+                        </div>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <aura:if isTrue="{!v.cancelLabel != ''}">
+                            <button class="slds-button slds-button--neutral" onclick="{!v.oncancel}">{!v.cancelLabel}</button>
+                        </aura:if>
+                        <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!v.onconfirm}">{!v.confirmLabel}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-modal-backdrop slds-modal-backdrop--open"></div>
+        </div>
+        
+    </div>
+    
+    
+	
+</aura:component>

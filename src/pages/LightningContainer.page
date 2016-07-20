@@ -1,0 +1,74 @@
+<apex:page controller="MyCustomController">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0101, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <div class="slds">
+    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-stacked">
+  <thead>
+    <tr class="slds-text-heading--label">
+      <th class="slds-row-select" scope="col">
+        <label class="slds-checkbox" for="select-all">
+          <input name="checkbox" type="checkbox" id="select-all" />
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-form-element__label slds-assistive-text">select all</span>
+        </label>
+      </th>      
+      <th scope="col">
+        <span class="slds-truncate">Year</span>
+      </th>
+      <th scope="col">
+        <span class="slds-truncate">Cut-Off Date</span>
+      </th>
+      <th class="slds-row-action" scope="col">
+        <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+          
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="slds-hint-parent">
+      <td class="slds-row-select">
+        <label class="slds-checkbox" for="select-row1">
+          <input name="select-row1" type="checkbox" id="select-row1" />
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-form-element__label slds-assistive-text">select row1</span>
+        </label>
+      </td>
+      <td data-label="stage">
+        <span class="slds-truncate">2015</span>
+      </td>
+      <td data-label="confidence">
+        <span class="slds-truncate">12-13-2015</span>
+      </td>      
+      <td class="slds-row-action">
+        <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+          
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+    <tr class="slds-hint-parent">
+      <td class="slds-row-select">
+        <label class="slds-checkbox" for="select-row2">
+          <input name="select-row2" type="checkbox" id="select-row2" />
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-form-element__label slds-assistive-text">select row2</span>
+        </label>
+      </td>      
+      <td data-label="stage">
+        <span class="slds-truncate">2016</span>
+      </td>
+      <td data-label="confidence">
+        <span class="slds-truncate">12-11-2016</span>
+      </td>
+      <td class="slds-row-action">
+        <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+          
+          <span class="slds-assistive-text">Show More</span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</apex:page>

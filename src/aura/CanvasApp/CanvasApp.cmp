@@ -1,0 +1,37 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="listName" type="String" default="Canvas App" access="global"/>
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
+    <div class="slds" style="border: 0px solid #aaa;">
+        
+        <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+
+                            
+                                
+                                    
+                            
+                                <h1 class="slds-page-header__title slds-truncate">{!v.listName}</h1>
+                            
+                            
+
+                          
+                        </div>
+                      </div>
+                    </div>
+                      <div class="slds-col slds-has-flexi-truncate">
+                          <c:svg class="slds-icon" xlinkHref="/resource/SLDS0103/assets/icons/utility-sprite/svg/symbols.svg#expand_alt" />
+                      </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info"></p>
+                </div>
+                
+                <!-- End of Header   -->
+        <!-- Start of Canvas App  -->
+        
+		<force:canvasApp developerName="rodrigocanvas" namespacePrefix="testautonumdata" maxHeight="400px" maxWidth="600px"/>
+    </div>
+</aura:component>

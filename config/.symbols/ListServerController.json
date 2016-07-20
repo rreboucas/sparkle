@@ -1,0 +1,737 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000lc07IAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000lc07IAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 21
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "AddFieldToObjectsMap",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "initialObjectName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 68
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "AddFieldToMap",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "ObjectName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 89
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getListRecords",
+            "parameters": [
+                {
+                    "name": "rowsLimit",
+                    "type": "String"
+                },
+                {
+                    "name": "objectApiName",
+                    "type": "String"
+                },
+                {
+                    "name": "filter1Field",
+                    "type": "String"
+                },
+                {
+                    "name": "filter1Value",
+                    "type": "String"
+                },
+                {
+                    "name": "eventField",
+                    "type": "String"
+                },
+                {
+                    "name": "column1",
+                    "type": "String"
+                },
+                {
+                    "name": "column2",
+                    "type": "String"
+                },
+                {
+                    "name": "column3",
+                    "type": "String"
+                },
+                {
+                    "name": "column4",
+                    "type": "String"
+                },
+                {
+                    "name": "sortField",
+                    "type": "String"
+                },
+                {
+                    "name": "sortDirection",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 242
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getCurrentUser",
+            "parameters": [],
+            "references": [],
+            "returnType": "User",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 27,
+                "line": 247
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "GetSobjectField",
+            "parameters": [
+                {
+                    "name": "e",
+                    "type": "SObject"
+                },
+                {
+                    "name": "lcfield",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "ListServerController",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 6
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 8
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "eventField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 10
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "column1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 12
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "column2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "column3",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 16
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "column4",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 3
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "mapObjectsFields",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "ListServerController",
+        "references": [],
+        "type": "ListServerController"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 71,
+                "line": 21
+            },
+            "modifiers": [],
+            "name": "initialObjectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 25
+            },
+            "modifiers": [],
+            "name": "relName1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 26
+            },
+            "modifiers": [],
+            "name": "relField1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 29
+            },
+            "modifiers": [],
+            "name": "relName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "relField2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "objectName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "objectName1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 68
+            },
+            "modifiers": [],
+            "name": "ObjectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 73
+            },
+            "modifiers": [],
+            "name": "existingFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 79
+            },
+            "modifiers": [],
+            "name": "newFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "rowsLimit",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 86,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "objectApiName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 108,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "filter1Field",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 129,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "filter1Value",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 150,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "eventField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 169,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "column1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 185,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "column2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 201,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "column3",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 217,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "column4",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 233,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "sortField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 251,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "sortDirection",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 99
+            },
+            "modifiers": [],
+            "name": "lstReturnRecords",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 101
+            },
+            "modifiers": [],
+            "name": "rLimit",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 106
+            },
+            "modifiers": [],
+            "name": "soql",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 164
+            },
+            "modifiers": [],
+            "name": "objectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 167
+            },
+            "modifiers": [],
+            "name": "sObj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 168
+            },
+            "modifiers": [],
+            "name": "m",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 169
+            },
+            "modifiers": [],
+            "name": "objectFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 171
+            },
+            "modifiers": [],
+            "name": "fieldToCheck",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 190
+            },
+            "modifiers": [],
+            "name": "lstQueriedRecords",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 196
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 199
+            },
+            "modifiers": [],
+            "name": "i",
+            "references": [],
+            "type": "ListServerController"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 243
+            },
+            "modifiers": [],
+            "name": "user",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 247
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 247
+            },
+            "modifiers": [],
+            "name": "lcfield",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 250
+            },
+            "modifiers": [],
+            "name": "returnValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 254
+            },
+            "modifiers": [],
+            "name": "relName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 255
+            },
+            "modifiers": [],
+            "name": "relField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 258
+            },
+            "modifiers": [],
+            "name": "relName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 259
+            },
+            "modifiers": [],
+            "name": "relField2",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

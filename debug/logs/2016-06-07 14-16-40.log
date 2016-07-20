@@ -1,0 +1,69 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+11:16:39.0 (152814)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+11:16:39.0 (792587)|HEAP_ALLOCATE|[72]|Bytes:3
+11:16:39.0 (879884)|HEAP_ALLOCATE|[77]|Bytes:152
+11:16:39.0 (907644)|HEAP_ALLOCATE|[342]|Bytes:408
+11:16:39.0 (939997)|HEAP_ALLOCATE|[355]|Bytes:408
+11:16:39.0 (973968)|HEAP_ALLOCATE|[467]|Bytes:48
+11:16:39.2 (2711517)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+11:16:39.2 (3029006)|STATEMENT_EXECUTE|[1]
+11:16:39.2 (3083349)|HEAP_ALLOCATE|[50]|Bytes:5
+11:16:39.2 (3122127)|HEAP_ALLOCATE|[56]|Bytes:5
+11:16:39.2 (3137000)|HEAP_ALLOCATE|[64]|Bytes:7
+11:16:39.2 (3175758)|SYSTEM_MODE_ENTER|false
+11:16:39.2 (3202736)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+11:16:39.2 (3215821)|SYSTEM_MODE_EXIT|false
+11:16:39.2 (3227022)|METHOD_EXIT|[1]|CandidateDropDownController
+11:16:39.2 (3234315)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:2
+11:16:39.2 (3244837)|SYSTEM_MODE_ENTER|false
+11:16:39.2 (3257440)|VARIABLE_SCOPE_BEGIN|[9]|searchKey|String|false|false
+11:16:39.2 (3304033)|VARIABLE_ASSIGNMENT|[9]|searchKey|"Jo"
+11:16:39.2 (3324383)|HEAP_ALLOCATE|[10]|Bytes:5
+11:16:39.2 (3334633)|STATEMENT_EXECUTE|[9]
+11:16:39.2 (3339303)|STATEMENT_EXECUTE|[10]
+11:16:39.2 (3344027)|HEAP_ALLOCATE|[10]|Bytes:1
+11:16:39.2 (3364214)|HEAP_ALLOCATE|[10]|Bytes:4
+11:16:39.2 (3373377)|VARIABLE_SCOPE_BEGIN|[10]|name|String|false|false
+11:16:39.2 (3386841)|VARIABLE_ASSIGNMENT|[10]|name|"%Jo%"
+11:16:39.2 (3394698)|STATEMENT_EXECUTE|[11]
+11:16:39.2 (3400164)|HEAP_ALLOCATE|[11]|Bytes:67
+11:16:39.2 (3414143)|HEAP_ALLOCATE|[11]|Bytes:4
+11:16:39.2 (3430360)|HEAP_ALLOCATE|[11]|Bytes:7
+11:16:39.2 (4113486)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT id, name FROM Candidate__c WHERE name LIKE :tmpVar1 LIMIT 50
+11:16:39.2 (14130835)|SOQL_EXECUTE_END|[11]|Rows:3
+11:16:39.2 (14164940)|HEAP_ALLOCATE|[11]|Bytes:16
+11:16:39.2 (14189536)|HEAP_ALLOCATE|[11]|Bytes:149
+11:16:39.2 (14231529)|HEAP_ALLOCATE|[11]|Bytes:16
+11:16:39.2 (14280371)|SYSTEM_MODE_EXIT|false
+11:16:39.14 (14332225)|CUMULATIVE_LIMIT_USAGE
+11:16:39.14 (14332225)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:16:39.14 (14332225)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:16:39.14 (14332225)|CUMULATIVE_LIMIT_USAGE_END
+
+11:16:39.2 (14393958)|CODE_UNIT_FINISHED|CandidateDropDownController.findByName

@@ -1,0 +1,66 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+11:15:29.0 (122451)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+11:15:29.0 (155101)|EXECUTION_STARTED
+11:15:29.0 (162940)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000lIqm|CandidateController.findAll
+11:15:29.0 (330257)|HEAP_ALLOCATE|[72]|Bytes:3
+11:15:29.0 (379087)|HEAP_ALLOCATE|[77]|Bytes:152
+11:15:29.0 (400046)|HEAP_ALLOCATE|[342]|Bytes:408
+11:15:29.0 (421073)|HEAP_ALLOCATE|[355]|Bytes:408
+11:15:29.0 (440223)|HEAP_ALLOCATE|[467]|Bytes:48
+11:15:29.0 (478971)|HEAP_ALLOCATE|[139]|Bytes:6
+11:15:29.0 (589829)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+11:15:29.0 (604472)|METHOD_ENTRY|[1]|01pB0000000lIqm|CandidateController.CandidateController()
+11:15:29.0 (616471)|STATEMENT_EXECUTE|[1]
+11:15:29.0 (746501)|STATEMENT_EXECUTE|[1]
+11:15:29.0 (788747)|HEAP_ALLOCATE|[50]|Bytes:5
+11:15:29.0 (812770)|HEAP_ALLOCATE|[56]|Bytes:5
+11:15:29.0 (821590)|HEAP_ALLOCATE|[64]|Bytes:7
+11:15:29.0 (849584)|SYSTEM_MODE_ENTER|false
+11:15:29.0 (866192)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+11:15:29.0 (874006)|SYSTEM_MODE_EXIT|false
+11:15:29.0 (884480)|METHOD_EXIT|[1]|CandidateController
+11:15:29.0 (896128)|SYSTEM_MODE_ENTER|false
+11:15:29.0 (908537)|HEAP_ALLOCATE|[7]|Bytes:5
+11:15:29.0 (942997)|STATEMENT_EXECUTE|[6]
+11:15:29.0 (962110)|STATEMENT_EXECUTE|[7]
+11:15:29.0 (967532)|HEAP_ALLOCATE|[7]|Bytes:259
+11:15:29.0 (976436)|HEAP_ALLOCATE|[7]|Bytes:4
+11:15:29.0 (1507070)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT Id, Name, testautonumdata__Geolocation__Latitude__s, testautonumdata__Geolocation__Longitude__s FROM testautonumdata__Candidate__c WHERE (testautonumdata__Geolocation__Longitude__s != NULL AND testautonumdata__Geolocation__Latitude__s != NULL) LIMIT 50
+11:15:29.0 (4993664)|SOQL_EXECUTE_END|[7]|Rows:9
+11:15:29.0 (5020744)|HEAP_ALLOCATE|[7]|Bytes:40
+11:15:29.0 (5055478)|HEAP_ALLOCATE|[7]|Bytes:1915
+11:15:29.0 (5167792)|HEAP_ALLOCATE|[7]|Bytes:40
+11:15:29.0 (5193830)|SYSTEM_MODE_EXIT|false
+11:15:29.5 (5245412)|CUMULATIVE_LIMIT_USAGE
+11:15:29.5 (5245412)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:15:29.5 (5245412)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:15:29.5 (5245412)|CUMULATIVE_LIMIT_USAGE_END
+
+11:15:29.0 (5319278)|CODE_UNIT_FINISHED|CandidateController.findAll
+11:15:29.0 (7709098)|EXECUTION_FINISHED

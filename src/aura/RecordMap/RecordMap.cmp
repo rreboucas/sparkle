@@ -1,0 +1,17 @@
+<aura:component >
+    
+    <aura:attribute name="map" type="Object"/>
+    <aura:registerEvent name="bubblingEvent" type="c:MapBubblingEvent" />
+
+    <!--<ltng:require styles="/resource/testautonumdata/leaflet/leaflet.css" />-->
+
+    <ltng:require styles="/resource/leaflet/leaflet.css" />
+    <ltng:require scripts="/resource/leaflet/leaflet.js"
+             afterScriptsLoaded="{!c.jsLoaded}" />
+
+    <div id="map"></div>
+    
+	<aura:handler event="c:CandidatesLoaded" action="{!c.candidatesLoaded}"/>
+    <aura:handler event="c:CandidateSelected" action="{!c.candidateSelected}"/>
+	
+</aura:component>

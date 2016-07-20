@@ -1,0 +1,16 @@
+<aura:component >
+    <!-- Attribute for the card's record -->
+    <aura:attribute name="candidaterecord" type="LightningServerController" />
+    <ltng:require styles="/resource/SLDS0101/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <!-- Initialization event handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<div class="slds" onclick="{!c.linkToRecord}">
+        
+        <div class="slds-grid slds-grid--align-center">
+          <div class="slds-col--padded"><img class="imgComp" src="https://rrlightningout-dev-ed.my.salesforce.com/img/icon/t4v35/standard/contact_120.png"/></div>
+          <div class="slds-col--padded">{!v.candidaterecord.recordName}</div>
+        </div>
+        
+   </div>
+    
+</aura:component>

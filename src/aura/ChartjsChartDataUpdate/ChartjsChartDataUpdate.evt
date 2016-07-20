@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event to notify chart data has been updated.">
+    <aura:attribute name="componentName" type="string" description="Target component name which should listen to this event. If this attribute is not set, All the Chartjs Components will respond and refresh the charts." />
+    <aura:attribute name="chartData" type="string" description="Chart data in JSON format. This attribute is optional. If this is not set, Chartjs Component retrieve latest data by itself." />
+</aura:event>

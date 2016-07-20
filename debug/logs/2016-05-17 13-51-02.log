@@ -1,0 +1,88 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+10:51:01.0 (130872)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+10:51:01.0 (663307)|HEAP_ALLOCATE|[72]|Bytes:3
+10:51:01.0 (730085)|HEAP_ALLOCATE|[77]|Bytes:152
+10:51:01.0 (753384)|HEAP_ALLOCATE|[342]|Bytes:408
+10:51:01.0 (779306)|HEAP_ALLOCATE|[355]|Bytes:408
+10:51:01.0 (800446)|HEAP_ALLOCATE|[467]|Bytes:48
+10:51:01.2 (2838458)|USER_INFO|[EXTERNAL]|005B00000021dad|elisabeth.brooks@df16recruitment.dev|Pacific Standard Time|GMT-07:00
+10:51:01.2 (3206982)|STATEMENT_EXECUTE|[1]
+10:51:01.2 (3251333)|HEAP_ALLOCATE|[50]|Bytes:5
+10:51:01.2 (3281696)|HEAP_ALLOCATE|[56]|Bytes:5
+10:51:01.2 (3293081)|HEAP_ALLOCATE|[64]|Bytes:7
+10:51:01.2 (3323594)|SYSTEM_MODE_ENTER|false
+10:51:01.2 (3343520)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+10:51:01.2 (3355357)|SYSTEM_MODE_EXIT|false
+10:51:01.2 (3370311)|METHOD_EXIT|[1]|OffersServerController
+10:51:01.2 (3376600)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:18
+10:51:01.2 (3388161)|SYSTEM_MODE_ENTER|false
+10:51:01.2 (3398717)|VARIABLE_SCOPE_BEGIN|[27]|positionID|String|false|false
+10:51:01.2 (3433566)|VARIABLE_ASSIGNMENT|[27]|positionID|"a0MB0000000cQXFMA2"
+10:51:01.2 (3448516)|HEAP_ALLOCATE|[30]|Bytes:5
+10:51:01.2 (3458030)|STATEMENT_EXECUTE|[28]
+10:51:01.2 (3461753)|STATEMENT_EXECUTE|[30]
+10:51:01.2 (3468960)|HEAP_ALLOCATE|[30]|Bytes:4
+10:51:01.2 (3552211)|ENTERING_MANAGED_PKG|
+10:51:01.2 (3595854)|VARIABLE_SCOPE_BEGIN|[30]|lstPosts|List<testautonumdata.OffersServerController>|true|false
+10:51:01.2 (3631938)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+10:51:01.2 (3658854)|VARIABLE_ASSIGNMENT|[30]|lstPosts|{"s":1,"v":[]}|0x4d0282bf
+10:51:01.2 (3667884)|STATEMENT_EXECUTE|[34]
+10:51:01.2 (3672329)|HEAP_ALLOCATE|[34]|Bytes:472
+10:51:01.2 (3684680)|HEAP_ALLOCATE|[34]|Bytes:4
+10:51:01.2 (3695605)|HEAP_ALLOCATE|[34]|Bytes:7
+10:51:01.2 (5719249)|SOQL_EXECUTE_BEGIN|[34]|Aggregations:0|SELECT id, Name, testautonumdata__Candidate__c, testautonumdata__Candidate__r.Name, testautonumdata__Annual_Salary_Agreed_Amount__c, testautonumdata__Annual_Salary_Offered_Amount__c, testautonumdata__Approved__c, testautonumdata__Expiration_Date__c FROM testautonumdata__Offer__c WHERE testautonumdata__Candidate__r.testautonumdata__Position__c = :tmpVar1 ORDER BY testautonumdata__Approved__c DESC NULLS FIRST, testautonumdata__Expiration_Date__c DESC NULLS FIRST LIMIT 5
+10:51:01.2 (16231515)|SOQL_EXECUTE_END|[34]|Rows:0
+10:51:01.2 (16291778)|HEAP_ALLOCATE|[34]|Bytes:4
+10:51:01.2 (16308197)|HEAP_ALLOCATE|[34]|Bytes:0
+10:51:01.2 (16425837)|HEAP_ALLOCATE|[34]|Bytes:4
+10:51:01.2 (16445685)|VARIABLE_SCOPE_BEGIN|[34]|lstOffers|List<testautonumdata__Offer__c>|true|false
+10:51:01.2 (16472972)|VARIABLE_ASSIGNMENT|[34]|lstOffers|{"s":1,"v":[]}|0x26e8f5d1
+10:51:01.2 (16485612)|STATEMENT_EXECUTE|[41]
+10:51:01.2 (16495220)|VARIABLE_SCOPE_BEGIN|[41]|counter|Integer|false|false
+10:51:01.2 (16499932)|HEAP_ALLOCATE|[41]|Bytes:4
+10:51:01.2 (16505471)|VARIABLE_ASSIGNMENT|[41]|counter|0
+10:51:01.2 (16593345)|ENTERING_MANAGED_PKG|
+10:51:01.2 (16897260)|HEAP_ALLOCATE|[43]|Bytes:5
+10:51:01.2 (16924790)|VARIABLE_ASSIGNMENT|[43]|e|null|
+10:51:01.2 (16935154)|STATEMENT_EXECUTE|[43]
+10:51:01.2 (16939399)|STATEMENT_EXECUTE|[67]
+10:51:01.2 (16944505)|HEAP_ALLOCATE|[67]|Bytes:19
+10:51:01.2 (16978643)|ENTERING_MANAGED_PKG|
+10:51:01.2 (17019095)|HEAP_ALLOCATE|[67]|Bytes:2
+10:51:01.2 (17041834)|HEAP_ALLOCATE|[67]|Bytes:21
+10:51:01.2 (17076035)|ENTERING_MANAGED_PKG|
+10:51:01.2 (17085660)|USER_DEBUG|[67]|DEBUG|######## lstPosts: ()
+10:51:01.2 (17097221)|STATEMENT_EXECUTE|[69]
+10:51:01.2 (17112168)|SYSTEM_MODE_EXIT|false
+10:51:01.17 (17155378)|CUMULATIVE_LIMIT_USAGE
+10:51:01.17 (17155378)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:51:01.17 (17155378)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:51:01.17 (17155378)|CUMULATIVE_LIMIT_USAGE_END
+
+10:51:01.2 (17230608)|CODE_UNIT_FINISHED|OffersServerController.getOffers

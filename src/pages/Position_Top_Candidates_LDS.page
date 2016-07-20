@@ -1,0 +1,66 @@
+<apex:page standardController="Position__c" extensions="PositionControllerExtension">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0101, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <div class="slds">
+        <div class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+                  
+                </svg>
+              </div>
+              <div class="slds-media__body">
+                <h2 class="slds-text-heading--small slds-truncate">Top 3 Runners: (Inline Visualforce Page)</h2>
+              </div>
+            </div>
+            <div class="slds-no-flex">
+              <div class="slds-button-group">
+                <button class="slds-button slds-button--neutral slds-button--small">Export</button>
+              </div>
+            </div>
+          </div>
+          <div class="slds-card__body">
+            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+              <thead>
+                <tr>
+                  <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Position</th>
+                  <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Name</th>
+                  <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Score</th>
+                  <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Interviews</th>
+                  <th class="slds-row-action" scope="col">
+                    <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                        
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- apex repeater  -->
+                <apex:variable value="{!1}" var="i"/>
+                <apex:repeat var="candidates" value="{!TopCandidates}">
+                <tr class="slds-hint-parent">
+                  <td class="slds-size--1-of-4" data-label="Position">{!i}</td>
+                    <td class="slds-size--1-of-4" data-label="Name"><a href="/{!candidates.id}">{!candidates.Name}</a></td>
+                  <td class="slds-size--1-of-4" data-label="Score">{!candidates.Average_Score__c}</td>
+                  <td class="slds-size--1-of-4" data-label="Interviews">{!candidates.Number_of_Interviews__c}</td>
+                  <td>
+                    <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small">
+                      <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                        
+                      </svg>
+                      <span class="slds-assistive-text">Show More</span>
+                    </button>
+                  </td>
+                </tr>
+              <apex:variable value="{!i+1}" var="i" />
+              </apex:repeat> 
+              </tbody>
+            </table>
+          </div>
+          <div class="slds-card__footer"><a href="#">View All <span class="slds-assistive-text">entity type</span></a></div>
+          </div>
+</div>
+</apex:page>

@@ -1,0 +1,67 @@
+<aura:component controller="Twitter_Lightning_Controller" access="global" >
+	<aura:attribute name="recordId" type="String" access="GLOBAL"/>
+	<aura:attribute name="record" type="Twitter_Lightning_Controller" access="global"/>
+	<aura:attribute name="rec" type="Twitter_Lightning_Controller" access="global"/>
+	<aura:attribute name="hasRecords" type="Boolean" default="false" access="global"/>    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" access="global"/>
+    <aura:handler event="c:TwitterRecordEvent" action="{!c.handleApplicationEvent}" access="global"/>
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+
+    <div class="slds" style="padding-top: 0.5%;padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+	<aura:if isTrue="{!v.hasRecords}">	
+        <div class="slds-grid slds-grid--align-left">
+            <div class="smallFit info-mediumFit info-largeFit info-xlargeFit" style="">
+            
+                <div class="slds-media slds-media--responsive" style="min-width: 70%; padding-top: 8px;">
+                <div class="slds-media__figure" style="padding-top: 2%;">
+                  <img src="{!v.rec.pictureUrl}" class="slds-avatar--large" style="border-radius: 7px;" alt="Placeholder" />
+                </div>
+                <div class="slds-media__body" style="min-width: 300px;">
+                      <p>{!v.rec.twitterName}</p>
+                    <div class="slds-grid">
+                        <div class="iconsDiv"> <img src="{!$Resource.SLDS0103 + '/assets/icons/utility/home_60.png'}" style="width: 12px;height: 10px; padding-right:1px;"/></div>
+                                                                                                                                                                                                 
+                        <div class="numberDiv">{!v.rec.location}</div>
+                    </div>
+
+                    <div class="slds-grid">
+                        <div class="iconsDiv"><img src="{!$Resource.SLDS0103 + '/assets/icons/utility/people_60.png'}" style="width: 12px;height: 10px; padding-right:1px;"/></div>
+                        <div class="numberDiv">Followers: {!v.rec.numFollowers} </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="iconsDiv"><img src="{!$Resource.SLDS0103 + '/assets/icons/utility/adduser_60.png'}" style="width: 12px;height: 10px; padding-right:1px;"/> </div>
+                        <div class="numberDiv"> Follows: {!v.rec.follows}</div>
+                    </div>
+                    
+                      
+                    </div>
+               </div>
+            
+            </div>
+            <div class="smallFit tweet-mediumFit tweet-largeFit tweet-xlargeFit" style=" max-width: 350px; padding-left: 2%;">
+
+                    <div style="" >
+                    	<img src="{!$Resource.lightningicons + '/lightningicons/images/Twitter_logo_blue.png'}" style="width: 12px;height: 10px; padding-right:1px;"/>
+                    </div>
+                    <div style=""> 
+                        <div style="font-size: xx-small">{!v.rec.tweetDate}</div>
+                </div>
+                <div class="slds-grid slds-grid--align-left">
+                    <div class="slds-col slds-size--1-of-1">
+                        
+                        <span style="padding-right:6px;">
+                        <a  onclick="{!c.OpenTweet}">{!v.rec.tweetText} </a></span>
+                    </div>
+                </div>
+                <!--<ui:button press="{!c.pressButton}">
+                    <div auraid="myButton" class="testClass"> Click Me</div>
+                </ui:button> -->
+
+            </div>
+        </div>
+        </aura:if>
+    </div>
+	
+
+
+</aura:component>
