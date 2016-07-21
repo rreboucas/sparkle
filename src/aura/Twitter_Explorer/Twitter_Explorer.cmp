@@ -1,6 +1,6 @@
 <aura:component controller="Twitter_Lightning_Controller" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
 
-	<aura:attribute name="recordId" type="String" access="GLOBAL"/>
+    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
     <aura:attribute name="hasId" type="Boolean" access="global"/>
     <aura:attribute name="objectApiName" type="String" default="Candidate__c" access="global"/>
     <aura:attribute name="TwitterIDFieldApiName" type="String" default="Twitter_ID__c" access="global"/>
@@ -13,7 +13,7 @@
 
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     <aura:registerEvent name="TwitterRecordEvent" type="c:TwitterRecordEvent"/>
 
 
@@ -44,16 +44,16 @@
                 <!-- End of Header  -->
 
         <!-- Embed 2 components, 1 to show user Twitter details if there is a twitter id and if not show a component to enable the user to search for the right Twitter user -->
-    	
-    	<div aura:id="userdetails">
-    		<c:TwitterUserDetails recordId="{!v.recordId}" rec="{!v.rec}"/>
-    	</div>
+        
+        <div aura:id="userdetails">
+            <c:TwitterUserDetails recordId="{!v.recordId}" rec="{!v.rec}"/>
+        </div>
 
-    	<div aura:id="searchusers">
-    		<c:TwitterUserSearch />		
-    	</div>
+        <div aura:id="searchusers">
+            <c:TwitterUserSearch />     
+        </div>
 
     
     </div>
-	
+    
 </aura:component>

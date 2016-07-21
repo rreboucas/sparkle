@@ -10,15 +10,15 @@
             component.set("v.latitudeFieldName", latFieldV);
             
             var longFieldV = geoField.replace("__c", "__Longitude__s");
-	        component.set("v.longitudeFieldName", longFieldV);
+            component.set("v.longitudeFieldName", longFieldV);
         }
         
 
         console.log("GenericListMapController.doInit: exit");
         
-	},
+    },
     
-	jsLoaded: function(component, event, helper) {
+    jsLoaded: function(component, event, helper) {
 
         component.rerender();
         
@@ -39,27 +39,31 @@
         
         var params = event.getParams();
         component.set("v.lstRecordIDs", params.recordIdsParameter);
-    	        
-     	var idsReceived = component.get("v.lstRecordIDs");
+                
+        var idsReceived = component.get("v.lstRecordIDs");
         console.log("GenericListMapController.handleRecordListEvent idsReceived: " + idsReceived);
         
-		helper.getListRecords(component); 
+        helper.getListRecords(component); 
         helper.addMarkers(component);
         
         console.log("GenericListMapController.handleRecordListEvent: exit");
         
-	},
+    },
     
     handleApplicationEvent : function(component, event, helper) {
         
         console.log("GenericListMapController.handleApplicationEvent: entered");
         
         var params = event.getParams();
-        component.set("v.recordId", params.candidateID);
+        component.set("v.recordId", params.recordId);
+
+        console.log("GenericListMapController: ltng:SelectSobject - recordID = " + params.recordId);
+        console.log("GenericListMapController: ltng:SelectSobject - channel = " + params.channel);
+                
         
         var recId = component.get("v.recordId");
-    	        
-     	var map = component.get('v.map'); 
+                
+        var map = component.get('v.map'); 
         
         var markers = component.get("v.markersList");
         if (markers && recId)
@@ -76,5 +80,5 @@
 
         console.log("GenericListMapController.handleApplicationEvent: exit");
         
-	}
+    }
 })

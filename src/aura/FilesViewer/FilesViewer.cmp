@@ -1,13 +1,13 @@
 <aura:component controller="FilesViewerServerController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-	<aura:attribute name="lstRecords" type="FilesViewerServerController" access="global"/>
+  <aura:attribute name="lstRecords" type="FilesViewerServerController" access="global"/>
     <aura:attribute name="listName" type="String" default="Files Viewer" access="global"/>
     <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
     <aura:attribute name="limitRows" type="String" default="8" access="global"/>
     <aura:attribute name="recordId" type="String" access="GLOBAL"/>
-	<aura:attribute name="objectApiName" type="String" access="global"/>
+  <aura:attribute name="objectApiName" type="String" access="global"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
-	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     
     <div class="slds">
         
@@ -68,7 +68,7 @@
             
         </div>
         <!--<div aura:id="modal">
-        	<c:Files_Modal_Previewer />        
+          <c:Files_Modal_Previewer />        
         </div> -->
     </div>
 </aura:component>

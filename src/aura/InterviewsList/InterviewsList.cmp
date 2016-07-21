@@ -1,6 +1,7 @@
-<aura:component controller="InterviewsLCServerController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+<aura:component controller="ListServerController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
     
-    <aura:attribute name="lstRecords" type="InterviewsLCServerController" access="global"/>
+    <aura:attribute name="runningUser" type="User" access="global"/>
+    <aura:attribute name="lstRecords" type="ListServerController" access="global"/>
     <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
     <aura:attribute name="limitRows" type="String" default="8" access="global"/>
     <aura:attribute name="objectName" type="String" default="Object Name" access="global"/>
@@ -25,10 +26,13 @@
     <aura:attribute name="showButton" type="Boolean" default="True" access="global"/>
     <aura:attribute name="buttonLabel" type="String" default="Start" access="global"/>
     <aura:attribute name="buttonURL" type="String" access="global"/>
+    <aura:attribute name="buttonURLParameter" type="String" access="global"/>
+    <aura:attribute name="buttonURLParameter2" type="String" access="global"/>
+    <aura:attribute name="userIdParameterValue" type="Boolean" default="False" access="global"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-	<aura:registerEvent name="appEvent" type="c:CandidateDetailEvent"/>
-    <aura:registerEvent name="recordListEvent" type="c:RecordListIdsEvent"/>
+  <aura:registerEvent name="stdAppEvent" type="ltng:selectSObject"/>
+    <aura:registerEvent name="recordListEvent" type="c:recordListEvent"/>
     <div class="slds tokenPadding" style="">
       <!-- List LC: Start -->  
         <div class="slds-page-header" role="banner">
@@ -116,7 +120,7 @@
                         <aura:renderIf isTrue="{!v.showButton}">
 
                           <td class="" aura:id="colButtonRow">                    
-                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" onclick="{!c.OpenVisualForce}">
+                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" data-record="{!rec.eventField}" onclick="{!c.OpenVisualForce}">
                             <span class="slds-text-not-selected">{!v.buttonLabel}</span>
                           </button>
                         </td>
@@ -136,5 +140,5 @@
         <!-- Modal LC: End -->
         
     </div>
-	
+  
 </aura:component>

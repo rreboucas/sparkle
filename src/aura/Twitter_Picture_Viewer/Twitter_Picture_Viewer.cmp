@@ -8,7 +8,7 @@
     <aura:attribute name="TwitterIDFieldApiName" type="String" default="Twitter_ID__c" access="global"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     
     <div class="slds">
 
@@ -36,13 +36,13 @@
                 
                 <!-- End of Header  -->
 
-		<div class="tokenPadding">
+        <div class="tokenPadding">
         <span class="slds-avatar slds-avatar--circle slds-avatar--large"   >
-        	<img src="{!v.rec.pictureUrl}" alt="Placeholder"/>
+            <img src="{!v.rec.pictureUrl}" alt="Placeholder"/>
         </span>
         </div>
     
     
     </div>
-	
+    
 </aura:component>
