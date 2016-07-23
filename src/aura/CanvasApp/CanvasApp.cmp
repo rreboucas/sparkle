@@ -1,5 +1,8 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
     <aura:attribute name="listName" type="String" default="Canvas App" access="global"/>
+    <aura:attribute name="developerName" type="String" access="global"/>
+    <aura:attribute name="applicationName" type="String" access="global"/>
+    <aura:attribute name="namespacePrefix" type="String" access="global"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     
     <div class="slds" style="border: 0px solid #aaa;">
@@ -32,6 +35,6 @@
                 <!-- End of Header   -->
         <!-- Start of Canvas App  -->
         
-		<force:canvasApp developerName="rodrigocanvas" namespacePrefix="testautonumdata" maxHeight="400px" maxWidth="600px"/>
+    <force:canvasApp developerName="{!v.developerName}" applicationName="{!v.applicationName}" namespacePrefix="{!v.namespacePrefix}" maxHeight="400px" maxWidth="600px"/>
     </div>
 </aura:component>
