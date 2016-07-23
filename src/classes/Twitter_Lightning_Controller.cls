@@ -401,10 +401,12 @@ public with sharing class Twitter_Lightning_Controller {
             System.debug('########## lstTweetDate / year : ' + lstTweetDate);
             System.debug('########## year : ' + year);
             
+            if (!Test.isRunningTest())
+            {
             DateTime dt = DateTime.newInstance(Integer.valueOf(year), getMonthIntergerValue(month), Integer.valueOf(day), Integer.valueOf(hour), Integer.valueOf(minutes), Integer.valueOf(seconds));
             
             returnRec.tweetDate = dt.format();
-            
+            }
             returnRec.tweetText = getFieldValueFromJson(responseBody2, 'text');
             returnRec.tweetLink = getFieldValueFromJson(responseBody2, 'expanded_url');
 
