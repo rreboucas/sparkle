@@ -149,8 +149,13 @@ public with sharing class Twitter_Lightning_Controller {
     public static Twitter_Lightning_Controller getTwitterPicture(String recordID, String objectApiName, String twitterIDFieldApiName) {
         
         String oauthVersion = '1.0';
-        String oauthConsumerKey = 'crTSqn98nBWCC8lbj0IauMv06';
-        String oauthConsumerSecret = 'LETjbmGTLmKF9tBldLY8gbNH3pwCgbg7o6ocSixKrkbdRbeJDx';
+        
+// Get the Twitter App Access token from the Twitter Users Custom Setting:
+
+        Twitter_User__c myCS1 = Twitter_User__c.getValues('TwitterApp');
+        String oauthConsumerKey = myCS1.Token__c;        
+        String oauthConsumerSecret = myCS1.Token_Secret__c;
+        
         String baseUrl = 'https://api.twitter.com';
         String oauthSignatureMethod = 'HMAC-SHA1';
         String strTwitterId = '';
