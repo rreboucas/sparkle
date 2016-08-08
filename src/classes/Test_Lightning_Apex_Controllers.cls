@@ -109,6 +109,14 @@ private class Test_Lightning_Apex_Controllers {
         // insert candidate records with lat long and twitter info
 
         testautonumdata__Candidate__c candidateA = TestFactory.insertCandidate('Candidate A', 'Candidate', 'San Francisco', 'r@r.com', 'A', 'CA', '@roreb');
+
+		// Create Custom Settings for test:
+
+        Twitter_User__c cstRecord = new Twitter_User__c(Name = 'TwitterApp',
+    	Token_Secret__c  = 'LETjbmGTLmKF9tBldLY8gbNH3pwCgbg7o6ocSixKrkbdRbeJDx',
+    	Token__c  = 'crTSqn98nBWCC8lbj0IauMv06');
+        Database.UpsertResult urList = Database.upsert(cstRecord, true);
+
         Test.startTest();
         Boolean hasTwitId = Twitter_Lightning_Controller.hasTwitterID(candidateA.id, 'testautonumdata__Candidate__c', 'testautonumdata__Twitter_ID__c');
 
@@ -116,6 +124,8 @@ private class Test_Lightning_Apex_Controllers {
         Test.setMock(HttpCalloutMock.class, new WebServiceMockImpl());
 
         Twitter_Lightning_Controller rec = Twitter_Lightning_Controller.getRecordDetails(candidateA.id, 'testautonumdata__Candidate__c', 'testautonumdata__Twitter_ID__c', 'testautonumdata__First_Name__c', 'testautonumdata__Last_Name__c', 'testautonumdata__Company__c', 'testautonumdata__E_mail__c');
+
+        
 
 		Twitter_Lightning_Controller recPicture = Twitter_Lightning_Controller.getTwitterPicture(candidateA.id, 'testautonumdata__Candidate__c', 'testautonumdata__Twitter_ID__c');
 
@@ -166,5 +176,11 @@ private class Test_Lightning_Apex_Controllers {
 		Test.stopTest();
 
 	}
+
+	@isTest static void testInstallScript() {
+	  	Sparkle_After_Install postinstall = new Sparkle_After_Install();
+	    Test.testInstall(postinstall, null);
+	    
+  }
 
 }

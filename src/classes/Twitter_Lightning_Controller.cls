@@ -150,7 +150,7 @@ public with sharing class Twitter_Lightning_Controller {
         
         String oauthVersion = '1.0';
         
-// Get the Twitter App Access token from the Twitter Users Custom Setting:
+// Get the Twitter App Access token from the Twitter Users Custom Setting: 
 
         Twitter_User__c myCS1 = Twitter_User__c.getValues('TwitterApp');
         String oauthConsumerKey = myCS1.Token__c;        

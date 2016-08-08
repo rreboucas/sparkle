@@ -1,0 +1,19 @@
+<!-- Page: -->
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="My Content" mode="edit">
+            <apex:pageBlockSection title="My Content Section" columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel>
+                        <apex:outputText>*</apex:outputText>
+                        <apex:outputLabel value="Account Name" for="account__name"/>
+                    </apex:outputPanel>
+                    <apex:inputText value="{!account.name}" id="account__name"/> 
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:enhancedlist type="Account" height="730" customizable="false" rowsPerPage="25" Listid="00BB0000001PyxT" />
+
+</apex:page>
