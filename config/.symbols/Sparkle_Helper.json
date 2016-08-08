@@ -1,0 +1,576 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000ljzxIAA",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000ljzxIAA",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 5
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getFieldValueFromJson",
+            "parameters": [
+                {
+                    "name": "jsonBody",
+                    "type": "String"
+                },
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 42
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getMonthIntergerValue",
+            "parameters": [
+                {
+                    "name": "monthStringValue",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Integer",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 78
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "GetSobjectField",
+            "parameters": [
+                {
+                    "name": "e",
+                    "type": "SObject"
+                },
+                {
+                    "name": "lcfield",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 107
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "AddFieldToObjectsMap",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "initialObjectName",
+                    "type": "String"
+                },
+                {
+                    "name": "theMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 157
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "AddFieldToMap",
+            "parameters": [
+                {
+                    "name": "fieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "ObjectName",
+                    "type": "String"
+                },
+                {
+                    "name": "theMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 175
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "UserHasAccessToObjectsAndFields",
+            "parameters": [
+                {
+                    "name": "theMap",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        }
+    ],
+    "name": "Sparkle_Helper",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "Sparkle_Helper",
+        "references": [],
+        "type": "Sparkle_Helper"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 5
+            },
+            "modifiers": [],
+            "name": "jsonBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 5
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 8
+            },
+            "modifiers": [],
+            "name": "returnValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 9
+            },
+            "modifiers": [],
+            "name": "parser2",
+            "references": [],
+            "type": "JSONParser"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 11
+            },
+            "modifiers": [],
+            "name": "textCount",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 17
+            },
+            "modifiers": [],
+            "name": "jsonValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 52,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "monthStringValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "monthValue",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 78
+            },
+            "modifiers": [],
+            "name": "e",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 56,
+                "line": 78
+            },
+            "modifiers": [],
+            "name": "lcfield",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 81
+            },
+            "modifiers": [],
+            "name": "returnValue",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 85
+            },
+            "modifiers": [],
+            "name": "relName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "relField",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 89
+            },
+            "modifiers": [],
+            "name": "relName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 90
+            },
+            "modifiers": [],
+            "name": "relField2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 107
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 107
+            },
+            "modifiers": [],
+            "name": "initialObjectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 110,
+                "line": 107
+            },
+            "modifiers": [],
+            "name": "theMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 111
+            },
+            "modifiers": [],
+            "name": "relName1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 112
+            },
+            "modifiers": [],
+            "name": "relField1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 115
+            },
+            "modifiers": [],
+            "name": "relName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 116
+            },
+            "modifiers": [],
+            "name": "relField2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 122
+            },
+            "modifiers": [],
+            "name": "objectName2",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 36,
+                "line": 137
+            },
+            "modifiers": [],
+            "name": "objectName1",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 42,
+                "line": 157
+            },
+            "modifiers": [],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 60,
+                "line": 157
+            },
+            "modifiers": [],
+            "name": "ObjectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 97,
+                "line": 157
+            },
+            "modifiers": [],
+            "name": "theMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 162
+            },
+            "modifiers": [],
+            "name": "existingFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 168
+            },
+            "modifiers": [],
+            "name": "newFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 80,
+                "line": 175
+            },
+            "modifiers": [],
+            "name": "theMap",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 10,
+                "line": 177
+            },
+            "modifiers": [],
+            "name": "hasAccess",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 182
+            },
+            "modifiers": [],
+            "name": "objectName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 185
+            },
+            "modifiers": [],
+            "name": "sObj",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 49,
+                "line": 186
+            },
+            "modifiers": [],
+            "name": "m",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 187
+            },
+            "modifiers": [],
+            "name": "objectFieldSet",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 189
+            },
+            "modifiers": [],
+            "name": "fieldToCheck",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}

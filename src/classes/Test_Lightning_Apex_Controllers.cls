@@ -183,4 +183,23 @@ private class Test_Lightning_Apex_Controllers {
 	    
   }
 
+  @isTest static void test_Sparkle_Helper() {
+	  	
+  		/*Test.startTest();
+
+        testautonumdata__Candidate__c candidateA = TestFactory.insertCandidate('Candidate A', 'Candidate', 'San Francisco', 'r@r.com', 'A', 'CA', '@roreb');
+
+        testautonumdata__Interview__c interviewA = TestFactory.insertInterview(candidateA.id, 'Technical Interview', 'Pending');
+
+        testautonumdata__Interviewer__c interviewerA = TestFactory.insertInterviewer(interviewA.id);
+
+	  	String returnValue = Sparkle_Helper.GetSobjectField(interviewerA, 'Id');
+	  	//String returnValue2 = Sparkle_Helper.GetSobjectField(interviewerA, 'CreatedBy.Id');
+	  	String returnValue3 = Sparkle_Helper.GetSobjectField(interviewerA, 'testautonumdata__Interview__r.Name');
+	  	String returnValue4 = Sparkle_Helper.GetSobjectField(interviewerA, 'testautonumdata__Interview__r.testautonumdata__Candidate__r.Name');
+
+	  	Test.stopTest(); */
+	    
+  }
+
 }

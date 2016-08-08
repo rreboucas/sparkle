@@ -1,5 +1,7 @@
 public with sharing class Twitter_Lightning_Controller {
     
+    private static Map<String, Set<String>> mapObjectsFields = null;
+
     @AuraEnabled
     public String salesforceRecordID { get;set; }
     @AuraEnabled
@@ -37,26 +39,38 @@ public with sharing class Twitter_Lightning_Controller {
 
         Boolean hasTwitterMemberID = false;
 
+        // CRUD / FLS Check - Create a map with the object names and fields for CRUD\FLS check
+        mapObjectsFields = new Map<String, Set<String>>(); 
+
         if (!String.isBlank(recordID))
         {
             String soql = 'Select id';
-                
+            Sparkle_Helper.AddFieldToObjectsMap('Id', objectApiName, mapObjectsFields);
+
             if (twitterIDFieldApiName != null)
-                soql += ', ' + twitterIDFieldApiName;
+            {
+                soql += ', ' + String.escapeSingleQuotes(twitterIDFieldApiName);
+                Sparkle_Helper.AddFieldToObjectsMap(twitterIDFieldApiName, objectApiName, mapObjectsFields);
+            }
             
             // Add object name to query string:        
-            soql += ' FROM ' + objectApiName;
+            soql += ' FROM ' + String.escapeSingleQuotes(objectApiName);
             
-            soql += ' WHERE id =\'' + recordID + '\'';
+            soql += ' WHERE id =\'' + String.escapeSingleQuotes(recordID) + '\'';
             
             // Add limit to query string:        
             soql += ' limit 1';
             
             System.debug('######## soql: ' + soql);
             
-            List<SObject> lstQueriedRecords = Database.query(soql);
-            if (lstQueriedRecords.size() > 0)
-                hasTwitterMemberID = true;
+            // CRUD\FLS Check: Before running the SOQL query check if the user who is invoking this method has access to the Object and to the fields requested
+        
+            if (Sparkle_Helper.UserHasAccessToObjectsAndFields(mapObjectsFields))
+            {
+                List<SObject> lstQueriedRecords = Database.query(soql);
+                if (lstQueriedRecords.size() > 0)
+                    hasTwitterMemberID = true;
+            }
         }
 
         return hasTwitterMemberID;
@@ -70,34 +84,53 @@ public with sharing class Twitter_Lightning_Controller {
         Boolean hasTwitterMemberID = false;
         Twitter_Lightning_Controller returnRec = new Twitter_Lightning_Controller();
 
+        // CRUD / FLS Check - Create a map with the object names and fields for CRUD\FLS check
+        mapObjectsFields = new Map<String, Set<String>>(); 
+
         if (!String.isBlank(recordID))
         {
             String soql = 'Select id';
+            Sparkle_Helper.AddFieldToObjectsMap('Id', objectApiName, mapObjectsFields);
                 
-            if (twitterIDFieldApiName != null)
-                soql += ', ' + twitterIDFieldApiName;
+            if (twitterIDFieldApiName != null){
+                soql += ', ' + String.escapeSingleQuotes(twitterIDFieldApiName);
+                Sparkle_Helper.AddFieldToObjectsMap(twitterIDFieldApiName, objectApiName, mapObjectsFields);
+            }
        
-            if (firstName != null)
-                soql += ', ' + firstName;
+            if (firstName != null){
+                soql += ', ' + String.escapeSingleQuotes(firstName);
+                Sparkle_Helper.AddFieldToObjectsMap(firstName, objectApiName, mapObjectsFields);
+            }
             
-            if (lastName != null)
-                soql += ', ' + lastName;
+            if (lastName != null){
+                soql += ', ' + String.escapeSingleQuotes(lastName);
+                Sparkle_Helper.AddFieldToObjectsMap(lastName, objectApiName, mapObjectsFields);
+            }
             
-            if (companyName != null)
-                soql += ', ' + companyName;
+            if (companyName != null){
+                soql += ', ' + String.escapeSingleQuotes(companyName);
+                Sparkle_Helper.AddFieldToObjectsMap(companyName, objectApiName, mapObjectsFields);
+            }
             
-            if (email != null)
-                soql += ', ' + email;
+            if (email != null){
+                soql += ', ' + String.escapeSingleQuotes(email);
+                Sparkle_Helper.AddFieldToObjectsMap(email, objectApiName, mapObjectsFields);
+            }
             
             // Add object name to query string:        
-            soql += ' FROM ' + objectApiName;
+            soql += ' FROM ' + String.escapeSingleQuotes(objectApiName);
             
-            soql += ' WHERE id =\'' + recordID + '\'';
+            soql += ' WHERE id =\'' + String.escapeSingleQuotes(recordID)  + '\'';
             
             // Add limit to query string:        
             soql += ' limit 1';
             
             System.debug('######## soql: ' + soql);
+
+            // CRUD\FLS Check: Before running the SOQL query check if the user who is invoking this method has access to the Object and to the fields requested
+        
+        if (Sparkle_Helper.UserHasAccessToObjectsAndFields(mapObjectsFields))
+        {
             
             List<SObject> lstQueriedRecords = Database.query(soql);
             if (lstQueriedRecords.size() > 0)
@@ -107,32 +140,33 @@ public with sharing class Twitter_Lightning_Controller {
 
                 if (recordID != null)
                 {                
-                    returnRec.salesforceRecordID = GetSobjectField(e, 'id');
+                    returnRec.salesforceRecordID = Sparkle_Helper.GetSobjectField(e, 'id');
                 }
                 if (firstName != null)
                 {                
-                    returnRec.firstName = GetSobjectField(e, firstName);
+                    returnRec.firstName = Sparkle_Helper.GetSobjectField(e, firstName);
                 }
                 if (lastName != null)
                 {
-                    returnRec.lastName = GetSobjectField(e, lastName);
+                    returnRec.lastName = Sparkle_Helper.GetSobjectField(e, lastName);
                 }
                 if (companyName != null)
                 {
-                    returnRec.companyName = GetSobjectField(e, companyName);
+                    returnRec.companyName = Sparkle_Helper.GetSobjectField(e, companyName);
                 }
                     
                 if (email != null)
                 {
-                    returnRec.email = GetSobjectField(e, email);
+                    returnRec.email = Sparkle_Helper.GetSobjectField(e, email);
                 }
 
                 if (twitterIDFieldApiName != null)
                 {
-                    returnRec.twitterName = GetSobjectField(e, twitterIDFieldApiName);
+                    returnRec.twitterName = Sparkle_Helper.GetSobjectField(e, twitterIDFieldApiName);
                 }
                 
             }
+        }
             
               
         }
@@ -160,6 +194,7 @@ public with sharing class Twitter_Lightning_Controller {
         String oauthSignatureMethod = 'HMAC-SHA1';
         String strTwitterId = '';
         String pictureURL = '';
+        String twitterAcct = '';
         Twitter_Lightning_Controller returnRec = new Twitter_Lightning_Controller();
         returnRec.pictureUrl = 'https://www.lightningdesignsystem.com/assets/images/avatar1.jpg';
         if (!String.isBlank(recordID))
@@ -173,41 +208,51 @@ public with sharing class Twitter_Lightning_Controller {
             // Get the id of the Salesforce user who is making the request in the LC:
             String strUserId = UserInfo.getUserId();
             
- 
+        
+            // CRUD / FLS Check - Create a map with the object names and fields for CRUD\FLS check
+            mapObjectsFields = new Map<String, Set<String>>(); 
+
             
-            // Get the value from the object record field (LC Attributes) that stored the linkedin ID
-            // 
+            // Get the value from the object record field (LC Attributes) that stored the Twitter Id
 
             
             String soql = 'Select id';
+            Sparkle_Helper.AddFieldToObjectsMap('Id', objectApiName, mapObjectsFields);
             
-            if (twitterIDFieldApiName != null)
-                soql += ', ' + twitterIDFieldApiName;
+            if (twitterIDFieldApiName != null){
+                soql += ', ' + String.escapeSingleQuotes(twitterIDFieldApiName);
+                Sparkle_Helper.AddFieldToObjectsMap(twitterIDFieldApiName, objectApiName, mapObjectsFields);
+            }
             
             // Add object name to query string:        
-            soql += ' FROM ' + objectApiName;
+            soql += ' FROM ' + String.escapeSingleQuotes(objectApiName);
             
-            soql += ' WHERE id =\'' + recordID + '\'';
+            soql += ' WHERE id =\'' + String.escapeSingleQuotes(recordID)  + '\'';
             
             // Add limit to query string:        
             soql += ' limit 1';
             
             System.debug('######## soql: ' + soql);
-            
-            List<SObject> lstQueriedRecords = Database.query(soql); 
-            
-            System.debug('######## lstQueriedRecords: ' + lstQueriedRecords);
-            
-            for (SObject e: lstQueriedRecords)
+
+            // CRUD\FLS Check: Before running the SOQL query check if the user who is invoking this method has access to the Object and to the fields requested
+        
+            if (Sparkle_Helper.UserHasAccessToObjectsAndFields(mapObjectsFields))
             {
-                System.debug('######## e: ' + e);
-                
-                strTwitterId = GetSobjectField(e, twitterIDFieldApiName);
-            }
             
-            System.debug('######## strTwitterId: ' + strTwitterId);
-            String twitterAcct = strTwitterId.remove('@');
-    
+                List<SObject> lstQueriedRecords = Database.query(soql); 
+                
+                System.debug('######## lstQueriedRecords: ' + lstQueriedRecords);
+                
+                for (SObject e: lstQueriedRecords)
+                {
+                    System.debug('######## e: ' + e);
+                    
+                    strTwitterId = Sparkle_Helper.GetSobjectField(e, twitterIDFieldApiName);
+                }
+                
+                System.debug('######## strTwitterId: ' + strTwitterId);
+                twitterAcct = strTwitterId.remove('@');
+            }
             
             // Make a callout to Twitter
             
@@ -269,15 +314,15 @@ public with sharing class Twitter_Lightning_Controller {
             System.debug('########## responseBody2 : ' + responseBody2);
             
 
-            String pictureFullURL = getFieldValueFromJson(responseBody2, 'profile_image_url');
+            String pictureFullURL = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'profile_image_url');
             pictureURL = pictureFullURL.remove('_normal');
 
             returnRec.pictureUrl = pictureURL;
             returnRec.twitterName = strTwitterId;
-            returnRec.location = getFieldValueFromJson(responseBody2, 'location');
-            returnRec.numFollowers = getFieldValueFromJson(responseBody2, 'followers_count');
-            returnRec.follows = getFieldValueFromJson(responseBody2, 'friends_count');
-            returnRec.description = getFieldValueFromJson(responseBody2, 'description');
+            returnRec.location = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'location');
+            returnRec.numFollowers = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'followers_count');
+            returnRec.follows = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'friends_count');
+            returnRec.description = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'description');
 
 
         }
@@ -369,18 +414,17 @@ public with sharing class Twitter_Lightning_Controller {
             System.debug('########## responseBody2 : ' + responseBody2);
             
 
-            String pictureFullURL = getFieldValueFromJson(responseBody2, 'profile_image_url');
+            String pictureFullURL = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'profile_image_url');
             pictureURL = pictureFullURL.remove('_normal');
 
             returnRec.pictureUrl = pictureURL;
             returnRec.twitterName = twitterName;
-            returnRec.location = getFieldValueFromJson(responseBody2, 'location');
-            returnRec.numFollowers = getFieldValueFromJson(responseBody2, 'followers_count');
-            returnRec.follows = getFieldValueFromJson(responseBody2, 'friends_count');
-            returnRec.description = getFieldValueFromJson(responseBody2, 'name');
-            //returnRec.tweetDate = getFieldValueFromJson(responseBody2, 'created_at');
+            returnRec.location = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'location');
+            returnRec.numFollowers = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'followers_count');
+            returnRec.follows = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'friends_count');
+            returnRec.description = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'name');
             
-            String lstTweetDate = getFieldValueFromJson(responseBody2, 'created_at');
+            String lstTweetDate = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'created_at');
             String weekDay = lstTweetDate.substringBefore(' ') ;
             System.debug('########## weekDay : ' + weekDay);
             lstTweetDate = lstTweetDate.removeStart(weekDay + ' ');
@@ -413,12 +457,12 @@ public with sharing class Twitter_Lightning_Controller {
             
             if (!Test.isRunningTest())
             {
-            DateTime dt = DateTime.newInstance(Integer.valueOf(year), getMonthIntergerValue(month), Integer.valueOf(day), Integer.valueOf(hour), Integer.valueOf(minutes), Integer.valueOf(seconds));
+            DateTime dt = DateTime.newInstance(Integer.valueOf(year), Sparkle_Helper.getMonthIntergerValue(month), Integer.valueOf(day), Integer.valueOf(hour), Integer.valueOf(minutes), Integer.valueOf(seconds));
             
             returnRec.tweetDate = dt.format();
             }
-            returnRec.tweetText = getFieldValueFromJson(responseBody2, 'text');
-            returnRec.tweetLink = getFieldValueFromJson(responseBody2, 'expanded_url');
+            returnRec.tweetText = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'text');
+            returnRec.tweetLink = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'expanded_url');
 
 
         }
@@ -435,100 +479,7 @@ public with sharing class Twitter_Lightning_Controller {
         
         return returnRec;
     }
-    
-    private static Integer getMonthIntergerValue(String monthStringValue)
-    {
-        Integer monthValue = 0;
-        
-        if(monthStringValue.equalsIgnoreCase('Jan'))
-            monthValue = 1;
-        if(monthStringValue.equalsIgnoreCase('Feb'))
-            monthValue = 2;
-        if(monthStringValue.equalsIgnoreCase('Mar'))
-            monthValue = 3;
-        if(monthStringValue.equalsIgnoreCase('Apr'))
-            monthValue = 4;
-        if(monthStringValue.equalsIgnoreCase('May'))
-            monthValue = 5;
-        if(monthStringValue.equalsIgnoreCase('Jun'))
-            monthValue = 6;
-        if(monthStringValue.equalsIgnoreCase('Jul'))
-            monthValue = 7;
-        if(monthStringValue.equalsIgnoreCase('Aug'))
-            monthValue = 8;
-        if(monthStringValue.equalsIgnoreCase('Sep'))
-            monthValue = 9;
-        if(monthStringValue.equalsIgnoreCase('Oct'))
-            monthValue = 10;
-        if(monthStringValue.equalsIgnoreCase('Nov'))
-            monthValue = 11;
-        if(monthStringValue.equalsIgnoreCase('Dec'))
-            monthValue = 12;
-        
-        
-        return monthValue;
-    }
+ 
 
-
-    private static String getFieldValueFromJson(String jsonBody, String fieldName)
-    {
-
-        String returnValue = '';
-        JSONParser parser2 = JSON.createParser(jsonBody);
-           
-           Integer textCount = 1;
-            while (parser2.nextToken() != null) {
-                if ((parser2.getCurrentToken() == JSONToken.FIELD_NAME) && 
-                    (parser2.getText() == fieldName)) {
-                        
-                        parser2.nextToken();
-                        String jsonValue = parser2.getText();
-                        System.debug('fieldname = '+ fieldName + 'and jsonValue = ' + jsonValue);
-                        if (fieldname.equalsIgnoreCase('text'))
-                        {
-                            
-                            System.debug('fieldname is text: ' + jsonValue + 'and textcount = ' + textCount);
-                            if (textCount == 1)
-                            {
-                                System.debug('textcount = 2 : jsonValue = ' + jsonValue);
-                                returnValue =  parser2.getText();
-                            }
-                                
-                            textCount ++;
-                        }
-                        else
-                        	returnValue =  parser2.getText();
-                        
-                    }
-            }
-
-            return returnValue;
-
-    }
-    
-    private static String GetSobjectField(Sobject e, String lcfield)
-    {
-        
-        String returnValue = '';
-        
-        if (lcfield.contains('.')) // than it is a parent-relationship field
-                {
-                    String relName = lcfield.substringBefore('.');
-                    String relField = lcfield.substringAfter('.');
-                    if (relField.contains('.')) // than it is a 2 level parent-relationship field
-                    {
-                       String relName2 = relField.substringBefore('.');
-                       String relField2 = relField.substringAfter('.');
-                       returnValue = String.valueOf(e.getSObject(relName).getSObject(relName2).get(relField2));
-                    }
-                    else
-                    	returnValue = String.valueOf(e.getSObject(relName).get(relField));
-                }
-                    
-                else
-                	returnValue = String.valueOf( e.get(lcfield) );
-     
-        return returnValue;
-    } 
 
 }
