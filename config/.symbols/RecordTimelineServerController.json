@@ -1,16 +1,16 @@
 {
     "constructors": [],
     "externalReferences": [],
-    "id": "01pB0000000lc8wIAA",
+    "id": "01pB0000000rR5GIAU",
     "innerClasses": [],
     "interfaces": [],
-    "key": "01pB0000000lc8wIAA",
+    "key": "01pB0000000rR5GIAU",
     "methods": [
         {
             "annotations": [],
             "location": {
-                "column": 53,
-                "line": 22
+                "column": 56,
+                "line": 24
             },
             "modifiers": [
                 "static",
@@ -19,19 +19,15 @@
             "name": "getListRecords",
             "parameters": [
                 {
+                    "name": "recordID",
+                    "type": "String"
+                },
+                {
                     "name": "rowsLimit",
                     "type": "String"
                 },
                 {
-                    "name": "recordId",
-                    "type": "String"
-                },
-                {
                     "name": "objectApiName",
-                    "type": "String"
-                },
-                {
-                    "name": "ParentObjectFieldName",
                     "type": "String"
                 },
                 {
@@ -43,15 +39,31 @@
                     "type": "String"
                 },
                 {
-                    "name": "column1",
+                    "name": "objectDateFieldName",
                     "type": "String"
                 },
                 {
-                    "name": "RelFieldWithName",
+                    "name": "objectDisplayDateFieldName",
                     "type": "String"
                 },
                 {
-                    "name": "column2",
+                    "name": "parentObjectIDFieldName",
+                    "type": "String"
+                },
+                {
+                    "name": "detail1FieldAPIName",
+                    "type": "String"
+                },
+                {
+                    "name": "detail2FieldAPIName",
+                    "type": "String"
+                },
+                {
+                    "name": "titleFieldAPIName",
+                    "type": "String"
+                },
+                {
+                    "name": "subtitleFieldAPIName",
                     "type": "String"
                 }
             ],
@@ -60,7 +72,7 @@
             "type": null
         }
     ],
-    "name": "RelatedListServerController",
+    "name": "RecordTimelineServerController",
     "namespace": "testautonumdata",
     "parentClass": "",
     "properties": [
@@ -86,7 +98,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "OwnerName",
+            "name": "eventField",
             "references": [],
             "type": "String"
         },
@@ -99,7 +111,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "OwnerID",
+            "name": "dateValue",
             "references": [],
             "type": "String"
         },
@@ -112,7 +124,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "column2",
+            "name": "title",
             "references": [],
             "type": "String"
         },
@@ -125,7 +137,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "ReferralMessage",
+            "name": "subtitle",
             "references": [],
             "type": "String"
         },
@@ -138,7 +150,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "ReferralDate",
+            "name": "detail1",
             "references": [],
             "type": "String"
         },
@@ -151,7 +163,7 @@
             "modifiers": [
                 "public"
             ],
-            "name": "iconUrl",
+            "name": "detail2",
             "references": [],
             "type": "String"
         },
@@ -180,16 +192,27 @@
             "public",
             "with sharing"
         ],
-        "name": "RelatedListServerController",
+        "name": "RecordTimelineServerController",
         "references": [],
-        "type": "RelatedListServerController"
+        "type": "RecordTimelineServerController"
     },
     "variables": [
         {
             "annotations": [],
             "location": {
-                "column": 75,
-                "line": 22
+                "column": 78,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "recordID",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 95,
+                "line": 24
             },
             "modifiers": [],
             "name": "rowsLimit",
@@ -199,19 +222,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 93,
-                "line": 22
-            },
-            "modifiers": [],
-            "name": "recordId",
-            "references": [],
-            "type": "String"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 110,
-                "line": 22
+                "column": 113,
+                "line": 24
             },
             "modifiers": [],
             "name": "objectApiName",
@@ -221,19 +233,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 132,
-                "line": 22
-            },
-            "modifiers": [],
-            "name": "ParentObjectFieldName",
-            "references": [],
-            "type": "String"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 162,
-                "line": 22
+                "column": 135,
+                "line": 24
             },
             "modifiers": [],
             "name": "filter1Field",
@@ -243,8 +244,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 183,
-                "line": 22
+                "column": 156,
+                "line": 24
             },
             "modifiers": [],
             "name": "filter1Value",
@@ -254,40 +255,84 @@
         {
             "annotations": [],
             "location": {
-                "column": 204,
-                "line": 22
+                "column": 177,
+                "line": 24
             },
             "modifiers": [],
-            "name": "column1",
+            "name": "objectDateFieldName",
             "references": [],
             "type": "String"
         },
         {
             "annotations": [],
             "location": {
-                "column": 220,
-                "line": 22
+                "column": 205,
+                "line": 24
             },
             "modifiers": [],
-            "name": "RelFieldWithName",
+            "name": "objectDisplayDateFieldName",
             "references": [],
             "type": "String"
         },
         {
             "annotations": [],
             "location": {
-                "column": 245,
-                "line": 22
+                "column": 240,
+                "line": 24
             },
             "modifiers": [],
-            "name": "column2",
+            "name": "parentObjectIDFieldName",
             "references": [],
             "type": "String"
         },
         {
             "annotations": [],
             "location": {
-                "column": 43,
+                "column": 272,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "detail1FieldAPIName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 300,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "detail2FieldAPIName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 328,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "titleFieldAPIName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 354,
+                "line": 24
+            },
+            "modifiers": [],
+            "name": "subtitleFieldAPIName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
                 "line": 34
             },
             "modifiers": [],
@@ -298,19 +343,19 @@
         {
             "annotations": [],
             "location": {
-                "column": 20,
-                "line": 38
+                "column": 17,
+                "line": 37
             },
             "modifiers": [],
-            "name": "fullUserRelationship",
+            "name": "rLimit",
             "references": [],
-            "type": "String"
+            "type": "Integer"
         },
         {
             "annotations": [],
             "location": {
-                "column": 20,
-                "line": 39
+                "column": 16,
+                "line": 40
             },
             "modifiers": [],
             "name": "soql",
@@ -320,8 +365,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 35,
-                "line": 82
+                "column": 27,
+                "line": 100
             },
             "modifiers": [],
             "name": "lstQueriedRecords",
@@ -331,8 +376,8 @@
         {
             "annotations": [],
             "location": {
-                "column": 34,
-                "line": 88
+                "column": 26,
+                "line": 106
             },
             "modifiers": [],
             "name": "e",
@@ -342,24 +387,13 @@
         {
             "annotations": [],
             "location": {
-                "column": 53,
-                "line": 91
+                "column": 48,
+                "line": 109
             },
             "modifiers": [],
             "name": "i",
             "references": [],
-            "type": "RelatedListServerController"
-        },
-        {
-            "annotations": [],
-            "location": {
-                "column": 46,
-                "line": 99
-            },
-            "modifiers": [],
-            "name": "userPhoto",
-            "references": [],
-            "type": "Photo"
+            "type": "RecordTimelineServerController"
         }
     ]
 }

@@ -1,5 +1,7 @@
 public with sharing class FilesViewerServerController {
     
+    private static Map<String, Set<String>> mapObjectsFields = null;
+
     @AuraEnabled
     public String fileID { get;set; }
     @AuraEnabled
@@ -16,25 +18,49 @@ public with sharing class FilesViewerServerController {
     public static List<FilesViewerServerController> getListRecords(String recordID, String rowsLimit) {
         
         System.debug('######## FilesViewerServerController: rowsLimit: ' + rowsLimit);
+
+        // CRUD / FLS Check - Create a map with the object names and fields for CRUD\FLS check
+        mapObjectsFields = new Map<String, Set<String>>(); 
+        
+        Sparkle_Helper.AddFieldToObjectsMap('Id', 'ContentDocumentLink', mapObjectsFields);
         
         List<FilesViewerServerController> lstReturnRecords = new List<FilesViewerServerController>();
         if (!String.isBlank(recordID))
         {
         Integer rLimit = integer.valueOf(rowsLimit);
         System.debug('######## FilesViewerServerController: rLimit: ' + rLimit);
+
+
         
         String soql = 'select ContentDocumentId, contentdocument.title, contentdocument.filetype, contentdocument.createddate, contentdocument.fileextension, contentdocument.contentsize, Id,IsDeleted,LinkedEntityId,ShareType,SystemModstamp,Visibility FROM ContentDocumentLink';
         
         // Add Filter Where clause if provided
-        soql += ' where LinkedEntityId  = \'' + recordID+'\' and contentdocument.isArchived = false and contentdocument.isDeleted = false';
+        soql += ' where LinkedEntityId  = \'' + String.escapeSingleQuotes(recordID) + '\' and contentdocument.isArchived = false and contentdocument.isDeleted = false';
         
         
         // Add order by:
         soql += ' order by contentdocument.createddate desc'; 
         
         // Add return row limit to query string:        
-        soql += ' limit ' + rowsLimit;
+        soql += ' limit ' + String.escapeSingleQuotes(rowsLimit);
         
+        Sparkle_Helper.AddFieldToObjectsMap('ContentDocumentId', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.title', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.filetype', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.createddate', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.fileextension', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.contentsize', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('IsDeleted', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('LinkedEntityId', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('ShareType', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('SystemModstamp', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('Visibility', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.isArchived', 'ContentDocumentLink', mapObjectsFields);
+        Sparkle_Helper.AddFieldToObjectsMap('contentdocument.isDeleted', 'ContentDocumentLink', mapObjectsFields);
+
+
+
+
         // Get List of QueriedRecords
         
         System.debug('######## FilesViewerServerController - soql: ' + soql);
@@ -43,29 +69,32 @@ public with sharing class FilesViewerServerController {
         
         System.debug('######## FilesViewerServerController -  lstQueriedRecords: ' + lstQueriedRecords);
        
+        // CRUD\FLS Check: Before running the SOQL query check if the user who is invoking this method has access to the Object and to the fields requested
         
-        
-        for (SObject e: lstQueriedRecords)
+        if (Sparkle_Helper.UserHasAccessToObjectsAndFields(mapObjectsFields))
         {
-            System.debug('######## e: ' + e);
-            FilesViewerServerController i = new FilesViewerServerController();
-            
-            
-            i.fileID = GetSobjectField(e, 'ContentDocumentId');
-            i.fileName = GetSobjectField(e, 'ContentDocument.Title');
-            i.fileCreatedDate = GetSobjectField(e, 'ContentDocument.CreatedDate');
-            i.fileExtension = GetSobjectField(e, 'ContentDocument.FileExtension');
-            if (i.fileExtension.equalsIgnoreCase('doc'))
-                i.fileExtension = 'word';
-            i.fileSize = GetSobjectField(e, 'ContentDocument.ContentSize');
-            
+        
+            for (SObject e: lstQueriedRecords)
+            {
+                System.debug('######## e: ' + e);
+                FilesViewerServerController i = new FilesViewerServerController();
+                
+                
+                i.fileID = Sparkle_Helper.GetSobjectField(e, 'ContentDocumentId');
+                i.fileName = Sparkle_Helper.GetSobjectField(e, 'ContentDocument.Title');
+                i.fileCreatedDate = Sparkle_Helper.GetSobjectField(e, 'ContentDocument.CreatedDate');
+                i.fileExtension = Sparkle_Helper.GetSobjectField(e, 'ContentDocument.FileExtension');
+                if (i.fileExtension.equalsIgnoreCase('doc'))
+                    i.fileExtension = 'word';
+                i.fileSize = Sparkle_Helper.GetSobjectField(e, 'ContentDocument.ContentSize');
+                
 
-            lstReturnRecords.add(i);
+                lstReturnRecords.add(i);
 
-			System.debug('######## i: ' + i);               
+    			System.debug('######## i: ' + i);               
+            }
+        
         }
-        
-        
         
         System.debug('######## FilesViewerServerController - lstReturnRecords: ' + lstReturnRecords);
         }
@@ -75,30 +104,6 @@ public with sharing class FilesViewerServerController {
         
     }
     
-    private static String GetSobjectField(Sobject e, String lcfield)
-    {
-        
-        String returnValue = '';
-        
-        if (lcfield.contains('.')) // than it is a parent-relationship field
-                {
-                    String relName = lcfield.substringBefore('.');
-                    String relField = lcfield.substringAfter('.');
-                    if (relField.contains('.')) // than it is a 2 level parent-relationship field
-                    {
-                       String relName2 = relField.substringBefore('.');
-                       String relField2 = relField.substringAfter('.');
-                       returnValue = String.valueOf(e.getSObject(relName).getSObject(relName2).get(relField2));
-                    }
-                    else
-                    	returnValue = String.valueOf(e.getSObject(relName).get(relField));
-                }
-                    
-                else
-                	returnValue = String.valueOf( e.get(lcfield) );
-     
-        return returnValue;
-    } 
 
 
 }
