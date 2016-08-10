@@ -83,7 +83,7 @@ private class Test_Lightning_Apex_Controllers {
         Account a = TestFactory.insertAccount();
         Contact c = TestFactory.insertContact('FirstName', 'LastName', a.id);
 
-		List<ReferralsServerController> lstRecs = ReferralsServerController.getListRecords(1, a.id, 'Contact', 'AccountId', 'FirstName', 'FirstName', 'OwnerId', 'Owner', 'LastName');
+		List<ReferralsServerController> lstRecs = ReferralsServerController.getListRecords('1', a.id, 'Contact', 'AccountId', 'FirstName', 'FirstName', 'OwnerId', 'Owner', 'LastName');
 
 		Test.stopTest();
 
@@ -96,7 +96,7 @@ private class Test_Lightning_Apex_Controllers {
         Account a = TestFactory.insertAccount();
         Contact c = TestFactory.insertContact('FirstName', 'LastName', a.id);
 
-		List<RelatedListServerController> lstRecs = RelatedListServerController.getListRecords(1, a.id, 'Contact', 'AccountId', 'FirstName', 'FirstName', 'OwnerId', 'Owner', 'LastName');
+		List<RelatedListServerController> lstRecs = RelatedListServerController.getListRecords('1', a.id, 'Contact', 'AccountId', 'FirstName', 'FirstName', 'OwnerId', 'Owner', 'LastName');
 
 		Test.stopTest();
 

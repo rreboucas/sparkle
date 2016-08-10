@@ -63,7 +63,7 @@ public with sharing class GenericListMap_ServerController {
             soql += ' FROM ' + objectApiName;
             
             // Add Filter Where clause if provided
-            soql += ' where id in (' + String.escapeSingleQuotes(recordIds) + ')';
+            soql += ' where id in (' + recordIds + ')';
         
             
             // Get List of QueriedRecords
