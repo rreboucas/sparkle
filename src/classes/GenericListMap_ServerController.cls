@@ -1,4 +1,6 @@
 public with sharing class GenericListMap_ServerController {
+
+    private static Map<String, Set<String>> mapObjectsFields = null;
     
     @AuraEnabled
     public String recordID { get;set; }
@@ -24,35 +26,54 @@ public with sharing class GenericListMap_ServerController {
         
         List<GenericListMap_ServerController> lstReturnRecords = new List<GenericListMap_ServerController>();
         
+        // CRUD / FLS Check - Create a map with the object names and fields for CRUD\FLS check
+        mapObjectsFields = new Map<String, Set<String>>(); 
+
         if (recordIds != null && objectApiName != null)
         {
-            String soql = 'Select id';      
+            String soql = 'Select id'; 
+            Sparkle_Helper.AddFieldToObjectsMap('Id', objectApiName, mapObjectsFields);     
             
-            if (NameField != null)
-                soql += ', ' + NameField;
+            if (NameField != null){
+                soql += ', ' + String.escapeSingleQuotes(NameField);
+                Sparkle_Helper.AddFieldToObjectsMap(NameField, objectApiName, mapObjectsFields);
+            }
             
-            if (latField != null)
-                soql += ', ' + latField ;  
+            if (latField != null){
+                soql += ', ' + String.escapeSingleQuotes(latField);
+                Sparkle_Helper.AddFieldToObjectsMap(latField, objectApiName, mapObjectsFields);
+            }
             
-            if (longField != null)
-                soql += ', ' + longField;
+            if (longField != null){
+                soql += ', ' + String.escapeSingleQuotes(longField);
+                Sparkle_Helper.AddFieldToObjectsMap(longField, objectApiName, mapObjectsFields);
+            }
                   
-            if (CityField != null)
-                soql += ', ' + CityField;
+            if (CityField != null){
+                soql += ', ' + String.escapeSingleQuotes(CityField);
+                Sparkle_Helper.AddFieldToObjectsMap(CityField, objectApiName, mapObjectsFields);
+            }
             
-            if (StateField != null)
-                soql += ', ' + StateField;
+            if (StateField != null){
+                soql += ', ' + String.escapeSingleQuotes(StateField);
+                Sparkle_Helper.AddFieldToObjectsMap(StateField, objectApiName, mapObjectsFields);
+            }
             
             // Add object name to query string:        
             soql += ' FROM ' + objectApiName;
             
             // Add Filter Where clause if provided
-            soql += ' where id in (' + recordIds + ')';
+            soql += ' where id in (' + String.escapeSingleQuotes(recordIds) + ')';
         
             
             // Get List of QueriedRecords
             
             System.debug('######## soql: ' + soql);
+
+            // CRUD\FLS Check: Before running the SOQL query check if the user who is invoking this method has access to the Object and to the fields requested
+        
+        if (Sparkle_Helper.UserHasAccessToObjectsAndFields(mapObjectsFields))
+        {
             
             List<SObject> lstQueriedRecords = Database.query(soql); 
             
@@ -65,30 +86,30 @@ public with sharing class GenericListMap_ServerController {
                 System.debug('######## e: ' + e);
                 GenericListMap_ServerController i = new GenericListMap_ServerController();
                 
-                i.recordID = GetSobjectField(e, 'id');
+                i.recordID = Sparkle_Helper.GetSobjectField(e, 'id');
                 
                 if (NameField != null)
                 {
-                    i.Name = GetSobjectField(e, NameField);      
+                    i.Name = Sparkle_Helper.GetSobjectField(e, NameField);      
                 }
                 
             	if (latField != null)
                 {
-                    i.LatValue = GetSobjectField(e, latField);      
+                    i.LatValue = Sparkle_Helper.GetSobjectField(e, latField);      
                 }
 
                 if (longField != null)
                 {
-                    i.LongValue = GetSobjectField(e, longField);
+                    i.LongValue = Sparkle_Helper.GetSobjectField(e, longField);
                     
                 }
                 if (CityField != null)
                 {
-                    i.City = GetSobjectField(e, CityField);
+                    i.City = Sparkle_Helper.GetSobjectField(e, CityField);
                 }
                 if (StateField != null)
                 {
-                    i.State = GetSobjectField(e, StateField);
+                    i.State = Sparkle_Helper.GetSobjectField(e, StateField);
                 }    
                 
     
@@ -96,6 +117,8 @@ public with sharing class GenericListMap_ServerController {
     
                 System.debug('######## i: ' + i);               
             }
+
+        }
         
         
         }
@@ -106,31 +129,5 @@ public with sharing class GenericListMap_ServerController {
     }
     
     
-    
-    
-    private static String GetSobjectField(Sobject e, String lcfield)
-    {
-        
-        String returnValue = '';
-        
-        if (lcfield.contains('.')) // than it is a parent-relationship field
-                {
-                    String relName = lcfield.substringBefore('.');
-                    String relField = lcfield.substringAfter('.');
-                    if (relField.contains('.')) // than it is a 2 level parent-relationship field
-                    {
-                       String relName2 = relField.substringBefore('.');
-                       String relField2 = relField.substringAfter('.');
-                       returnValue = String.valueOf(e.getSObject(relName).getSObject(relName2).get(relField2));
-                    }
-                    else
-                    	returnValue = String.valueOf(e.getSObject(relName).get(relField));
-                }
-                    
-                else
-                	returnValue = String.valueOf( e.get(lcfield) );
-     
-        return returnValue;
-    } 
 
 }
