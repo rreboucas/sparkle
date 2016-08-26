@@ -1,4 +1,4 @@
-public class myControllerExtension {
+public with sharing class myControllerExtension {
 
     private final testautonumdata__Interviewer__c interviewer;
     
