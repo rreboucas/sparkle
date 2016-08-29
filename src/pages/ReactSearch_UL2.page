@@ -1,0 +1,209 @@
+<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <head>
+         <meta charset="UTF-8" />
+         <title>Hello React</title>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <apex:includeScript value="//cdn.rawgit.com/mattwelch/makeDeferredProvider/master/makeDeferredProvider.min.js"/>
+         <apex:stylesheet value="//cdn.rawgit.com/mailtoharshit/LightingDesignSystem/master/salesforce-lightning-design-system-v0.8.0/assets/styles/salesforce-lightning-design-system-vf.min.css" />
+      </head>
+      
+      <!-- Remote Objects definition to set accessible sObjects and fields -->
+      <apex:remoteObjects >
+         <apex:remoteObjectModel name="Contact" jsShorthand="con" 
+            fields="Name">
+         </apex:remoteObjectModel>
+      </apex:remoteObjects>
+
+      <body>
+      <div id="content" class="slds"></div>
+      	<script type="text/jsx">
+
+      	
+
+
+
+      		 var InstantBox = React.createClass({
+
+
+		     fetchWarehouses:function(){
+	            // Create a new Remote Object
+	            var wh = new SObjectModel.Contact();
+	            
+	            // Use the Remote Object to query for 10 warehouse records
+	            wh.retrieve({ limit: 10 }, function(err, records, event){
+	                if(err) {
+	                    alert(err.message);
+	                }
+	                else {
+	                    
+	                    records.forEach(function(record) {
+	                        // Build the text for a warehouse line item
+	                        var whText = record.get("Name");
+	                        dataSource.push(whText);
+	                    });
+	                console.log('dataSource: ' + dataSource);
+
+	                 
+
+	                }
+	            });
+
+
+	        },                   
+		                 
+
+			    doSearch:function(queryText){
+
+
+			    
+			    	console.log('First doSearch function')
+			        console.log('queryText: ' + queryText)
+			        //get query result
+			        var queryResult=[];
+			        this.props.data.forEach(function(person){
+			        	console.log('person: ' + person)
+			            if(person.toLowerCase().indexOf(queryText)!=-1)
+			            queryResult.push(person);
+			        });
+
+			        console.log('queryResult: ' + queryResult)
+
+			        this.setState({
+			            query:queryText,
+			            filteredData: queryResult
+			        })
+			    },
+			    getInitialState:function(){
+			    console.log('getInitialState function');
+			    var goGetData = this.fetchWarehouses();
+			    
+			        return{
+			            query:          '',
+			            filteredData:   dataSource
+			        }
+			    },
+
+			    renderResults: function() {
+			    console.log('renderResults function');
+			        if (this.state.filteredData) {
+			            return (
+			                <DisplayTable data={this.state.filteredData}/>
+			            );
+			        }
+			    },
+
+			    componentDidMount: function() {
+			    
+			    console.log('componentDidMount function');
+
+		    	makeDeferredProvider();
+                // Create a new Remote Object
+	            var wh = SObjectModel.deferredObject('con');
+	            
+	            // Use the Remote Object to query for 10 warehouse records
+	            // Use the Remote Object to query for 10 warehouse records
+                    var whp = wh.retrieve({ limit: 100 });
+	                whp.then(
+                           // The first function is invoked when the promise is successfully fulfilled
+                        function(records){
+	                    
+	                    records.forEach(function(record) {
+	                        // Build the text for a warehouse line item
+	                        var whText = record.get("Name");
+	                        dataSource.push(whText);
+	                    }.bind(this));
+	                console.log('dataSource: ' + dataSource);
+                        this.setState({query:' ',filteredData: dataSource});
+                             
+                }.bind(this),
+                // The second function is invoked when the promise is rejected
+                function(err) {
+                  
+                });
+                console.log('INSIDE DATA1'+data);
+
+
+
+
+				  },
+
+			    render:function(){
+			    console.log('render function');
+			        return (
+			            <div className="InstantBox">
+			                
+			                <SearchBox query={this.state.query} doSearch={this.doSearch}/>
+			                {this.renderResults()}
+			            </div>
+			        );
+			    }
+			});
+
+			var SearchBox = React.createClass({
+			    doSearch:function(){
+			        var query=this.refs.searchInput.getDOMNode().value; // this is the search text
+			        this.props.doSearch(query);
+			    },
+			    render:function(){
+			        return <input className="searchbar-edit" type="text" ref="searchInput" placeholder="Enter contact name..." value={this.props.query} onChange={this.doSearch}/>
+			    }
+			});
+
+			var DisplayTable = React.createClass({
+			      doSearch:function(queryText){
+
+			      this.fetchWarehouses();
+
+			      console.log('dataSource: ' + dataSource);
+			        console.log(queryText)
+			        //get query result
+			        var queryResult=[];
+			        this.props.data.forEach(function(person){
+			            if(person.toLowerCase().indexOf(queryText)!=-1)
+			            queryResult.push(person);
+			        });
+
+			        this.setState({
+			            query:queryText,
+			            filteredData: queryResult
+			        })
+			    },
+
+			    render:function(){
+			        //making the rows to display
+			        var rows=[];
+			        this.props.data.forEach(function(person) {
+			        
+			        rows.push(<tr><td>{person}</td></tr>)
+			        });        
+			        //returning the table
+			        return(
+			             <table>
+			                <tbody>{rows}</tbody>
+			            </table>
+			        );
+			    }
+			});
+
+			var tableData=[
+			{
+			    name:'Paul mak',
+			    id: '12323453456',
+			},
+			];
+
+			var dataSource=[];
+
+			
+
+			React.render(
+			  <InstantBox data={dataSource}/>,
+			  document.getElementById('content')
+			);
+      	</script>
+      </body>
+   </html>
+</apex:page>

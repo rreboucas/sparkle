@@ -1,0 +1,134 @@
+<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <head>
+         <meta charset="UTF-8" />
+         <title>Hello React</title>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <apex:includeScript value="//cdn.rawgit.com/mattwelch/makeDeferredProvider/master/makeDeferredProvider.min.js"/>
+         <apex:stylesheet value="//cdn.rawgit.com/mailtoharshit/LightingDesignSystem/master/salesforce-lightning-design-system-v0.8.0/assets/styles/salesforce-lightning-design-system-vf.min.css" />
+      </head>
+      
+      <!-- Remote Objects definition to set accessible sObjects and fields -->
+      <apex:remoteObjects >
+         <apex:remoteObjectModel name="Contact" jsShorthand="acc" 
+            fields="Name,Id">
+         </apex:remoteObjectModel>
+      </apex:remoteObjects>
+
+      <body>
+      <div id="content" class="slds"></div>
+      	<script type="text/jsx">
+      		 var InstantBox = React.createClass({
+			    doSearch:function(queryText){
+			        console.log(queryText)
+			        //get query result
+			        var queryResult=[];
+			        this.props.data.forEach(function(person){
+			            if(person.name.toLowerCase().indexOf(queryText)!=-1)
+			            queryResult.push(person);
+			        });
+
+			        this.setState({
+			            query:queryText,
+			            filteredData: queryResult
+			        })
+			    },
+			    getInitialState:function(){
+			        return{
+			            query:          '',
+			            filteredData:   undefined
+			        }
+			    },
+
+			    renderResults: function() {
+			        if (this.state.filteredData) {
+			            return (
+			                <DisplayTable data={this.state.filteredData}/>
+			            );
+			        }
+			    },
+			    render:function(){
+			        return (
+			            <div className="InstantBox">
+			                <h2>Who is Richer?</h2>
+			                <SearchBox query={this.state.query} doSearch={this.doSearch}/>
+			                {this.renderResults()}
+			            </div>
+			        );
+			    }
+			});
+
+			var SearchBox = React.createClass({
+			    doSearch:function(){
+			        var query=this.refs.searchInput.getDOMNode().value; // this is the search text
+			        this.props.doSearch(query);
+			    },
+			    render:function(){
+			        return <input className="searchbar-edit" type="text" ref="searchInput" placeholder="Search Name" value={this.props.query} onChange={this.doSearch}/>
+			    }
+			});
+
+			var DisplayTable = React.createClass({
+			      doSearch:function(queryText){
+			        console.log(queryText)
+			        //get query result
+			        var queryResult=[];
+			        this.props.data.forEach(function(person){
+			            if(person.name.toLowerCase().indexOf(queryText)!=-1)
+			            queryResult.push(person);
+			        });
+
+			        this.setState({
+			            query:queryText,
+			            filteredData: queryResult
+			        })
+			    },
+
+			    render:function(){
+			        //making the rows to display
+			        var rows=[];
+			        this.props.data.forEach(function(person) {
+			        rows.push(<tr><td>{person.image}</td></tr>)
+			        rows.push(<tr><td>{person.name}</td></tr>)
+			        });        
+			        //returning the table
+			        return(
+			             <table>
+			                <tbody>{rows}</tbody>
+			            </table>
+			        );
+			    }
+			});
+
+			var tableData=[
+			{
+			    name:'Paul mak',
+			    image: <img width="50" src="./images/profile_img.png"/>,
+			},
+			];
+
+			var dataSource=[
+			{
+			    name:'Paul mak',
+			    image: <img width="50" src="./images/profile_img.png"/>,
+			},
+			{
+			    name:'John Doe',
+			    image : '002'
+			},
+			{
+			    name:'Sachin Tendulkar',
+			    image : '003'
+			}];
+
+
+			React.render(
+			  <InstantBox data={dataSource}/>,
+			  document.getElementById('content')
+			);
+      	</script>
+      </body>
+   </html>
+</apex:page>

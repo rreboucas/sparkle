@@ -1,0 +1,117 @@
+<apex:page standardStylesheets="false" showHeader="false" applyHtmlTag="false" docType="html-5.0">
+   <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <head>
+         <meta charset="UTF-8" />
+         <title>Hello React</title>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <apex:includeScript value="//cdn.rawgit.com/mattwelch/makeDeferredProvider/master/makeDeferredProvider.min.js"/>
+         <apex:stylesheet value="//cdn.rawgit.com/mailtoharshit/LightingDesignSystem/master/salesforce-lightning-design-system-v0.8.0/assets/styles/salesforce-lightning-design-system-vf.min.css" />
+      </head>
+      <!-- Remote Objects definition to set accessible sObjects and fields -->
+      <apex:remoteObjects >
+         <apex:remoteObjectModel name="Contact" jsShorthand="acc" 
+            fields="Name,Id">
+         </apex:remoteObjectModel>
+      </apex:remoteObjects>
+      <body>
+         <div id="content" class="slds"></div>
+         <script type="text/jsx">
+            var data=[];
+            
+                var ContactList = React.createClass({
+                    render: function() {
+                        console.log('DATA'+this.props.data);
+                        var contactNodes = this.props.data.map(function (contact) {
+                          return (
+                            <Contact name={contact.name} key={contact.id}>
+                            </Contact>
+                          );
+                    });
+                    return (
+                      <div className="slds-scrollable--x">
+                          <table className="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+                              <thead>
+                                  <tr className="slds-text-heading--label">
+                                      <th scope="col">
+                                          <span className="slds-truncate">Contact Name</span>
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  {contactNodes}
+                              </tbody>
+                          </table>
+                      </div>
+                    );
+                }
+            });
+            
+            var ContactView = React.createClass({
+                  getInitialState: function() {
+                        return {data:[]};
+                   },
+                  componentDidMount: function() {
+                        makeDeferredProvider();
+                        var wh = SObjectModel.deferredObject('acc');
+                        // Use the Remote Object to query for 10 warehouse records
+                        var whp = wh.retrieve({ limit: 100 });
+                        whp.then(
+                           // The first function is invoked when the promise is successfully fulfilled
+                        function(records){
+                          records.forEach(function(record) {
+                                          // Build the Contact data
+                                          var dataitem = {
+                                            "name": record.get("Name"),
+                                            "id"  :  record.get("Id")
+                                          }
+                                         data.push(dataitem);
+                                      }.bind(this));
+                                      console.log('GOT DATA HERE'+data);
+                                      this.setState({data: data});
+                                     
+                        }.bind(this),
+                        // The second function is invoked when the promise is rejected
+                        function(err) {
+                          
+                        });
+                        console.log('INSIDE DATA1'+data);
+                    },
+                    render: function() {
+                              return (
+                                <div className="myapp">
+                                    <div id="contactList" className="slds-p-vertical--medium">
+                                      <div className="slds-page-header" role="banner">
+                                        <div className="slds-grid">
+                                          <div className="slds-col">
+                                            <p className="slds-text-heading--label">Contacts</p>
+                                            <h1 className="slds-text-heading--medium">My Contacts</h1>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <ContactList data={this.state.data} />
+                                    </div>
+                                </div>
+                              );
+                            }
+                    });
+            
+                var Contact = React.createClass({
+                      render: function() {
+                        return (
+                          <tr>
+                              <td data-label="Name"><span className="slds-truncate">{this.props.name}</span></td>
+                              <td data-label="Fax"><span className="slds-truncate">{this.props.id}</span></td>
+                          </tr>
+                        );
+                      }
+                });
+                React.render(
+                   <ContactView />,
+                      document.getElementById('content')
+                );
+         </script>
+      </body>
+   </html>
+</apex:page>
