@@ -3,11 +3,14 @@
       <head>
          <meta charset="UTF-8" />
          <title>Hello React</title>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-         <apex:includeScript value="//cdn.rawgit.com/mattwelch/makeDeferredProvider/master/makeDeferredProvider.min.js"/>
-         <apex:stylesheet value="//cdn.rawgit.com/mailtoharshit/LightingDesignSystem/master/salesforce-lightning-design-system-v0.8.0/assets/styles/salesforce-lightning-design-system-vf.min.css" />
+         <apex:includeScript value="{!$Resource.react}"/>
+         <apex:includeScript value="{!$Resource.MakeDeferredProvider}"/>
+         <apex:includeScript value="{!$Resource.JSXTransformer}"/>
+         <apex:includeScript value="{!$Resource.jquery_2_1_1}"/>
+
+         <apex:stylesheet value="{!URLFOR($Resource.SLDS0101, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+
       </head>
       
       <!-- Remote Objects definition to set accessible sObjects and fields -->
@@ -78,7 +81,7 @@
 			    },
 			    getInitialState:function(){
 			    console.log('getInitialState function');
-			    var goGetData = this.fetchWarehouses();
+			    //var goGetData = this.fetchWarehouses();
 			    
 			        return{
 			            query:          '',
@@ -105,7 +108,8 @@
 	            
 	            // Use the Remote Object to query for 10 warehouse records
 	            // Use the Remote Object to query for 10 warehouse records
-                    var whp = wh.retrieve({ limit: 100 });
+                    var whp = wh.retrieve({ limit: 10 });
+                    
 	                whp.then(
                            // The first function is invoked when the promise is successfully fulfilled
                         function(records){
@@ -123,7 +127,7 @@
                 function(err) {
                   
                 });
-                console.log('INSIDE DATA1'+data);
+
 
 
 

@@ -1,0 +1,37 @@
+<aura:component controller="ContactController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    
+    <div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+    	
+    	<div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+    	<div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+
+                            
+                                
+                                    <img src="{!$Resource.lightningicons + '/lightningicons/images/ltngVFReactlogo.png'}" style="width: 130px;height: 35px; padding-right:4px;"/>
+                            
+                                <h1 class="slds-page-header__title slds-truncate" style="padding-top:6px; padding-left:3px"> Search</h1>
+                            
+                            
+
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info"></p>
+                </div>
+        </div>        
+                <!-- End of Header  -->
+
+
+    	<div>
+	         <iframe src="/apex/ReactSearch_UL2" width="800" height="600" frameborder="0"></iframe>
+    	</div>
+	</div>
+
+</aura:component>
