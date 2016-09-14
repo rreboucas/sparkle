@@ -1,14 +1,18 @@
 <aura:component controller="FilesViewerServerController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
   <aura:attribute name="lstRecords" type="FilesViewerServerController" access="global"/>
-    <aura:attribute name="listName" type="String" default="Files Viewer" access="global"/>
-    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
-    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
-    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+  <aura:attribute name="listName" type="String" default="Files Viewer" access="global"/>
+  <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+  <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+  <aura:attribute name="recordId" type="String" access="GLOBAL"/>
   <aura:attribute name="objectApiName" type="String" access="global"/>
-    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+  <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+  <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+
+  <aura:registerEvent name="stdAppEvent" type="lightning:openFiles"/>
     
+
+
     <div class="slds">
         
         
@@ -19,10 +23,10 @@
                         <div class="slds-grid slds-type-focus slds-no-space">
 
                             
-                                
-                                    <img src="{!$Resource.lightningicons + '/lightningicons/action/new_event_60.png'}" style="padding-right:4px;"/>
-                            
-                                <h1 class="slds-page-header__title slds-truncate">{!v.listName}</h1>
+                                <span class="slds-avatar slds-avatar--circle slds-avatar--medium slds-icon-action-share-file " style="width: 32px; height: 32px;">
+                                    <img src="{!$Resource.testautonumdata__SLDS0103 + '/assets/icons/standard/file_120.png'}" style=""/>
+                                </span>
+                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">{!v.listName}</h1>
                             
                             
 
@@ -49,7 +53,7 @@
                       <c:svg class="{!'slds-icon icon-doctype-' + rec.fileExtension}" xlinkHref="{!'/resource/testautonumdata__SLDS0103/assets/icons/doctype-sprite/svg/symbols.svg#'+ rec.fileExtension}" />
                   </div>
                   <div class="slds-media__body">
-                    <p class="slds-tile__title slds-truncate"><a>{!rec.fileName}</a></p>
+                    <p class="slds-tile__title slds-truncate"><a onclick="{!c.openFileViewer}" data-record="{!rec.fileID}">{!rec.fileName}</a></p>
                     <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
                       <li class="slds-truncate slds-list__item">{!rec.fileCreatedDate}</li>
                       <li class="slds-truncate slds-list__item">{!rec.fileSize}</li>

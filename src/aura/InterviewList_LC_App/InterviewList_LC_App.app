@@ -1,5 +1,5 @@
 <aura:application >
     
-    <c:InterviewsList buttonURL="/apex/InterviewQuestionsLDS?id=a0PB0000000ofaSMAQ" />
+    <c:InterviewsList showButton="false" column1_headertext="Name" column1_fieldapiname="Name" />
 	
 </aura:application>

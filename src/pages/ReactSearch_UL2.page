@@ -23,14 +23,7 @@
       <body>
       <div id="content" class="slds"></div>
 
-        <script>
 
-		function showToastOnLC(){
-		    //Display post message
-		    console.log('VF showToastOnLC entered');
-			parent.postMessage({action:'toast', title:"Success", message:"A link was clicked on the VF Page inside the iframe"});
-		}
-		</script>
 
       	<script type="text/jsx">
 
@@ -233,6 +226,12 @@
 			  <InstantBox data={dataSource}/>,
 			  document.getElementById('content')
 			);
+                        
+            function showToastOnLC(){
+		    //Display post message
+		    console.log('VF showToastOnLC entered');
+			parent.postMessage({action:'toast', title:"Success", message:"A link was clicked on the VF Page inside the iframe"});
+		}            
       	</script>
       </body>
    </html>

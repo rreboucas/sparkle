@@ -29,9 +29,15 @@
     <aura:attribute name="buttonURLParameter" type="String" access="global"/>
     <aura:attribute name="buttonURLParameter2" type="String" access="global"/>
     <aura:attribute name="userIdParameterValue" type="Boolean" default="False" access="global"/>
+    <aura:attribute name="isDoneRendering" type="Boolean" default="false"/>
     
+    <aura:attribute name="lastSelectedRow" type="Object" access="global"/>
+    
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     <!-- System Event -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>
+
 
 <!-- Application Event -->
   <aura:registerEvent name="stdAppEvent" type="ltng:selectSObject"/>
@@ -72,7 +78,7 @@
             <!-- End of Header  -->
             
             
-            <table class="slds-table slds-table--bordered">
+            <table aura:id="tablebody" class="slds-table slds-table--bordered">
                 <thead>
                   <tr class="slds-text-heading--label">
                     <th class="slds-cell-shrink">
@@ -116,9 +122,10 @@
                     <th class="slds-cell-shrink"></th>
                   </tr>
                 </thead>
-                <tbody>
-                    <aura:iteration items="{!v.lstRecords}" var="rec">
-                      <tr class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
+                <tbody >
+                    <aura:iteration items="{!v.lstRecords}"  var="rec" indexVar="index">
+                      <aura:if isTrue="{!index == 0}">
+                      <tr aura:id="firstRow" class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
                         <td class="slds-cell-shrink">
                         </td>
                           <th class="slds-truncate" scope="row">{!rec.column1}</th>
@@ -136,11 +143,33 @@
                         <td class="slds-cell-shrink" data-label="Actions">
                         </td>
                       </tr>
+                    <aura:set attribute="else">
+                      <tr class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
+                        <td class="slds-cell-shrink">
+                        </td>
+                          <th class="slds-truncate" scope="row">{!rec.column1}</th>
+                        <td class="slds-truncate sizehidden" aura:id="col2Row">{!rec.column2}</td>
+                        <td class="sizehidden" aura:id="col3Row" >{!rec.column3}</td>
+                        <td class="sizehidden" aura:id="col4Row" >{!rec.column4}</td>
+                        <aura:renderIf isTrue="{!v.showButton}">
+
+                          <td class="" aura:id="colButtonRow">                    
+                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" data-record="{!rec.eventField}" onclick="{!c.OpenVisualForce}">
+                            <span class="slds-text-not-selected">{!v.buttonLabel}</span>
+                          </button>
+                        </td>
+                        </aura:renderIf>
+                        <td class="slds-cell-shrink" data-label="Actions">
+                        </td>
+                      </tr>  
+                    </aura:set>
+
+                    </aura:if>
                     </aura:iteration>
                 </tbody>
               </table>
         
-        <!-- List LC: End -->
+        <!-- List LC: End --> 
    
         <!-- Modal LC: Start -->
 

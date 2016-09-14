@@ -54,17 +54,73 @@
         
     },
     
+    doneRendering : function(component, event, helper) {
+        console.log("InterviewsListController.doneRendering: entered");
+        var lstRecs = component.get("v.lstRecords");
+        var arr = [];
+        arr = lstRecs;
+        if (arr != null && !component.get("v.isDoneRendering")){
+            /*var rec1 = arr[0].recordID ;
+            console.log("rec1: " + rec1); */
+            var firstRow = component.find("firstRow");
+
+            console.log("firstRow: " + firstRow);
+            $A.util.removeClass(firstRow, "slds-hint-parent");
+            $A.util.addClass(firstRow, "slds-is-selected"); 
+            component.set("v.isDoneRendering", true);
+            
+            
+            // Fire standard ltng:selectSobject event:
+            var stdAppEvent = $A.get("e.ltng:selectSObject");
+    
+            stdAppEvent.setParams({ "recordId": arr[0].eventField, "channel": "Project Sparkle Interview List LC" });
+            stdAppEvent.fire();
+
+        }
+        
+        
+
+        
+		console.log("InterviewsListController.doneRendering: exit")
+
+
+    },
+    
     fireApplicationEvent : function(component, event, helper) {
-        //var recId = = event.target.value;
+
+        //CSS - Remove Selected class from first row and any other rows that were selected before        
+        var firstRow = component.find("firstRow");
+        console.log("firstRow: " + firstRow);
+        $A.util.removeClass(firstRow, "slds-is-selected");
+        $A.util.addClass(firstRow, "slds-hint-parent"); 
+        
+        
+        var lastSelectedRow = component.get("v.lastSelectedRow");
+		console.log("lastSelectedRow: " + lastSelectedRow);
+        if (lastSelectedRow){
+            $A.util.removeClass(lastSelectedRow, "slds-is-selected");
+        	$A.util.addClass(lastSelectedRow, "slds-hint-parent");
+        }
+        
+        // Grab the record id from the DOM - Table row that was clicked
+       
         var selectedItem = event.currentTarget;
-        var Name = selectedItem.dataset.record;
-        console.log('data Name = '+ Name);
+        console.log("selectedItem: " + selectedItem);
+        var SelectedRecordID = selectedItem.dataset.record;
+        console.log('Selected Record ID = '+ SelectedRecordID);
+        
+        //CSS - Add Selected class to the row that was clicked        
+        $A.util.removeClass(selectedItem, "slds-hint-parent");
+        $A.util.addClass(selectedItem, "slds-is-selected"); 
+        
+        // Store the last Table Rown that was clicked
+        component.set("v.lastSelectedRow", selectedItem);
 
 
         // Fire standard ltng:selectSobject event:
         var stdAppEvent = $A.get("e.ltng:selectSObject");
 
-        stdAppEvent.setParams({ "recordId": Name, "channel": "Project Sparkle Interview List LC" });
+        stdAppEvent.setParams({ "recordId": SelectedRecordID, "channel": "Project Sparkle Interview List LC" });
         stdAppEvent.fire();
 
 

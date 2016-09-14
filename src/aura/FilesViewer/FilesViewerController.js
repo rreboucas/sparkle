@@ -32,7 +32,35 @@
 
         console.log("FilesViewerController.handleApplicationEvent: exit");
         
-    },
+    } ,
+    
+    openFileViewer : function(component, event, helper) {
+
+        console.log("FilesViewerController.openFileViewer: entered");
+        
+        // Grab the record id from the DOM - File that was clicked
+       
+        var selectedItem = event.currentTarget;
+        console.log("selectedItem: " + selectedItem);
+        var SelectedRecordID = selectedItem.dataset.record;
+        console.log('Selected File Record ID = '+ SelectedRecordID);
+   
+        var array = [];
+        array[0] = SelectedRecordID;
+        console.log('array = '+ array);
+
+        // Fire standard lightning:openFiles event:
+        var stdAppEvent = $A.get("e.lightning:openFiles");
+
+        stdAppEvent.setParams({ "recordIds": array, "selectedRecordId": null });
+        stdAppEvent.fire();
+
+        console.log("FilesViewerController.openFileViewer: exit");
+
+    }
+
+
+    ,
     
     viewModal : function(component, event) {
     // Open Modal

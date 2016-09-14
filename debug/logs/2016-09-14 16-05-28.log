@@ -1,0 +1,1906 @@
+38.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+13:05:24.0 (119450)|USER_INFO|[EXTERNAL]|005B0000001VpZR|rreboucas-yi5c@force.com|Pacific Standard Time|GMT-07:00
+13:05:24.2 (2695128)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000lc07|ListServerController.getListRecords
+13:05:24.2 (2759639)|VARIABLE_SCOPE_BEGIN|[3]|ListServerController.mapObjectsFields|Map<String,Set<String>>|true|true
+13:05:24.2 (2831796)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:180
+13:05:24.2 (2842810)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:22
+13:05:24.2 (2846073)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:27
+13:05:24.2 (2872896)|METHOD_ENTRY|[1]|01pB0000000lc07|ListServerController.ListServerController()
+13:05:24.2 (2882882)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (2892001)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (2944406)|HEAP_ALLOCATE|[50]|Bytes:5
+13:05:24.2 (2975225)|HEAP_ALLOCATE|[56]|Bytes:5
+13:05:24.2 (2984378)|HEAP_ALLOCATE|[64]|Bytes:7
+13:05:24.2 (3018508)|SYSTEM_MODE_ENTER|false
+13:05:24.2 (3048449)|HEAP_ALLOCATE|[3]|Bytes:5
+13:05:24.2 (3053125)|STATEMENT_EXECUTE|[3]
+13:05:24.2 (3090391)|VARIABLE_ASSIGNMENT|[3]|ListServerController.mapObjectsFields|null|
+13:05:24.2 (3098294)|SYSTEM_MODE_EXIT|false
+13:05:24.2 (3111684)|METHOD_EXIT|[1]|ListServerController
+13:05:24.2 (3117131)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+13:05:24.2 (3119447)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.2 (3120839)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:26
+13:05:24.2 (3122022)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:7
+13:05:24.2 (3123217)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.2 (3125177)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:59
+13:05:24.2 (3126346)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:63
+13:05:24.2 (3127493)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:05:24.2 (3128632)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:34
+13:05:24.2 (3130142)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:63
+13:05:24.2 (3131259)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+13:05:24.2 (3138147)|SYSTEM_MODE_ENTER|false
+13:05:24.2 (3146264)|VARIABLE_SCOPE_BEGIN|[23]|rowsLimit|String|false|false
+13:05:24.2 (3159048)|VARIABLE_ASSIGNMENT|[23]|rowsLimit|"8"
+13:05:24.2 (3161793)|VARIABLE_SCOPE_BEGIN|[23]|objectApiName|String|false|false
+13:05:24.2 (3168527)|VARIABLE_ASSIGNMENT|[23]|objectApiName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (3171094)|VARIABLE_SCOPE_BEGIN|[23]|filter1Field|String|false|false
+13:05:24.2 (3174934)|VARIABLE_ASSIGNMENT|[23]|filter1Field|"testautonumdata__Sta (6 more) ..."
+13:05:24.2 (3176786)|VARIABLE_SCOPE_BEGIN|[23]|filter1Value|String|false|false
+13:05:24.2 (3179497)|VARIABLE_ASSIGNMENT|[23]|filter1Value|"Pending"
+13:05:24.2 (3181489)|VARIABLE_SCOPE_BEGIN|[23]|eventField|String|false|false
+13:05:24.2 (3184973)|VARIABLE_ASSIGNMENT|[23]|eventField|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (3186706)|VARIABLE_SCOPE_BEGIN|[23]|column1|String|false|false
+13:05:24.2 (3190297)|VARIABLE_ASSIGNMENT|[23]|column1|"testautonumdata__Can (39 more) ..."
+13:05:24.2 (3192335)|VARIABLE_SCOPE_BEGIN|[23]|column2|String|false|false
+13:05:24.2 (3195355)|VARIABLE_ASSIGNMENT|[23]|column2|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (3196994)|VARIABLE_SCOPE_BEGIN|[23]|column3|String|false|false
+13:05:24.2 (3200012)|VARIABLE_ASSIGNMENT|[23]|column3|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (3201707)|VARIABLE_SCOPE_BEGIN|[23]|column4|String|false|false
+13:05:24.2 (3204809)|VARIABLE_ASSIGNMENT|[23]|column4|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (3206386)|VARIABLE_SCOPE_BEGIN|[23]|sortField|String|false|false
+13:05:24.2 (3209482)|VARIABLE_ASSIGNMENT|[23]|sortField|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (3211233)|VARIABLE_SCOPE_BEGIN|[23]|sortDirection|String|false|false
+13:05:24.2 (3213945)|VARIABLE_ASSIGNMENT|[23]|sortDirection|"asc"
+13:05:24.2 (3228575)|HEAP_ALLOCATE|[25]|Bytes:5
+13:05:24.2 (3233195)|STATEMENT_EXECUTE|[23]
+13:05:24.2 (3234544)|STATEMENT_EXECUTE|[25]
+13:05:24.2 (3237086)|HEAP_ALLOCATE|[25]|Bytes:20
+13:05:24.2 (3251096)|HEAP_ALLOCATE|[25]|Bytes:21
+13:05:24.2 (3290911)|ENTERING_MANAGED_PKG|
+13:05:24.2 (3336944)|USER_DEBUG|[25]|DEBUG|######## rowsLimit: 8
+13:05:24.2 (3348707)|STATEMENT_EXECUTE|[26]
+13:05:24.2 (3352058)|HEAP_ALLOCATE|[26]|Bytes:24
+13:05:24.2 (3359079)|HEAP_ALLOCATE|[26]|Bytes:53
+13:05:24.2 (3367912)|ENTERING_MANAGED_PKG|
+13:05:24.2 (3386956)|USER_DEBUG|[26]|DEBUG|######## objectApiName: testautonumdata__Interview__c
+13:05:24.2 (3393970)|STATEMENT_EXECUTE|[29]
+13:05:24.2 (3401631)|HEAP_ALLOCATE|[29]|Bytes:4
+13:05:24.2 (3451632)|VARIABLE_ASSIGNMENT|[29]|ListServerController.mapObjectsFields|{"s":1,"v":{}}|0x4193f7cd
+13:05:24.2 (3456478)|STATEMENT_EXECUTE|[31]
+13:05:24.2 (3460121)|HEAP_ALLOCATE|[31]|Bytes:2
+13:05:24.2 (3600473)|HEAP_ALLOCATE|[31]|Bytes:19
+13:05:24.2 (3605790)|HEAP_ALLOCATE|[31]|Bytes:28
+13:05:24.2 (3619199)|METHOD_ENTRY|[1]|01pB0000000ljzx|Sparkle_Helper.Sparkle_Helper()
+13:05:24.2 (3622559)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (3626587)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (3633204)|HEAP_ALLOCATE|[31]|Bytes:5
+13:05:24.2 (3643582)|METHOD_EXIT|[1]|Sparkle_Helper
+13:05:24.2 (3661352)|METHOD_ENTRY|[31]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (3678992)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (3686741)|VARIABLE_ASSIGNMENT|[107]|fieldName|"Id"
+13:05:24.2 (3690141)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (3694418)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (3696261)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (3710818)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{}}|0x4193f7cd
+13:05:24.2 (3719318)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (3723905)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (3726837)|HEAP_ALLOCATE|[109]|Bytes:1
+13:05:24.2 (3745021)|ENTERING_MANAGED_PKG|
+13:05:24.2 (3786303)|STATEMENT_EXECUTE|[150]
+13:05:24.2 (3797572)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (3815653)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (3822262)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Id"
+13:05:24.2 (3824667)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (3828871)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (3832046)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (3847266)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{}}|0x4193f7cd
+13:05:24.2 (3856124)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (3860577)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (3880829)|ENTERING_MANAGED_PKG|
+13:05:24.2 (3915894)|STATEMENT_EXECUTE|[167]
+13:05:24.2 (3917916)|STATEMENT_EXECUTE|[168]
+13:05:24.2 (3975550)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.2 (4002402)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4038438)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.2 (4090617)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x6720a05b
+13:05:24.2 (4094777)|STATEMENT_EXECUTE|[169]
+13:05:24.2 (4108005)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4133545)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (4142866)|STATEMENT_EXECUTE|[170]
+13:05:24.2 (4150545)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4179306)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.2 (4193537)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (4200665)|METHOD_EXIT|[31]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (4203767)|STATEMENT_EXECUTE|[33]
+13:05:24.2 (4236173)|HEAP_ALLOCATE|[33]|Bytes:4
+13:05:24.2 (4331304)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4354537)|VARIABLE_SCOPE_BEGIN|[33]|lstReturnRecords|List<testautonumdata.ListServerController>|true|false
+13:05:24.2 (4384482)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (4401269)|VARIABLE_ASSIGNMENT|[33]|lstReturnRecords|{"s":1,"v":[]}|0x23d1f4e7
+13:05:24.2 (4404605)|STATEMENT_EXECUTE|[35]
+13:05:24.2 (4431579)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4462893)|VARIABLE_SCOPE_BEGIN|[35]|rLimit|Integer|false|false
+13:05:24.2 (4467825)|HEAP_ALLOCATE|[35]|Bytes:4
+13:05:24.2 (4474257)|VARIABLE_ASSIGNMENT|[35]|rLimit|8
+13:05:24.2 (4476603)|STATEMENT_EXECUTE|[36]
+13:05:24.2 (4479970)|HEAP_ALLOCATE|[36]|Bytes:17
+13:05:24.2 (4498791)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4522175)|HEAP_ALLOCATE|[36]|Bytes:1
+13:05:24.2 (4536966)|HEAP_ALLOCATE|[36]|Bytes:18
+13:05:24.2 (4550276)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4557085)|USER_DEBUG|[36]|DEBUG|######## rLimit: 8
+13:05:24.2 (4563210)|STATEMENT_EXECUTE|[40]
+13:05:24.2 (4566740)|HEAP_ALLOCATE|[40]|Bytes:9
+13:05:24.2 (4572616)|VARIABLE_SCOPE_BEGIN|[40]|soql|String|false|false
+13:05:24.2 (4580529)|VARIABLE_ASSIGNMENT|[40]|soql|"Select id"
+13:05:24.2 (4597175)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4626937)|STATEMENT_EXECUTE|[43]
+13:05:24.2 (4629027)|STATEMENT_EXECUTE|[44]
+13:05:24.2 (4632088)|HEAP_ALLOCATE|[44]|Bytes:2
+13:05:24.2 (4644587)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4660104)|HEAP_ALLOCATE|[44]|Bytes:29
+13:05:24.2 (4672182)|HEAP_ALLOCATE|[44]|Bytes:31
+13:05:24.2 (4676095)|HEAP_ALLOCATE|[44]|Bytes:40
+13:05:24.2 (4683862)|VARIABLE_ASSIGNMENT|[44]|soql|"Select id, testauton (20 more) ..."
+13:05:24.2 (4686317)|STATEMENT_EXECUTE|[45]
+13:05:24.2 (4694658)|METHOD_ENTRY|[45]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (4706871)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (4712642)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (4715187)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (4718462)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (4719975)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (4740542)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id"]}}}|0x4193f7cd
+13:05:24.2 (4749540)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (4753593)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (4770964)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4779357)|STATEMENT_EXECUTE|[150]
+13:05:24.2 (4787457)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (4792381)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (4798841)|VARIABLE_ASSIGNMENT|[157]|fieldName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (4800825)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (4803857)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (4805463)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (4826898)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id"]}}}|0x4193f7cd
+13:05:24.2 (4834838)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (4839673)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (4848519)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4855630)|STATEMENT_EXECUTE|[161]
+13:05:24.2 (4857079)|STATEMENT_EXECUTE|[162]
+13:05:24.2 (4863099)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4900424)|VARIABLE_SCOPE_BEGIN|[162]|existingFieldSet|Set<String>|true|false
+13:05:24.2 (4918586)|VARIABLE_ASSIGNMENT|[162]|existingFieldSet|{"s":1,"v":["Id"]}|0x6720a05b
+13:05:24.2 (4922022)|STATEMENT_EXECUTE|[163]
+13:05:24.2 (4938864)|ENTERING_MANAGED_PKG|
+13:05:24.2 (4962248)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (4971517)|STATEMENT_EXECUTE|[164]
+13:05:24.2 (4978772)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5022332)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5032546)|METHOD_EXIT|[45]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5036266)|STATEMENT_EXECUTE|[49]
+13:05:24.2 (5037630)|STATEMENT_EXECUTE|[50]
+13:05:24.2 (5055942)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5074038)|HEAP_ALLOCATE|[50]|Bytes:59
+13:05:24.2 (5090264)|HEAP_ALLOCATE|[50]|Bytes:61
+13:05:24.2 (5094519)|HEAP_ALLOCATE|[50]|Bytes:101
+13:05:24.2 (5103030)|VARIABLE_ASSIGNMENT|[50]|soql|"Select id, testauton (81 more) ..."
+13:05:24.2 (5105412)|STATEMENT_EXECUTE|[51]
+13:05:24.2 (5113865)|METHOD_ENTRY|[51]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5126121)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (5131772)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Can (39 more) ..."
+13:05:24.2 (5134024)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (5137467)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (5139025)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (5158805)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]}}}|0x4193f7cd
+13:05:24.2 (5168072)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (5172059)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (5184598)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5192684)|STATEMENT_EXECUTE|[110]
+13:05:24.2 (5194283)|STATEMENT_EXECUTE|[111]
+13:05:24.2 (5205767)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5225353)|HEAP_ALLOCATE|[111]|Bytes:29
+13:05:24.2 (5236021)|VARIABLE_SCOPE_BEGIN|[111]|relName1|String|false|false
+13:05:24.2 (5243933)|VARIABLE_ASSIGNMENT|[111]|relName1|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (5246482)|STATEMENT_EXECUTE|[112]
+13:05:24.2 (5258429)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5279616)|HEAP_ALLOCATE|[112]|Bytes:29
+13:05:24.2 (5291780)|VARIABLE_SCOPE_BEGIN|[112]|relField1|String|false|false
+13:05:24.2 (5301159)|VARIABLE_ASSIGNMENT|[112]|relField1|"testautonumdata__Ful (9 more) ..."
+13:05:24.2 (5312241)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5338993)|STATEMENT_EXECUTE|[132]
+13:05:24.2 (5343991)|HEAP_ALLOCATE|[134]|Bytes:3
+13:05:24.2 (5356775)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5378683)|STATEMENT_EXECUTE|[135]
+13:05:24.2 (5380475)|STATEMENT_EXECUTE|[137]
+13:05:24.2 (5387833)|HEAP_ALLOCATE|[137]|Bytes:3
+13:05:24.2 (5400850)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5428987)|HEAP_ALLOCATE|[137]|Bytes:29
+13:05:24.2 (5445740)|VARIABLE_SCOPE_BEGIN|[137]|objectName1|String|false|false
+13:05:24.2 (5453615)|VARIABLE_ASSIGNMENT|[137]|objectName1|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (5456173)|STATEMENT_EXECUTE|[138]
+13:05:24.2 (5464969)|METHOD_ENTRY|[138]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5479360)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (5484799)|VARIABLE_ASSIGNMENT|[157]|fieldName|"testautonumdata__Ful (9 more) ..."
+13:05:24.2 (5486939)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (5490004)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (5491489)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (5515746)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]}}}|0x4193f7cd
+13:05:24.2 (5525270)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (5530830)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (5539383)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5545843)|STATEMENT_EXECUTE|[167]
+13:05:24.2 (5547097)|STATEMENT_EXECUTE|[168]
+13:05:24.2 (5551344)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.2 (5563772)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5570719)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.2 (5591510)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x79b20330
+13:05:24.2 (5594646)|STATEMENT_EXECUTE|[169]
+13:05:24.2 (5601871)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5606443)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (5612990)|STATEMENT_EXECUTE|[170]
+13:05:24.2 (5617302)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5624841)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.2 (5635389)|METHOD_EXIT|[138]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5641893)|METHOD_EXIT|[51]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5645178)|STATEMENT_EXECUTE|[54]
+13:05:24.2 (5646458)|STATEMENT_EXECUTE|[55]
+13:05:24.2 (5658969)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5676009)|HEAP_ALLOCATE|[55]|Bytes:63
+13:05:24.2 (5689015)|HEAP_ALLOCATE|[55]|Bytes:65
+13:05:24.2 (5692873)|HEAP_ALLOCATE|[55]|Bytes:166
+13:05:24.2 (5701502)|VARIABLE_ASSIGNMENT|[55]|soql|"Select id, testauton (146 more) ..."
+13:05:24.2 (5703820)|STATEMENT_EXECUTE|[56]
+13:05:24.2 (5711505)|METHOD_ENTRY|[56]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (5724043)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (5730209)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (5732292)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (5735342)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (5736734)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (5759515)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]}}}|0x4193f7cd
+13:05:24.2 (5773333)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (5777574)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (5792690)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5801821)|STATEMENT_EXECUTE|[110]
+13:05:24.2 (5803460)|STATEMENT_EXECUTE|[111]
+13:05:24.2 (5810862)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5818008)|HEAP_ALLOCATE|[111]|Bytes:29
+13:05:24.2 (5826537)|VARIABLE_SCOPE_BEGIN|[111]|relName1|String|false|false
+13:05:24.2 (5834129)|VARIABLE_ASSIGNMENT|[111]|relName1|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (5836585)|STATEMENT_EXECUTE|[112]
+13:05:24.2 (5848193)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5851813)|HEAP_ALLOCATE|[112]|Bytes:33
+13:05:24.2 (5859818)|VARIABLE_SCOPE_BEGIN|[112]|relField1|String|false|false
+13:05:24.2 (5865898)|VARIABLE_ASSIGNMENT|[112]|relField1|"testautonumdata__Pos (13 more) ..."
+13:05:24.2 (5873875)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5885381)|STATEMENT_EXECUTE|[114]
+13:05:24.2 (5886894)|STATEMENT_EXECUTE|[115]
+13:05:24.2 (5895372)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5915017)|HEAP_ALLOCATE|[115]|Bytes:28
+13:05:24.2 (5926681)|VARIABLE_SCOPE_BEGIN|[115]|relName2|String|false|false
+13:05:24.2 (5942503)|VARIABLE_ASSIGNMENT|[115]|relName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (5945133)|STATEMENT_EXECUTE|[116]
+13:05:24.2 (5956016)|ENTERING_MANAGED_PKG|
+13:05:24.2 (5974578)|HEAP_ALLOCATE|[116]|Bytes:4
+13:05:24.2 (5985733)|VARIABLE_SCOPE_BEGIN|[116]|relField2|String|false|false
+13:05:24.2 (5992465)|VARIABLE_ASSIGNMENT|[116]|relField2|"Name"
+13:05:24.2 (6006388)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6032685)|STATEMENT_EXECUTE|[120]
+13:05:24.2 (6034702)|STATEMENT_EXECUTE|[122]
+13:05:24.2 (6043884)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6067858)|HEAP_ALLOCATE|[122]|Bytes:28
+13:05:24.2 (6082044)|VARIABLE_SCOPE_BEGIN|[122]|objectName2|String|false|false
+13:05:24.2 (6089848)|VARIABLE_ASSIGNMENT|[122]|objectName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (6092593)|STATEMENT_EXECUTE|[123]
+13:05:24.2 (6099843)|METHOD_ENTRY|[123]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6111759)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (6116069)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Name"
+13:05:24.2 (6118219)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (6121559)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (6123032)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (6145750)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]}}}|0x4193f7cd
+13:05:24.2 (6154711)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (6158598)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (6165680)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6172030)|STATEMENT_EXECUTE|[167]
+13:05:24.2 (6173326)|STATEMENT_EXECUTE|[168]
+13:05:24.2 (6177024)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.2 (6185141)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6191592)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.2 (6209369)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x1bf25625
+13:05:24.2 (6212074)|STATEMENT_EXECUTE|[169]
+13:05:24.2 (6218662)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6223127)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (6229526)|STATEMENT_EXECUTE|[170]
+13:05:24.2 (6233692)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6240931)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.2 (6251130)|METHOD_EXIT|[123]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6257199)|METHOD_EXIT|[56]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6260381)|STATEMENT_EXECUTE|[59]
+13:05:24.2 (6261662)|STATEMENT_EXECUTE|[60]
+13:05:24.2 (6279449)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6298168)|HEAP_ALLOCATE|[60]|Bytes:24
+13:05:24.2 (6313672)|HEAP_ALLOCATE|[60]|Bytes:26
+13:05:24.2 (6317803)|HEAP_ALLOCATE|[60]|Bytes:192
+13:05:24.2 (6330682)|VARIABLE_ASSIGNMENT|[60]|soql|"Select id, testauton (172 more) ..."
+13:05:24.2 (6333281)|STATEMENT_EXECUTE|[61]
+13:05:24.2 (6341532)|METHOD_ENTRY|[61]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6356105)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (6362264)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (6364535)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (6367726)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (6369326)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (6399211)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (6410372)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (6415378)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (6430330)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6438789)|STATEMENT_EXECUTE|[150]
+13:05:24.2 (6450327)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6454105)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (6460284)|VARIABLE_ASSIGNMENT|[157]|fieldName|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (6462317)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (6465438)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (6467136)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (6494494)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (6503318)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (6507803)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (6519406)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6525836)|STATEMENT_EXECUTE|[161]
+13:05:24.2 (6527119)|STATEMENT_EXECUTE|[162]
+13:05:24.2 (6530681)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6542557)|VARIABLE_SCOPE_BEGIN|[162]|existingFieldSet|Set<String>|true|false
+13:05:24.2 (6557699)|VARIABLE_ASSIGNMENT|[162]|existingFieldSet|{"s":1,"v":["Id","testautonumdata__Can (9 more) ..."]}|0x6720a05b
+13:05:24.2 (6560874)|STATEMENT_EXECUTE|[163]
+13:05:24.2 (6571656)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6576492)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (6583089)|STATEMENT_EXECUTE|[164]
+13:05:24.2 (6589092)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6610122)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6616445)|METHOD_EXIT|[61]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6619757)|STATEMENT_EXECUTE|[64]
+13:05:24.2 (6621055)|STATEMENT_EXECUTE|[65]
+13:05:24.2 (6633579)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6650725)|HEAP_ALLOCATE|[65]|Bytes:34
+13:05:24.2 (6663786)|HEAP_ALLOCATE|[65]|Bytes:36
+13:05:24.2 (6667903)|HEAP_ALLOCATE|[65]|Bytes:228
+13:05:24.2 (6675969)|VARIABLE_ASSIGNMENT|[65]|soql|"Select id, testauton (208 more) ..."
+13:05:24.2 (6678458)|STATEMENT_EXECUTE|[66]
+13:05:24.2 (6685943)|METHOD_ENTRY|[66]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6697262)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (6702906)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (6705155)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (6708398)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (6709817)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (6735678)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (6745619)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (6749535)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (6762286)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6770457)|STATEMENT_EXECUTE|[150]
+13:05:24.2 (6782178)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6785501)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (6791518)|VARIABLE_ASSIGNMENT|[157]|fieldName|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (6793256)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (6798496)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (6801327)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (6827847)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (6840831)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (6844694)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (6852302)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6861187)|STATEMENT_EXECUTE|[161]
+13:05:24.2 (6862666)|STATEMENT_EXECUTE|[162]
+13:05:24.2 (6866729)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6876085)|VARIABLE_SCOPE_BEGIN|[162]|existingFieldSet|Set<String>|true|false
+13:05:24.2 (6891962)|VARIABLE_ASSIGNMENT|[162]|existingFieldSet|{"s":1,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ..."]}|0x6720a05b
+13:05:24.2 (6900110)|STATEMENT_EXECUTE|[163]
+13:05:24.2 (6906440)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6910869)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (6917849)|STATEMENT_EXECUTE|[164]
+13:05:24.2 (6924882)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6952323)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6959074)|METHOD_EXIT|[66]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (6962402)|STATEMENT_EXECUTE|[69]
+13:05:24.2 (6966502)|HEAP_ALLOCATE|[69]|Bytes:6
+13:05:24.2 (6982423)|ENTERING_MANAGED_PKG|
+13:05:24.2 (6999994)|HEAP_ALLOCATE|[69]|Bytes:29
+13:05:24.2 (7016975)|HEAP_ALLOCATE|[69]|Bytes:35
+13:05:24.2 (7022460)|HEAP_ALLOCATE|[69]|Bytes:263
+13:05:24.2 (7030727)|VARIABLE_ASSIGNMENT|[69]|soql|"Select id, testauton (243 more) ..."
+13:05:24.2 (7035092)|STATEMENT_EXECUTE|[73]
+13:05:24.2 (7037270)|STATEMENT_EXECUTE|[74]
+13:05:24.2 (7041221)|HEAP_ALLOCATE|[74]|Bytes:7
+13:05:24.2 (7054047)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7073666)|HEAP_ALLOCATE|[74]|Bytes:26
+13:05:24.2 (7084409)|HEAP_ALLOCATE|[74]|Bytes:4
+13:05:24.2 (7095991)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7099629)|HEAP_ALLOCATE|[74]|Bytes:7
+13:05:24.2 (7107945)|HEAP_ALLOCATE|[74]|Bytes:1
+13:05:24.2 (7124333)|HEAP_ALLOCATE|[74]|Bytes:45
+13:05:24.2 (7128929)|HEAP_ALLOCATE|[74]|Bytes:308
+13:05:24.2 (7136712)|VARIABLE_ASSIGNMENT|[74]|soql|"Select id, testauton (288 more) ..."
+13:05:24.2 (7139036)|STATEMENT_EXECUTE|[75]
+13:05:24.2 (7147018)|METHOD_ENTRY|[75]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7158669)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (7164465)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Sta (6 more) ..."
+13:05:24.2 (7166453)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (7169538)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (7170933)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (7197467)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (7207562)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (7211571)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (7224444)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7232515)|STATEMENT_EXECUTE|[150]
+13:05:24.2 (7238067)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7241175)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (7247044)|VARIABLE_ASSIGNMENT|[157]|fieldName|"testautonumdata__Sta (6 more) ..."
+13:05:24.2 (7248830)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (7251983)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (7253294)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (7277637)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (7291151)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (7295081)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (7301908)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7311068)|STATEMENT_EXECUTE|[161]
+13:05:24.2 (7312643)|STATEMENT_EXECUTE|[162]
+13:05:24.2 (7317108)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7326345)|VARIABLE_SCOPE_BEGIN|[162]|existingFieldSet|Set<String>|true|false
+13:05:24.2 (7347106)|VARIABLE_ASSIGNMENT|[162]|existingFieldSet|{"s":1,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ..."]}|0x6720a05b
+13:05:24.2 (7350707)|STATEMENT_EXECUTE|[163]
+13:05:24.2 (7357067)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7362928)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (7371821)|STATEMENT_EXECUTE|[164]
+13:05:24.2 (7376547)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7394202)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7400070)|METHOD_EXIT|[75]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7409403)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (7410680)|STATEMENT_EXECUTE|[80]
+13:05:24.2 (7413856)|HEAP_ALLOCATE|[80]|Bytes:10
+13:05:24.2 (7429385)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7447159)|HEAP_ALLOCATE|[80]|Bytes:63
+13:05:24.2 (7462228)|HEAP_ALLOCATE|[80]|Bytes:1
+13:05:24.2 (7471437)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7474085)|HEAP_ALLOCATE|[80]|Bytes:3
+13:05:24.2 (7490752)|HEAP_ALLOCATE|[80]|Bytes:77
+13:05:24.2 (7495758)|HEAP_ALLOCATE|[80]|Bytes:385
+13:05:24.2 (7504048)|VARIABLE_ASSIGNMENT|[80]|soql|"Select id, testauton (365 more) ..."
+13:05:24.2 (7506406)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (7514649)|METHOD_ENTRY|[81]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7531070)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.2 (7537155)|VARIABLE_ASSIGNMENT|[107]|fieldName|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (7539313)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.2 (7543948)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (7546864)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (7579942)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ...","testautonumdata__Sta (6 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (7590443)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.2 (7594583)|STATEMENT_EXECUTE|[108]
+13:05:24.2 (7609667)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7618288)|STATEMENT_EXECUTE|[110]
+13:05:24.2 (7619708)|STATEMENT_EXECUTE|[111]
+13:05:24.2 (7626650)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7629964)|HEAP_ALLOCATE|[111]|Bytes:29
+13:05:24.2 (7637763)|VARIABLE_SCOPE_BEGIN|[111]|relName1|String|false|false
+13:05:24.2 (7645039)|VARIABLE_ASSIGNMENT|[111]|relName1|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (7647572)|STATEMENT_EXECUTE|[112]
+13:05:24.2 (7655929)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7659003)|HEAP_ALLOCATE|[112]|Bytes:33
+13:05:24.2 (7666231)|VARIABLE_SCOPE_BEGIN|[112]|relField1|String|false|false
+13:05:24.2 (7671560)|VARIABLE_ASSIGNMENT|[112]|relField1|"testautonumdata__Pos (13 more) ..."
+13:05:24.2 (7679246)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7686203)|STATEMENT_EXECUTE|[114]
+13:05:24.2 (7687567)|STATEMENT_EXECUTE|[115]
+13:05:24.2 (7693716)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7696322)|HEAP_ALLOCATE|[115]|Bytes:28
+13:05:24.2 (7703325)|VARIABLE_SCOPE_BEGIN|[115]|relName2|String|false|false
+13:05:24.2 (7708414)|VARIABLE_ASSIGNMENT|[115]|relName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (7710333)|STATEMENT_EXECUTE|[116]
+13:05:24.2 (7717922)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7720562)|HEAP_ALLOCATE|[116]|Bytes:4
+13:05:24.2 (7727570)|VARIABLE_SCOPE_BEGIN|[116]|relField2|String|false|false
+13:05:24.2 (7732040)|VARIABLE_ASSIGNMENT|[116]|relField2|"Name"
+13:05:24.2 (7739431)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7746641)|STATEMENT_EXECUTE|[120]
+13:05:24.2 (7748002)|STATEMENT_EXECUTE|[122]
+13:05:24.2 (7754477)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7761239)|HEAP_ALLOCATE|[122]|Bytes:28
+13:05:24.2 (7769071)|VARIABLE_SCOPE_BEGIN|[122]|objectName2|String|false|false
+13:05:24.2 (7774699)|VARIABLE_ASSIGNMENT|[122]|objectName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (7777222)|STATEMENT_EXECUTE|[123]
+13:05:24.2 (7783254)|METHOD_ENTRY|[123]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7786398)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.2 (7795051)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Name"
+13:05:24.2 (7797122)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.2 (7800469)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (7801983)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (7832316)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ...","testautonumdata__Sta (6 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (7842732)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.2 (7850794)|STATEMENT_EXECUTE|[158]
+13:05:24.2 (7857821)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7864560)|STATEMENT_EXECUTE|[161]
+13:05:24.2 (7865864)|STATEMENT_EXECUTE|[162]
+13:05:24.2 (7871017)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7882486)|VARIABLE_SCOPE_BEGIN|[162]|existingFieldSet|Set<String>|true|false
+13:05:24.2 (7896721)|VARIABLE_ASSIGNMENT|[162]|existingFieldSet|{"s":1,"v":["Name"]}|0x1bf25625
+13:05:24.2 (7899639)|STATEMENT_EXECUTE|[163]
+13:05:24.2 (7905480)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7913743)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (7920355)|STATEMENT_EXECUTE|[164]
+13:05:24.2 (7924865)|ENTERING_MANAGED_PKG|
+13:05:24.2 (7949842)|METHOD_EXIT|[123]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7956556)|METHOD_EXIT|[81]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.2 (7959794)|STATEMENT_EXECUTE|[84]
+13:05:24.2 (7967974)|HEAP_ALLOCATE|[84]|Bytes:7
+13:05:24.2 (7981542)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8001827)|HEAP_ALLOCATE|[84]|Bytes:1
+13:05:24.2 (8016522)|HEAP_ALLOCATE|[84]|Bytes:8
+13:05:24.2 (8020906)|HEAP_ALLOCATE|[84]|Bytes:393
+13:05:24.2 (8033379)|VARIABLE_ASSIGNMENT|[84]|soql|"Select id, testauton (373 more) ..."
+13:05:24.2 (8035845)|STATEMENT_EXECUTE|[88]
+13:05:24.2 (8038520)|HEAP_ALLOCATE|[88]|Bytes:15
+13:05:24.2 (8043466)|HEAP_ALLOCATE|[88]|Bytes:408
+13:05:24.2 (8055104)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8074183)|USER_DEBUG|[88]|DEBUG|######## soql: Select id, testautonumdata__Candidate__c, testautonumdata__Candidate__r.testautonumdata__Full_Name__c, testautonumdata__Candidate__r.testautonumdata__Position__r.Name, testautonumdata__Date__c, testautonumdata__Interview_Type__c FROM testautonumdata__Interview__c where testautonumdata__Status__c = 'Pending' order by testautonumdata__Candidate__r.testautonumdata__Position__r.Name asc limit 8
+13:05:24.2 (8096988)|METHOD_ENTRY|[95]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.UserHasAccessToObjectsAndFields(Map<String,Set<String>>)
+13:05:24.2 (8111725)|VARIABLE_SCOPE_BEGIN|[175]|theMap|Map<String,Set<String>>|true|false
+13:05:24.2 (8142960)|VARIABLE_ASSIGNMENT|[175]|theMap|{"s":1,"v":{"testautonumdata__Int (9 more) ...":{"s":2,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ...","testautonumdata__Sta (6 more) ..."]},"testautonumdata__Can (9 more) ...":{"s":3,"v":["testautonumdata__Ful (9 more) ..."]},"testautonumdata__Pos (8 more) ...":{"s":4,"v":["Name"]}}}|0x4193f7cd
+13:05:24.2 (8154939)|HEAP_ALLOCATE|[177]|Bytes:5
+13:05:24.2 (8159494)|STATEMENT_EXECUTE|[176]
+13:05:24.2 (8160786)|STATEMENT_EXECUTE|[177]
+13:05:24.2 (8164814)|VARIABLE_SCOPE_BEGIN|[177]|hasAccess|Boolean|false|false
+13:05:24.2 (8167990)|HEAP_ALLOCATE|[177]|Bytes:5
+13:05:24.2 (8172923)|VARIABLE_ASSIGNMENT|[177]|hasAccess|true
+13:05:24.2 (8181684)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8206776)|STATEMENT_EXECUTE|[180]
+13:05:24.2 (8208687)|STATEMENT_EXECUTE|[181]
+13:05:24.2 (8212127)|HEAP_ALLOCATE|[181]|Bytes:17
+13:05:24.2 (8226363)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8260925)|HEAP_ALLOCATE|[181]|Bytes:257
+13:05:24.2 (8274217)|HEAP_ALLOCATE|[181]|Bytes:274
+13:05:24.2 (8283581)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8290265)|USER_DEBUG|[181]|DEBUG|######## theMap: {testautonumdata__Candidate__c={testautonumdata__Full_Name__c}, testautonumdata__Interview__c={Id, testautonumdata__Candidate__c, testautonumdata__Date__c, testautonumdata__Interview_Type__c, testautonumdata__Status__c}, testautonumdata__Position__c={Name}}
+13:05:24.2 (8309953)|HEAP_ALLOCATE|[182]|Bytes:4
+13:05:24.2 (8325210)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8351287)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8377976)|HEAP_ALLOCATE|[182]|Bytes:102
+13:05:24.2 (8394696)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8401492)|HEAP_ALLOCATE|[182]|Bytes:12
+13:05:24.2 (8409128)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8483384)|HEAP_ALLOCATE|[182]|Bytes:5
+13:05:24.2 (8507695)|VARIABLE_SCOPE_BEGIN|[182]|objectName|String|false|false
+13:05:24.2 (8516735)|VARIABLE_ASSIGNMENT|[182]|objectName|"testautonumdata__Int (9 more) ..."
+13:05:24.2 (8520278)|STATEMENT_EXECUTE|[183]
+13:05:24.2 (8521419)|STATEMENT_EXECUTE|[184]
+13:05:24.2 (8524828)|HEAP_ALLOCATE|[184]|Bytes:21
+13:05:24.2 (8536110)|HEAP_ALLOCATE|[184]|Bytes:50
+13:05:24.2 (8546787)|ENTERING_MANAGED_PKG|
+13:05:24.2 (8566802)|USER_DEBUG|[184]|DEBUG|######## objectName: testautonumdata__Interview__c
+13:05:24.2 (8575364)|STATEMENT_EXECUTE|[185]
+13:05:24.2 (8596603)|ENTERING_MANAGED_PKG|
+13:05:24.2 (25796569)|HEAP_ALLOCATE|[185]|Bytes:1648
+13:05:24.2 (25850183)|ENTERING_MANAGED_PKG|
+13:05:24.2 (26022356)|HEAP_ALLOCATE|[185]|Bytes:4
+13:05:24.2 (26036977)|VARIABLE_SCOPE_BEGIN|[185]|sObj|SObject|true|false
+13:05:24.2 (26061420)|VARIABLE_ASSIGNMENT|[185]|sObj|{}|0x1d6ff16a
+13:05:24.2 (26066589)|STATEMENT_EXECUTE|[186]
+13:05:24.2 (26105664)|ENTERING_MANAGED_PKG|
+13:05:24.2 (26541943)|HEAP_ALLOCATE|[186]|Bytes:4
+13:05:24.2 (28281024)|HEAP_ALLOCATE|[186]|Bytes:80
+13:05:24.2 (28294611)|VARIABLE_SCOPE_BEGIN|[186]|m|Map<String,Schema.SObjectField>|true|false
+13:05:24.2 (28579072)|VARIABLE_ASSIGNMENT|[186]|m|"{createdbyid=CreatedById, createddate=CreatedDate, id=Id, isdeleted=IsDeleted, lastactivitydate=LastActivityDate, lastmodifiedbyid=LastModifiedById, lastmodifieddate=LastModifiedDate, lastreferenceddate=LastReferencedDate, lastvieweddate=LastViewedDate, name=Name, ...}"|0x4ff7f16d
+13:05:24.2 (28585859)|STATEMENT_EXECUTE|[187]
+13:05:24.2 (28599800)|ENTERING_MANAGED_PKG|
+13:05:24.2 (28643163)|VARIABLE_SCOPE_BEGIN|[187]|objectFieldSet|Set<String>|true|false
+13:05:24.2 (28673876)|VARIABLE_ASSIGNMENT|[187]|objectFieldSet|{"s":1,"v":["Id","testautonumdata__Can (9 more) ...","testautonumdata__Dat (4 more) ...","testautonumdata__Int (14 more) ...","testautonumdata__Sta (6 more) ..."]}|0x6720a05b
+13:05:24.2 (28687798)|HEAP_ALLOCATE|[189]|Bytes:4
+13:05:24.2 (28704508)|ENTERING_MANAGED_PKG|
+13:05:24.2 (28734022)|ENTERING_MANAGED_PKG|
+13:05:24.2 (28744968)|HEAP_ALLOCATE|[189]|Bytes:20
+13:05:24.2 (28753924)|ENTERING_MANAGED_PKG|
+13:05:24.2 (28782596)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (28805558)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (28813271)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"Id"
+13:05:24.2 (28820510)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (28822324)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (28827613)|HEAP_ALLOCATE|[190]|Bytes:23
+13:05:24.2 (28839841)|HEAP_ALLOCATE|[190]|Bytes:25
+13:05:24.2 (28858231)|ENTERING_MANAGED_PKG|
+13:05:24.2 (28887236)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: Id
+13:05:24.2 (28904295)|ENTERING_MANAGED_PKG|
+13:05:24.2 (29549376)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (29582639)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (29585230)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (29588437)|HEAP_ALLOCATE|[199]|Bytes:35
+13:05:24.2 (29597313)|HEAP_ALLOCATE|[199]|Bytes:37
+13:05:24.2 (29610786)|ENTERING_MANAGED_PKG|
+13:05:24.2 (29629095)|USER_DEBUG|[199]|DEBUG|######## User has access to field: Id
+13:05:24.2 (29645748)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (29657752)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (29666883)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (29670063)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (29671242)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (29677039)|HEAP_ALLOCATE|[190]|Bytes:52
+13:05:24.2 (29685625)|ENTERING_MANAGED_PKG|
+13:05:24.2 (29691268)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: testautonumdata__Candidate__c
+13:05:24.2 (29700456)|ENTERING_MANAGED_PKG|
+13:05:24.2 (29953904)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (29972112)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (29974309)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (29980246)|HEAP_ALLOCATE|[199]|Bytes:64
+13:05:24.2 (29991514)|ENTERING_MANAGED_PKG|
+13:05:24.2 (29998461)|USER_DEBUG|[199]|DEBUG|######## User has access to field: testautonumdata__Candidate__c
+13:05:24.2 (30013279)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (30025749)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (30037926)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (30041051)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (30042203)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (30047647)|HEAP_ALLOCATE|[190]|Bytes:47
+13:05:24.2 (30058895)|ENTERING_MANAGED_PKG|
+13:05:24.2 (30064971)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: testautonumdata__Date__c
+13:05:24.2 (30075146)|ENTERING_MANAGED_PKG|
+13:05:24.2 (33919123)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (33940208)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (33942446)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (33948538)|HEAP_ALLOCATE|[199]|Bytes:59
+13:05:24.2 (33958271)|ENTERING_MANAGED_PKG|
+13:05:24.2 (33965249)|USER_DEBUG|[199]|DEBUG|######## User has access to field: testautonumdata__Date__c
+13:05:24.2 (33979795)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (33991295)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (34000528)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (34004479)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (34005647)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (34010880)|HEAP_ALLOCATE|[190]|Bytes:57
+13:05:24.2 (34019578)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34025041)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: testautonumdata__Interview_Type__c
+13:05:24.2 (34034340)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34206079)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (34224789)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (34226814)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (34232577)|HEAP_ALLOCATE|[199]|Bytes:69
+13:05:24.2 (34243827)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34250908)|USER_DEBUG|[199]|DEBUG|######## User has access to field: testautonumdata__Interview_Type__c
+13:05:24.2 (34265968)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (34281209)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (34291004)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"testautonumdata__Sta (6 more) ..."
+13:05:24.2 (34295683)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (34297206)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (34303024)|HEAP_ALLOCATE|[190]|Bytes:49
+13:05:24.2 (34312004)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34317727)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: testautonumdata__Status__c
+13:05:24.2 (34327520)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34486756)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (34501206)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (34503058)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (34509179)|HEAP_ALLOCATE|[199]|Bytes:61
+13:05:24.2 (34517903)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34524130)|USER_DEBUG|[199]|DEBUG|######## User has access to field: testautonumdata__Status__c
+13:05:24.2 (34537709)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (34551088)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|null
+13:05:24.2 (34560984)|HEAP_ALLOCATE|[182]|Bytes:5
+13:05:24.2 (34571371)|VARIABLE_SCOPE_BEGIN|[182]|objectName|String|false|false
+13:05:24.2 (34579433)|VARIABLE_ASSIGNMENT|[182]|objectName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (34582464)|STATEMENT_EXECUTE|[183]
+13:05:24.2 (34583659)|STATEMENT_EXECUTE|[184]
+13:05:24.2 (34588992)|HEAP_ALLOCATE|[184]|Bytes:50
+13:05:24.2 (34597630)|ENTERING_MANAGED_PKG|
+13:05:24.2 (34602970)|USER_DEBUG|[184]|DEBUG|######## objectName: testautonumdata__Candidate__c
+13:05:24.2 (34608695)|STATEMENT_EXECUTE|[185]
+13:05:24.2 (34613654)|ENTERING_MANAGED_PKG|
+13:05:24.2 (41119076)|HEAP_ALLOCATE|[185]|Bytes:1648
+13:05:24.2 (41138048)|ENTERING_MANAGED_PKG|
+13:05:24.2 (41217523)|HEAP_ALLOCATE|[185]|Bytes:4
+13:05:24.2 (41228895)|VARIABLE_SCOPE_BEGIN|[185]|sObj|SObject|true|false
+13:05:24.2 (41243993)|VARIABLE_ASSIGNMENT|[185]|sObj|{}|0x4849f1e3
+13:05:24.2 (41250800)|STATEMENT_EXECUTE|[186]
+13:05:24.2 (41268788)|ENTERING_MANAGED_PKG|
+13:05:24.2 (41442896)|HEAP_ALLOCATE|[186]|Bytes:4
+13:05:24.2 (43143788)|HEAP_ALLOCATE|[186]|Bytes:140
+13:05:24.2 (43154569)|VARIABLE_SCOPE_BEGIN|[186]|m|Map<String,Schema.SObjectField>|true|false
+13:05:24.2 (43412534)|VARIABLE_ASSIGNMENT|[186]|m|"{createdbyid=CreatedById, createddate=CreatedDate, id=Id, isdeleted=IsDeleted, lastactivitydate=LastActivityDate, lastmodifiedbyid=LastModifiedById, lastmodifieddate=LastModifiedDate, lastreferenceddate=LastReferencedDate, lastvieweddate=LastViewedDate, name=Name, ...}"|0x6f366f87
+13:05:24.2 (43421634)|STATEMENT_EXECUTE|[187]
+13:05:24.2 (43432656)|ENTERING_MANAGED_PKG|
+13:05:24.2 (43450098)|VARIABLE_SCOPE_BEGIN|[187]|objectFieldSet|Set<String>|true|false
+13:05:24.2 (43476638)|VARIABLE_ASSIGNMENT|[187]|objectFieldSet|{"s":1,"v":["testautonumdata__Ful (9 more) ..."]}|0x79b20330
+13:05:24.2 (43485995)|HEAP_ALLOCATE|[189]|Bytes:4
+13:05:24.2 (43501041)|ENTERING_MANAGED_PKG|
+13:05:24.2 (43513644)|ENTERING_MANAGED_PKG|
+13:05:24.2 (43517935)|HEAP_ALLOCATE|[189]|Bytes:4
+13:05:24.2 (43524598)|ENTERING_MANAGED_PKG|
+13:05:24.2 (43541761)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (43555226)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (43564677)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"testautonumdata__Ful (9 more) ..."
+13:05:24.2 (43568117)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (43569473)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (43575995)|HEAP_ALLOCATE|[190]|Bytes:52
+13:05:24.2 (43589322)|ENTERING_MANAGED_PKG|
+13:05:24.2 (43596277)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: testautonumdata__Full_Name__c
+13:05:24.2 (43607394)|ENTERING_MANAGED_PKG|
+13:05:24.2 (48638812)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (48658117)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (48660493)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (48667100)|HEAP_ALLOCATE|[199]|Bytes:64
+13:05:24.2 (48680604)|ENTERING_MANAGED_PKG|
+13:05:24.2 (48687959)|USER_DEBUG|[199]|DEBUG|######## User has access to field: testautonumdata__Full_Name__c
+13:05:24.2 (48706232)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (48720677)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|null
+13:05:24.2 (48730687)|HEAP_ALLOCATE|[182]|Bytes:5
+13:05:24.2 (48744411)|VARIABLE_SCOPE_BEGIN|[182]|objectName|String|false|false
+13:05:24.2 (48753446)|VARIABLE_ASSIGNMENT|[182]|objectName|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (48756566)|STATEMENT_EXECUTE|[183]
+13:05:24.2 (48758803)|STATEMENT_EXECUTE|[184]
+13:05:24.2 (48766567)|HEAP_ALLOCATE|[184]|Bytes:49
+13:05:24.2 (48776931)|ENTERING_MANAGED_PKG|
+13:05:24.2 (48783126)|USER_DEBUG|[184]|DEBUG|######## objectName: testautonumdata__Position__c
+13:05:24.2 (48789123)|STATEMENT_EXECUTE|[185]
+13:05:24.2 (48793803)|ENTERING_MANAGED_PKG|
+13:05:24.2 (54948841)|HEAP_ALLOCATE|[185]|Bytes:1648
+13:05:24.2 (54971644)|ENTERING_MANAGED_PKG|
+13:05:24.2 (55047629)|HEAP_ALLOCATE|[185]|Bytes:4
+13:05:24.2 (55059889)|VARIABLE_SCOPE_BEGIN|[185]|sObj|SObject|true|false
+13:05:24.2 (55074213)|VARIABLE_ASSIGNMENT|[185]|sObj|{}|0x285d629
+13:05:24.2 (55077508)|STATEMENT_EXECUTE|[186]
+13:05:24.2 (55098559)|ENTERING_MANAGED_PKG|
+13:05:24.2 (55253974)|HEAP_ALLOCATE|[186]|Bytes:4
+13:05:24.2 (56359286)|HEAP_ALLOCATE|[186]|Bytes:64
+13:05:24.2 (56369852)|VARIABLE_SCOPE_BEGIN|[186]|m|Map<String,Schema.SObjectField>|true|false
+13:05:24.2 (56590307)|VARIABLE_ASSIGNMENT|[186]|m|"{createdbyid=CreatedById, createddate=CreatedDate, id=Id, isdeleted=IsDeleted, lastactivitydate=LastActivityDate, lastmodifiedbyid=LastModifiedById, lastmodifieddate=LastModifiedDate, lastreferenceddate=LastReferencedDate, lastvieweddate=LastViewedDate, name=Name, ...}"|0x2c04192b
+13:05:24.2 (56596729)|STATEMENT_EXECUTE|[187]
+13:05:24.2 (56608450)|ENTERING_MANAGED_PKG|
+13:05:24.2 (56622728)|VARIABLE_SCOPE_BEGIN|[187]|objectFieldSet|Set<String>|true|false
+13:05:24.2 (56645557)|VARIABLE_ASSIGNMENT|[187]|objectFieldSet|{"s":1,"v":["Name"]}|0x1bf25625
+13:05:24.2 (56667693)|HEAP_ALLOCATE|[189]|Bytes:4
+13:05:24.2 (56686532)|ENTERING_MANAGED_PKG|
+13:05:24.2 (56709102)|ENTERING_MANAGED_PKG|
+13:05:24.2 (56714741)|HEAP_ALLOCATE|[189]|Bytes:4
+13:05:24.2 (56725066)|ENTERING_MANAGED_PKG|
+13:05:24.2 (56740351)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (56755723)|VARIABLE_SCOPE_BEGIN|[189]|fieldToCheck|String|false|false
+13:05:24.2 (56763229)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|"Name"
+13:05:24.2 (56766660)|STATEMENT_EXECUTE|[189]
+13:05:24.2 (56767896)|STATEMENT_EXECUTE|[190]
+13:05:24.2 (56774105)|HEAP_ALLOCATE|[190]|Bytes:27
+13:05:24.2 (56783672)|ENTERING_MANAGED_PKG|
+13:05:24.2 (56790425)|USER_DEBUG|[190]|DEBUG|######## fieldToCheck: Name
+13:05:24.2 (56801003)|ENTERING_MANAGED_PKG|
+13:05:24.2 (57225524)|HEAP_ALLOCATE|[192]|Bytes:8
+13:05:24.2 (57242136)|STATEMENT_EXECUTE|[192]
+13:05:24.2 (57245509)|STATEMENT_EXECUTE|[199]
+13:05:24.2 (57253328)|HEAP_ALLOCATE|[199]|Bytes:39
+13:05:24.2 (57263529)|ENTERING_MANAGED_PKG|
+13:05:24.2 (57270650)|USER_DEBUG|[199]|DEBUG|######## User has access to field: Name
+13:05:24.2 (57288308)|HEAP_ALLOCATE|[189]|Bytes:5
+13:05:24.2 (57302831)|VARIABLE_ASSIGNMENT|[189]|fieldToCheck|null
+13:05:24.2 (57313155)|HEAP_ALLOCATE|[182]|Bytes:5
+13:05:24.2 (57322308)|VARIABLE_ASSIGNMENT|[182]|objectName|null
+13:05:24.2 (57326289)|STATEMENT_EXECUTE|[206]
+13:05:24.2 (57328955)|HEAP_ALLOCATE|[206]|Bytes:5
+13:05:24.2 (57350273)|METHOD_EXIT|[95]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.UserHasAccessToObjectsAndFields(Map<String,Set<String>>)
+13:05:24.2 (57356032)|STATEMENT_EXECUTE|[96]
+13:05:24.2 (57358529)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (57400188)|ENTERING_MANAGED_PKG|
+13:05:24.2 (57448132)|HEAP_ALLOCATE|[98]|Bytes:4
+13:05:24.2 (58164954)|SOQL_EXECUTE_BEGIN|[98]|Aggregations:0|Select id, testautonumdata__Candidate__c, testautonumdata__Candidate__r.testautonumdata__Full_Name__c, testautonumdata__Candidate__r.testautonumdata__Position__r.Name, testautonumdata__Date__c, testautonumdata__Interview_Type__c FROM testautonumdata__Interview__c where testautonumdata__Status__c = 'Pending' order by testautonumdata__Candidate__r.testautonumdata__Position__r.Name asc limit 8
+13:05:24.2 (76754577)|SOQL_EXECUTE_END|[98]|Rows:2
+13:05:24.2 (76797893)|HEAP_ALLOCATE|[98]|Bytes:12
+13:05:24.2 (76839748)|HEAP_ALLOCATE|[98]|Bytes:840
+13:05:24.2 (76960858)|HEAP_ALLOCATE|[98]|Bytes:12
+13:05:24.2 (76994116)|VARIABLE_SCOPE_BEGIN|[98]|lstQueriedRecords|List<SObject>|true|false
+13:05:24.2 (77083511)|VARIABLE_ASSIGNMENT|[98]|lstQueriedRecords|{"s":1,"v":[{"s":2,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":3,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":4,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}},{"s":5,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":6,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":7,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}]}|0x553fb3f1
+13:05:24.2 (77097415)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (77106919)|HEAP_ALLOCATE|[100]|Bytes:28
+13:05:24.2 (77144142)|ENTERING_MANAGED_PKG|
+13:05:24.2 (77288515)|HEAP_ALLOCATE|[100]|Bytes:395
+13:05:24.2 (77309592)|HEAP_ALLOCATE|[100]|Bytes:423
+13:05:24.2 (77327798)|ENTERING_MANAGED_PKG|
+13:05:24.2 (77338630)|USER_DEBUG|[100]|DEBUG|######## lstQueriedRecords: (testautonumdata__Interview__c:{Id=a0NB0000000TaTOMA0, testautonumdata__Candidate__c=a0MB0000000cQXFMA2, testautonumdata__Date__c=11/9/2016, testautonumdata__Interview_Type__c=Technical Interview}, testautonumdata__Interview__c:{Id=a0NB0000000RasPMAS, testautonumdata__Candidate__c=a0MB0000000cQdIMAU, testautonumdata__Date__c=10/26/2016, testautonumdata__Interview_Type__c=Recruiter Interview})
+13:05:24.2 (77433279)|ENTERING_MANAGED_PKG|
+13:05:24.2 (77606657)|HEAP_ALLOCATE|[104]|Bytes:5
+13:05:24.2 (77653659)|HEAP_ALLOCATE|[104]|Bytes:24
+13:05:24.2 (77683044)|VARIABLE_SCOPE_BEGIN|[104]|e|SObject|true|false
+13:05:24.2 (77713619)|VARIABLE_ASSIGNMENT|[104]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (77720422)|STATEMENT_EXECUTE|[105]
+13:05:24.2 (77722056)|STATEMENT_EXECUTE|[106]
+13:05:24.2 (77728553)|HEAP_ALLOCATE|[106]|Bytes:12
+13:05:24.2 (77745580)|ENTERING_MANAGED_PKG|
+13:05:24.2 (77813420)|HEAP_ALLOCATE|[106]|Bytes:195
+13:05:24.2 (77830410)|HEAP_ALLOCATE|[106]|Bytes:207
+13:05:24.2 (77840685)|ENTERING_MANAGED_PKG|
+13:05:24.2 (77847166)|USER_DEBUG|[106]|DEBUG|######## e: testautonumdata__Interview__c:{Id=a0NB0000000TaTOMA0, testautonumdata__Candidate__c=a0MB0000000cQXFMA2, testautonumdata__Date__c=11/9/2016, testautonumdata__Interview_Type__c=Technical Interview}
+13:05:24.2 (77854340)|STATEMENT_EXECUTE|[107]
+13:05:24.2 (77864178)|HEAP_ALLOCATE|[107]|Bytes:28
+13:05:24.2 (77886413)|CONSTRUCTOR_ENTRY|[107]|01pB0000000lc07|<init>()
+13:05:24.2 (77909964)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.ListServerController|true|false
+13:05:24.2 (77953791)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x64f054d6
+13:05:24.2 (77968690)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.2 (77984791)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+13:05:24.2 (78038578)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (78044956)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.2 (78047782)|STATEMENT_EXECUTE|[6]
+13:05:24.2 (78049216)|STATEMENT_EXECUTE|[8]
+13:05:24.2 (78050244)|STATEMENT_EXECUTE|[10]
+13:05:24.2 (78051392)|STATEMENT_EXECUTE|[12]
+13:05:24.2 (78052341)|STATEMENT_EXECUTE|[14]
+13:05:24.2 (78053325)|STATEMENT_EXECUTE|[16]
+13:05:24.2 (78065810)|CONSTRUCTOR_EXIT|[107]|01pB0000000lc07|<init>()
+13:05:24.2 (78070646)|VARIABLE_SCOPE_BEGIN|[107]|i|testautonumdata.ListServerController|true|false
+13:05:24.2 (78090408)|VARIABLE_ASSIGNMENT|[107]|i|{}|0x64f054d6
+13:05:24.2 (78092965)|STATEMENT_EXECUTE|[110]
+13:05:24.2 (78096515)|HEAP_ALLOCATE|[110]|Bytes:2
+13:05:24.2 (78118711)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78179227)|HEAP_ALLOCATE|[110]|Bytes:4
+13:05:24.2 (78203341)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78209021)|HEAP_ALLOCATE|[110]|Bytes:18
+13:05:24.2 (78242882)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x64f054d6
+13:05:24.2 (78253180)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0NB0000000TaTOMA0"
+13:05:24.2 (78268875)|VARIABLE_ASSIGNMENT|[6]|this.recordID|"a0NB0000000TaTOMA0"|0x64f054d6
+13:05:24.2 (78278091)|STATEMENT_EXECUTE|[112]
+13:05:24.2 (78280052)|STATEMENT_EXECUTE|[113]
+13:05:24.2 (78295156)|METHOD_ENTRY|[113]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (78315002)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (78347942)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (78355634)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (78361421)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (78371840)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (78377100)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (78378346)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (78383657)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (78388834)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (78404440)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78431984)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (78441966)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78485664)|HEAP_ALLOCATE|[98]|Bytes:4
+13:05:24.2 (78503881)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78507257)|HEAP_ALLOCATE|[98]|Bytes:18
+13:05:24.2 (78523066)|VARIABLE_ASSIGNMENT|[98]|returnValue|"a0MB0000000cQXFMA2"
+13:05:24.2 (78526238)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (78535683)|METHOD_EXIT|[113]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (78573773)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"recordID":"a0NB0000000TaTOMA0"}|0x64f054d6
+13:05:24.2 (78579661)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0MB0000000cQXFMA2"
+13:05:24.2 (78587150)|VARIABLE_ASSIGNMENT|[8]|this.eventField|"a0MB0000000cQXFMA2"|0x64f054d6
+13:05:24.2 (78595995)|STATEMENT_EXECUTE|[116]
+13:05:24.2 (78597900)|STATEMENT_EXECUTE|[117]
+13:05:24.2 (78605094)|METHOD_ENTRY|[117]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (78617968)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (78648436)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (78653837)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (78662288)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (39 more) ..."
+13:05:24.2 (78671569)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (78675911)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (78677160)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (78680924)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (78686478)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (78703446)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78714319)|STATEMENT_EXECUTE|[84]
+13:05:24.2 (78716454)|STATEMENT_EXECUTE|[85]
+13:05:24.2 (78726418)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78746677)|HEAP_ALLOCATE|[85]|Bytes:29
+13:05:24.2 (78761709)|VARIABLE_SCOPE_BEGIN|[85]|relName|String|false|false
+13:05:24.2 (78769693)|VARIABLE_ASSIGNMENT|[85]|relName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (78772710)|STATEMENT_EXECUTE|[86]
+13:05:24.2 (78786710)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78807697)|HEAP_ALLOCATE|[86]|Bytes:29
+13:05:24.2 (78819123)|VARIABLE_SCOPE_BEGIN|[86]|relField|String|false|false
+13:05:24.2 (78826449)|VARIABLE_ASSIGNMENT|[86]|relField|"testautonumdata__Ful (9 more) ..."
+13:05:24.2 (78839596)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78862409)|STATEMENT_EXECUTE|[94]
+13:05:24.2 (78875912)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78937834)|HEAP_ALLOCATE|[94]|Bytes:20
+13:05:24.2 (78957620)|ENTERING_MANAGED_PKG|
+13:05:24.2 (78983604)|HEAP_ALLOCATE|[94]|Bytes:16
+13:05:24.2 (78999661)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79008680)|HEAP_ALLOCATE|[94]|Bytes:16
+13:05:24.2 (79021439)|VARIABLE_ASSIGNMENT|[94]|returnValue|"Rodrigo Reboucas"
+13:05:24.2 (79024939)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (79034634)|METHOD_EXIT|[117]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79071614)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"eventField":"a0MB0000000cQXFMA2","recordID":"a0NB0000000TaTOMA0"}|0x64f054d6
+13:05:24.2 (79077095)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Rodrigo Reboucas"
+13:05:24.2 (79087650)|VARIABLE_ASSIGNMENT|[10]|this.column1|"Rodrigo Reboucas"|0x64f054d6
+13:05:24.2 (79094694)|STATEMENT_EXECUTE|[120]
+13:05:24.2 (79095962)|STATEMENT_EXECUTE|[121]
+13:05:24.2 (79102698)|METHOD_ENTRY|[121]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79115429)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (79145853)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (79153783)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (79159390)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (79168064)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (79172448)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (79173724)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (79181230)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (79185985)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (79198935)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79211084)|STATEMENT_EXECUTE|[84]
+13:05:24.2 (79212831)|STATEMENT_EXECUTE|[85]
+13:05:24.2 (79220284)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79223841)|HEAP_ALLOCATE|[85]|Bytes:29
+13:05:24.2 (79231242)|VARIABLE_SCOPE_BEGIN|[85]|relName|String|false|false
+13:05:24.2 (79237761)|VARIABLE_ASSIGNMENT|[85]|relName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (79245387)|STATEMENT_EXECUTE|[86]
+13:05:24.2 (79254649)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79257976)|HEAP_ALLOCATE|[86]|Bytes:33
+13:05:24.2 (79267921)|VARIABLE_SCOPE_BEGIN|[86]|relField|String|false|false
+13:05:24.2 (79274853)|VARIABLE_ASSIGNMENT|[86]|relField|"testautonumdata__Pos (13 more) ..."
+13:05:24.2 (79284043)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79296231)|STATEMENT_EXECUTE|[88]
+13:05:24.2 (79297962)|STATEMENT_EXECUTE|[89]
+13:05:24.2 (79306029)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79325531)|HEAP_ALLOCATE|[89]|Bytes:28
+13:05:24.2 (79337115)|VARIABLE_SCOPE_BEGIN|[89]|relName2|String|false|false
+13:05:24.2 (79344384)|VARIABLE_ASSIGNMENT|[89]|relName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (79347188)|STATEMENT_EXECUTE|[90]
+13:05:24.2 (79357232)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79372277)|HEAP_ALLOCATE|[90]|Bytes:4
+13:05:24.2 (79382333)|VARIABLE_SCOPE_BEGIN|[90]|relField2|String|false|false
+13:05:24.2 (79388587)|VARIABLE_ASSIGNMENT|[90]|relField2|"Name"
+13:05:24.2 (79390785)|STATEMENT_EXECUTE|[91]
+13:05:24.2 (79400610)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79444865)|HEAP_ALLOCATE|[91]|Bytes:20
+13:05:24.2 (79463650)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79498275)|HEAP_ALLOCATE|[91]|Bytes:12
+13:05:24.2 (79515585)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79545910)|HEAP_ALLOCATE|[91]|Bytes:21
+13:05:24.2 (79563882)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79567275)|HEAP_ALLOCATE|[91]|Bytes:21
+13:05:24.2 (79583479)|VARIABLE_ASSIGNMENT|[91]|returnValue|"Architect - Force.co (1 more) ..."
+13:05:24.2 (79587132)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (79595373)|METHOD_EXIT|[121]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79630593)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Rodrigo Reboucas","eventField":"a0MB0000000cQXFMA2","recordID":"a0NB0000000TaTOMA0"}|0x64f054d6
+13:05:24.2 (79642334)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Architect - Force.co (1 more) ..."
+13:05:24.2 (79650724)|VARIABLE_ASSIGNMENT|[12]|this.column2|"Architect - Force.co (1 more) ..."|0x64f054d6
+13:05:24.2 (79657344)|STATEMENT_EXECUTE|[125]
+13:05:24.2 (79658988)|STATEMENT_EXECUTE|[126]
+13:05:24.2 (79668095)|METHOD_ENTRY|[126]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79681368)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (79711338)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (79719189)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (79724808)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (79733516)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (79737858)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (79738998)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (79742649)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (79747045)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (79762912)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79771708)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (79782516)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79810268)|HEAP_ALLOCATE|[98]|Bytes:9
+13:05:24.2 (79826326)|ENTERING_MANAGED_PKG|
+13:05:24.2 (79829941)|HEAP_ALLOCATE|[98]|Bytes:9
+13:05:24.2 (79844585)|VARIABLE_ASSIGNMENT|[98]|returnValue|"11/9/2016"
+13:05:24.2 (79847453)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (79855001)|METHOD_EXIT|[126]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79887352)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Rodrigo Reboucas","column2":"Architect - Force.co (1 more) ...","eventField":"a0MB0000000cQXFMA2","recordID":"a0NB0000000TaTOMA0"}|0x64f054d6
+13:05:24.2 (79892593)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"11/9/2016"
+13:05:24.2 (79900144)|VARIABLE_ASSIGNMENT|[14]|this.column3|"11/9/2016"|0x64f054d6
+13:05:24.2 (79906286)|STATEMENT_EXECUTE|[130]
+13:05:24.2 (79907626)|STATEMENT_EXECUTE|[131]
+13:05:24.2 (79913628)|METHOD_ENTRY|[131]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (79926074)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (79954919)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000TaTOMA0","testautonumdata__Can (9 more) ...":"a0MB0000000cQXFMA2","testautonumdata__Dat (4 more) ...":"11/9/2016","testautonumdata__Int (14 more) ...":"Technical Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Rodrigo Reboucas","testautonumdata__Pos (8 more) ...":"a0LB0000000seqpMAA","Id":"a0MB0000000cQXFMA2","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Architect - Force.co (1 more) ...","Id":"a0LB0000000seqpMAA"}}}}}}|0x2d98fc85
+13:05:24.2 (79960705)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (79965357)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (79973367)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (79977710)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (79978970)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (79982547)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (79986642)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (79998813)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80006938)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (80014868)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80037478)|HEAP_ALLOCATE|[98]|Bytes:19
+13:05:24.2 (80059197)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80063501)|HEAP_ALLOCATE|[98]|Bytes:19
+13:05:24.2 (80078578)|VARIABLE_ASSIGNMENT|[98]|returnValue|"Technical Interview"
+13:05:24.2 (80081779)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (80088999)|METHOD_EXIT|[131]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (80129320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Rodrigo Reboucas","column2":"Architect - Force.co (1 more) ...","column3":"11/9/2016","eventField":"a0MB0000000cQXFMA2","recordID":"a0NB0000000TaTOMA0"}|0x64f054d6
+13:05:24.2 (80135085)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Technical Interview"
+13:05:24.2 (80142590)|VARIABLE_ASSIGNMENT|[16]|this.column4|"Technical Interview"|0x64f054d6
+13:05:24.2 (80149438)|STATEMENT_EXECUTE|[135]
+13:05:24.2 (80165832)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80201234)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (80215617)|STATEMENT_EXECUTE|[137]
+13:05:24.2 (80219845)|HEAP_ALLOCATE|[137]|Bytes:12
+13:05:24.2 (80235007)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80323705)|HEAP_ALLOCATE|[137]|Bytes:462
+13:05:24.2 (80345279)|HEAP_ALLOCATE|[137]|Bytes:474
+13:05:24.2 (80357816)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80364862)|USER_DEBUG|[137]|DEBUG|######## i: ListServerController:[column1=Rodrigo Reboucas, column2=Architect - Force.com, column3=11/9/2016, column4=Technical Interview, eventField=a0MB0000000cQXFMA2, mapObjectsFields={testautonumdata__Candidate__c={testautonumdata__Full_Name__c}, testautonumdata__Interview__c={Id, testautonumdata__Candidate__c, testautonumdata__Date__c, testautonumdata__Interview_Type__c, testautonumdata__Status__c}, testautonumdata__Position__c={Name}}, recordID=a0NB0000000TaTOMA0]
+13:05:24.2 (80382150)|HEAP_ALLOCATE|[104]|Bytes:5
+13:05:24.2 (80410221)|HEAP_ALLOCATE|[104]|Bytes:24
+13:05:24.2 (80427680)|VARIABLE_SCOPE_BEGIN|[104]|e|SObject|true|false
+13:05:24.2 (80453416)|VARIABLE_ASSIGNMENT|[104]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (80459003)|STATEMENT_EXECUTE|[105]
+13:05:24.2 (80460242)|STATEMENT_EXECUTE|[106]
+13:05:24.2 (80473486)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80518503)|HEAP_ALLOCATE|[106]|Bytes:196
+13:05:24.2 (80532988)|HEAP_ALLOCATE|[106]|Bytes:208
+13:05:24.2 (80545806)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80552231)|USER_DEBUG|[106]|DEBUG|######## e: testautonumdata__Interview__c:{Id=a0NB0000000RasPMAS, testautonumdata__Candidate__c=a0MB0000000cQdIMAU, testautonumdata__Date__c=10/26/2016, testautonumdata__Interview_Type__c=Recruiter Interview}
+13:05:24.2 (80562499)|STATEMENT_EXECUTE|[107]
+13:05:24.2 (80567653)|HEAP_ALLOCATE|[107]|Bytes:28
+13:05:24.2 (80577835)|CONSTRUCTOR_ENTRY|[107]|01pB0000000lc07|<init>()
+13:05:24.2 (80581860)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.ListServerController|true|false
+13:05:24.2 (80607154)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x52259d71
+13:05:24.2 (80616503)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.2 (80632595)|STATEMENT_EXECUTE|[1]
+13:05:24.2 (80636427)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.2 (80638581)|STATEMENT_EXECUTE|[6]
+13:05:24.2 (80639891)|STATEMENT_EXECUTE|[8]
+13:05:24.2 (80640899)|STATEMENT_EXECUTE|[10]
+13:05:24.2 (80641861)|STATEMENT_EXECUTE|[12]
+13:05:24.2 (80642712)|STATEMENT_EXECUTE|[14]
+13:05:24.2 (80643585)|STATEMENT_EXECUTE|[16]
+13:05:24.2 (80657151)|CONSTRUCTOR_EXIT|[107]|01pB0000000lc07|<init>()
+13:05:24.2 (80661330)|VARIABLE_SCOPE_BEGIN|[107]|i|testautonumdata.ListServerController|true|false
+13:05:24.2 (80681794)|VARIABLE_ASSIGNMENT|[107]|i|{}|0x52259d71
+13:05:24.2 (80684929)|STATEMENT_EXECUTE|[110]
+13:05:24.2 (80698511)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80724241)|HEAP_ALLOCATE|[110]|Bytes:4
+13:05:24.2 (80743738)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80747587)|HEAP_ALLOCATE|[110]|Bytes:18
+13:05:24.2 (80777749)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x52259d71
+13:05:24.2 (80786983)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0NB0000000RasPMAS"
+13:05:24.2 (80797421)|VARIABLE_ASSIGNMENT|[6]|this.recordID|"a0NB0000000RasPMAS"|0x52259d71
+13:05:24.2 (80804548)|STATEMENT_EXECUTE|[112]
+13:05:24.2 (80805862)|STATEMENT_EXECUTE|[113]
+13:05:24.2 (80811576)|METHOD_ENTRY|[113]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (80814913)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (80844404)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (80852701)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (80858095)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (80866205)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (80870417)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (80871562)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (80875114)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (80879420)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (80891414)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80899395)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (80906430)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80936558)|HEAP_ALLOCATE|[98]|Bytes:4
+13:05:24.2 (80952206)|ENTERING_MANAGED_PKG|
+13:05:24.2 (80955381)|HEAP_ALLOCATE|[98]|Bytes:18
+13:05:24.2 (80966222)|VARIABLE_ASSIGNMENT|[98]|returnValue|"a0MB0000000cQdIMAU"
+13:05:24.2 (80969119)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (80977209)|METHOD_EXIT|[113]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81001708)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"recordID":"a0NB0000000RasPMAS"}|0x52259d71
+13:05:24.2 (81006625)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"a0MB0000000cQdIMAU"
+13:05:24.2 (81013318)|VARIABLE_ASSIGNMENT|[8]|this.eventField|"a0MB0000000cQdIMAU"|0x52259d71
+13:05:24.2 (81019207)|STATEMENT_EXECUTE|[116]
+13:05:24.2 (81020395)|STATEMENT_EXECUTE|[117]
+13:05:24.2 (81025187)|METHOD_ENTRY|[117]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81028195)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (81052355)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (81057431)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (81062194)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (39 more) ..."
+13:05:24.2 (81069559)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (81073480)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (81074599)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (81077874)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (81081881)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (81093581)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81106767)|STATEMENT_EXECUTE|[84]
+13:05:24.2 (81108549)|STATEMENT_EXECUTE|[85]
+13:05:24.2 (81115768)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81119150)|HEAP_ALLOCATE|[85]|Bytes:29
+13:05:24.2 (81127984)|VARIABLE_SCOPE_BEGIN|[85]|relName|String|false|false
+13:05:24.2 (81136160)|VARIABLE_ASSIGNMENT|[85]|relName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (81138710)|STATEMENT_EXECUTE|[86]
+13:05:24.2 (81147787)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81151095)|HEAP_ALLOCATE|[86]|Bytes:29
+13:05:24.2 (81162933)|VARIABLE_SCOPE_BEGIN|[86]|relField|String|false|false
+13:05:24.2 (81169235)|VARIABLE_ASSIGNMENT|[86]|relField|"testautonumdata__Ful (9 more) ..."
+13:05:24.2 (81178490)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81189129)|STATEMENT_EXECUTE|[94]
+13:05:24.2 (81196832)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81239402)|HEAP_ALLOCATE|[94]|Bytes:20
+13:05:24.2 (81259947)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81289734)|HEAP_ALLOCATE|[94]|Bytes:11
+13:05:24.2 (81308676)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81312260)|HEAP_ALLOCATE|[94]|Bytes:11
+13:05:24.2 (81323688)|VARIABLE_ASSIGNMENT|[94]|returnValue|"Lizz Brooks"
+13:05:24.2 (81326817)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (81341085)|METHOD_EXIT|[117]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81371633)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"eventField":"a0MB0000000cQdIMAU","recordID":"a0NB0000000RasPMAS"}|0x52259d71
+13:05:24.2 (81376856)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Lizz Brooks"
+13:05:24.2 (81383444)|VARIABLE_ASSIGNMENT|[10]|this.column1|"Lizz Brooks"|0x52259d71
+13:05:24.2 (81394361)|STATEMENT_EXECUTE|[120]
+13:05:24.2 (81395660)|STATEMENT_EXECUTE|[121]
+13:05:24.2 (81400917)|METHOD_ENTRY|[121]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81403898)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (81432006)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (81437623)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (81442251)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Can (43 more) ..."
+13:05:24.2 (81449931)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (81458273)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (81459562)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (81463084)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (81467482)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (81482413)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81494874)|STATEMENT_EXECUTE|[84]
+13:05:24.2 (81496419)|STATEMENT_EXECUTE|[85]
+13:05:24.2 (81503766)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81511905)|HEAP_ALLOCATE|[85]|Bytes:29
+13:05:24.2 (81520158)|VARIABLE_SCOPE_BEGIN|[85]|relName|String|false|false
+13:05:24.2 (81526579)|VARIABLE_ASSIGNMENT|[85]|relName|"testautonumdata__Can (9 more) ..."
+13:05:24.2 (81529668)|STATEMENT_EXECUTE|[86]
+13:05:24.2 (81541361)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81545061)|HEAP_ALLOCATE|[86]|Bytes:33
+13:05:24.2 (81552757)|VARIABLE_SCOPE_BEGIN|[86]|relField|String|false|false
+13:05:24.2 (81558646)|VARIABLE_ASSIGNMENT|[86]|relField|"testautonumdata__Pos (13 more) ..."
+13:05:24.2 (81566596)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81573839)|STATEMENT_EXECUTE|[88]
+13:05:24.2 (81575197)|STATEMENT_EXECUTE|[89]
+13:05:24.2 (81581346)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81584116)|HEAP_ALLOCATE|[89]|Bytes:28
+13:05:24.2 (81591019)|VARIABLE_SCOPE_BEGIN|[89]|relName2|String|false|false
+13:05:24.2 (81596294)|VARIABLE_ASSIGNMENT|[89]|relName2|"testautonumdata__Pos (8 more) ..."
+13:05:24.2 (81598537)|STATEMENT_EXECUTE|[90]
+13:05:24.2 (81606267)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81609103)|HEAP_ALLOCATE|[90]|Bytes:4
+13:05:24.2 (81616243)|VARIABLE_SCOPE_BEGIN|[90]|relField2|String|false|false
+13:05:24.2 (81620580)|VARIABLE_ASSIGNMENT|[90]|relField2|"Name"
+13:05:24.2 (81622608)|STATEMENT_EXECUTE|[91]
+13:05:24.2 (81630407)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81660920)|HEAP_ALLOCATE|[91]|Bytes:20
+13:05:24.2 (81677427)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81709584)|HEAP_ALLOCATE|[91]|Bytes:12
+13:05:24.2 (81725753)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81751696)|HEAP_ALLOCATE|[91]|Bytes:19
+13:05:24.2 (81770351)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81773900)|HEAP_ALLOCATE|[91]|Bytes:19
+13:05:24.2 (81785632)|VARIABLE_ASSIGNMENT|[91]|returnValue|"Project Coordinator"
+13:05:24.2 (81792849)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (81800584)|METHOD_EXIT|[121]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81831233)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Lizz Brooks","eventField":"a0MB0000000cQdIMAU","recordID":"a0NB0000000RasPMAS"}|0x52259d71
+13:05:24.2 (81836899)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Project Coordinator"
+13:05:24.2 (81843588)|VARIABLE_ASSIGNMENT|[12]|this.column2|"Project Coordinator"|0x52259d71
+13:05:24.2 (81849970)|STATEMENT_EXECUTE|[125]
+13:05:24.2 (81851263)|STATEMENT_EXECUTE|[126]
+13:05:24.2 (81861187)|METHOD_ENTRY|[126]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (81864397)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (81893355)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (81898814)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (81903184)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Dat (4 more) ..."
+13:05:24.2 (81915182)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (81919207)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (81920419)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (81923863)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (81932853)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (81947679)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81956198)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (81963354)|ENTERING_MANAGED_PKG|
+13:05:24.2 (81989850)|HEAP_ALLOCATE|[98]|Bytes:10
+13:05:24.2 (82008581)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82012989)|HEAP_ALLOCATE|[98]|Bytes:10
+13:05:24.2 (82028424)|VARIABLE_ASSIGNMENT|[98]|returnValue|"10/26/2016"
+13:05:24.2 (82031523)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (82039017)|METHOD_EXIT|[126]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (82068828)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Lizz Brooks","column2":"Project Coordinator","eventField":"a0MB0000000cQdIMAU","recordID":"a0NB0000000RasPMAS"}|0x52259d71
+13:05:24.2 (82073857)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"10/26/2016"
+13:05:24.2 (82080319)|VARIABLE_ASSIGNMENT|[14]|this.column3|"10/26/2016"|0x52259d71
+13:05:24.2 (82086867)|STATEMENT_EXECUTE|[130]
+13:05:24.2 (82088195)|STATEMENT_EXECUTE|[131]
+13:05:24.2 (82093307)|METHOD_ENTRY|[131]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (82096236)|VARIABLE_SCOPE_BEGIN|[78]|e|SObject|true|false
+13:05:24.2 (82119319)|VARIABLE_ASSIGNMENT|[78]|e|{"s":1,"v":{"Id":"a0NB0000000RasPMAS","testautonumdata__Can (9 more) ...":"a0MB0000000cQdIMAU","testautonumdata__Dat (4 more) ...":"10/26/2016","testautonumdata__Int (14 more) ...":"Recruiter Interview","testautonumdata__Can (9 more) ...":{"s":2,"v":{"testautonumdata__Ful (9 more) ...":"Lizz Brooks","testautonumdata__Pos (8 more) ...":"a0LB0000000sexWMAQ","Id":"a0MB0000000cQdIMAU","testautonumdata__Pos (8 more) ...":{"s":3,"v":{"Name":"Project Coordinator","Id":"a0LB0000000sexWMAQ"}}}}}}|0x3e20c775
+13:05:24.2 (82124161)|VARIABLE_SCOPE_BEGIN|[78]|lcfield|String|false|false
+13:05:24.2 (82128445)|VARIABLE_ASSIGNMENT|[78]|lcfield|"testautonumdata__Int (14 more) ..."
+13:05:24.2 (82139065)|HEAP_ALLOCATE|[81]|Bytes:5
+13:05:24.2 (82142896)|STATEMENT_EXECUTE|[79]
+13:05:24.2 (82144408)|STATEMENT_EXECUTE|[81]
+13:05:24.2 (82147978)|VARIABLE_SCOPE_BEGIN|[81]|returnValue|String|false|false
+13:05:24.2 (82152237)|VARIABLE_ASSIGNMENT|[81]|returnValue|""
+13:05:24.2 (82164031)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82172111)|STATEMENT_EXECUTE|[98]
+13:05:24.2 (82178938)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82201120)|HEAP_ALLOCATE|[98]|Bytes:19
+13:05:24.2 (82215598)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82218743)|HEAP_ALLOCATE|[98]|Bytes:19
+13:05:24.2 (82229462)|VARIABLE_ASSIGNMENT|[98]|returnValue|"Recruiter Interview"
+13:05:24.2 (82232247)|STATEMENT_EXECUTE|[100]
+13:05:24.2 (82239163)|METHOD_EXIT|[131]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.GetSobjectField(SObject, String)
+13:05:24.2 (82269903)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"column1":"Lizz Brooks","column2":"Project Coordinator","column3":"10/26/2016","eventField":"a0MB0000000cQdIMAU","recordID":"a0NB0000000RasPMAS"}|0x52259d71
+13:05:24.2 (82277308)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Recruiter Interview"
+13:05:24.2 (82286070)|VARIABLE_ASSIGNMENT|[16]|this.column4|"Recruiter Interview"|0x52259d71
+13:05:24.2 (82292224)|STATEMENT_EXECUTE|[135]
+13:05:24.2 (82298620)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82310004)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.2 (82316265)|STATEMENT_EXECUTE|[137]
+13:05:24.2 (82328989)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82375309)|HEAP_ALLOCATE|[137]|Bytes:456
+13:05:24.2 (82391760)|HEAP_ALLOCATE|[137]|Bytes:468
+13:05:24.2 (82403096)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82409675)|USER_DEBUG|[137]|DEBUG|######## i: ListServerController:[column1=Lizz Brooks, column2=Project Coordinator, column3=10/26/2016, column4=Recruiter Interview, eventField=a0MB0000000cQdIMAU, mapObjectsFields={testautonumdata__Candidate__c={testautonumdata__Full_Name__c}, testautonumdata__Interview__c={Id, testautonumdata__Candidate__c, testautonumdata__Date__c, testautonumdata__Interview_Type__c, testautonumdata__Status__c}, testautonumdata__Position__c={Name}}, recordID=a0NB0000000RasPMAS]
+13:05:24.2 (82430947)|HEAP_ALLOCATE|[104]|Bytes:5
+13:05:24.2 (82446876)|VARIABLE_ASSIGNMENT|[104]|e|null|
+13:05:24.2 (82452109)|STATEMENT_EXECUTE|[142]
+13:05:24.2 (82455809)|HEAP_ALLOCATE|[142]|Bytes:27
+13:05:24.2 (82469765)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82562889)|HEAP_ALLOCATE|[142]|Bytes:681
+13:05:24.2 (82580576)|HEAP_ALLOCATE|[142]|Bytes:708
+13:05:24.2 (82590422)|ENTERING_MANAGED_PKG|
+13:05:24.2 (82596675)|USER_DEBUG|[142]|DEBUG|######## lstReturnRecords: (ListServerController:[column1=Rodrigo Reboucas, column2=Architect - Force.com, column3=11/9/2016, column4=Technical Interview, eventField=a0MB0000000cQXFMA2, mapObjectsFields={testautonumdata__Candidate__c={testautonumdata__Full_Name__c}, testautonumdata__Interview__c={Id, testautonumdata__Candidate__c, testautonumdata__Date__c, testautonumdata__Interview_Type__c, testautonumdata__Status__c}, testautonumdata__Position__c={Name}}, recordID=a0NB0000000TaTOMA0], ListServerController:[column1=Lizz Brooks, column2=Project Coordinator, column3=10/26/2016, column4=Recruiter Interview, eventField=a0MB0000000cQdIMAU, mapObjectsFields=(already output), recordID=a0NB0000000RasPMAS])
+13:05:24.2 (82605921)|STATEMENT_EXECUTE|[144]
+13:05:24.2 (82616400)|SYSTEM_MODE_EXIT|false
+13:05:24.82 (82668835)|CUMULATIVE_LIMIT_USAGE
+13:05:24.82 (82668835)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.82 (82668835)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.82 (82668835)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.85 (85202536)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+13:05:24.86 (86765745)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+13:05:24.88 (88088854)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000lc07|ListServerController.getCurrentUser
+13:05:24.88 (88138037)|SYSTEM_MODE_ENTER|false
+13:05:24.88 (88153746)|HEAP_ALLOCATE|[151]|Bytes:5
+13:05:24.88 (88159447)|STATEMENT_EXECUTE|[150]
+13:05:24.88 (88160983)|STATEMENT_EXECUTE|[151]
+13:05:24.88 (88164515)|HEAP_ALLOCATE|[151]|Bytes:68
+13:05:24.88 (88176309)|HEAP_ALLOCATE|[151]|Bytes:4
+13:05:24.88 (88189476)|HEAP_ALLOCATE|[151]|Bytes:7
+13:05:24.88 (88283355)|HEAP_ALLOCATE|[151]|Bytes:85
+13:05:24.88 (88311317)|SYSTEM_METHOD_ENTRY|[1]|UserInfo.UserInfo()
+13:05:24.88 (88316525)|STATEMENT_EXECUTE|[1]
+13:05:24.88 (88330354)|SYSTEM_METHOD_EXIT|[1]|UserInfo
+13:05:24.88 (88348316)|METHOD_ENTRY|[151]||System.UserInfo.getUserId()
+13:05:24.88 (88395398)|METHOD_EXIT|[151]||System.UserInfo.getUserId()
+13:05:24.88 (90528124)|SOQL_EXECUTE_BEGIN|[151]|Aggregations:0|SELECT Id, FirstName, LastName FROM User WHERE Id = :tmpVar1 LIMIT 1
+13:05:24.88 (97167987)|SOQL_EXECUTE_END|[151]|Rows:1
+13:05:24.88 (97194708)|HEAP_ALLOCATE|[151]|Bytes:8
+13:05:24.88 (97213392)|HEAP_ALLOCATE|[151]|Bytes:69
+13:05:24.88 (97299431)|HEAP_ALLOCATE|[151]|Bytes:8
+13:05:24.88 (97309076)|HEAP_ALLOCATE|[151]|Bytes:30
+13:05:24.88 (97419864)|HEAP_ALLOCATE|[151]|Bytes:16
+13:05:24.88 (97430378)|VARIABLE_SCOPE_BEGIN|[151]|user|User|true|false
+13:05:24.88 (97484330)|VARIABLE_ASSIGNMENT|[151]|user|{"s":1,"v":{"Id":"005B0000001VpZRIA0","FirstName":"Rodrigo","LastName":"Reboucas"}}|0x20decae7
+13:05:24.88 (97489769)|STATEMENT_EXECUTE|[152]
+13:05:24.88 (97502436)|SYSTEM_MODE_EXIT|false
+13:05:24.97 (97545699)|CUMULATIVE_LIMIT_USAGE
+13:05:24.97 (97545699)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.97 (97545699)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.97 (97545699)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.296 (296699806)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000lc8w|RelatedListServerController.getListRecords
+13:05:24.296 (296779412)|VARIABLE_SCOPE_BEGIN|[3]|RelatedListServerController.mapObjectsFields|Map<String,Set<String>>|true|true
+13:05:24.296 (296798167)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:220
+13:05:24.296 (296807826)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:21
+13:05:24.296 (296810877)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:22
+13:05:24.296 (296843604)|METHOD_ENTRY|[1]|01pB0000000lc8w|RelatedListServerController.RelatedListServerController()
+13:05:24.296 (296850186)|STATEMENT_EXECUTE|[1]
+13:05:24.296 (296864848)|STATEMENT_EXECUTE|[1]
+13:05:24.296 (296881074)|SYSTEM_MODE_ENTER|false
+13:05:24.296 (296893123)|HEAP_ALLOCATE|[3]|Bytes:5
+13:05:24.296 (296899697)|STATEMENT_EXECUTE|[3]
+13:05:24.296 (296946655)|VARIABLE_ASSIGNMENT|[3]|RelatedListServerController.mapObjectsFields|null|
+13:05:24.296 (296955089)|SYSTEM_MODE_EXIT|false
+13:05:24.296 (296972393)|METHOD_EXIT|[1]|RelatedListServerController
+13:05:24.296 (296978942)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+13:05:24.296 (296981235)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:05:24.296 (296985741)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.296 (296987508)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:7
+13:05:24.296 (296988909)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.296 (296990170)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+13:05:24.296 (296997269)|SYSTEM_MODE_ENTER|false
+13:05:24.296 (297005794)|VARIABLE_SCOPE_BEGIN|[22]|rowsLimit|String|false|false
+13:05:24.296 (297020241)|VARIABLE_ASSIGNMENT|[22]|rowsLimit|"8"
+13:05:24.296 (297023889)|VARIABLE_SCOPE_BEGIN|[22]|recordId|String|false|false
+13:05:24.296 (297028034)|VARIABLE_ASSIGNMENT|[22]|recordId|null
+13:05:24.296 (297030061)|VARIABLE_SCOPE_BEGIN|[22]|objectApiName|String|false|false
+13:05:24.296 (297039013)|VARIABLE_ASSIGNMENT|[22]|objectApiName|"testautonumdata__Ref (8 more) ..."
+13:05:24.296 (297041714)|VARIABLE_SCOPE_BEGIN|[22]|ParentObjectFieldName|String|false|false
+13:05:24.296 (297045723)|VARIABLE_ASSIGNMENT|[22]|ParentObjectFieldName|"testautonumdata__Can (9 more) ..."
+13:05:24.296 (297047972)|VARIABLE_SCOPE_BEGIN|[22]|filter1Field|String|false|false
+13:05:24.296 (297051048)|VARIABLE_ASSIGNMENT|[22]|filter1Field|null
+13:05:24.296 (297052710)|VARIABLE_SCOPE_BEGIN|[22]|filter1Value|String|false|false
+13:05:24.296 (297055355)|VARIABLE_ASSIGNMENT|[22]|filter1Value|null
+13:05:24.296 (297057112)|VARIABLE_SCOPE_BEGIN|[22]|column1|String|false|false
+13:05:24.296 (297060168)|VARIABLE_ASSIGNMENT|[22]|column1|"OwnerId"
+13:05:24.296 (297061841)|VARIABLE_SCOPE_BEGIN|[22]|RelFieldWithName|String|false|false
+13:05:24.296 (297064579)|VARIABLE_ASSIGNMENT|[22]|RelFieldWithName|"Owner"
+13:05:24.296 (297066437)|VARIABLE_SCOPE_BEGIN|[22]|column2|String|false|false
+13:05:24.296 (297069039)|VARIABLE_ASSIGNMENT|[22]|column2|"createddate"
+13:05:24.296 (297079758)|HEAP_ALLOCATE|[24]|Bytes:5
+13:05:24.296 (297084551)|STATEMENT_EXECUTE|[22]
+13:05:24.296 (297085941)|STATEMENT_EXECUTE|[24]
+13:05:24.296 (297101672)|HEAP_ALLOCATE|[24]|Bytes:21
+13:05:24.296 (297132054)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297184125)|USER_DEBUG|[24]|DEBUG|######## rowsLimit: 8
+13:05:24.296 (297195488)|STATEMENT_EXECUTE|[25]
+13:05:24.296 (297206605)|HEAP_ALLOCATE|[25]|Bytes:52
+13:05:24.296 (297218763)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297233840)|USER_DEBUG|[25]|DEBUG|######## objectApiName: testautonumdata__Referral__c
+13:05:24.296 (297240510)|STATEMENT_EXECUTE|[28]
+13:05:24.296 (297250332)|HEAP_ALLOCATE|[28]|Bytes:4
+13:05:24.296 (297288641)|VARIABLE_ASSIGNMENT|[28]|RelatedListServerController.mapObjectsFields|{"s":1,"v":{}}|0x95eea1a
+13:05:24.296 (297292181)|STATEMENT_EXECUTE|[30]
+13:05:24.296 (297312428)|METHOD_ENTRY|[30]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.296 (297330604)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.296 (297337691)|VARIABLE_ASSIGNMENT|[107]|fieldName|"Id"
+13:05:24.296 (297341111)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.296 (297346111)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Ref (8 more) ..."
+13:05:24.296 (297349227)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.296 (297364460)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{}}|0x95eea1a
+13:05:24.296 (297376741)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.296 (297381337)|STATEMENT_EXECUTE|[108]
+13:05:24.296 (297397211)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297411250)|STATEMENT_EXECUTE|[150]
+13:05:24.296 (297420335)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.296 (297428450)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.296 (297434093)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Id"
+13:05:24.296 (297439282)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.296 (297446332)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Ref (8 more) ..."
+13:05:24.296 (297449147)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.296 (297467125)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{}}|0x95eea1a
+13:05:24.296 (297478053)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.296 (297484143)|STATEMENT_EXECUTE|[158]
+13:05:24.296 (297497905)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297508369)|STATEMENT_EXECUTE|[167]
+13:05:24.296 (297509808)|STATEMENT_EXECUTE|[168]
+13:05:24.296 (297517383)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.296 (297535022)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297550065)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.296 (297583533)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x1f32bf49
+13:05:24.296 (297588898)|STATEMENT_EXECUTE|[169]
+13:05:24.296 (297598234)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297609746)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.296 (297617226)|STATEMENT_EXECUTE|[170]
+13:05:24.296 (297624958)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297642451)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.296 (297666104)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.296 (297679720)|METHOD_EXIT|[30]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.296 (297685723)|STATEMENT_EXECUTE|[34]
+13:05:24.296 (297725468)|HEAP_ALLOCATE|[34]|Bytes:4
+13:05:24.296 (297811896)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297838862)|VARIABLE_SCOPE_BEGIN|[34]|lstReturnRecords|List<testautonumdata.RelatedListServerController>|true|false
+13:05:24.296 (297866404)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.296 (297883234)|VARIABLE_ASSIGNMENT|[34]|lstReturnRecords|{"s":1,"v":[]}|0x5b18a80c
+13:05:24.296 (297888009)|STATEMENT_EXECUTE|[36]
+13:05:24.296 (297889629)|STATEMENT_EXECUTE|[125]
+13:05:24.296 (297908076)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297944635)|HEAP_ALLOCATE|[125]|Bytes:2
+13:05:24.296 (297963235)|HEAP_ALLOCATE|[125]|Bytes:29
+13:05:24.296 (297973301)|ENTERING_MANAGED_PKG|
+13:05:24.296 (297979584)|USER_DEBUG|[125]|DEBUG|######## lstReturnRecords: ()
+13:05:24.296 (297985918)|STATEMENT_EXECUTE|[127]
+13:05:24.296 (297995040)|SYSTEM_MODE_EXIT|false
+13:05:24.298 (298044391)|CUMULATIVE_LIMIT_USAGE
+13:05:24.298 (298044391)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.298 (298044391)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.298 (298044391)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.388 (388187281)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000r382|Twitter_Lightning_Controller.getRecordDetails
+13:05:24.388 (388280260)|VARIABLE_SCOPE_BEGIN|[3]|Twitter_Lightning_Controller.mapObjectsFields|Map<String,Set<String>>|true|true
+13:05:24.388 (388304647)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:384
+13:05:24.388 (388319777)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:56
+13:05:24.388 (388326653)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:114
+13:05:24.388 (388363696)|METHOD_ENTRY|[1]|01pB0000000r382|Twitter_Lightning_Controller.Twitter_Lightning_Controller()
+13:05:24.388 (388371686)|STATEMENT_EXECUTE|[1]
+13:05:24.388 (388386232)|STATEMENT_EXECUTE|[1]
+13:05:24.388 (388406257)|SYSTEM_MODE_ENTER|false
+13:05:24.388 (388426191)|HEAP_ALLOCATE|[3]|Bytes:5
+13:05:24.388 (388433072)|STATEMENT_EXECUTE|[3]
+13:05:24.388 (388482686)|VARIABLE_ASSIGNMENT|[3]|Twitter_Lightning_Controller.mapObjectsFields|null|
+13:05:24.388 (388494712)|SYSTEM_MODE_EXIT|false
+13:05:24.388 (388516177)|METHOD_EXIT|[1]|Twitter_Lightning_Controller
+13:05:24.388 (388525319)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.388 (388529068)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:30
+13:05:24.388 (388531508)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:30
+13:05:24.388 (388533686)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.388 (388536258)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:27
+13:05:24.388 (388539014)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:26
+13:05:24.388 (388552668)|SYSTEM_MODE_ENTER|false
+13:05:24.388 (388561930)|VARIABLE_SCOPE_BEGIN|[82]|recordID|String|false|false
+13:05:24.388 (388573420)|VARIABLE_ASSIGNMENT|[82]|recordID|null
+13:05:24.388 (388577650)|VARIABLE_SCOPE_BEGIN|[82]|objectApiName|String|false|false
+13:05:24.388 (388586776)|VARIABLE_ASSIGNMENT|[82]|objectApiName|"testautonumdata__Can (9 more) ..."
+13:05:24.388 (388589280)|VARIABLE_SCOPE_BEGIN|[82]|twitterIDFieldApiName|String|false|false
+13:05:24.388 (388593378)|VARIABLE_ASSIGNMENT|[82]|twitterIDFieldApiName|"testautonumdata__Twi (10 more) ..."
+13:05:24.388 (388598278)|VARIABLE_SCOPE_BEGIN|[82]|firstName|String|false|false
+13:05:24.388 (388602228)|VARIABLE_ASSIGNMENT|[82]|firstName|"testautonumdata__Fir (10 more) ..."
+13:05:24.388 (388604102)|VARIABLE_SCOPE_BEGIN|[82]|lastName|String|false|false
+13:05:24.388 (388607873)|VARIABLE_ASSIGNMENT|[82]|lastName|"testautonumdata__Las (9 more) ..."
+13:05:24.388 (388609671)|VARIABLE_SCOPE_BEGIN|[82]|companyName|String|false|false
+13:05:24.388 (388613570)|VARIABLE_ASSIGNMENT|[82]|companyName|"testautonumdata__Com (7 more) ..."
+13:05:24.388 (388615452)|VARIABLE_SCOPE_BEGIN|[82]|email|String|false|false
+13:05:24.388 (388619279)|VARIABLE_ASSIGNMENT|[82]|email|"testautonumdata__E_m (6 more) ..."
+13:05:24.388 (388630675)|HEAP_ALLOCATE|[84]|Bytes:5
+13:05:24.388 (388635456)|STATEMENT_EXECUTE|[82]
+13:05:24.388 (388636876)|STATEMENT_EXECUTE|[84]
+13:05:24.388 (388647479)|VARIABLE_SCOPE_BEGIN|[84]|hasTwitterMemberID|Boolean|false|false
+13:05:24.388 (388653849)|HEAP_ALLOCATE|[84]|Bytes:5
+13:05:24.388 (388672690)|VARIABLE_ASSIGNMENT|[84]|hasTwitterMemberID|false
+13:05:24.388 (388676652)|STATEMENT_EXECUTE|[85]
+13:05:24.388 (388690308)|HEAP_ALLOCATE|[85]|Bytes:64
+13:05:24.388 (388724583)|CONSTRUCTOR_ENTRY|[85]|01pB0000000r382|<init>()
+13:05:24.388 (388756625)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.Twitter_Lightning_Controller|true|false
+13:05:24.388 (388815782)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x44784585
+13:05:24.388 (388831921)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.388 (388865672)|STATEMENT_EXECUTE|[1]
+13:05:24.388 (388872672)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.388 (388876923)|STATEMENT_EXECUTE|[6]
+13:05:24.388 (388879074)|STATEMENT_EXECUTE|[8]
+13:05:24.388 (388881034)|STATEMENT_EXECUTE|[10]
+13:05:24.388 (388882780)|STATEMENT_EXECUTE|[12]
+13:05:24.388 (388884297)|STATEMENT_EXECUTE|[14]
+13:05:24.388 (388885889)|STATEMENT_EXECUTE|[16]
+13:05:24.388 (388887498)|STATEMENT_EXECUTE|[18]
+13:05:24.388 (388888906)|STATEMENT_EXECUTE|[20]
+13:05:24.388 (388890220)|STATEMENT_EXECUTE|[22]
+13:05:24.388 (388891617)|STATEMENT_EXECUTE|[24]
+13:05:24.388 (388893394)|STATEMENT_EXECUTE|[26]
+13:05:24.388 (388895069)|STATEMENT_EXECUTE|[28]
+13:05:24.388 (388896688)|STATEMENT_EXECUTE|[30]
+13:05:24.388 (388898434)|STATEMENT_EXECUTE|[32]
+13:05:24.388 (388899747)|STATEMENT_EXECUTE|[34]
+13:05:24.388 (388917768)|CONSTRUCTOR_EXIT|[85]|01pB0000000r382|<init>()
+13:05:24.388 (388924448)|VARIABLE_SCOPE_BEGIN|[85]|returnRec|testautonumdata.Twitter_Lightning_Controller|true|false
+13:05:24.388 (388965679)|VARIABLE_ASSIGNMENT|[85]|returnRec|{}|0x44784585
+13:05:24.388 (388974434)|STATEMENT_EXECUTE|[88]
+13:05:24.388 (388984245)|HEAP_ALLOCATE|[88]|Bytes:4
+13:05:24.388 (389036162)|VARIABLE_ASSIGNMENT|[88]|Twitter_Lightning_Controller.mapObjectsFields|{"s":1,"v":{}}|0x3c324c30
+13:05:24.388 (389072354)|ENTERING_MANAGED_PKG|
+13:05:24.388 (389143153)|STATEMENT_EXECUTE|[90]
+13:05:24.388 (389147319)|STATEMENT_EXECUTE|[177]
+13:05:24.388 (389163973)|SYSTEM_MODE_EXIT|false
+13:05:24.389 (389229900)|CUMULATIVE_LIMIT_USAGE
+13:05:24.389 (389229900)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.389 (389229900)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.389 (389229900)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.390 (390851912)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+13:05:24.433 (433311183)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000rehC|FilesViewerServerController.getListRecords
+13:05:24.433 (433390612)|VARIABLE_SCOPE_BEGIN|[3]|FilesViewerServerController.mapObjectsFields|Map<String,Set<String>>|true|true
+13:05:24.433 (433405449)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:172
+13:05:24.433 (433414104)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:15
+13:05:24.433 (433417247)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:20
+13:05:24.433 (433455011)|METHOD_ENTRY|[1]|01pB0000000rehC|FilesViewerServerController.FilesViewerServerController()
+13:05:24.433 (433461469)|STATEMENT_EXECUTE|[1]
+13:05:24.433 (433474620)|STATEMENT_EXECUTE|[1]
+13:05:24.433 (433486624)|SYSTEM_MODE_ENTER|false
+13:05:24.433 (433493709)|HEAP_ALLOCATE|[3]|Bytes:5
+13:05:24.433 (433500072)|STATEMENT_EXECUTE|[3]
+13:05:24.433 (433550279)|VARIABLE_ASSIGNMENT|[3]|FilesViewerServerController.mapObjectsFields|null|
+13:05:24.433 (433557878)|SYSTEM_MODE_EXIT|false
+13:05:24.433 (433571592)|METHOD_EXIT|[1]|FilesViewerServerController
+13:05:24.433 (433577709)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+13:05:24.433 (433585139)|SYSTEM_MODE_ENTER|false
+13:05:24.433 (433597663)|VARIABLE_SCOPE_BEGIN|[18]|recordID|String|false|false
+13:05:24.433 (433607777)|VARIABLE_ASSIGNMENT|[18]|recordID|null
+13:05:24.433 (433610553)|VARIABLE_SCOPE_BEGIN|[18]|rowsLimit|String|false|false
+13:05:24.433 (433620507)|VARIABLE_ASSIGNMENT|[18]|rowsLimit|"8"
+13:05:24.433 (433630469)|HEAP_ALLOCATE|[20]|Bytes:5
+13:05:24.433 (433634865)|STATEMENT_EXECUTE|[18]
+13:05:24.433 (433636228)|STATEMENT_EXECUTE|[20]
+13:05:24.433 (433639424)|HEAP_ALLOCATE|[20]|Bytes:49
+13:05:24.433 (433656800)|HEAP_ALLOCATE|[20]|Bytes:50
+13:05:24.433 (433677919)|ENTERING_MANAGED_PKG|
+13:05:24.433 (433724038)|USER_DEBUG|[20]|DEBUG|######## FilesViewerServerController: rowsLimit: 8
+13:05:24.433 (433735953)|STATEMENT_EXECUTE|[23]
+13:05:24.433 (433743564)|HEAP_ALLOCATE|[23]|Bytes:4
+13:05:24.433 (433787598)|VARIABLE_ASSIGNMENT|[23]|FilesViewerServerController.mapObjectsFields|{"s":1,"v":{}}|0x65cafd33
+13:05:24.433 (433793290)|STATEMENT_EXECUTE|[25]
+13:05:24.433 (433797996)|HEAP_ALLOCATE|[25]|Bytes:19
+13:05:24.433 (433818834)|METHOD_ENTRY|[25]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.433 (433842224)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.433 (433849763)|VARIABLE_ASSIGNMENT|[107]|fieldName|"Id"
+13:05:24.433 (433853462)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.433 (433860344)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"ContentDocumentLink"
+13:05:24.433 (433862583)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.433 (433876650)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{}}|0x65cafd33
+13:05:24.433 (433888861)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.433 (433893634)|STATEMENT_EXECUTE|[108]
+13:05:24.433 (433911781)|ENTERING_MANAGED_PKG|
+13:05:24.433 (433924168)|STATEMENT_EXECUTE|[150]
+13:05:24.433 (433936722)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.433 (433941560)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.433 (433947164)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Id"
+13:05:24.433 (433949345)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.433 (433953393)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"ContentDocumentLink"
+13:05:24.433 (433955266)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.433 (433967633)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{}}|0x65cafd33
+13:05:24.433 (433975189)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.433 (433978998)|STATEMENT_EXECUTE|[158]
+13:05:24.433 (433987409)|ENTERING_MANAGED_PKG|
+13:05:24.433 (433996043)|STATEMENT_EXECUTE|[167]
+13:05:24.433 (433997514)|STATEMENT_EXECUTE|[168]
+13:05:24.433 (434004480)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.433 (434019778)|ENTERING_MANAGED_PKG|
+13:05:24.433 (434031076)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.433 (434059350)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x1d6dc3d6
+13:05:24.433 (434062380)|STATEMENT_EXECUTE|[169]
+13:05:24.433 (434069971)|ENTERING_MANAGED_PKG|
+13:05:24.433 (434078386)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.433 (434085356)|STATEMENT_EXECUTE|[170]
+13:05:24.433 (434095287)|ENTERING_MANAGED_PKG|
+13:05:24.433 (434106965)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.433 (434121789)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.433 (434129154)|METHOD_EXIT|[25]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.433 (434132255)|STATEMENT_EXECUTE|[27]
+13:05:24.433 (434169178)|HEAP_ALLOCATE|[27]|Bytes:4
+13:05:24.433 (434263613)|ENTERING_MANAGED_PKG|
+13:05:24.433 (434294136)|VARIABLE_SCOPE_BEGIN|[27]|lstReturnRecords|List<testautonumdata.FilesViewerServerController>|true|false
+13:05:24.433 (434327617)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.433 (434342532)|VARIABLE_ASSIGNMENT|[27]|lstReturnRecords|{"s":1,"v":[]}|0x5884b631
+13:05:24.433 (434359298)|ENTERING_MANAGED_PKG|
+13:05:24.433 (434398011)|STATEMENT_EXECUTE|[28]
+13:05:24.433 (434401221)|STATEMENT_EXECUTE|[101]
+13:05:24.433 (434410720)|SYSTEM_MODE_EXIT|false
+13:05:24.434 (434459015)|CUMULATIVE_LIMIT_USAGE
+13:05:24.434 (434459015)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.434 (434459015)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.434 (434459015)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.458 (458701940)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000r382|Twitter_Lightning_Controller.getTwitterPicture
+13:05:24.458 (458777998)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.458 (458785307)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:30
+13:05:24.458 (458796999)|SYSTEM_MODE_ENTER|false
+13:05:24.458 (458810478)|VARIABLE_SCOPE_BEGIN|[183]|recordID|String|false|false
+13:05:24.458 (458854143)|VARIABLE_ASSIGNMENT|[183]|recordID|null
+13:05:24.458 (458858192)|VARIABLE_SCOPE_BEGIN|[183]|objectApiName|String|false|false
+13:05:24.458 (458866669)|VARIABLE_ASSIGNMENT|[183]|objectApiName|"testautonumdata__Can (9 more) ..."
+13:05:24.458 (458868761)|VARIABLE_SCOPE_BEGIN|[183]|twitterIDFieldApiName|String|false|false
+13:05:24.458 (458873251)|VARIABLE_ASSIGNMENT|[183]|twitterIDFieldApiName|"testautonumdata__Twi (10 more) ..."
+13:05:24.458 (458890515)|HEAP_ALLOCATE|[185]|Bytes:5
+13:05:24.458 (458897763)|STATEMENT_EXECUTE|[183]
+13:05:24.458 (458900424)|STATEMENT_EXECUTE|[185]
+13:05:24.458 (458905555)|HEAP_ALLOCATE|[185]|Bytes:3
+13:05:24.458 (458914371)|VARIABLE_SCOPE_BEGIN|[185]|oauthVersion|String|false|false
+13:05:24.458 (458920959)|VARIABLE_ASSIGNMENT|[185]|oauthVersion|"1.0"
+13:05:24.458 (458922784)|STATEMENT_EXECUTE|[189]
+13:05:24.458 (458925451)|HEAP_ALLOCATE|[189]|Bytes:10
+13:05:24.458 (459107003)|ENTERING_MANAGED_PKG|
+13:05:24.458 (460776788)|HEAP_ALLOCATE|[189]|Bytes:48
+13:05:24.458 (460795476)|VARIABLE_SCOPE_BEGIN|[189]|myCS1|testautonumdata__Twitter_User__c|true|false
+13:05:24.458 (460978546)|VARIABLE_ASSIGNMENT|[189]|myCS1|{"s":1,"v":{"LastModifiedDate":"2016-08-08T16:17:25.000Z","IsDeleted":false,"testautonumdata__Tok (5 more) ...":"crTSqn98nBWCC8lbj0Ia (5 more) ...","CreatedById":"005B0000001VpZRIA0","testautonumdata__Tok (12 more) ...":"LETjbmGTLmKF9tBldLY8 (30 more) ...","CreatedDate":"2016-08-08T16:17:25.000Z","Id":"a0WB0000000MITiMAO","LastModifiedById":"005B0000001VpZRIA0","SetupOwnerId":"00DB00000002068MAA","Name":"TwitterApp","SystemModstamp":"2016-08-12T10:32:00.000Z"}}|0x73e524f
+13:05:24.458 (460987442)|STATEMENT_EXECUTE|[190]
+13:05:24.458 (461040025)|VARIABLE_SCOPE_BEGIN|[190]|oauthConsumerKey|String|false|false
+13:05:24.458 (461056380)|VARIABLE_ASSIGNMENT|[190]|oauthConsumerKey|"crTSqn98nBWCC8lbj0Ia (5 more) ..."
+13:05:24.458 (461059003)|STATEMENT_EXECUTE|[191]
+13:05:24.458 (461085282)|VARIABLE_SCOPE_BEGIN|[191]|oauthConsumerSecret|String|false|false
+13:05:24.458 (461093842)|VARIABLE_ASSIGNMENT|[191]|oauthConsumerSecret|"LETjbmGTLmKF9tBldLY8 (30 more) ..."
+13:05:24.458 (461096112)|STATEMENT_EXECUTE|[193]
+13:05:24.458 (461099893)|HEAP_ALLOCATE|[193]|Bytes:23
+13:05:24.458 (461103501)|VARIABLE_SCOPE_BEGIN|[193]|baseUrl|String|false|false
+13:05:24.458 (461108701)|VARIABLE_ASSIGNMENT|[193]|baseUrl|"https://api.twitter. (3 more) ..."
+13:05:24.458 (461110550)|STATEMENT_EXECUTE|[194]
+13:05:24.458 (461112919)|HEAP_ALLOCATE|[194]|Bytes:9
+13:05:24.458 (461115564)|VARIABLE_SCOPE_BEGIN|[194]|oauthSignatureMethod|String|false|false
+13:05:24.458 (461124355)|VARIABLE_ASSIGNMENT|[194]|oauthSignatureMethod|"HMAC-SHA1"
+13:05:24.458 (461126205)|STATEMENT_EXECUTE|[195]
+13:05:24.458 (461128517)|VARIABLE_SCOPE_BEGIN|[195]|strTwitterId|String|false|false
+13:05:24.458 (461132186)|VARIABLE_ASSIGNMENT|[195]|strTwitterId|""
+13:05:24.458 (461133740)|STATEMENT_EXECUTE|[196]
+13:05:24.458 (461135647)|VARIABLE_SCOPE_BEGIN|[196]|pictureURL|String|false|false
+13:05:24.458 (461139120)|VARIABLE_ASSIGNMENT|[196]|pictureURL|""
+13:05:24.458 (461141976)|STATEMENT_EXECUTE|[197]
+13:05:24.458 (461146005)|VARIABLE_SCOPE_BEGIN|[197]|twitterAcct|String|false|false
+13:05:24.458 (461151222)|VARIABLE_ASSIGNMENT|[197]|twitterAcct|""
+13:05:24.458 (461152942)|STATEMENT_EXECUTE|[198]
+13:05:24.458 (461159547)|HEAP_ALLOCATE|[198]|Bytes:64
+13:05:24.458 (461185221)|CONSTRUCTOR_ENTRY|[198]|01pB0000000r382|<init>()
+13:05:24.458 (461210108)|VARIABLE_SCOPE_BEGIN|[1]|this|testautonumdata.Twitter_Lightning_Controller|true|false
+13:05:24.458 (461254990)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2c37ed3f
+13:05:24.458 (461267163)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.458 (461289889)|STATEMENT_EXECUTE|[1]
+13:05:24.458 (461294635)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:05:24.458 (461297102)|STATEMENT_EXECUTE|[6]
+13:05:24.458 (461298460)|STATEMENT_EXECUTE|[8]
+13:05:24.458 (461299469)|STATEMENT_EXECUTE|[10]
+13:05:24.458 (461300612)|STATEMENT_EXECUTE|[12]
+13:05:24.458 (461301582)|STATEMENT_EXECUTE|[14]
+13:05:24.458 (461302729)|STATEMENT_EXECUTE|[16]
+13:05:24.458 (461303637)|STATEMENT_EXECUTE|[18]
+13:05:24.458 (461304569)|STATEMENT_EXECUTE|[20]
+13:05:24.458 (461305463)|STATEMENT_EXECUTE|[22]
+13:05:24.458 (461306409)|STATEMENT_EXECUTE|[24]
+13:05:24.458 (461307517)|STATEMENT_EXECUTE|[26]
+13:05:24.458 (461308369)|STATEMENT_EXECUTE|[28]
+13:05:24.458 (461309313)|STATEMENT_EXECUTE|[30]
+13:05:24.458 (461310182)|STATEMENT_EXECUTE|[32]
+13:05:24.458 (461311271)|STATEMENT_EXECUTE|[34]
+13:05:24.458 (461323794)|CONSTRUCTOR_EXIT|[198]|01pB0000000r382|<init>()
+13:05:24.458 (461332112)|VARIABLE_SCOPE_BEGIN|[198]|returnRec|testautonumdata.Twitter_Lightning_Controller|true|false
+13:05:24.458 (461360796)|VARIABLE_ASSIGNMENT|[198]|returnRec|{}|0x2c37ed3f
+13:05:24.458 (461363768)|STATEMENT_EXECUTE|[199]
+13:05:24.458 (461368041)|HEAP_ALLOCATE|[199]|Bytes:63
+13:05:24.458 (461419107)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2c37ed3f
+13:05:24.458 (461426530)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"https://www.lightnin (43 more) ..."
+13:05:24.458 (461440628)|VARIABLE_ASSIGNMENT|[8]|this.pictureUrl|"https://www.lightnin (43 more) ..."|0x2c37ed3f
+13:05:24.458 (461459992)|ENTERING_MANAGED_PKG|
+13:05:24.458 (461496446)|STATEMENT_EXECUTE|[200]
+13:05:24.458 (461498787)|STATEMENT_EXECUTE|[331]
+13:05:24.458 (461514068)|SYSTEM_MODE_EXIT|false
+13:05:24.461 (461565458)|CUMULATIVE_LIMIT_USAGE
+13:05:24.461 (461565458)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.461 (461565458)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.461 (461565458)|CUMULATIVE_LIMIT_USAGE_END
+
+13:05:24.462 (462952302)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+13:05:24.498 (498391404)|CODE_UNIT_STARTED|[EXTERNAL]|01pB0000000rR5G|RecordTimelineServerController.getListRecords
+13:05:24.498 (498479633)|VARIABLE_SCOPE_BEGIN|[3]|RecordTimelineServerController.mapObjectsFields|Map<String,Set<String>>|true|true
+13:05:24.498 (498495507)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:208
+13:05:24.498 (498504621)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:21
+13:05:24.498 (498507942)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:27
+13:05:24.498 (498544477)|METHOD_ENTRY|[1]|01pB0000000rR5G|RecordTimelineServerController.RecordTimelineServerController()
+13:05:24.498 (498551226)|STATEMENT_EXECUTE|[1]
+13:05:24.498 (498560625)|STATEMENT_EXECUTE|[1]
+13:05:24.498 (498570322)|SYSTEM_MODE_ENTER|false
+13:05:24.498 (498584438)|HEAP_ALLOCATE|[3]|Bytes:5
+13:05:24.498 (498588836)|STATEMENT_EXECUTE|[3]
+13:05:24.498 (498634042)|VARIABLE_ASSIGNMENT|[3]|RecordTimelineServerController.mapObjectsFields|null|
+13:05:24.498 (498641392)|SYSTEM_MODE_EXIT|false
+13:05:24.498 (498656570)|METHOD_EXIT|[1]|RecordTimelineServerController
+13:05:24.498 (498662900)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+13:05:24.498 (498665145)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.498 (498666594)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:34
+13:05:24.498 (498667728)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:05:24.498 (498668919)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:29
+13:05:24.498 (498670187)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.498 (498671373)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:26
+13:05:24.498 (498672505)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:34
+13:05:24.498 (498679370)|SYSTEM_MODE_ENTER|false
+13:05:24.498 (498687924)|VARIABLE_SCOPE_BEGIN|[24]|recordID|String|false|false
+13:05:24.498 (498701408)|VARIABLE_ASSIGNMENT|[24]|recordID|null
+13:05:24.498 (498704306)|VARIABLE_SCOPE_BEGIN|[24]|rowsLimit|String|false|false
+13:05:24.498 (498709678)|VARIABLE_ASSIGNMENT|[24]|rowsLimit|"4"
+13:05:24.498 (498711530)|VARIABLE_SCOPE_BEGIN|[24]|objectApiName|String|false|false
+13:05:24.498 (498720039)|VARIABLE_ASSIGNMENT|[24]|objectApiName|"testautonumdata__Int (9 more) ..."
+13:05:24.498 (498723109)|VARIABLE_SCOPE_BEGIN|[24]|filter1Field|String|false|false
+13:05:24.498 (498726834)|VARIABLE_ASSIGNMENT|[24]|filter1Field|null
+13:05:24.498 (498728773)|VARIABLE_SCOPE_BEGIN|[24]|filter1Value|String|false|false
+13:05:24.498 (498731302)|VARIABLE_ASSIGNMENT|[24]|filter1Value|null
+13:05:24.498 (498732805)|VARIABLE_SCOPE_BEGIN|[24]|objectDateFieldName|String|false|false
+13:05:24.498 (498737253)|VARIABLE_ASSIGNMENT|[24]|objectDateFieldName|"testautonumdata__Int (14 more) ..."
+13:05:24.498 (498739485)|VARIABLE_SCOPE_BEGIN|[24]|objectDisplayDateFieldName|String|false|false
+13:05:24.498 (498747230)|VARIABLE_ASSIGNMENT|[24]|objectDisplayDateFieldName|"testautonumdata__Dat (4 more) ..."
+13:05:24.498 (498749675)|VARIABLE_SCOPE_BEGIN|[24]|parentObjectIDFieldName|String|false|false
+13:05:24.498 (498753566)|VARIABLE_ASSIGNMENT|[24]|parentObjectIDFieldName|"testautonumdata__Can (9 more) ..."
+13:05:24.498 (498755506)|VARIABLE_SCOPE_BEGIN|[24]|detail1FieldAPIName|String|false|false
+13:05:24.498 (498758664)|VARIABLE_ASSIGNMENT|[24]|detail1FieldAPIName|"Name"
+13:05:24.498 (498760454)|VARIABLE_SCOPE_BEGIN|[24]|detail2FieldAPIName|String|false|false
+13:05:24.498 (498763828)|VARIABLE_ASSIGNMENT|[24]|detail2FieldAPIName|"testautonumdata__Sta (6 more) ..."
+13:05:24.498 (498766076)|VARIABLE_SCOPE_BEGIN|[24]|titleFieldAPIName|String|false|false
+13:05:24.498 (498772545)|VARIABLE_ASSIGNMENT|[24]|titleFieldAPIName|"testautonumdata__Int (14 more) ..."
+13:05:24.498 (498775048)|VARIABLE_SCOPE_BEGIN|[24]|subtitleFieldAPIName|String|false|false
+13:05:24.498 (498778617)|VARIABLE_ASSIGNMENT|[24]|subtitleFieldAPIName|null
+13:05:24.498 (498788557)|HEAP_ALLOCATE|[26]|Bytes:5
+13:05:24.498 (498793164)|STATEMENT_EXECUTE|[24]
+13:05:24.498 (498794531)|STATEMENT_EXECUTE|[26]
+13:05:24.498 (498797952)|HEAP_ALLOCATE|[26]|Bytes:52
+13:05:24.498 (498806894)|HEAP_ALLOCATE|[26]|Bytes:53
+13:05:24.498 (498826680)|ENTERING_MANAGED_PKG|
+13:05:24.498 (498866480)|USER_DEBUG|[26]|DEBUG|######## RecordTimelineServerController: rowsLimit: 4
+13:05:24.498 (498876365)|STATEMENT_EXECUTE|[27]
+13:05:24.498 (498880001)|HEAP_ALLOCATE|[27]|Bytes:56
+13:05:24.498 (498885963)|HEAP_ALLOCATE|[27]|Bytes:85
+13:05:24.498 (498893922)|ENTERING_MANAGED_PKG|
+13:05:24.498 (498907034)|USER_DEBUG|[27]|DEBUG|######## RecordTimelineServerController: objectApiName: testautonumdata__Interview__c
+13:05:24.498 (498914130)|STATEMENT_EXECUTE|[30]
+13:05:24.498 (498919058)|HEAP_ALLOCATE|[30]|Bytes:4
+13:05:24.498 (498958029)|VARIABLE_ASSIGNMENT|[30]|RecordTimelineServerController.mapObjectsFields|{"s":1,"v":{}}|0x1b93beba
+13:05:24.498 (498961956)|STATEMENT_EXECUTE|[32]
+13:05:24.498 (498978777)|METHOD_ENTRY|[32]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.498 (498996858)|VARIABLE_SCOPE_BEGIN|[107]|fieldName|String|false|false
+13:05:24.498 (499004003)|VARIABLE_ASSIGNMENT|[107]|fieldName|"Id"
+13:05:24.498 (499007794)|VARIABLE_SCOPE_BEGIN|[107]|initialObjectName|String|false|false
+13:05:24.498 (499011994)|VARIABLE_ASSIGNMENT|[107]|initialObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.498 (499013938)|VARIABLE_SCOPE_BEGIN|[107]|theMap|Map<String,Set<String>>|true|false
+13:05:24.498 (499026370)|VARIABLE_ASSIGNMENT|[107]|theMap|{"s":1,"v":{}}|0x1b93beba
+13:05:24.498 (499034727)|HEAP_ALLOCATE|[109]|Bytes:5
+13:05:24.498 (499039024)|STATEMENT_EXECUTE|[108]
+13:05:24.498 (499054856)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499066199)|STATEMENT_EXECUTE|[150]
+13:05:24.498 (499079208)|METHOD_ENTRY|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.498 (499083704)|VARIABLE_SCOPE_BEGIN|[157]|fieldName|String|false|false
+13:05:24.498 (499088893)|VARIABLE_ASSIGNMENT|[157]|fieldName|"Id"
+13:05:24.498 (499090930)|VARIABLE_SCOPE_BEGIN|[157]|ObjectName|String|false|false
+13:05:24.498 (499094838)|VARIABLE_ASSIGNMENT|[157]|ObjectName|"testautonumdata__Int (9 more) ..."
+13:05:24.498 (499097633)|VARIABLE_SCOPE_BEGIN|[157]|theMap|Map<String,Set<String>>|true|false
+13:05:24.498 (499112597)|VARIABLE_ASSIGNMENT|[157]|theMap|{"s":1,"v":{}}|0x1b93beba
+13:05:24.498 (499120577)|HEAP_ALLOCATE|[160]|Bytes:5
+13:05:24.498 (499124619)|STATEMENT_EXECUTE|[158]
+13:05:24.498 (499132970)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499147213)|STATEMENT_EXECUTE|[167]
+13:05:24.498 (499149081)|STATEMENT_EXECUTE|[168]
+13:05:24.498 (499156555)|HEAP_ALLOCATE|[168]|Bytes:4
+13:05:24.498 (499172781)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499185295)|VARIABLE_SCOPE_BEGIN|[168]|newFieldSet|Set<String>|true|false
+13:05:24.498 (499212769)|VARIABLE_ASSIGNMENT|[168]|newFieldSet|{"s":1,"v":[]}|0x1922e3b8
+13:05:24.498 (499215757)|STATEMENT_EXECUTE|[169]
+13:05:24.498 (499229329)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499237783)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.498 (499244646)|STATEMENT_EXECUTE|[170]
+13:05:24.498 (499249577)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499263742)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:05:24.498 (499275920)|METHOD_EXIT|[150]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToMap(String, String, Map<String,Set<String>>)
+13:05:24.498 (499282990)|METHOD_EXIT|[32]|01pB0000000ljzx|testautonumdata.Sparkle_Helper.AddFieldToObjectsMap(String, String, Map<String,Set<String>>)
+13:05:24.498 (499285966)|STATEMENT_EXECUTE|[34]
+13:05:24.498 (499321661)|HEAP_ALLOCATE|[34]|Bytes:4
+13:05:24.498 (499399427)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499429252)|VARIABLE_SCOPE_BEGIN|[34]|lstReturnRecords|List<testautonumdata.RecordTimelineServerController>|true|false
+13:05:24.498 (499459933)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:05:24.498 (499475858)|VARIABLE_ASSIGNMENT|[34]|lstReturnRecords|{"s":1,"v":[]}|0x24a6311f
+13:05:24.498 (499492111)|ENTERING_MANAGED_PKG|
+13:05:24.498 (499525288)|STATEMENT_EXECUTE|[35]
+13:05:24.498 (499527313)|STATEMENT_EXECUTE|[147]
+13:05:24.498 (499535735)|SYSTEM_MODE_EXIT|false
+13:05:24.499 (499578782)|CUMULATIVE_LIMIT_USAGE
+13:05:24.499 (499578782)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.499 (499578782)|LIMIT_USAGE_FOR_NS|testautonumdata|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:05:24.499 (499578782)|CUMULATIVE_LIMIT_USAGE_END
+
