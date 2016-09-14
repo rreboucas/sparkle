@@ -11,7 +11,7 @@
     <aura:attribute name="ObjectCompanyNameAPIField" type="String" access="GLOBAL"/>
     <aura:attribute name="ObjectEmailAPIField" type="String" access="GLOBAL"/>
 
-    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     <aura:registerEvent name="TwitterRecordEvent" type="c:TwitterRecordEvent"/>

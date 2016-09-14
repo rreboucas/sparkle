@@ -1,5 +1,5 @@
 <aura:component controller="ContactController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-	
+<aura:handler name="init" value="{!this}" action="{!c.setupLightningConverterListener}" />
     
     <div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
     	

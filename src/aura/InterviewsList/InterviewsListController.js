@@ -70,6 +70,21 @@
 
 
     },
+
+    CreateNewRecord : function(component, event, helper) {
+        
+        console.log("InterviewsListController.CreateNewRecord: entered");
+        var objectAPIName = component.get("v.objectApiName");
+
+        var createRecordEvent = $A.get("e.force:createRecord");
+        createRecordEvent.setParams({
+            "entityApiName": objectAPIName
+        });
+        createRecordEvent.fire();
+
+        console.log("InterviewsListController.CreateNewRecord: exit");
+
+    },
     
     
     sortGrid : function(component, event, helper) {

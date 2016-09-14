@@ -22,6 +22,16 @@
 
       <body>
       <div id="content" class="slds"></div>
+
+        <script>
+
+		function showToastOnLC(){
+		    //Display post message
+		    console.log('VF showToastOnLC entered');
+			parent.postMessage({action:'toast', title:"Success", message:"A link was clicked on the VF Page inside the iframe"});
+		}
+		</script>
+
       	<script type="text/jsx">
 
       	
@@ -64,12 +74,26 @@
 			    
 			    	console.log('First doSearch function')
 			        console.log('queryText: ' + queryText)
+
+			        queryText = queryText.trim()
+			        
+			        var queryTextLC = queryText.toLowerCase()
+			        console.log('queryTextLC: ' + queryTextLC)
+
 			        //get query result
 			        var queryResult=[];
 			        this.props.data.forEach(function(person){
 			        	console.log('person: ' + person)
-			            if(person.toLowerCase().indexOf(queryText)!=-1)
+
+			        	var indexOfCharOnThisPerson = person.toLowerCase().lastIndexOf(queryText.toLowerCase())
+			        	console.log('indexOfCharOnThisPerson: ' + indexOfCharOnThisPerson)
+
+
+
+			            if(person.toLowerCase().lastIndexOf(queryText.toLowerCase()) >= 0){
+			            console.log('Adding this person to queryResult array: ' + person)
 			            queryResult.push(person);
+			            }
 			        });
 
 			        console.log('queryResult: ' + queryResult)
@@ -79,6 +103,8 @@
 			            filteredData: queryResult
 			        })
 			    },
+
+
 			    getInitialState:function(){
 			    console.log('getInitialState function');
 			    //var goGetData = this.fetchWarehouses();
@@ -160,7 +186,7 @@
 			      doSearch:function(queryText){
 
 			      this.fetchWarehouses();
-
+			      console.log('2nd doSearch function')
 			      console.log('dataSource: ' + dataSource);
 			        console.log(queryText)
 			        //get query result
@@ -181,7 +207,7 @@
 			        var rows=[];
 			        this.props.data.forEach(function(person) {
 			        
-			        rows.push(<tr><td>{person}</td></tr>)
+			        rows.push(<tr><td><a href="#" onclick="showToastOnLC();">{person}</a></td></tr>)
 			        });        
 			        //returning the table
 			        return(
