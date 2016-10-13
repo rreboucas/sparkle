@@ -1,3 +1,3 @@
 <aura:application useAppCache="true">
-	<c:JqueryTestLocker />
+	<c:ReactVisualforceLC />
 </aura:application>

@@ -25,6 +25,16 @@
 
         
 	},
+
+    showSpinner : function (component, event, helper) {
+        var spinner = component.find('xi-spinner');
+        $A.util.removeClass(spinner, "xc-hidden");    
+    },
+    
+    hideSpinner : function (component, event, helper) {
+       var spinner = component.find('xi-spinner');
+       $A.util.addClass(spinner, "xc-hidden");   
+    },
     
     pressButton : function(component, event, helper) {
         

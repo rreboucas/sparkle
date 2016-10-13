@@ -23,4 +23,22 @@ public with sharing class myControllerExtension {
         options.add(new SelectOption('5','5')); 
         return options; 
     }
+    
+    public PageReference doSomething()
+    {
+        // Apex code for handling record from a Detail page goes here
+        PageReference pg = new PageReference('/a0MB0000000cQXF');
+        pg.setRedirect(true);
+        return pg; 
+        
+    }
+    
+    public PageReference goToAnotherVFPage()
+    {
+        // Apex code for handling record from a Detail page goes here
+        PageReference pg = new PageReference('/apex/InterviewQuestionsLDS');
+        pg.setRedirect(true);
+        return pg; 
+        
+    }
 }

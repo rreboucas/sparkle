@@ -1,0 +1,527 @@
+38.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+13:48:31.3 (3128957)|USER_INFO|[EXTERNAL]|005B0000001VpZR|rreboucas-yi5c@force.com|Pacific Standard Time|GMT-07:00
+13:48:31.3 (3192425)|EXECUTION_STARTED
+13:48:31.3 (3204596)|CODE_UNIT_STARTED|[EXTERNAL]|SendNotification.dispatch
+13:48:31.3 (3536254)|HEAP_ALLOCATE|[72]|Bytes:3
+13:48:31.3 (3603232)|HEAP_ALLOCATE|[77]|Bytes:152
+13:48:31.3 (3635181)|HEAP_ALLOCATE|[342]|Bytes:408
+13:48:31.3 (3665944)|HEAP_ALLOCATE|[355]|Bytes:408
+13:48:31.3 (3695240)|HEAP_ALLOCATE|[467]|Bytes:48
+13:48:31.3 (3745593)|HEAP_ALLOCATE|[139]|Bytes:6
+13:48:31.3 (3779890)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:45
+13:48:31.3 (3803226)|SYSTEM_METHOD_ENTRY|[4]|SendNotification.SendNotification()
+13:48:31.3 (3812195)|STATEMENT_EXECUTE|[4]
+13:48:31.3 (3820669)|STATEMENT_EXECUTE|[4]
+13:48:31.3 (3831702)|SYSTEM_METHOD_EXIT|[4]|SendNotification
+13:48:31.3 (3842897)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:48:31.3 (3850824)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:15
+13:48:31.3 (3857941)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:20
+13:48:31.3 (3874025)|VARIABLE_SCOPE_BEGIN|[5]|msgId|Id|false|false
+13:48:31.3 (4042062)|VARIABLE_ASSIGNMENT|[5]|msgId|"04tB00000003vJ5IAI"
+13:48:31.3 (4057676)|VARIABLE_SCOPE_BEGIN|[5]|extraData|String|false|false
+13:48:31.3 (4076355)|VARIABLE_ASSIGNMENT|[5]|extraData|"00Dj00000028Bjd"
+13:48:31.3 (4084728)|VARIABLE_SCOPE_BEGIN|[5]|t|String|false|false
+13:48:31.3 (4098660)|VARIABLE_ASSIGNMENT|[5]|t|"packageVersionUpload"
+13:48:31.3 (4114557)|STATEMENT_EXECUTE|[5]
+13:48:31.3 (4123941)|HEAP_ALLOCATE|[6]|Bytes:20
+13:48:31.3 (4166932)|HEAP_ALLOCATE|[50]|Bytes:5
+13:48:31.3 (4200756)|HEAP_ALLOCATE|[56]|Bytes:5
+13:48:31.3 (4220098)|HEAP_ALLOCATE|[64]|Bytes:7
+13:48:31.3 (4280230)|STATEMENT_EXECUTE|[6]
+13:48:31.3 (4288781)|STATEMENT_EXECUTE|[7]
+13:48:31.3 (4319137)|METHOD_ENTRY|[7]||Packaging.SendNotification.versionUpload(Id, String)
+13:48:31.3 (4380583)|VARIABLE_SCOPE_BEGIN|[18]|allPackageVersionId|Id|false|false
+13:48:31.3 (4435870)|VARIABLE_ASSIGNMENT|[18]|allPackageVersionId|"04tB00000003vJ5IAI"
+13:48:31.3 (4447846)|VARIABLE_SCOPE_BEGIN|[18]|licenseManagementOrgId|String|false|false
+13:48:31.3 (4462688)|VARIABLE_ASSIGNMENT|[18]|licenseManagementOrgId|"00Dj00000028Bjd"
+13:48:31.3 (4471640)|STATEMENT_EXECUTE|[18]
+13:48:31.3 (4477182)|STATEMENT_EXECUTE|[20]
+13:48:31.3 (4501913)|METHOD_ENTRY|[20]||Packaging.SendNotification.getVersionById(Id)
+13:48:31.3 (4590470)|VARIABLE_SCOPE_BEGIN|[96]|allPackageVersionId|Id|false|false
+13:48:31.3 (4639494)|VARIABLE_ASSIGNMENT|[96]|allPackageVersionId|"04tB00000003vJ5IAI"
+13:48:31.3 (4651174)|STATEMENT_EXECUTE|[96]
+13:48:31.3 (4656691)|STATEMENT_EXECUTE|[97]
+13:48:31.3 (4665009)|HEAP_ALLOCATE|[97]|Bytes:185
+13:48:31.3 (4685891)|HEAP_ALLOCATE|[97]|Bytes:4
+13:48:31.3 (4706308)|HEAP_ALLOCATE|[97]|Bytes:7
+13:48:31.3 (5147533)|SOQL_EXECUTE_BEGIN|[97]|Aggregations:0|SELECT Id, AllPackageId, VersionName, IsReleased, SequenceNumber, Description, LastModifiedDate, DevelopmentOrganizationId, IsManaged FROM AllPackageVersion WHERE id = :tmpVar1 ALL ROWS
+13:48:31.3 (7773331)|SOQL_EXECUTE_END|[97]|Rows:1
+13:48:31.3 (7804312)|HEAP_ALLOCATE|[97]|Bytes:8
+13:48:31.3 (7830645)|HEAP_ALLOCATE|[97]|Bytes:188
+13:48:31.3 (7974976)|HEAP_ALLOCATE|[97]|Bytes:8
+13:48:31.3 (8002457)|VARIABLE_SCOPE_BEGIN|[97]|result|List<AllPackageVersion>|true|false
+13:48:31.3 (8151181)|VARIABLE_ASSIGNMENT|[97]|result|{"s":1,"v":[{"s":2,"v":{"Id":"04tB00000003vJ5IAI","AllPackageId":"033B0000000An41IAC","VersionName":"1.14","IsReleased":true,"LastModifiedDate":"2016-09-15T20:48:30.000Z","DevelopmentOrganizat (5 more) ...":"00DB00000002068MAA","IsManaged":true}}]}|0x3f822799
+13:48:31.3 (8269572)|ENTERING_MANAGED_PKG|
+13:48:31.3 (8444156)|STATEMENT_EXECUTE|[100]
+13:48:31.3 (8455554)|STATEMENT_EXECUTE|[103]
+13:48:31.3 (8486091)|HEAP_ALLOCATE|[103]|Bytes:32
+13:48:31.3 (8540010)|METHOD_EXIT|[20]||Packaging.SendNotification.getVersionById(Id)
+13:48:31.3 (8554917)|VARIABLE_SCOPE_BEGIN|[20]|pv|AllPackageVersion|true|false
+13:48:31.3 (8630770)|VARIABLE_ASSIGNMENT|[20]|pv|{"s":1,"v":{"Id":"04tB00000003vJ5IAI","AllPackageId":"033B0000000An41IAC","VersionName":"1.14","IsReleased":true,"LastModifiedDate":"2016-09-15T20:48:30.000Z","DevelopmentOrganizat (5 more) ...":"00DB00000002068MAA","IsManaged":true}}|0x73e9f140
+13:48:31.3 (8679662)|STATEMENT_EXECUTE|[21]
+13:48:31.3 (8689084)|STATEMENT_EXECUTE|[24]
+13:48:31.3 (8732382)|METHOD_ENTRY|[24]||Packaging.SendNotification.getAllPackageById(Id)
+13:48:31.3 (8801747)|VARIABLE_SCOPE_BEGIN|[106]|allPackageId|Id|false|false
+13:48:31.3 (8862824)|VARIABLE_ASSIGNMENT|[106]|allPackageId|"033B0000000An41IAC"
+13:48:31.3 (8874951)|STATEMENT_EXECUTE|[106]
+13:48:31.3 (8880566)|STATEMENT_EXECUTE|[107]
+13:48:31.3 (8898949)|HEAP_ALLOCATE|[107]|Bytes:128
+13:48:31.3 (8917129)|HEAP_ALLOCATE|[107]|Bytes:4
+13:48:31.3 (9187860)|SOQL_EXECUTE_BEGIN|[107]|Aggregations:0|SELECT AllPackage.Id, AllPackage.Description, AllPackage.PackageName, AllPackage.CreatedDate FROM AllPackage WHERE id = :tmpVar1
+13:48:31.3 (11363737)|SOQL_EXECUTE_END|[107]|Rows:1
+13:48:31.3 (11387965)|HEAP_ALLOCATE|[107]|Bytes:8
+13:48:31.3 (11407266)|HEAP_ALLOCATE|[107]|Bytes:78
+13:48:31.3 (11463749)|HEAP_ALLOCATE|[107]|Bytes:8
+13:48:31.3 (11485087)|VARIABLE_SCOPE_BEGIN|[107]|result|List<AllPackage>|true|false
+13:48:31.3 (11568624)|VARIABLE_ASSIGNMENT|[107]|result|{"s":1,"v":[{"s":2,"v":{"Id":"033B0000000An41IAC","PackageName":"Project Sparkle","CreatedDate":"2015-10-19T15:53:43.000Z"}}]}|0x576719af
+13:48:31.3 (11633260)|ENTERING_MANAGED_PKG|
+13:48:31.3 (11698095)|STATEMENT_EXECUTE|[110]
+13:48:31.3 (11708227)|STATEMENT_EXECUTE|[113]
+13:48:31.3 (11732319)|HEAP_ALLOCATE|[113]|Bytes:16
+13:48:31.3 (11757469)|METHOD_EXIT|[24]||Packaging.SendNotification.getAllPackageById(Id)
+13:48:31.3 (11769468)|VARIABLE_SCOPE_BEGIN|[24]|p|AllPackage|true|false
+13:48:31.3 (11836231)|VARIABLE_ASSIGNMENT|[24]|p|{"s":1,"v":{"Id":"033B0000000An41IAC","PackageName":"Project Sparkle","CreatedDate":"2015-10-19T15:53:43.000Z"}}|0x12c85670
+13:48:31.3 (11847343)|STATEMENT_EXECUTE|[25]
+13:48:31.3 (11880150)|METHOD_ENTRY|[25]||Packaging.SendNotification.getVersion(AllPackageVersion, AllPackage)
+13:48:31.3 (11995263)|VARIABLE_SCOPE_BEGIN|[147]|pv|AllPackageVersion|true|false
+13:48:31.3 (12069695)|VARIABLE_ASSIGNMENT|[147]|pv|{"s":1,"v":{"Id":"04tB00000003vJ5IAI","AllPackageId":"033B0000000An41IAC","VersionName":"1.14","IsReleased":true,"LastModifiedDate":"2016-09-15T20:48:30.000Z","DevelopmentOrganizat (5 more) ...":"00DB00000002068MAA","IsManaged":true}}|0x73e9f140
+13:48:31.3 (12085593)|VARIABLE_SCOPE_BEGIN|[147]|p|AllPackage|true|false
+13:48:31.3 (12143450)|VARIABLE_ASSIGNMENT|[147]|p|{"s":1,"v":{"Id":"033B0000000An41IAC","PackageName":"Project Sparkle","CreatedDate":"2015-10-19T15:53:43.000Z"}}|0x12c85670
+13:48:31.3 (12156119)|STATEMENT_EXECUTE|[147]
+13:48:31.3 (12161976)|STATEMENT_EXECUTE|[148]
+13:48:31.3 (12172331)|HEAP_ALLOCATE|[148]|Bytes:52
+13:48:31.3 (12199667)|CONSTRUCTOR_ENTRY|[148]||<init>()
+13:48:31.3 (12243689)|VARIABLE_SCOPE_BEGIN|[4]|this|Packaging.SoapPackageVersionInfo.PackageVersionInfo|true|false
+13:48:31.3 (12339014)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x315ca70e
+13:48:31.3 (12359324)|HEAP_ALLOCATE|[10]|Bytes:6
+13:48:31.3 (12382064)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (12397086)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (12448042)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x315ca70e
+13:48:31.3 (12463900)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (12472023)|STATEMENT_EXECUTE|[4]
+13:48:31.3 (12477240)|STATEMENT_EXECUTE|[5]
+13:48:31.3 (12482546)|STATEMENT_EXECUTE|[6]
+13:48:31.3 (12487643)|STATEMENT_EXECUTE|[7]
+13:48:31.3 (12492966)|STATEMENT_EXECUTE|[8]
+13:48:31.3 (12497945)|STATEMENT_EXECUTE|[9]
+13:48:31.3 (12502905)|STATEMENT_EXECUTE|[10]
+13:48:31.3 (12512609)|HEAP_ALLOCATE|[10]|Bytes:4
+13:48:31.3 (12538048)|ENTERING_MANAGED_PKG|
+13:48:31.3 (12573189)|HEAP_ALLOCATE|[10]|Bytes:11
+13:48:31.3 (12594351)|HEAP_ALLOCATE|[10]|Bytes:32
+13:48:31.3 (12607393)|HEAP_ALLOCATE|[10]|Bytes:4
+13:48:31.3 (12619733)|HEAP_ALLOCATE|[10]|Bytes:1
+13:48:31.3 (12631911)|HEAP_ALLOCATE|[10]|Bytes:1
+13:48:31.3 (12644087)|HEAP_ALLOCATE|[10]|Bytes:4
+13:48:31.3 (12687577)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (12726905)|VARIABLE_ASSIGNMENT|[10]|this.createdDate_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x315ca70e
+13:48:31.3 (12736269)|STATEMENT_EXECUTE|[11]
+13:48:31.3 (12746369)|HEAP_ALLOCATE|[11]|Bytes:4
+13:48:31.3 (12765982)|ENTERING_MANAGED_PKG|
+13:48:31.3 (12797731)|HEAP_ALLOCATE|[11]|Bytes:4
+13:48:31.3 (12816382)|HEAP_ALLOCATE|[11]|Bytes:6
+13:48:31.3 (12846359)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (12878320)|VARIABLE_ASSIGNMENT|[11]|this.name_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x315ca70e
+13:48:31.3 (12887150)|STATEMENT_EXECUTE|[12]
+13:48:31.3 (12901915)|HEAP_ALLOCATE|[12]|Bytes:4
+13:48:31.3 (12921881)|ENTERING_MANAGED_PKG|
+13:48:31.3 (12953376)|HEAP_ALLOCATE|[12]|Bytes:11
+13:48:31.3 (12973869)|HEAP_ALLOCATE|[12]|Bytes:54
+13:48:31.3 (12986565)|HEAP_ALLOCATE|[12]|Bytes:11
+13:48:31.3 (13015576)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (13048477)|VARIABLE_ASSIGNMENT|[12]|this.packageInfo_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x315ca70e
+13:48:31.3 (13057553)|STATEMENT_EXECUTE|[13]
+13:48:31.3 (13067198)|HEAP_ALLOCATE|[13]|Bytes:4
+13:48:31.3 (13086431)|ENTERING_MANAGED_PKG|
+13:48:31.3 (13117659)|HEAP_ALLOCATE|[13]|Bytes:16
+13:48:31.3 (13152431)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (13183852)|VARIABLE_ASSIGNMENT|[13]|this.packageVersionId_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x315ca70e
+13:48:31.3 (13192927)|STATEMENT_EXECUTE|[14]
+13:48:31.3 (13202879)|HEAP_ALLOCATE|[14]|Bytes:4
+13:48:31.3 (13222079)|ENTERING_MANAGED_PKG|
+13:48:31.3 (13252641)|HEAP_ALLOCATE|[14]|Bytes:14
+13:48:31.3 (13288692)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (13319833)|VARIABLE_ASSIGNMENT|[14]|this.sequenceNumber_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x315ca70e
+13:48:31.3 (13329017)|STATEMENT_EXECUTE|[15]
+13:48:31.3 (13338591)|HEAP_ALLOCATE|[15]|Bytes:4
+13:48:31.3 (13357189)|ENTERING_MANAGED_PKG|
+13:48:31.3 (13387756)|HEAP_ALLOCATE|[15]|Bytes:61
+13:48:31.3 (13418889)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:48:31.3 (13451214)|VARIABLE_ASSIGNMENT|[15]|this.apex_schema_type_info|{"s":1,"v":["http://soap.sforce.c (41 more) ...","true"]}|0x315ca70e
+13:48:31.3 (13460595)|STATEMENT_EXECUTE|[16]
+13:48:31.3 (13470150)|HEAP_ALLOCATE|[16]|Bytes:4
+13:48:31.3 (13488850)|ENTERING_MANAGED_PKG|
+13:48:31.3 (13537798)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:48:31.3 (13571605)|VARIABLE_ASSIGNMENT|[16]|this.field_order_type_info|{"s":1,"v":["createdDate","name","packageInfo","packageVersionId","sequenceNumber"]}|0x315ca70e
+13:48:31.3 (13589059)|VARIABLE_SCOPE_BEGIN|[148]|pvi|Packaging.SoapPackageVersionInfo.PackageVersionInfo|true|false
+13:48:31.3 (13658000)|VARIABLE_ASSIGNMENT|[148]|pvi|{"apex_schema_type_inf (1 more) ...":"0x578079e1","createdDate_type_inf (1 more) ...":"0x7d7915eb","field_order_type_inf (1 more) ...":"0x2e9d21cc","name_type_info":"0x12bcc18a","packageInfo_type_inf (1 more) ...":"0x42177e7b","packageVersionId_typ (6 more) ...":"0x16a7c5e0","sequenceNumber_type_ (4 more) ...":"0x23444c92"}|0x315ca70e
+13:48:31.3 (13669500)|STATEMENT_EXECUTE|[149]
+13:48:31.3 (13729750)|METHOD_ENTRY|[149]||Packaging.SendNotification.toDate(Datetime)
+13:48:31.3 (13775081)|VARIABLE_SCOPE_BEGIN|[143]|dt|Datetime|false|false
+13:48:31.3 (13836374)|VARIABLE_ASSIGNMENT|[143]|dt|"2016-09-15T20:48:30.000Z"
+13:48:31.3 (13847866)|STATEMENT_EXECUTE|[143]
+13:48:31.3 (13853510)|STATEMENT_EXECUTE|[144]
+13:48:31.3 (13926661)|HEAP_ALLOCATE|[144]|Bytes:4
+13:48:31.3 (13955060)|METHOD_EXIT|[149]||Packaging.SendNotification.toDate(Datetime)
+13:48:31.3 (14020333)|VARIABLE_ASSIGNMENT|[149]|this.createdDate|"2016-09-15T00:00:00.000Z"|0x315ca70e
+13:48:31.3 (14032288)|STATEMENT_EXECUTE|[150]
+13:48:31.3 (14063776)|VARIABLE_ASSIGNMENT|[150]|this.sequenceNumber|null|0x315ca70e
+13:48:31.3 (14072320)|STATEMENT_EXECUTE|[151]
+13:48:31.3 (14107880)|HEAP_ALLOCATE|[151]|Bytes:18
+13:48:31.3 (14142439)|VARIABLE_ASSIGNMENT|[151]|this.packageVersionId|"04tB00000003vJ5IAI"|0x315ca70e
+13:48:31.3 (14151071)|STATEMENT_EXECUTE|[152]
+13:48:31.3 (14190694)|VARIABLE_ASSIGNMENT|[152]|this.name|"1.14"|0x315ca70e
+13:48:31.3 (14199786)|STATEMENT_EXECUTE|[154]
+13:48:31.3 (14261324)|HEAP_ALLOCATE|[154]|Bytes:52
+13:48:31.3 (14287337)|CONSTRUCTOR_ENTRY|[154]||<init>()
+13:48:31.3 (14325724)|VARIABLE_SCOPE_BEGIN|[4]|this|Packaging.SoapPackageInfo.PackageInfo|true|false
+13:48:31.3 (14394631)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6bd693a
+13:48:31.3 (14408627)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (14454006)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x6bd693a
+13:48:31.3 (14467194)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (14474799)|STATEMENT_EXECUTE|[4]
+13:48:31.3 (14479916)|STATEMENT_EXECUTE|[5]
+13:48:31.3 (14484901)|STATEMENT_EXECUTE|[6]
+13:48:31.3 (14490108)|STATEMENT_EXECUTE|[7]
+13:48:31.3 (14495003)|STATEMENT_EXECUTE|[8]
+13:48:31.3 (14499770)|STATEMENT_EXECUTE|[9]
+13:48:31.3 (14504591)|STATEMENT_EXECUTE|[10]
+13:48:31.3 (14513211)|HEAP_ALLOCATE|[10]|Bytes:4
+13:48:31.3 (14532912)|ENTERING_MANAGED_PKG|
+13:48:31.3 (14585479)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (14618586)|VARIABLE_ASSIGNMENT|[10]|this.createdDate_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x6bd693a
+13:48:31.3 (14627729)|STATEMENT_EXECUTE|[11]
+13:48:31.3 (14637258)|HEAP_ALLOCATE|[11]|Bytes:4
+13:48:31.3 (14656295)|ENTERING_MANAGED_PKG|
+13:48:31.3 (14706090)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (14737782)|VARIABLE_ASSIGNMENT|[11]|this.name_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x6bd693a
+13:48:31.3 (14747009)|STATEMENT_EXECUTE|[12]
+13:48:31.3 (14756417)|HEAP_ALLOCATE|[12]|Bytes:4
+13:48:31.3 (14775312)|ENTERING_MANAGED_PKG|
+13:48:31.3 (14805087)|HEAP_ALLOCATE|[12]|Bytes:9
+13:48:31.3 (14839090)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (14869904)|VARIABLE_ASSIGNMENT|[12]|this.packageId_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x6bd693a
+13:48:31.3 (14878641)|STATEMENT_EXECUTE|[13]
+13:48:31.3 (14887979)|HEAP_ALLOCATE|[13]|Bytes:4
+13:48:31.3 (14911917)|ENTERING_MANAGED_PKG|
+13:48:31.3 (14941956)|HEAP_ALLOCATE|[13]|Bytes:9
+13:48:31.3 (14975970)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (15006414)|VARIABLE_ASSIGNMENT|[13]|this.publisher_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x6bd693a
+13:48:31.3 (15016111)|STATEMENT_EXECUTE|[14]
+13:48:31.3 (15025573)|HEAP_ALLOCATE|[14]|Bytes:4
+13:48:31.3 (15044289)|ENTERING_MANAGED_PKG|
+13:48:31.3 (15074094)|HEAP_ALLOCATE|[14]|Bytes:6
+13:48:31.3 (15108416)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (15138372)|VARIABLE_ASSIGNMENT|[14]|this.source_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x6bd693a
+13:48:31.3 (15147084)|STATEMENT_EXECUTE|[15]
+13:48:31.3 (15156417)|HEAP_ALLOCATE|[15]|Bytes:4
+13:48:31.3 (15175226)|ENTERING_MANAGED_PKG|
+13:48:31.3 (15221430)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:48:31.3 (15254734)|VARIABLE_ASSIGNMENT|[15]|this.apex_schema_type_info|{"s":1,"v":["http://soap.sforce.c (34 more) ...","true"]}|0x6bd693a
+13:48:31.3 (15263570)|STATEMENT_EXECUTE|[16]
+13:48:31.3 (15273028)|HEAP_ALLOCATE|[16]|Bytes:4
+13:48:31.3 (15291938)|ENTERING_MANAGED_PKG|
+13:48:31.3 (15341490)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:48:31.3 (15374551)|VARIABLE_ASSIGNMENT|[16]|this.field_order_type_info|{"s":1,"v":["createdDate","name","packageId","publisher","source"]}|0x6bd693a
+13:48:31.3 (15391458)|VARIABLE_SCOPE_BEGIN|[154]|pi|Packaging.SoapPackageInfo.PackageInfo|true|false
+13:48:31.3 (15455640)|VARIABLE_ASSIGNMENT|[154]|pi|{"apex_schema_type_inf (1 more) ...":"0x742fee9b","createdDate_type_inf (1 more) ...":"0x71c85a3","field_order_type_inf (1 more) ...":"0x7beab128","name_type_info":"0x5387bbd0","packageId_type_info":"0x14d3732d","publisher_type_info":"0x794a3c34","source_type_info":"0x1a989f23"}|0x6bd693a
+13:48:31.3 (15467002)|STATEMENT_EXECUTE|[155]
+13:48:31.3 (15506874)|METHOD_ENTRY|[155]||Packaging.SendNotification.toDate(Datetime)
+13:48:31.3 (15535736)|VARIABLE_SCOPE_BEGIN|[143]|dt|Datetime|false|false
+13:48:31.3 (15592326)|VARIABLE_ASSIGNMENT|[143]|dt|"2015-10-19T15:53:43.000Z"
+13:48:31.3 (15602841)|STATEMENT_EXECUTE|[143]
+13:48:31.3 (15608283)|STATEMENT_EXECUTE|[144]
+13:48:31.3 (15630831)|HEAP_ALLOCATE|[144]|Bytes:4
+13:48:31.3 (15656022)|METHOD_EXIT|[155]||Packaging.SendNotification.toDate(Datetime)
+13:48:31.3 (15718245)|VARIABLE_ASSIGNMENT|[155]|this.createdDate|"2015-10-19T00:00:00.000Z"|0x6bd693a
+13:48:31.3 (15728596)|STATEMENT_EXECUTE|[156]
+13:48:31.3 (15755399)|HEAP_ALLOCATE|[156]|Bytes:18
+13:48:31.3 (15789710)|VARIABLE_ASSIGNMENT|[156]|this.packageId|"033B0000000An41IAC"|0x6bd693a
+13:48:31.3 (15798334)|STATEMENT_EXECUTE|[157]
+13:48:31.3 (15824768)|HEAP_ALLOCATE|[157]|Bytes:18
+13:48:31.3 (15857258)|VARIABLE_ASSIGNMENT|[157]|this.source|"00DB00000002068MAA"|0x6bd693a
+13:48:31.3 (15865845)|STATEMENT_EXECUTE|[158]
+13:48:31.3 (15900313)|METHOD_ENTRY|[158]||Packaging.SendNotification.getPublisherById(Id)
+13:48:31.3 (15939130)|VARIABLE_SCOPE_BEGIN|[134]|orgId|Id|false|false
+13:48:31.3 (16004355)|VARIABLE_ASSIGNMENT|[134]|orgId|"00DB00000002068MAA"
+13:48:31.3 (16017142)|STATEMENT_EXECUTE|[134]
+13:48:31.3 (16023616)|STATEMENT_EXECUTE|[135]
+13:48:31.3 (16031893)|HEAP_ALLOCATE|[135]|Bytes:59
+13:48:31.3 (16048968)|HEAP_ALLOCATE|[135]|Bytes:4
+13:48:31.3 (24288729)|SOQL_EXECUTE_BEGIN|[135]|Aggregations:0|SELECT Id, Name FROM GlobalOrganization WHERE id = :tmpVar1
+13:48:31.3 (29107717)|SOQL_EXECUTE_END|[135]|Rows:1
+13:48:31.3 (29147615)|HEAP_ALLOCATE|[135]|Bytes:8
+13:48:31.3 (29173180)|HEAP_ALLOCATE|[135]|Bytes:51
+13:48:31.3 (29282313)|HEAP_ALLOCATE|[135]|Bytes:8
+13:48:31.3 (29317687)|VARIABLE_SCOPE_BEGIN|[135]|result|List<GlobalOrganization>|true|false
+13:48:31.3 (29385722)|VARIABLE_ASSIGNMENT|[135]|result|{"s":1,"v":[{"s":2,"v":{"Id":"00DB00000002068MAA","Name":"Salesforce.com"}}]}|0x1c05612a
+13:48:31.3 (29480766)|ENTERING_MANAGED_PKG|
+13:48:31.3 (29549019)|STATEMENT_EXECUTE|[136]
+13:48:31.3 (29558645)|STATEMENT_EXECUTE|[140]
+13:48:31.3 (29593229)|HEAP_ALLOCATE|[140]|Bytes:12
+13:48:31.3 (29639994)|METHOD_EXIT|[158]||Packaging.SendNotification.getPublisherById(Id)
+13:48:31.3 (29684608)|VARIABLE_ASSIGNMENT|[158]|this.publisher|"Salesforce.com"|0x6bd693a
+13:48:31.3 (29695319)|STATEMENT_EXECUTE|[161]
+13:48:31.3 (29701616)|STATEMENT_EXECUTE|[166]
+13:48:31.3 (29746851)|VARIABLE_ASSIGNMENT|[166]|this.name|"Project Sparkle"|0x6bd693a
+13:48:31.3 (29756633)|STATEMENT_EXECUTE|[167]
+13:48:31.3 (29776371)|VARIABLE_ASSIGNMENT|[167]|this.packageInfo|0x6bd693a|0x315ca70e
+13:48:31.3 (29783457)|STATEMENT_EXECUTE|[168]
+13:48:31.3 (29801730)|METHOD_EXIT|[25]||Packaging.SendNotification.getVersion(AllPackageVersion, AllPackage)
+13:48:31.3 (29811941)|VARIABLE_SCOPE_BEGIN|[25]|pvi|Packaging.SoapPackageVersionInfo.PackageVersionInfo|true|false
+13:48:31.3 (29991380)|VARIABLE_ASSIGNMENT|[25]|pvi|{"apex_schema_type_inf (1 more) ...":"0x578079e1","createdDate":"2016-09-15T00:00:00.000Z","createdDate_type_inf (1 more) ...":"0x7d7915eb","field_order_type_inf (1 more) ...":"0x2e9d21cc","name":"1.14","name_type_info":"0x12bcc18a","packageInfo":"0x6bd693a","packageInfo_type_inf (1 more) ...":"0x42177e7b","packageVersionId":"04tB00000003vJ5IAI","packageVersionId_typ (6 more) ...":"0x16a7c5e0","sequenceNumber_type_ (4 more) ...":"0x23444c92"}|0x315ca70e
+13:48:31.3 (30003540)|STATEMENT_EXECUTE|[30]
+13:48:31.3 (169912876)|HEAP_ALLOCATE|[30]|Bytes:8
+13:48:31.3 (169992866)|VARIABLE_SCOPE_BEGIN|[30]|result|java:com.sforce.soap.crossinstance.LoginXiResult|true|false
+13:48:31.3 (170424468)|VARIABLE_ASSIGNMENT|[30]|result|"[LoginXiResult  passwordExpired='false'\n serverUrl='https://na16.salesforce.com/services/Soap/c/37.0'\n sessionId='00Dj00000028Bjd!AQkAQCHDPJC_.2vEbSdb3tU_xbhm5BxYfEYJaAvW6o4QEy8ZZeRlk4jvEfqMx1UqFsz..n4LajtBWp5XJr.xK_Py51Q59TOa'\n userId='005j000000BdjMJAAZ'\n]\n"|0x41f7715
+13:48:31.3 (170442307)|STATEMENT_EXECUTE|[33]
+13:48:31.3 (170451514)|STATEMENT_EXECUTE|[36]
+13:48:31.3 (170599760)|HEAP_ALLOCATE|[36]|Bytes:15
+13:48:31.3 (170639748)|SYSTEM_METHOD_ENTRY|[1]|LoginXiResult.LoginXiResult()
+13:48:31.3 (170649225)|STATEMENT_EXECUTE|[1]
+13:48:31.3 (170657522)|STATEMENT_EXECUTE|[1]
+13:48:31.3 (170670285)|SYSTEM_METHOD_EXIT|[1]|LoginXiResult
+13:48:31.3 (170683216)|HEAP_ALLOCATE|[36]|Bytes:8
+13:48:31.3 (170727993)|CONSTRUCTOR_ENTRY|[36]||<init>(java:com.sforce.soap.crossinstance.LoginXiResult)
+13:48:31.3 (170797837)|VARIABLE_SCOPE_BEGIN|[5]|this|Packaging.LoginXiResult|true|false
+13:48:31.3 (170867870)|VARIABLE_ASSIGNMENT|[5]|this|{}|0x3beca9c5
+13:48:31.3 (170880630)|VARIABLE_SCOPE_BEGIN|[5]|result|java:com.sforce.soap.crossinstance.LoginXiResult|true|false
+13:48:31.3 (170943395)|VARIABLE_ASSIGNMENT|[5]|result|"[LoginXiResult  passwordExpired='false'\n serverUrl='https://na16.salesforce.com/services/Soap/c/37.0'\n sessionId='00Dj00000028Bjd!AQkAQCHDPJC_.2vEbSdb3tU_xbhm5BxYfEYJaAvW6o4QEy8ZZeRlk4jvEfqMx1UqFsz..n4LajtBWp5XJr.xK_Py51Q59TOa'\n userId='005j000000BdjMJAAZ'\n]\n"|0x41f7715
+13:48:31.3 (170957666)|STATEMENT_EXECUTE|[1]
+13:48:31.3 (170963887)|STATEMENT_EXECUTE|[3]
+13:48:31.3 (170978944)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (171022638)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x3beca9c5
+13:48:31.3 (171039443)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (171047709)|STATEMENT_EXECUTE|[5]
+13:48:31.3 (171052997)|STATEMENT_EXECUTE|[6]
+13:48:31.3 (171148124)|VARIABLE_ASSIGNMENT|[6]|this.result|"[LoginXiResult  passwordExpired='false'\n serverUrl='https://na16.salesforce.com/services/Soap/c/37.0'\n sessionId='00Dj00000028Bjd!AQkAQCHDPJC_.2vEbSdb3tU_xbhm5BxYfEYJaAvW6o4QEy8ZZeRlk4jvEfqMx1UqFsz..n4LajtBWp5XJr.xK_Py51Q59TOa'\n userId='005j000000BdjMJAAZ'\n]\n"|0x3beca9c5
+13:48:31.3 (171169700)|VARIABLE_SCOPE_BEGIN|[36]|lxr|Packaging.LoginXiResult|true|false
+13:48:31.3 (171214054)|VARIABLE_ASSIGNMENT|[36]|lxr|{"result":"0x41f7715"}|0x3beca9c5
+13:48:31.3 (171223503)|STATEMENT_EXECUTE|[37]
+13:48:31.3 (171257019)|METHOD_ENTRY|[37]||Packaging.SendNotification.getSu(Packaging.LoginXiResult)
+13:48:31.3 (171352697)|VARIABLE_SCOPE_BEGIN|[199]|lxr|Packaging.LoginXiResult|true|false
+13:48:31.3 (171396980)|VARIABLE_ASSIGNMENT|[199]|lxr|{"result":"0x41f7715"}|0x3beca9c5
+13:48:31.3 (171409115)|STATEMENT_EXECUTE|[199]
+13:48:31.3 (171414669)|STATEMENT_EXECUTE|[200]
+13:48:31.3 (171439593)|METHOD_ENTRY|[200]||Packaging.SendNotification.getEndpoint(Packaging.LoginXiResult)
+13:48:31.3 (171473658)|VARIABLE_SCOPE_BEGIN|[191]|res|Packaging.LoginXiResult|true|false
+13:48:31.3 (171515106)|VARIABLE_ASSIGNMENT|[191]|res|{"result":"0x41f7715"}|0x3beca9c5
+13:48:31.3 (171525988)|STATEMENT_EXECUTE|[191]
+13:48:31.3 (171531377)|STATEMENT_EXECUTE|[192]
+13:48:31.3 (171560239)|METHOD_ENTRY|[192]||Packaging.LoginXiResult.getServerUrl()
+13:48:31.3 (171593266)|VARIABLE_SCOPE_BEGIN|[9]|this|Packaging.LoginXiResult|true|false
+13:48:31.3 (171634254)|VARIABLE_ASSIGNMENT|[9]|this|{"result":"0x41f7715"}|0x3beca9c5
+13:48:31.3 (171645151)|STATEMENT_EXECUTE|[9]
+13:48:31.3 (171650423)|STATEMENT_EXECUTE|[10]
+13:48:31.3 (171674836)|HEAP_ALLOCATE|[10]|Bytes:48
+13:48:31.3 (171698763)|METHOD_EXIT|[192]||Packaging.LoginXiResult.getServerUrl()
+13:48:31.3 (171711417)|VARIABLE_SCOPE_BEGIN|[192]|target|String|false|false
+13:48:31.3 (171732326)|VARIABLE_ASSIGNMENT|[192]|target|"https://na16.salesfo (28 more) ..."
+13:48:31.3 (171739876)|STATEMENT_EXECUTE|[193]
+13:48:31.3 (171749524)|HEAP_ALLOCATE|[193]|Bytes:1
+13:48:31.3 (171803438)|ENTERING_MANAGED_PKG|
+13:48:31.3 (171861284)|VARIABLE_SCOPE_BEGIN|[193]|dotLoc|Integer|false|false
+13:48:31.3 (171873969)|HEAP_ALLOCATE|[193]|Bytes:4
+13:48:31.3 (171896417)|VARIABLE_ASSIGNMENT|[193]|dotLoc|27
+13:48:31.3 (171904064)|STATEMENT_EXECUTE|[194]
+13:48:31.3 (171935116)|ENTERING_MANAGED_PKG|
+13:48:31.3 (171977679)|STATEMENT_EXECUTE|[195]
+13:48:31.3 (172011046)|ENTERING_MANAGED_PKG|
+13:48:31.3 (172053553)|HEAP_ALLOCATE|[195]|Bytes:27
+13:48:31.3 (172080540)|HEAP_ALLOCATE|[196]|Bytes:43
+13:48:31.3 (172103399)|HEAP_ALLOCATE|[195]|Bytes:70
+13:48:31.3 (172122442)|METHOD_EXIT|[200]||Packaging.SendNotification.getEndpoint(Packaging.LoginXiResult)
+13:48:31.3 (172133562)|VARIABLE_SCOPE_BEGIN|[200]|endpoint|String|false|false
+13:48:31.3 (172153831)|VARIABLE_ASSIGNMENT|[200]|endpoint|"https://na16.salesfo (50 more) ..."
+13:48:31.3 (172161800)|STATEMENT_EXECUTE|[201]
+13:48:31.3 (172188575)|METHOD_ENTRY|[201]||Packaging.LoginXiResult.getSessionId()
+13:48:31.3 (172227187)|VARIABLE_SCOPE_BEGIN|[13]|this|Packaging.LoginXiResult|true|false
+13:48:31.3 (172269467)|VARIABLE_ASSIGNMENT|[13]|this|{"result":"0x41f7715"}|0x3beca9c5
+13:48:31.3 (172280570)|STATEMENT_EXECUTE|[13]
+13:48:31.3 (172286036)|STATEMENT_EXECUTE|[14]
+13:48:31.3 (172302587)|HEAP_ALLOCATE|[14]|Bytes:112
+13:48:31.3 (172323261)|METHOD_EXIT|[201]||Packaging.LoginXiResult.getSessionId()
+13:48:31.3 (172334469)|VARIABLE_SCOPE_BEGIN|[201]|sessionId|String|false|false
+13:48:31.3 (172353930)|VARIABLE_ASSIGNMENT|[201]|sessionId|"00Dj00000028Bjd!AQkA (92 more) ..."
+13:48:31.3 (172361586)|STATEMENT_EXECUTE|[204]
+13:48:31.3 (172372203)|HEAP_ALLOCATE|[204]|Bytes:13
+13:48:31.3 (172389805)|HEAP_ALLOCATE|[204]|Bytes:44
+13:48:31.3 (172410688)|CONSTRUCTOR_ENTRY|[204]||<init>()
+13:48:31.3 (172445567)|VARIABLE_SCOPE_BEGIN|[50]|this|Packaging.SoapSubscriberUpdate.SubscriberUpdate|true|false
+13:48:31.3 (172499135)|VARIABLE_ASSIGNMENT|[50]|this|{}|0xc5783a3
+13:48:31.3 (172512776)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (172555910)|VARIABLE_ASSIGNMENT|[2]|this|{}|0xc5783a3
+13:48:31.3 (172569571)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (172577372)|STATEMENT_EXECUTE|[50]
+13:48:31.3 (172583016)|STATEMENT_EXECUTE|[51]
+13:48:31.3 (172591055)|HEAP_ALLOCATE|[51]|Bytes:62
+13:48:31.3 (172624219)|VARIABLE_ASSIGNMENT|[51]|this.endpoint_x|"http://localhost:80/ (42 more) ..."|0xc5783a3
+13:48:31.3 (172633032)|STATEMENT_EXECUTE|[52]
+13:48:31.3 (172638888)|STATEMENT_EXECUTE|[53]
+13:48:31.3 (172644133)|STATEMENT_EXECUTE|[54]
+13:48:31.3 (172649152)|STATEMENT_EXECUTE|[55]
+13:48:31.3 (172654108)|STATEMENT_EXECUTE|[56]
+13:48:31.3 (172661200)|HEAP_ALLOCATE|[56]|Bytes:73
+13:48:31.3 (172689629)|VARIABLE_ASSIGNMENT|[56]|this.DebuggingInfo_hns|"DebuggingInfo=http:/ (53 more) ..."|0xc5783a3
+13:48:31.3 (172698338)|STATEMENT_EXECUTE|[57]
+13:48:31.3 (172705752)|HEAP_ALLOCATE|[57]|Bytes:75
+13:48:31.3 (172732311)|VARIABLE_ASSIGNMENT|[57]|this.DebuggingHeader_hns|"DebuggingHeader=http (55 more) ..."|0xc5783a3
+13:48:31.3 (172740389)|STATEMENT_EXECUTE|[58]
+13:48:31.3 (172748028)|HEAP_ALLOCATE|[58]|Bytes:71
+13:48:31.3 (172774677)|VARIABLE_ASSIGNMENT|[58]|this.CallOptions_hns|"CallOptions=http://s (51 more) ..."|0xc5783a3
+13:48:31.3 (172782872)|STATEMENT_EXECUTE|[59]
+13:48:31.3 (172790465)|HEAP_ALLOCATE|[59]|Bytes:73
+13:48:31.3 (172817875)|VARIABLE_ASSIGNMENT|[59]|this.SessionHeader_hns|"SessionHeader=http:/ (53 more) ..."|0xc5783a3
+13:48:31.3 (172826339)|STATEMENT_EXECUTE|[60]
+13:48:31.3 (172837636)|HEAP_ALLOCATE|[60]|Bytes:4
+13:48:31.3 (172859184)|ENTERING_MANAGED_PKG|
+13:48:31.3 (172924996)|HEAP_ALLOCATE|[60]|Bytes:54
+13:48:31.3 (172949509)|HEAP_ALLOCATE|[60]|Bytes:15
+13:48:31.3 (172963945)|HEAP_ALLOCATE|[60]|Bytes:22
+13:48:31.3 (172976619)|HEAP_ALLOCATE|[60]|Bytes:59
+13:48:31.3 (172988845)|HEAP_ALLOCATE|[60]|Bytes:20
+13:48:31.3 (173011602)|HEAP_ALLOCATE|[60]|Bytes:15
+13:48:31.3 (173053594)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:36
+13:48:31.3 (173093523)|VARIABLE_ASSIGNMENT|[60]|this.ns_map_type_info|{"s":1,"v":"List of size 8 too large to display"}|0xc5783a3
+13:48:31.3 (173110068)|VARIABLE_SCOPE_BEGIN|[204]|su|Packaging.SoapSubscriberUpdate.SubscriberUpdate|true|false
+13:48:31.3 (173172556)|VARIABLE_ASSIGNMENT|[204]|su|{"CallOptions_hns":"CallOptions=http://s (51 more) ...","DebuggingHeader_hns":"DebuggingHeader=http (55 more) ...","DebuggingInfo_hns":"DebuggingInfo=http:/ (53 more) ...","endpoint_x":"http://localhost:80/ (42 more) ...","ns_map_type_info":"0x6158eda7","SessionHeader_hns":"SessionHeader=http:/ (53 more) ..."}|0xc5783a3
+13:48:31.3 (173184034)|STATEMENT_EXECUTE|[205]
+13:48:31.3 (173210010)|VARIABLE_ASSIGNMENT|[205]|this.endpoint_x|"https://na16.salesfo (50 more) ..."|0xc5783a3
+13:48:31.3 (173218317)|STATEMENT_EXECUTE|[206]
+13:48:31.3 (173275316)|HEAP_ALLOCATE|[206]|Bytes:20
+13:48:31.3 (173300950)|CONSTRUCTOR_ENTRY|[206]||<init>()
+13:48:31.3 (173337255)|VARIABLE_SCOPE_BEGIN|[20]|this|Packaging.SoapSubscriberUpdate.SessionHeader_element|true|false
+13:48:31.3 (173389975)|VARIABLE_ASSIGNMENT|[20]|this|{}|0x1e809946
+13:48:31.3 (173403653)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (173439865)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x1e809946
+13:48:31.3 (173453403)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (173461165)|STATEMENT_EXECUTE|[20]
+13:48:31.3 (173466441)|STATEMENT_EXECUTE|[21]
+13:48:31.3 (173471740)|STATEMENT_EXECUTE|[22]
+13:48:31.3 (173480493)|HEAP_ALLOCATE|[22]|Bytes:4
+13:48:31.3 (173500719)|ENTERING_MANAGED_PKG|
+13:48:31.3 (173545622)|HEAP_ALLOCATE|[22]|Bytes:9
+13:48:31.3 (173568646)|HEAP_ALLOCATE|[22]|Bytes:5
+13:48:31.3 (173597781)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (173630343)|VARIABLE_ASSIGNMENT|[22]|this.sessionId_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x1e809946
+13:48:31.3 (173639338)|STATEMENT_EXECUTE|[23]
+13:48:31.3 (173649047)|HEAP_ALLOCATE|[23]|Bytes:4
+13:48:31.3 (173668686)|ENTERING_MANAGED_PKG|
+13:48:31.3 (173718209)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:48:31.3 (173753411)|VARIABLE_ASSIGNMENT|[23]|this.apex_schema_type_info|{"s":1,"v":["http://soap.sforce.c (39 more) ...","true"]}|0x1e809946
+13:48:31.3 (173762989)|STATEMENT_EXECUTE|[24]
+13:48:31.3 (173772684)|HEAP_ALLOCATE|[24]|Bytes:4
+13:48:31.3 (173792310)|ENTERING_MANAGED_PKG|
+13:48:31.3 (173839693)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+13:48:31.3 (173871698)|VARIABLE_ASSIGNMENT|[24]|this.field_order_type_info|{"s":1,"v":["sessionId"]}|0x1e809946
+13:48:31.3 (173897014)|VARIABLE_ASSIGNMENT|[206]|this.SessionHeader|0x1e809946|0xc5783a3
+13:48:31.3 (173905368)|STATEMENT_EXECUTE|[207]
+13:48:31.3 (173929503)|VARIABLE_ASSIGNMENT|[207]|this.sessionId|"00Dj00000028Bjd!AQkA (92 more) ..."|0x1e809946
+13:48:31.3 (173937587)|STATEMENT_EXECUTE|[208]
+13:48:31.3 (173952017)|METHOD_EXIT|[37]||Packaging.SendNotification.getSu(Packaging.LoginXiResult)
+13:48:31.3 (173961874)|VARIABLE_SCOPE_BEGIN|[37]|su|Packaging.SoapSubscriberUpdate.SubscriberUpdate|true|false
+13:48:31.3 (174044319)|VARIABLE_ASSIGNMENT|[37]|su|{"CallOptions_hns":"CallOptions=http://s (51 more) ...","DebuggingHeader_hns":"DebuggingHeader=http (55 more) ...","DebuggingInfo_hns":"DebuggingInfo=http:/ (53 more) ...","endpoint_x":"https://na16.salesfo (50 more) ...","ns_map_type_info":"0x6158eda7","SessionHeader":"0x1e809946","SessionHeader_hns":"SessionHeader=http:/ (53 more) ..."}|0xc5783a3
+13:48:31.3 (174057711)|STATEMENT_EXECUTE|[38]
+13:48:31.3 (174084746)|METHOD_ENTRY|[38]||Packaging.SoapSubscriberUpdate.SubscriberUpdate.versionUpload(Packaging.SoapPackageVersionInfo.PackageVersionInfo)
+13:48:31.3 (174125747)|VARIABLE_SCOPE_BEGIN|[122]|this|Packaging.SoapSubscriberUpdate.SubscriberUpdate|true|false
+13:48:31.3 (174191058)|VARIABLE_ASSIGNMENT|[122]|this|{"CallOptions_hns":"CallOptions=http://s (51 more) ...","DebuggingHeader_hns":"DebuggingHeader=http (55 more) ...","DebuggingInfo_hns":"DebuggingInfo=http:/ (53 more) ...","endpoint_x":"https://na16.salesfo (50 more) ...","ns_map_type_info":"0x6158eda7","SessionHeader":"0x1e809946","SessionHeader_hns":"SessionHeader=http:/ (53 more) ..."}|0xc5783a3
+13:48:31.3 (174203997)|VARIABLE_SCOPE_BEGIN|[122]|versInfo|Packaging.SoapPackageVersionInfo.PackageVersionInfo|true|false
+13:48:31.3 (174358751)|VARIABLE_ASSIGNMENT|[122]|versInfo|{"apex_schema_type_inf (1 more) ...":"0x578079e1","createdDate":"2016-09-15T00:00:00.000Z","createdDate_type_inf (1 more) ...":"0x7d7915eb","field_order_type_inf (1 more) ...":"0x2e9d21cc","name":"1.14","name_type_info":"0x12bcc18a","packageInfo":"0x6bd693a","packageInfo_type_inf (1 more) ...":"0x42177e7b","packageVersionId":"04tB00000003vJ5IAI","packageVersionId_typ (6 more) ...":"0x16a7c5e0","sequenceNumber_type_ (4 more) ...":"0x23444c92"}|0x315ca70e
+13:48:31.3 (174374286)|STATEMENT_EXECUTE|[122]
+13:48:31.3 (174380434)|STATEMENT_EXECUTE|[123]
+13:48:31.3 (174439495)|HEAP_ALLOCATE|[123]|Bytes:20
+13:48:31.3 (174465651)|CONSTRUCTOR_ENTRY|[123]||<init>()
+13:48:31.3 (174502301)|VARIABLE_SCOPE_BEGIN|[2]|this|Packaging.SoapSubscriberUpdate.versionUpload_element|true|false
+13:48:31.3 (174553180)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x4cc567ba
+13:48:31.3 (174566835)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (174602553)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x4cc567ba
+13:48:31.3 (174615497)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (174623399)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (174628871)|STATEMENT_EXECUTE|[3]
+13:48:31.3 (174634060)|STATEMENT_EXECUTE|[4]
+13:48:31.3 (174642808)|HEAP_ALLOCATE|[4]|Bytes:4
+13:48:31.3 (174662490)|ENTERING_MANAGED_PKG|
+13:48:31.3 (174694757)|HEAP_ALLOCATE|[4]|Bytes:8
+13:48:31.3 (174713568)|HEAP_ALLOCATE|[4]|Bytes:18
+13:48:31.3 (174744011)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:28
+13:48:31.3 (174776519)|VARIABLE_ASSIGNMENT|[4]|this.versInfo_type_info|{"s":1,"v":"List of size 6 too large to display"}|0x4cc567ba
+13:48:31.3 (174785696)|STATEMENT_EXECUTE|[5]
+13:48:31.3 (174795441)|HEAP_ALLOCATE|[5]|Bytes:4
+13:48:31.3 (174814765)|ENTERING_MANAGED_PKG|
+13:48:31.3 (174862121)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:48:31.3 (174895869)|VARIABLE_ASSIGNMENT|[5]|this.apex_schema_type_info|{"s":1,"v":["http://soap.sforce.c (39 more) ...","true"]}|0x4cc567ba
+13:48:31.3 (174905291)|STATEMENT_EXECUTE|[6]
+13:48:31.3 (174914814)|HEAP_ALLOCATE|[6]|Bytes:4
+13:48:31.3 (174934394)|ENTERING_MANAGED_PKG|
+13:48:31.3 (174980691)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+13:48:31.3 (175017220)|VARIABLE_ASSIGNMENT|[6]|this.field_order_type_info|{"s":1,"v":["versInfo"]}|0x4cc567ba
+13:48:31.3 (175035626)|VARIABLE_SCOPE_BEGIN|[123]|request_x|Packaging.SoapSubscriberUpdate.versionUpload_element|true|false
+13:48:31.3 (175085766)|VARIABLE_ASSIGNMENT|[123]|request_x|{"apex_schema_type_inf (1 more) ...":"0x2a1021ce","field_order_type_inf (1 more) ...":"0x500bf3ad","versInfo_type_info":"0x69d265d9"}|0x4cc567ba
+13:48:31.3 (175096616)|STATEMENT_EXECUTE|[124]
+13:48:31.3 (175150194)|VARIABLE_SCOPE_BEGIN|[124]|response_x|Packaging.SoapSubscriberUpdate.versionUploadResponse_element|true|false
+13:48:31.3 (175173374)|VARIABLE_ASSIGNMENT|[124]|response_x|null|
+13:48:31.3 (175180785)|STATEMENT_EXECUTE|[125]
+13:48:31.3 (175198373)|VARIABLE_ASSIGNMENT|[125]|this.versInfo|0x315ca70e|0x4cc567ba
+13:48:31.3 (175205495)|STATEMENT_EXECUTE|[126]
+13:48:31.3 (175256445)|HEAP_ALLOCATE|[126]|Bytes:4
+13:48:31.3 (175324354)|VARIABLE_SCOPE_BEGIN|[126]|response_map_x|Map<String,Packaging.SoapSubscriberUpdate.versionUploadResponse_element>|true|false
+13:48:31.3 (175361555)|VARIABLE_ASSIGNMENT|[126]|response_map_x|{"s":1,"v":{}}|0x3714a6a1
+13:48:31.3 (175370194)|STATEMENT_EXECUTE|[127]
+13:48:31.3 (175379006)|HEAP_ALLOCATE|[127]|Bytes:10
+13:48:31.3 (175403308)|ENTERING_MANAGED_PKG|
+13:48:31.3 (175458992)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+13:48:31.3 (175476721)|STATEMENT_EXECUTE|[128]
+13:48:31.3 (175487402)|HEAP_ALLOCATE|[132]|Bytes:4
+13:48:31.3 (175506030)|ENTERING_MANAGED_PKG|
+13:48:31.3 (175543784)|HEAP_ALLOCATE|[135]|Bytes:13
+13:48:31.3 (175560369)|HEAP_ALLOCATE|[137]|Bytes:21
+13:48:31.3 (175572794)|HEAP_ALLOCATE|[138]|Bytes:50
+13:48:31.3 (175608545)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:32
+13:48:31.3 (175637668)|ENTERING_MANAGED_PKG|
+13:48:31.3 (273252415)|CALLOUT_REQUEST|[128]|<?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Header><SessionHeader xmlns="http://soap.sforce.com/schemas/class/sfLma/SubscriberUpdate"><sessionId>00Dj00000028Bjd!AQkAQCHDPJC_.2vEbSdb3tU_xbhm5BxYfEYJaAvW6o4QEy8ZZeRlk4jvEfqMx1UqFsz..n4LajtBWp5XJr.xK_Py51Q59TOa</sessionId></SessionHeader></env:Header><env:Body><versionUpload xmlns="http://soap.sforce.com/schemas/class/sfLma/SubscriberUpdate"><versInfo><createdDate xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo">2016-09-15</createdDate><name xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo">1.14</name><packageInfo xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo"><createdDate xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageInfo">2015-10-19</createdDate><name xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageInfo">Project Sparkle</name><packageId xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageInfo">033B0000000An41IAC</packageId><publisher xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageInfo">Salesforce.com</publisher><source xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageInfo">00DB00000002068MAA</source></packageInfo><packageVersionId xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo">04tB00000003vJ5IAI</packageVersionId><sequenceNumber xsi:nil="true" xmlns="http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo" /></versInfo></versionUpload></env:Body></env:Envelope>
+13:48:31.3 (273448404)|CALLOUT_REQUEST|[128]|versionUpload_element:[apex_schema_type_info=(http://soap.sforce.com/schemas/class/sfLma/SubscriberUpdate, true), field_order_type_info=(versInfo), versInfo=PackageVersionInfo:[apex_schema_type_info=(http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo, true), createdDate=2016-09-15 00:00:00, createdDate_type_info=(createdDate, http://www.w3.org/2001/XMLSchema, date, 0, 1, true), field_order_type_info=(createdDate, name, packageInfo, packageVersionId, sequenceNumber), name=1.14, name_type_info=(name, http://www.w3.org/2001/XMLSchema, string, 0, 1, true), packageInfo=PackageInfo:[apex_schema_type_info=(http://soap.sforce.com/schemas/class/sfLma/PackageInfo, true), createdDate=2015-10-19 00:00:00, createdDate_type_info=(createdDate, http://www.w3.org/2001/XMLSchema, date, 0, 1, true), field_order_type_info=(createdDate, name, packageId, publisher, source), name=Project Sparkle, name_type_info=(name, http://www.w3.org/2001/XMLSchema, string, 0, 1, true), packageId=033B0000000An41IAC, packageId_type_info=(packageId, http://www.w3.org/2001/XMLSchema, string, 0, 1, true), publisher=Salesforce.com, publisher_type_info=(publisher, http://www.w3.org/2001/XMLSchema, string, 0, 1, true), source=00DB00000002068MAA, source_type_info=(source, http://www.w3.org/2001/XMLSchema, string, 0, 1, true)], packageInfo_type_info=(packageInfo, http://soap.sforce.com/schemas/class/sfLma/PackageInfo, PackageInfo, 0, 1, true), packageVersionId=04tB00000003vJ5IAI, packageVersionId_type_info=(packageVersionId, http://www.w3.org/2001/XMLSchema, string, 0, 1, true), sequenceNumber=null, sequenceNumber_type_info=(sequenceNumber, http://www.w3.org/2001/XMLSchema, int, 0, 1, true)], versInfo_type_info=(versInfo, http://soap.sforce.com/schemas/class/sfLma/PackageVersionInfo, PackageVersionInfo, 1, 1, true)]::SOAPAction="" Accept=text/xml User-Agent=SFDC-Callout/38.0 SFDC_STACK_DEPTH=1 Content-Type=text/xml; charset=UTF-8 
+13:48:31.3 (524806101)|CALLOUT_RESPONSE|[128]|<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://soap.sforce.com/schemas/class/sfLma/SubscriberUpdate"><soapenv:Body><versionUploadResponse/></soapenv:Body></soapenv:Envelope>
+13:48:31.3 (525191271)|HEAP_ALLOCATE|[128]|Bytes:12
+13:48:31.3 (525230709)|VARIABLE_SCOPE_BEGIN|[46]|this|Packaging.SoapSubscriberUpdate.versionUploadResponse_element|true|false
+13:48:31.3 (525349588)|VARIABLE_ASSIGNMENT|[46]|this|{}|0x1181181
+13:48:31.3 (525379992)|VARIABLE_SCOPE_BEGIN|[2]|this|System.ApexBaseClass|true|false
+13:48:31.3 (525428750)|VARIABLE_ASSIGNMENT|[2]|this|{}|0x1181181
+13:48:31.3 (525452831)|STATEMENT_EXECUTE|[2]
+13:48:31.3 (525465439)|STATEMENT_EXECUTE|[46]
+13:48:31.3 (525474121)|STATEMENT_EXECUTE|[47]
+13:48:31.3 (525489496)|HEAP_ALLOCATE|[47]|Bytes:4
+13:48:31.3 (525524969)|ENTERING_MANAGED_PKG|
+13:48:31.3 (525658227)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:48:31.3 (525721918)|VARIABLE_ASSIGNMENT|[47]|this.apex_schema_type_info|{"s":1,"v":["http://soap.sforce.c (39 more) ...","true"]}|0x1181181
+13:48:31.3 (525735095)|STATEMENT_EXECUTE|[48]
+13:48:31.3 (525749253)|HEAP_ALLOCATE|[48]|Bytes:4
+13:48:31.3 (525776247)|ENTERING_MANAGED_PKG|
+13:48:31.3 (525833816)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:48:31.3 (525875734)|VARIABLE_ASSIGNMENT|[48]|this.field_order_type_info|{"s":1,"v":[]}|0x1181181
+13:48:31.3 (525939780)|CALLOUT_RESPONSE|[128]|
+13:48:31.3 (526146171)|STATEMENT_EXECUTE|[140]
+13:48:31.3 (526186189)|ENTERING_MANAGED_PKG|
+13:48:31.3 (526357261)|VARIABLE_ASSIGNMENT|[140]|response_x|{"apex_schema_type_inf (1 more) ...":"0x542812ba","field_order_type_inf (1 more) ...":"0x33e0500e"}|0x1181181
+13:48:31.3 (526411275)|METHOD_EXIT|[38]||Packaging.SoapSubscriberUpdate.SubscriberUpdate.versionUpload(Packaging.SoapPackageVersionInfo.PackageVersionInfo)
+13:48:31.3 (526458582)|METHOD_EXIT|[7]||Packaging.SendNotification.versionUpload(Id, String)
+13:48:31.3 (526472812)|STATEMENT_EXECUTE|[15]
+13:48:31.3 (526492363)|HEAP_ALLOCATE|[15]|Bytes:5
+13:48:31.526 (526525892)|CUMULATIVE_LIMIT_USAGE
+13:48:31.526 (526525892)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:48:31.526 (526525892)|CUMULATIVE_LIMIT_USAGE_END
+
+13:48:31.3 (526621453)|CODE_UNIT_FINISHED|SendNotification.dispatch
+13:48:31.3 (529628304)|EXECUTION_FINISHED

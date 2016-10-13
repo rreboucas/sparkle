@@ -1,0 +1,560 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 3
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "LightningSelfRegisterController",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01pB0000000rC4tIAE",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000rC4tIAE",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 7
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "isValidPassword",
+            "parameters": [
+                {
+                    "name": "password",
+                    "type": "String"
+                },
+                {
+                    "name": "confirmPassword",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 28,
+                "line": 11
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "siteAsContainerEnabled",
+            "parameters": [
+                {
+                    "name": "networkId",
+                    "type": "Id"
+                }
+            ],
+            "references": [],
+            "returnType": "Boolean",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 16
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "validatePassword",
+            "parameters": [
+                {
+                    "name": "u",
+                    "type": "User"
+                },
+                {
+                    "name": "password",
+                    "type": "String"
+                },
+                {
+                    "name": "confirmPassword",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 26,
+                "line": 22
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "selfRegister",
+            "parameters": [
+                {
+                    "name": "firstname",
+                    "type": "String"
+                },
+                {
+                    "name": "lastname",
+                    "type": "String"
+                },
+                {
+                    "name": "email",
+                    "type": "String"
+                },
+                {
+                    "name": "password",
+                    "type": "String"
+                },
+                {
+                    "name": "confirmPassword",
+                    "type": "String"
+                },
+                {
+                    "name": "accountId",
+                    "type": "String"
+                },
+                {
+                    "name": "regConfirmUrl",
+                    "type": "String"
+                },
+                {
+                    "name": "extraFields",
+                    "type": "String"
+                },
+                {
+                    "name": "startUrl",
+                    "type": "String"
+                },
+                {
+                    "name": "includePassword",
+                    "type": "Boolean"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 44,
+                "line": 93
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getExtraFields",
+            "parameters": [
+                {
+                    "name": "extraFieldsFieldSet",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "LIST",
+            "type": null
+        }
+    ],
+    "name": "LightningSelfRegisterController",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 1
+        },
+        "modifiers": [
+            "global"
+        ],
+        "name": "LightningSelfRegisterController",
+        "references": [],
+        "type": "LightningSelfRegisterController"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 7
+            },
+            "modifiers": [],
+            "name": "password",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 68,
+                "line": 7
+            },
+            "modifiers": [],
+            "name": "confirmPassword",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 54,
+                "line": 11
+            },
+            "modifiers": [],
+            "name": "networkId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "authConfig",
+            "references": [],
+            "type": "AuthConfiguration"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 47,
+                "line": 16
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 16
+            },
+            "modifiers": [],
+            "name": "password",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 74,
+                "line": 16
+            },
+            "modifiers": [],
+            "name": "confirmPassword",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "firstname",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "lastname",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 81,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "email",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 95,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "password",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 112,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "confirmPassword",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 136,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "accountId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 154,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "regConfirmUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 176,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "extraFields",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 196,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "startUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 214,
+                "line": 22
+            },
+            "modifiers": [],
+            "name": "includePassword",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 23
+            },
+            "modifiers": [],
+            "name": "sp",
+            "references": [],
+            "type": "Savepoint"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "networkId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 49
+            },
+            "modifiers": [],
+            "name": "nickname",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 54
+            },
+            "modifiers": [],
+            "name": "extraFieldsList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 55
+            },
+            "modifiers": [],
+            "name": "thisFieldObject",
+            "references": [],
+            "type": "Object"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 56
+            },
+            "modifiers": [],
+            "name": "thisField",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 41,
+                "line": 57
+            },
+            "modifiers": [],
+            "name": "sof",
+            "references": [],
+            "type": "SObjectField"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 73
+            },
+            "modifiers": [],
+            "name": "userId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "lgn",
+            "references": [],
+            "type": "PageReference"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 80
+            },
+            "modifiers": [],
+            "name": "confirmRef",
+            "references": [],
+            "type": "PageReference"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "extraFieldsFieldSet",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 94
+            },
+            "modifiers": [],
+            "name": "extraFields",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 95
+            },
+            "modifiers": [],
+            "name": "fieldSet",
+            "references": [],
+            "type": "FieldSet"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 40,
+                "line": 97
+            },
+            "modifiers": [],
+            "name": "f",
+            "references": [],
+            "type": "FieldSetMember"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 98
+            },
+            "modifiers": [],
+            "name": "fieldDetail",
+            "references": [],
+            "type": "Map"
+        }
+    ]
+}

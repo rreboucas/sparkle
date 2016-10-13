@@ -83,11 +83,15 @@ public static String GetSobjectField(Sobject e, String lcfield)
         if (lcfield.contains('.')) // than it is a parent-relationship field
                 {
                     String relName = lcfield.substringBefore('.');
+                    System.debug('######## relName: ' + relName);
                     String relField = lcfield.substringAfter('.');
+                    System.debug('######## relField: ' + relField);
                     if (relField.contains('.')) // than it is a 2 level parent-relationship field
                     {
                        String relName2 = relField.substringBefore('.');
+                       System.debug('######## relName2: ' + relName2);
                        String relField2 = relField.substringAfter('.');
+                       System.debug('######## relField2: ' + relField2);
                        returnValue = String.valueOf(e.getSObject(relName).getSObject(relName2).get(relField2));
                     }
                     else

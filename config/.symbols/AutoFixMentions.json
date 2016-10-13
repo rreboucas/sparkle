@@ -1,0 +1,442 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000ORyPIAW",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000ORyPIAW",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 3
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getBadMentions",
+            "parameters": [
+                {
+                    "name": "feedItems",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "Set",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 12
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getBadMentions",
+            "parameters": [
+                {
+                    "name": "comments",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "Set",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 31,
+                "line": 27
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "getBadMentions",
+            "parameters": [
+                {
+                    "name": "body",
+                    "type": "String"
+                }
+            ],
+            "references": [],
+            "returnType": "Set",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 44
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "postCommentWithMentions",
+            "parameters": [
+                {
+                    "name": "feedItems",
+                    "type": "LIST"
+                },
+                {
+                    "name": "names",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 53
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "postCommentWithMentions",
+            "parameters": [
+                {
+                    "name": "comments",
+                    "type": "LIST"
+                },
+                {
+                    "name": "names",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 70
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "postCommentWithMentions",
+            "parameters": [
+                {
+                    "name": "feedItemId",
+                    "type": "Id"
+                },
+                {
+                    "name": "names",
+                    "type": "Set"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "AutoFixMentions",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 1
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "AutoFixMentions",
+        "references": [],
+        "type": "AutoFixMentions"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 61,
+                "line": 3
+            },
+            "modifiers": [],
+            "name": "feedItems",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 64,
+                "line": 12
+            },
+            "modifiers": [],
+            "name": "comments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 53,
+                "line": 27
+            },
+            "modifiers": [],
+            "name": "body",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 28
+            },
+            "modifiers": [],
+            "name": "badMentions",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 31
+            },
+            "modifiers": [],
+            "name": "regex",
+            "references": [],
+            "type": "Pattern"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 32
+            },
+            "modifiers": [],
+            "name": "regexMatcher",
+            "references": [],
+            "type": "Matcher"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 35
+            },
+            "modifiers": [],
+            "name": "fullMention",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "mentionName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 63,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "feedItems",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 86,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "names",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 66,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "comments",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 88,
+                "line": 53
+            },
+            "modifiers": [],
+            "name": "names",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 51,
+                "line": 70
+            },
+            "modifiers": [],
+            "name": "feedItemId",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 75,
+                "line": 70
+            },
+            "modifiers": [],
+            "name": "names",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 76
+            },
+            "modifiers": [],
+            "name": "communityId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 77
+            },
+            "modifiers": [],
+            "name": "idsToMention",
+            "references": [],
+            "type": "Set"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 78
+            },
+            "modifiers": [],
+            "name": "namesToMention",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 83
+            },
+            "modifiers": [],
+            "name": "users",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 84
+            },
+            "modifiers": [],
+            "name": "u",
+            "references": [],
+            "type": "User"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 38,
+                "line": 99
+            },
+            "modifiers": [],
+            "name": "groups",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 100
+            },
+            "modifiers": [],
+            "name": "g",
+            "references": [],
+            "type": "CollaborationGroup"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 37,
+                "line": 108
+            },
+            "modifiers": [],
+            "name": "input",
+            "references": [],
+            "type": "CommentInput"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 112
+            },
+            "modifiers": [],
+            "name": "idToMention",
+            "references": [],
+            "type": "Id"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 113
+            },
+            "modifiers": [],
+            "name": "mentionInput",
+            "references": [],
+            "type": "MentionSegmentInput"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 45,
+                "line": 117
+            },
+            "modifiers": [],
+            "name": "textInput",
+            "references": [],
+            "type": "TextSegmentInput"
+        }
+    ]
+}

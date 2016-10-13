@@ -1,0 +1,551 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000cYhwIAE",
+    "innerClasses": [
+        {
+            "constructors": [],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [],
+            "key": null,
+            "methods": [],
+            "name": "PatchException",
+            "namespace": "testautonumdata",
+            "parentClass": "Exception",
+            "properties": [],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 15,
+                    "line": 474
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "PatchException",
+                "references": [],
+                "type": "PatchException"
+            },
+            "variables": []
+        },
+        {
+            "constructors": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 10,
+                        "line": 486
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "LineReader",
+                    "parameters": [
+                        {
+                            "name": "textData",
+                            "type": "String"
+                        }
+                    ],
+                    "references": [],
+                    "type": null
+                }
+            ],
+            "externalReferences": [],
+            "id": null,
+            "innerClasses": [],
+            "interfaces": [
+                "System.Iterator",
+                "System.Iterable"
+            ],
+            "key": null,
+            "methods": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 491
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "hasNext",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "Boolean",
+                    "type": null
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 17,
+                        "line": 496
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "next",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "String",
+                    "type": null
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 27,
+                        "line": 513
+                    },
+                    "modifiers": [
+                        "public"
+                    ],
+                    "name": "Iterator",
+                    "parameters": [],
+                    "references": [],
+                    "returnType": "Iterator",
+                    "type": null
+                }
+            ],
+            "name": "LineReader",
+            "namespace": "testautonumdata",
+            "parentClass": "",
+            "properties": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 482
+                    },
+                    "modifiers": [
+                        "private"
+                    ],
+                    "name": "LF",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 18,
+                        "line": 484
+                    },
+                    "modifiers": [
+                        "private"
+                    ],
+                    "name": "textData",
+                    "references": [],
+                    "type": "String"
+                }
+            ],
+            "tableDeclaration": {
+                "annotations": [],
+                "location": {
+                    "column": 15,
+                    "line": 479
+                },
+                "modifiers": [
+                    "public"
+                ],
+                "name": "LineReader",
+                "references": [],
+                "type": "LineReader"
+            },
+            "variables": [
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 28,
+                        "line": 486
+                    },
+                    "modifiers": [],
+                    "name": "textData",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 11,
+                        "line": 498
+                    },
+                    "modifiers": [],
+                    "name": "row",
+                    "references": [],
+                    "type": "String"
+                },
+                {
+                    "annotations": [],
+                    "location": {
+                        "column": 12,
+                        "line": 499
+                    },
+                    "modifiers": [],
+                    "name": "endPos",
+                    "references": [],
+                    "type": "Integer"
+                }
+            ]
+        }
+    ],
+    "interfaces": [],
+    "key": "01pB0000000cYhwIAE",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 21,
+                "line": 217
+            },
+            "modifiers": [
+                "static",
+                "public"
+            ],
+            "name": "patch",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 519
+            },
+            "modifiers": [
+                "private",
+                "static"
+            ],
+            "name": "addCopyright",
+            "parameters": [
+                {
+                    "name": "lines",
+                    "type": "LIST"
+                }
+            ],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        }
+    ],
+    "name": "MetadataServicePatcher",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 64
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "API_VERSION",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 67
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "METADATA_TYPES",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 212
+            },
+            "modifiers": [
+                "private",
+                "static",
+                "final"
+            ],
+            "name": "METADATA_BASE_TYPES",
+            "references": [],
+            "type": "Map"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 62
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "MetadataServicePatcher",
+        "references": [],
+        "type": "MetadataServicePatcher"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 13,
+                "line": 220
+            },
+            "modifiers": [],
+            "name": "apexClass",
+            "references": [],
+            "type": "ApexClass"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 226
+            },
+            "modifiers": [],
+            "name": "typeBodyByBaseClass",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 14,
+                "line": 227
+            },
+            "modifiers": [],
+            "name": "lineReader",
+            "references": [],
+            "type": "LineReader"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 231
+            },
+            "modifiers": [],
+            "name": "line",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 232
+            },
+            "modifiers": [],
+            "name": "trimmedLine",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 236
+            },
+            "modifiers": [],
+            "name": "parts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 237
+            },
+            "modifiers": [],
+            "name": "className",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 240
+            },
+            "modifiers": [],
+            "name": "baseTypeLines",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 258
+            },
+            "modifiers": [],
+            "name": "newLines",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 266
+            },
+            "modifiers": [],
+            "name": "line",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 11,
+                "line": 267
+            },
+            "modifiers": [],
+            "name": "trimmedLine",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 320
+            },
+            "modifiers": [],
+            "name": "metadataType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 322
+            },
+            "modifiers": [],
+            "name": "apexClassType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 380
+            },
+            "modifiers": [],
+            "name": "parts",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 381
+            },
+            "modifiers": [],
+            "name": "className",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 13,
+                "line": 385
+            },
+            "modifiers": [],
+            "name": "extendsClassName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 13,
+                "line": 396
+            },
+            "modifiers": [],
+            "name": "fieldOrderTypeInfoFromBaseType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 398
+            },
+            "modifiers": [],
+            "name": "baseClassLine",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 439
+            },
+            "modifiers": [],
+            "name": "newFieldOrderType",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 10,
+                "line": 458
+            },
+            "modifiers": [],
+            "name": "patchClass",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 462
+            },
+            "modifiers": [],
+            "name": "docs",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 463
+            },
+            "modifiers": [],
+            "name": "generatedCode",
+            "references": [],
+            "type": "Document"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 48,
+                "line": 519
+            },
+            "modifiers": [],
+            "name": "lines",
+            "references": [],
+            "type": "LIST"
+        }
+    ]
+}

@@ -1,0 +1,899 @@
+{
+    "constructors": [],
+    "externalReferences": [],
+    "id": "01pB0000000qzQvIAI",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01pB0000000qzQvIAI",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 26
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "connect",
+            "parameters": [],
+            "references": [],
+            "returnType": "PageReference",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 80
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "MyActionMethod",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 144
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "getTimeStamp",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 149
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "generateNounce",
+            "parameters": [],
+            "references": [],
+            "returnType": "void",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 160
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "generateSignature",
+            "parameters": [
+                {
+                    "name": "httpMethod",
+                    "type": "String"
+                },
+                {
+                    "name": "baseUrl",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 193
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "generateAuthHeader",
+            "parameters": [
+                {
+                    "name": "params",
+                    "type": "Map"
+                }
+            ],
+            "references": [],
+            "returnType": "String",
+            "type": null
+        }
+    ],
+    "name": "twitterauth",
+    "namespace": "testautonumdata",
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 3
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "oauthVersion",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 4
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "oauthConsumerKey",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 5
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "oauthConsumerSecret",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 6
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "baseUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 7
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "oauthSignatureMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 8
+            },
+            "modifiers": [
+                "private",
+                "final"
+            ],
+            "name": "oauth_callback",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 10
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "oauthTimestamp",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 11
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "oauthNonce",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 12
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "oauthToken",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 13
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "oauthTokenSecret",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 14
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "accessToken",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 15
+            },
+            "modifiers": [
+                "private"
+            ],
+            "name": "accessTokenSecret",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 24
+            },
+            "modifiers": [
+                "public",
+                "final"
+            ],
+            "name": "REQUEST_TOKEN_URL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 18
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "REDIRECT_URL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 19
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "API_KEY",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 20
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "API_SECRET",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 21
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "AUTHORIZE_URL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 22
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "TOKEN_URL",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 23
+            },
+            "modifiers": [
+                "static",
+                "public",
+                "final"
+            ],
+            "name": "OAUTH_TOKEN",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 14,
+            "line": 1
+        },
+        "modifiers": [
+            "public"
+        ],
+        "name": "twitterauth",
+        "references": [],
+        "type": "twitterauth"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 15,
+                "line": 36
+            },
+            "modifiers": [],
+            "name": "requestUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 37
+            },
+            "modifiers": [],
+            "name": "requestMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 30,
+                "line": 42
+            },
+            "modifiers": [],
+            "name": "params",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 44
+            },
+            "modifiers": [],
+            "name": "authSignature",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 50
+            },
+            "modifiers": [],
+            "name": "request",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 54
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 56
+            },
+            "modifiers": [],
+            "name": "http",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 59
+            },
+            "modifiers": [],
+            "name": "responseBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "pg",
+            "references": [],
+            "type": "PageReference"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 86
+            },
+            "modifiers": [],
+            "name": "twitterId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 87
+            },
+            "modifiers": [],
+            "name": "counter",
+            "references": [],
+            "type": "Cookie"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 93
+            },
+            "modifiers": [],
+            "name": "requestUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 94
+            },
+            "modifiers": [],
+            "name": "httpMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 95
+            },
+            "modifiers": [],
+            "name": "oauthVerifier",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 100
+            },
+            "modifiers": [],
+            "name": "params",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 103
+            },
+            "modifiers": [],
+            "name": "authSignature",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 24,
+                "line": 109
+            },
+            "modifiers": [],
+            "name": "request",
+            "references": [],
+            "type": "HttpRequest"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 110
+            },
+            "modifiers": [],
+            "name": "response",
+            "references": [],
+            "type": "HttpResponse"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 111
+            },
+            "modifiers": [],
+            "name": "http",
+            "references": [],
+            "type": "Http"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 118
+            },
+            "modifiers": [],
+            "name": "responseBody",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 125
+            },
+            "modifiers": [],
+            "name": "detail",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 131
+            },
+            "modifiers": [],
+            "name": "strUserId",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 133
+            },
+            "modifiers": [],
+            "name": "externalIdField",
+            "references": [],
+            "type": "SObjectField"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 46,
+                "line": 134
+            },
+            "modifiers": [],
+            "name": "cstRecord",
+            "references": [],
+            "type": "testautonumdata__Twitter_User__c"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 34,
+                "line": 137
+            },
+            "modifiers": [],
+            "name": "urList",
+            "references": [],
+            "type": "UpsertResult"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 18,
+                "line": 145
+            },
+            "modifiers": [],
+            "name": "dateTimeNow",
+            "references": [],
+            "type": "Datetime"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 150
+            },
+            "modifiers": [],
+            "name": "chars",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 151
+            },
+            "modifiers": [],
+            "name": "randStr",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 154
+            },
+            "modifiers": [],
+            "name": "idx",
+            "references": [],
+            "type": "Integer"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 43,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "httpMethod",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 62,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "baseUrl",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 91,
+                "line": 160
+            },
+            "modifiers": [],
+            "name": "params",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 162
+            },
+            "modifiers": [],
+            "name": "encodedString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 163
+            },
+            "modifiers": [],
+            "name": "encodeParams",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 171
+            },
+            "modifiers": [],
+            "name": "keyList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 175
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 180
+            },
+            "modifiers": [],
+            "name": "baseString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 181
+            },
+            "modifiers": [],
+            "name": "signingKey",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 17,
+                "line": 186
+            },
+            "modifiers": [],
+            "name": "data",
+            "references": [],
+            "type": "Blob"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 187
+            },
+            "modifiers": [],
+            "name": "signature",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 57,
+                "line": 193
+            },
+            "modifiers": [],
+            "name": "params",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 32,
+                "line": 195
+            },
+            "modifiers": [],
+            "name": "authParams",
+            "references": [],
+            "type": "Map"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 203
+            },
+            "modifiers": [],
+            "name": "keyList",
+            "references": [],
+            "type": "LIST"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 206
+            },
+            "modifiers": [],
+            "name": "OathString",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 23,
+                "line": 207
+            },
+            "modifiers": [],
+            "name": "key",
+            "references": [],
+            "type": "String"
+        }
+    ]
+}
