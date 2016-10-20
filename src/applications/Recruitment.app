@@ -8,4 +8,5 @@
     <tab>Position__c</tab>
     <tab>Sparkle_All_LCs</tab>
     <tab>Insurance</tab>
+    <tab>JQuery</tab>
 </CustomApplication>

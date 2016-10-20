@@ -1,0 +1,36 @@
+<aura:component controller="DynamicSearchController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="objectApiName" type="String" default="Contact" access="global"/>
+	<aura:attribute name="lstRecords" type="DynamicSearchController" />
+	<aura:attribute name="displayfieldapiname" default="Name" type="String" access="global"/>
+    <aura:attribute name="searchKey" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+    	
+    	<div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+    	<div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                      	<ui:inputText aura:id="searchArea" placeholder="Enter name..." class="field" keyup="{!c.searchKeyChange}" updateOn="keyup"/>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info"></p>
+                </div>
+        </div>        
+                <!-- End of Header  -->
+
+
+    	<div>
+	        
+	        
+	        <ul>
+	        	<aura:iteration items="{!v.lstRecords}" var="rec">
+	                <li><a data-record="{!rec.recordID}" onclick="{!c.navigateToRecord}">{!rec.displayfieldname}</a></li>
+	            </aura:iteration>
+	        </ul>
+    	</div>
+	</div>
+
+</aura:component>
