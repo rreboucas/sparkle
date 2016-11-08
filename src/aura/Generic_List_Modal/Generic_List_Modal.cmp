@@ -1,17 +1,17 @@
-<aura:component controller="Modal_Record_Detail_Controller" access="global">
-    <aura:attribute name="objectApiName" type="String"/>
-    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
-    <aura:attribute name="lstRecords" type="ReferralsServerController"/>
-    <aura:attribute name="hasRecords" type="Boolean"/>
-    <aura:attribute name="Modal_Name" default="Record Details" type="String"/>
-    <aura:attribute name="Modal_column1_headertext" default="Column 1" type="String"/>
-    <aura:attribute name="Modal_column1_fieldapiname" type="String"/>
-    <aura:attribute name="Modal_column2_headertext" default="Column 2" type="String"/>
-    <aura:attribute name="Modal_column2_fieldapiname" type="String"/>
-    <aura:attribute name="Modal_column3_headertext" default="Column 3" type="String"/>
-    <aura:attribute name="Modal_column3_fieldapiname" type="String"/>
-    <aura:attribute name="Modal_column4_headertext" default="Column 4" type="String"/>
-    <aura:attribute name="Modal_column4_fieldapiname" type="String"/>
+<aura:component controller="Modal_Record_Detail_Controller" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="objectApiName" type="String" access="global"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="lstRecords" type="Modal_Record_Detail_Controller" access="global"/>
+    <aura:attribute name="hasRecords" type="Boolean" access="global"/>
+    <aura:attribute name="Modal_Name" default="Record Details" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_headertext" default="Column 1" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column2_headertext" default="Column 2" type="String" access="global"/>
+    <aura:attribute name="Modal_column2_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column3_headertext" default="Column 3" type="String" access="global"/>
+    <aura:attribute name="Modal_column3_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column4_headertext" default="Column 4" type="String" access="global"/>
+    <aura:attribute name="Modal_column4_fieldapiname" type="String" access="global"/>
     
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
     

@@ -78,8 +78,8 @@
     displayRecordsModal: function(component, event, helper) {
         console.log("CandidateReferralsController.displayRecordsModal entered");
         console.log($A.get("e.c:displayrecdetails"));
-        var userkey = component.get('v.salesUser.userId');
-        console.log(userkey);
+        //var userkey = component.get('v.salesUser.userId');
+        //console.log(userkey);
         var userevent = $A.get("e.c:displayrecdetails");
         
         //var recId = component.get("v.recordId");

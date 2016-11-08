@@ -2,6 +2,8 @@
 	<aura:attribute name="objectApiName" type="String" default="Contact" access="global"/>
 	<aura:attribute name="lstRecords" type="DynamicSearchController" />
 	<aura:attribute name="displayfieldapiname" default="Name" type="String" access="global"/>
+	<aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
     <aura:attribute name="searchKey" type="String" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     

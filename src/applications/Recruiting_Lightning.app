@@ -3,7 +3,6 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>Lightning Components Sample Pack</label>
     <tab>Getting_Started</tab>
-    <tab>Insurance</tab>
     <tab>Interviewer_Console</tab>
     <tab>Recruiter_Center</tab>
     <tab>Sparkle_All_LCs</tab>

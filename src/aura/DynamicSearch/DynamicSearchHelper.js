@@ -8,7 +8,9 @@
             action.setParams({
             	"objectApiName" : component.get("v.objectApiName"),
             	"displayFieldName" : component.get("v.displayfieldapiname"),
-                "key": attributeValue
+                "key": attributeValue,
+                "filter1Field" : component.get("v.filter1_fieldapiname"),
+            	"filter1Value" : component.get("v.filter1_fieldValue")
             });
 
             // Setup the CallBack

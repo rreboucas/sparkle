@@ -3,30 +3,29 @@
     <aura:attribute name="lstRecords" type="RelatedListServerController" access="GLOBAL"/>
     <aura:attribute name="hasRecords" type="Boolean" default="false"/>
 
-    <aura:attribute name="listSize" type="Integer" default="0" access="GLOBAL"/>
-    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
-    <aura:attribute name="limitRows" type="String" default="8" access="GLOBAL"/>
-    <aura:attribute name="listName" type="String" default="Referrals" access="GLOBAL"/>
-    <aura:attribute name="objectApiName" type="String" default="Referral__c" access="GLOBAL"/>
-    <aura:attribute name="ParentObjectRelationshipField" type="String" default="Candidate__c" access="GLOBAL"/>
-    <aura:attribute name="ParentObjectFieldName" type="String" default="Candidate__c" access="GLOBAL"/>
-    <aura:attribute name="column1_headertext" type="String" default="User" access="GLOBAL"/>
-    <aura:attribute name="column1_fieldapiname" type="String" default="OwnerId" access="GLOBAL"/>
-    <aura:attribute name="RelFieldWithName" type="String" default="Owner" access="GLOBAL"/>
-    <aura:attribute name="column2_headertext" type="String" default="Date" access="GLOBAL"/>
-    <aura:attribute name="column2_fieldapiname" type="String" default="createddate" access="GLOBAL"/>
-    <aura:attribute name="filter1_fieldapiname" type="String" access="GLOBAL"/>
-    <aura:attribute name="filter1_fieldValue" type="String" access="GLOBAL"/>
-    <aura:attribute name="Modal_Name" default="Record Details" type="String" access="GLOBAL"/>
-    <aura:attribute name="Modal_column1_headertext" type="String" default="Employee" access="GLOBAL"/>
-    <aura:attribute name="Modal_column1_fieldapiname" type="String" default="Owner.Name" access="GLOBAL"/>
-    <aura:attribute name="Modal_column2_headertext" type="String" default="Candidate" access="GLOBAL"/>
-    <aura:attribute name="Modal_column2_fieldapiname" type="String" default="Candidate__r.Full_Name__c" access="GLOBAL"/>
-    <aura:attribute name="Modal_column3_headertext" type="String" default="Date" access="GLOBAL"/>
-    <aura:attribute name="Modal_column3_fieldapiname" type="String" default="CreatedDate" access="GLOBAL"/>
-    <aura:attribute name="Modal_column4_headertext" type="String" default="Description" access="GLOBAL"/>
-    <aura:attribute name="Modal_column4_fieldapiname" type="String" default="Referral_Message__c" access="GLOBAL"/>
-    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+    <aura:attribute name="listName" type="String" default="Referrals" access="global"/>
+    <aura:attribute name="objectApiName" type="String" default="Referral__c" access="global"/>
+    <aura:attribute name="ParentObjectRelationshipField" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="ParentObjectFieldName" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="column1_headertext" type="String" default="User" access="global"/>
+    <aura:attribute name="column1_fieldapiname" type="String" default="OwnerId" access="global"/>
+    <aura:attribute name="RelFieldWithName" type="String" default="Owner" access="global"/>
+    <aura:attribute name="column2_headertext" type="String" default="Date" access="global"/>
+    <aura:attribute name="column2_fieldapiname" type="String" default="createddate" access="global"/>
+    <aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
+    <aura:attribute name="Modal_Name" default="Record Details" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_headertext" type="String" default="Employee" access="global"/>
+    <aura:attribute name="Modal_column1_fieldapiname" type="String" default="Owner.Name" access="global"/>
+    <aura:attribute name="Modal_column2_headertext" type="String" default="Candidate" access="global"/>
+    <aura:attribute name="Modal_column2_fieldapiname" type="String" default="Candidate__r.Full_Name__c" access="global"/>
+    <aura:attribute name="Modal_column3_headertext" type="String" default="Date" access="global"/>
+    <aura:attribute name="Modal_column3_fieldapiname" type="String" default="CreatedDate" access="global"/>
+    <aura:attribute name="Modal_column4_headertext" type="String" default="Description" access="global"/>
+    <aura:attribute name="Modal_column4_fieldapiname" type="String" default="Referral_Message__c" access="global"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     

@@ -108,6 +108,13 @@
         console.log("selectedItem: " + selectedItem);
         var SelectedRecordID = selectedItem.dataset.record;
         console.log('Selected Record ID = '+ SelectedRecordID);
+
+
+
+
+        var SelectedParentRecID = selectedItem.dataset.mainrec;
+        console.log('SelectedParentRecID = '+ SelectedParentRecID);
+        component.set("v.selectedRecordId", SelectedParentRecID);
         
         //CSS - Add Selected class to the row that was clicked        
         $A.util.removeClass(selectedItem, "slds-hint-parent");
@@ -139,6 +146,41 @@
         createRecordEvent.fire();
 
         console.log("InterviewsListController.CreateNewRecord: exit");
+
+    },
+
+    handleListMenuClick : function(component, event, helper) {
+        
+        console.log("InterviewsListController.handleListMenuClick: entered");
+        var btnLabel = component.get("v.buttonLabel");
+
+
+        var selectedItem = event.detail.menuItem.elements["0"].textContent;
+        console.log("selectedItem: " + selectedItem);
+
+        var selectedRecId = component.get("v.selectedRecordId");
+        console.log("selectedRecId: " + selectedRecId);
+
+        switch (selectedItem) {
+            case "View":
+                console.log("View switch: ");
+                var viewRecordEvent = $A.get("e.force:navigateToSObject");
+                viewRecordEvent.setParams({"recordId": selectedRecId});
+                viewRecordEvent.fire();
+                break;
+            case "Edit":
+                console.log("Edit switch: ");
+                var editRecordEvent = $A.get("e.force:editRecord");
+                editRecordEvent.setParams({"recordId": selectedRecId});
+                editRecordEvent.fire();
+                break;
+            case btnLabel:
+                console.log("btnLabel switch: ");
+                break;
+        }
+
+
+        console.log("InterviewsListController.handleListMenuClick: exit");
 
     },
     

@@ -2,6 +2,7 @@
     
     <aura:attribute name="runningUser" type="User" access="global"/>
     <aura:attribute name="lstRecords" type="ListServerController" access="global"/>
+    <aura:attribute name="selectedRecordId" type="String" access="global"/>
     <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
     <aura:attribute name="limitRows" type="String" default="8" access="global"/>
     <aura:attribute name="objectName" type="String" default="Object Name" access="global"/>
@@ -125,7 +126,7 @@
                 <tbody >
                     <aura:iteration items="{!v.lstRecords}"  var="rec" indexVar="index">
                       <aura:if isTrue="{!index == 0}">
-                      <tr aura:id="firstRow" class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
+                      <tr aura:id="firstRow" class="slds-hint-parent" data-mainrec="{!rec.recordID}" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
                         <td class="slds-cell-shrink">
                         </td>
                           <th class="slds-truncate" scope="row">{!rec.column1}</th>
@@ -135,16 +136,21 @@
                         <aura:renderIf isTrue="{!v.showButton}">
 
                           <td class="" aura:id="colButtonRow">                    
-                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" data-record="{!rec.eventField}" onclick="{!c.OpenVisualForce}">
-                            <span class="slds-text-not-selected">{!v.buttonLabel}</span>
-                          </button>
+                            
+
+                          <lightning:buttonMenu alternativeText="More options" onselect="{!c.handleListMenuClick }">
+                              <lightning:menuItem label="View" value="View" />
+                              <lightning:menuItem label="Edit" value="Edit" />
+                              <!--<lightning:menuItem label="{!v.buttonLabel}" value="customNavigateAction" /> -->
+                          </lightning:buttonMenu>
+
                         </td>
                         </aura:renderIf>
                         <td class="slds-cell-shrink" data-label="Actions">
                         </td>
                       </tr>
                     <aura:set attribute="else">
-                      <tr class="slds-hint-parent" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
+                      <tr class="slds-hint-parent" data-mainrec="{!rec.recordID}" data-record="{!rec.eventField}" onclick="{!c.fireApplicationEvent}">
                         <td class="slds-cell-shrink">
                         </td>
                           <th class="slds-truncate" scope="row">{!rec.column1}</th>
@@ -154,9 +160,11 @@
                         <aura:renderIf isTrue="{!v.showButton}">
 
                           <td class="" aura:id="colButtonRow">                    
-                            <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive" data-record="{!rec.eventField}" onclick="{!c.OpenVisualForce}">
-                            <span class="slds-text-not-selected">{!v.buttonLabel}</span>
-                          </button>
+                            <lightning:buttonMenu alternativeText="More options" onselect="{!c.handleListMenuClick }">
+                              <lightning:menuItem label="View" value="View" />
+                              <lightning:menuItem label="Edit" value="Edit" />
+                              <!--<lightning:menuItem label="{!v.buttonLabel}" value="customNavigateAction" /> -->
+                          </lightning:buttonMenu>
                         </td>
                         </aura:renderIf>
                         <td class="slds-cell-shrink" data-label="Actions">

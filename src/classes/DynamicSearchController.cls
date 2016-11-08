@@ -9,7 +9,7 @@ public with sharing class DynamicSearchController {
 
 	
 	@AuraEnabled
-    public static List<DynamicSearchController> findAll(String objectApiName, String displayFieldName) {
+    public static List<DynamicSearchController> findAll(String objectApiName, String displayFieldName, String filter1Field, String filter1Value) {
         
         System.debug('objectApiName: ' + objectApiName);
         List<DynamicSearchController> lstSobjectsToReturn = new List<DynamicSearchController>();
@@ -32,6 +32,11 @@ public with sharing class DynamicSearchController {
 
         	// Add object name to query string:        
         	soql += ' FROM ' + String.escapeSingleQuotes(objectApiName);
+
+        	if (filter1Field != null && filter1Value != null)
+        	{
+        		soql += ' where ' + String.escapeSingleQuotes(filter1Field)  + ' = \'' + String.escapeSingleQuotes(filter1Value) +'\'';
+        	}
 
         	soql += ' order by ' + displayFieldName + ' asc' ;
 
@@ -76,7 +81,7 @@ public with sharing class DynamicSearchController {
     }
 
     @AuraEnabled
-    public static List<DynamicSearchController> findByKey(String objectApiName, String displayFieldName , String key) {
+    public static List<DynamicSearchController> findByKey(String objectApiName, String displayFieldName , String key, String filter1Field, String filter1Value) {
         
         System.debug('objectApiName: ' + objectApiName);
         System.debug('key: ' + key);
@@ -103,6 +108,11 @@ public with sharing class DynamicSearchController {
         	soql += ' FROM ' + String.escapeSingleQuotes(objectApiName);
 
         	soql += ' where ' + String.escapeSingleQuotes(displayFieldName)  + ' LIKE \''  + String.escapeSingleQuotes(theKey) +'\'';
+
+        	if (filter1Field != null && filter1Value != null)
+        	{
+        		soql += ' and ' + String.escapeSingleQuotes(filter1Field)  + ' = \'' + String.escapeSingleQuotes(filter1Value) +'\'';
+        	}
 
         	soql += ' order by ' + displayFieldName + ' asc' ;
 
@@ -141,7 +151,7 @@ public with sharing class DynamicSearchController {
         }
         else
         {	
-        	lstSobjectsToReturn = findAll(objectApiName, displayFieldName);
+        	lstSobjectsToReturn = findAll(objectApiName, displayFieldName, filter1Field, filter1Value);
 
         }
         
