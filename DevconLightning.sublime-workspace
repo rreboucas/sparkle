@@ -52,30 +52,6 @@
 			}
 		},
 		{
-			"file": "src/aura/InterviewsList/InterviewsListController.js",
-			"settings":
-			{
-				"buffer_size": 10933,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/InterviewsList/InterviewsList.css",
-			"settings":
-			{
-				"buffer_size": 443,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/InterviewsList/InterviewsList.cmp",
-			"settings":
-			{
-				"buffer_size": 10317,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "src/aura/DynamicSearch/DynamicSearchController.js",
 			"settings":
 			{
@@ -84,53 +60,81 @@
 			}
 		},
 		{
-			"file": "src/aura/CandidateReferrals/CandidateReferralsController.js",
+			"file": "src/aura/InterviewsList/InterviewsListHelper.js",
 			"settings":
 			{
-				"buffer_size": 3182,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/CandidateReferrals/CandidateReferrals.design",
-			"settings":
-			{
-				"buffer_size": 2036,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/CandidateReferrals/CandidateReferrals.cmp",
-			"settings":
-			{
-				"buffer_size": 5829,
+				"buffer_size": 4742,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/aura/Generic_List_Modal/Generic_List_Modal.cmp",
+			"file": "src/aura/InterviewsList/InterviewsListController.js",
 			"settings":
 			{
-				"buffer_size": 5080,
+				"buffer_size": 12378,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/aura/InterviewsList/InterviewsList.cmp",
+			"settings":
+			{
+				"buffer_size": 10756,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/aura/Generic_List_Modal/Generic_List_ModalController.js",
+			"file": "src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
 			"settings":
 			{
-				"buffer_size": 1205,
+				"buffer_size": 4400,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/classes/Modal_Record_Detail_Controller.cls",
+			"file": "src/aura/Twitter_Explorer/Twitter_Explorer.css",
 			"settings":
 			{
-				"buffer_size": 4472,
+				"buffer_size": 35,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
+			"settings":
+			{
+				"buffer_size": 2940,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/rreboucas/Documents/quickactionsComponentCode.txt",
+			"settings":
+			{
+				"buffer_size": 1669,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "<aura:component implements=\"flexipage:availableFor"
+			}
+		},
+		{
+			"contents": "global with sharing class CandidateController {\n    Private final Candidate__c rec;\n    public CandidateController(ApexPages.StandardController stdController) {\n        this.rec = (Candidate) stdController.getRecord();\n    }\n    //For Javascript button\n    webservice static String sendSMS(Id CandidateId, String Phone, String Message){\n        if(sendSMSViaTwilio(CandidateId, Phone, Message) != null) {\n            return 'SMS was sent successfully!';\n        }\n        return 'SMS was NOT sent successfully!';\n    }\n    \n    //For LC\n    //Need to fetch Phone number\n    @AuraEnabled\n    public static Boolean sendSMS(Id CandidateId, String Message){\n        try{\n            List<Candidate> a = [Select Id, Phone__c  from Candidate__c where Id=:CandidateId limit 1];\n            if(a.size() > 0){\n                if(sendSMSViaTwilio(CandidateId, a[0].Phone__c , message) != null){\n                    return true;\n                }\n            }\n        }catch(Exception e){}\n        return false;\n    }\n\n    public static String sendSMSViaTwilio(Id CandidateId, String Phone, String Message){\n        String ret = null;\n        try{\n            String Candidate = 'ACb6d4b22484fe90c2bf1d939a42545897';\n            String token = 'd73786bbe77fb16c507c5b25fd4b631a';\n            TwilioRestClient client = new TwilioRestClient(Candidate, token);\n\n            Map<String,String> params = new Map<String,String> {\n                    'To'   => Phone,\n                    'From' => '+1 6137040291 ',\n                    'Body' => message\n            };\n            TwilioSMS sms = client.getCandidate().getSMSMessages().create(params);\n            System.debug(sms);\n            ret = sms.getStatus();\n            System.debug(ret);\n        }catch(Exception e){System.debug('Exception: ' + e.getMessage());}\n        return ret;\n    }\n}",
+			"settings":
+			{
+				"buffer_size": 1834,
+				"line_ending": "Unix",
+				"name": "global with sharing class CandidateController {"
 			}
 		},
 		{
@@ -138,6 +142,14 @@
 			"settings":
 			{
 				"buffer_size": 20508,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/classes/ListServerController.cls",
+			"settings":
+			{
+				"buffer_size": 5700,
 				"line_ending": "Unix"
 			}
 		}
@@ -203,22 +215,33 @@
 	[
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes"
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails"
 	],
 	"file_history":
 	[
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.css",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/pages/InterviewQuestionsLDS.page",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListHelper.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/OfferLetterSPA/OfferLetterSPA.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearchController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferralsController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.design",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_Modal.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_ModalController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Modal_Record_Detail_Controller.cls",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Twitter_Lightning_Controller.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/ReferralsServerController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/displayrecdetails/displayrecdetails.evt",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferralsHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearchHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/RelatedListServerController.cls",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_Modal.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.svg",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_ModalController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_ModalHelper.js",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferralsController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/DynamicSearchController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.svg",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
@@ -242,17 +265,14 @@
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearch.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearchController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearchHelper.js",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearch.cmp",
 		"/Users/rreboucas/Downloads/unpackaged 4/applications/Recruitment.app",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_Modal.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/FilesViewerServerController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/applications/Recruitment.app",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/flexipages/Candidate_Record_Page.flexipage",
 		"/Users/rreboucas/Desktop/package.xml",
 		"/Users/rreboucas/Desktop/Recruitment.app",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/svg/svg.cmp",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Modal_Record_Detail_Controller.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/recordListEvent/recordListEvent.evt",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserSearch/TwitterUserSearch.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserSearch/TwitterUserSearchController.js",
@@ -275,11 +295,8 @@
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/GenericListMap/GenericListMapHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/RelatedListServerController.cls-meta.xml",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/CandidateGeneralController.cls",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/pages/InterviewQuestionsLDS.page",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/GenericListMap/GenericListMapRenderer.js",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.design",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/RecordTimelineServerController.cls",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Twitter_Lightning_Controller.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/linkedinauth.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/pages/testOmni.page",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Linkedin_Lightning_Controller.cls",
@@ -289,7 +306,6 @@
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/FilesViewer/FilesViewer.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/GenericListMap/GenericListMap.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Picture_Viewer/Twitter_Picture_Viewer.css",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/ProjectSparkleLCsInfo/ProjectSparkleLCsInfo.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/ProjectSparkleLCsInfo/ProjectSparkleLCsInfoController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/RecordMarker/RecordMarkerController.js",
@@ -332,6 +348,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"acct",
+			"select",
+			"Account",
 			"cmp",
 			"show",
 			"testautonumdata",
@@ -364,6 +383,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"rec",
+			"Candidate",
 			"",
 			"accsearchcontroller"
 		],
@@ -376,7 +397,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -392,8 +413,8 @@
 						"selection":
 						[
 							[
-								521,
-								539
+								53,
+								167
 							]
 						],
 						"settings":
@@ -404,101 +425,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/aura/InterviewsList/InterviewsListController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10933,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								10933
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/aura/InterviewsList/InterviewsList.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								443
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/aura/InterviewsList/InterviewsList.cmp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10317,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								50,
-								96
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "src/aura/DynamicSearch/DynamicSearchController.js",
 					"semi_transient": false,
 					"settings":
@@ -510,71 +441,13 @@
 						"selection":
 						[
 							[
-								1135,
-								1135
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/aura/CandidateReferrals/CandidateReferralsController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2985,
-								2989
+								540,
+								540
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1010.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/aura/CandidateReferrals/CandidateReferrals.design",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2036,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								2036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -586,20 +459,80 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/aura/CandidateReferrals/CandidateReferrals.cmp",
+					"buffer": 2,
+					"file": "src/aura/InterviewsList/InterviewsListHelper.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5829,
+						"buffer_size": 4742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2566,
-								2566
+								1248,
+								1273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/aura/InterviewsList/InterviewsListController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4203,
+								4222
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/aura/InterviewsList/InterviewsList.cmp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3062,
+								2997
 							]
 						],
 						"settings":
@@ -612,24 +545,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "src/aura/Generic_List_Modal/Generic_List_Modal.cmp",
+					"buffer": 5,
+					"file": "src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5080,
+						"buffer_size": 4400,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								350,
-								356
+								3227,
+								3227
 							]
 						],
 						"settings":
@@ -639,27 +572,85 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "src/aura/Generic_List_Modal/Generic_List_ModalController.js",
+					"buffer": 6,
+					"file": "src/aura/Twitter_Explorer/Twitter_Explorer.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1205,
+						"buffer_size": 35,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
+								35,
 								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2654,
+								2682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 16.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1010,
+								1104
 							]
 						],
 						"settings":
@@ -672,29 +663,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "src/classes/Modal_Record_Detail_Controller.cls",
+					"buffer": 9,
+					"file": "/Users/rreboucas/Documents/quickactionsComponentCode.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4472,
+						"buffer_size": 1669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								323,
-								323
+								1669,
+								1669
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"auto_name": "<aura:component implements=\"flexipage:availableFor",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -702,7 +694,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"auto_name": "global with sharing class CandidateController {",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -718,8 +740,8 @@
 						"selection":
 						[
 							[
-								385,
-								385
+								6936,
+								7118
 							]
 						],
 						"settings":
@@ -728,11 +750,41 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 3.0,
+						"translation.y": 3705.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/classes/ListServerController.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5700,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 11.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -789,7 +841,7 @@
 	"project": "DevconLightning.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

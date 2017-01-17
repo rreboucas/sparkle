@@ -21,7 +21,7 @@
                             
                                 
                                     <span class="slds-avatar slds-avatar--circle slds-avatar--medium " style="width: 32px; height: 32px; background-color: #5ba8df;">
-                                    <img src="{!$Resource.lightningicons + '/lightningicons/images/twitterwhite.png'}" style=""/>
+                                        <img src="{!$Resource.angularcarousel + '/angularcarousel/demo/img/grumpy.jpg'}" style=""/>
                                 </span>
                                 <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">Twitter Pic</h1>
                             
@@ -38,9 +38,14 @@
                 <!-- End of Header  -->
 
         <div class="tokenPadding">
-        <span class="slds-avatar slds-avatar--circle slds-avatar--large"   >
-            <img src="{!v.rec.pictureUrl}" alt="Placeholder"/>
-        </span>
+        
+
+            
+            <lightning:container aura:id="AngularApp"
+                             src="{!$Resource.angularcarousel + '/angularcarousel/index.html' }"
+                             onmessage="{!c.handleMessage}"
+                             onerror="{!c.handleError}"/>
+            
         </div>
     
     

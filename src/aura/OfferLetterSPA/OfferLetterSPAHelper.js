@@ -1,4 +1,6 @@
 ({
-	helperMethod : function() {
-	}
+    
+    
+    
+    
 })

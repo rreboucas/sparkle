@@ -2,9 +2,10 @@
     <aura:attribute name="listName" type="String" default="Canvas App" access="global"/>
     <aura:attribute name="developerName" type="String" access="global"/>
     <aura:attribute name="applicationName" type="String" access="global"/>
+    <aura:attribute name="params" type="String" access="global"/>
     <aura:attribute name="namespacePrefix" type="String" access="global"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
-    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <div class="slds" style="border: 0px solid #aaa;">
         
         <div class="slds-page-header" role="banner">

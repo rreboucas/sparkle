@@ -4,7 +4,7 @@
         console.log("TwitterPictureController.doInit: entered");
         
 
-        helper.getTwitterPicture(component);
+        //helper.getTwitterPicture(component);
 
         console.log("TwitterPictureController.doInit: exit");
         

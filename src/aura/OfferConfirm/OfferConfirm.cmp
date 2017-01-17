@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="OfferLetterCompController">
+    
+    <aura:attribute name="templateVal" type="String" access="global" />
+    <aura:attribute name="templateSubjectVal" type="String" />
+    <aura:attribute name="offerId" type="String" access="global" />
+    <aura:attribute name="email" type="String" access="global" />
+    <aura:attribute name="sendResult" type="OfferLetterCompController" access="global"/>
+    <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+    
+	<div class="c-container">
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <!--<aura:if isTrue="{!v.sendResult.SendSuccessful}">
+                    <lightning:icon iconName="action:approval" size="large" alternativeText="Send Suceeded"/>
+                    <aura:set attribute="else">
+                        <lightning:icon iconName="action:close " size="large" alternativeText="Send Failed"/>
+                    </aura:set>
+                </aura:if> -->
+            {!v.body}
+    
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                {!v.sendResult.SendResults}
+            </lightning:layoutItem>
+
+        </lightning:layout>
+    <br/>
+    <div>    
+        <lightning:buttonGroup >
+            <lightning:button label="Open Offer" onclick="{!c.navigateToRecord}" />
+        </lightning:buttonGroup>
+    </div>    
+    
+    </div>
+    
+</aura:component>
