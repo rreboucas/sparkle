@@ -7,29 +7,28 @@
     <aura:attribute name="sendResult" type="OfferLetterCompController" access="global"/>
     <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
     
-	<div class="c-container">
-        <lightning:layout horizontalAlign="space">
-            <lightning:layoutItem flexibility="auto" padding="around-small">
-                <!--<aura:if isTrue="{!v.sendResult.SendSuccessful}">
-                    <lightning:icon iconName="action:approval" size="large" alternativeText="Send Suceeded"/>
-                    <aura:set attribute="else">
-                        <lightning:icon iconName="action:close " size="large" alternativeText="Send Failed"/>
-                    </aura:set>
-                </aura:if> -->
+	<div class="c-container" style="padding-top:6%">
+        <lightning:layout horizontalAlign="center" verticalAlign="center">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="2">
+
             {!v.body}
     
             </lightning:layoutItem>
-            <lightning:layoutItem flexibility="auto" padding="around-small">
+            <lightning:layoutItem flexibility="auto" padding="around-medium" size="4">
                 {!v.sendResult.SendResults}
             </lightning:layoutItem>
 
         </lightning:layout>
-    <br/>
-    <div>    
+ 
+        <br/>
+        <br/>
+    <lightning:layout horizontalAlign="space" verticalAlign="center">  
+        <lightning:layoutItem flexibility="auto" padding="around-small" size="3">
         <lightning:buttonGroup >
             <lightning:button label="Open Offer" onclick="{!c.navigateToRecord}" />
         </lightning:buttonGroup>
-    </div>    
+            </lightning:layoutItem>
+    </lightning:layout>    
     
     </div>
     

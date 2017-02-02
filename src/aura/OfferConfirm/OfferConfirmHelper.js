@@ -38,16 +38,22 @@
                 console.log("Send Results: " + strResult); 
                 
                 
-                // Dynamically create Icon in the LC Body based on the results:
-
-				if (strResult.SendSuccessful == true)
-                {
+                // Dynamically chose which icon to display based on the results:
+				
+                var iconToShow;
+                if (strResult.SendSuccessful == true)
+					iconToShow = "action:approval";
+                else
+                	iconToShow = "action:close";
+                
+                // Then create the Lightning Components Dynamically and apply to the LC Body
+				
                    $A.createComponent(
                 "lightning:icon",
                 {
                     "aura:id": "findableAuraId",
-                    "iconName": "action:approval",
-                    "size": "large"
+                    "iconName": iconToShow,
+                    "size": "medium"
                 },
                 function(newIcon, status, errorMessage){
                     //Add the new button to the body array
@@ -66,7 +72,6 @@
                     }
                 }
               ); 
-                }
                 
 
                 

@@ -7,5 +7,4 @@
     <tab>standard-Dashboard</tab>
     <tab>Position__c</tab>
     <tab>Sparkle_All_LCs</tab>
-    <tab>LightningContainer</tab>
 </CustomApplication>

@@ -68,6 +68,22 @@ public class TestFactory {
            );
 
     }
+    
+    public static testautonumdata__Candidate__c createCandidateWithPosition(String name, String fname, String city, String email, String lname, String state, String twitterid, String positionId){
+
+           return new testautonumdata__Candidate__c(
+           	   Name = name,
+               testautonumdata__First_Name__c = fname,
+               testautonumdata__City__c = city,
+               testautonumdata__E_mail__c = email,
+               testautonumdata__Last_Name__c = lname,
+               testautonumdata__State__c = state,
+               testautonumdata__Twitter_ID__c = twitterid,
+               testautonumdata__Position__c = positionId
+
+           );
+
+    }
 
     public static testautonumdata__Position__c createPosition(String name, String recStatus){
 
@@ -106,6 +122,31 @@ public class TestFactory {
            );
 
     } 
+    
+    
+    public static testautonumdata__Offer__c createOffer(String candidateId, Double salary, Double bonus){
+
+           return new testautonumdata__Offer__c(
+           	   testautonumdata__Candidate__c = candidateId, 
+               testautonumdata__Annual_Salary_Offered_Amount__c = salary, 
+               testautonumdata__Annual_Bonus_Amount__c  = bonus
+
+           );
+
+    }
+    
+    /*
+    public static EmailTemplate createEmailTemplate(String Body,FolderId,HtmlValue,Id,IsActive,Name,NamespacePrefix,OwnerId,Subject){
+
+           return new testautonumdata__Offer__c(
+           	   testautonumdata__Candidate__c = candidateId, 
+               testautonumdata__Annual_Salary_Offered_Amount__c = salary, 
+               testautonumdata__Annual_Bonus_Amount__c  = bonus
+
+           );
+
+    }
+*/
 
     /* The “Insert” methods are used to create the sobjects and then insert them. They delegate 
        the creation to the create methods and then insert the records. Like the create methods,
@@ -143,6 +184,14 @@ public class TestFactory {
           return entToInsert;
 
     }
+    
+    public static testautonumdata__Candidate__c insertCandidatewithPosition(String name, String fname, String city, String email, String lname, String state, String twitterid, String positionId){
+
+          testautonumdata__Candidate__c entToInsert = createCandidateWithPosition(name, fname, city, email, lname, state, twitterid, positionId);
+          insert entToInsert;
+          return entToInsert;
+
+    }
 
     public static testautonumdata__Position__c insertPosition(String name, String recStatus){
 
@@ -163,6 +212,14 @@ public class TestFactory {
     public static testautonumdata__Interviewer__c insertInterviewer(String interviewId){
 
           testautonumdata__Interviewer__c entToInsert = createInterviewer(interviewId);
+          insert entToInsert;
+          return entToInsert;
+
+    }
+    
+    public static testautonumdata__Offer__c insertOffer(String candidateId, Double salary, Double bonus){
+
+          testautonumdata__Offer__c entToInsert = createOffer(candidateId, salary, bonus);
           insert entToInsert;
           return entToInsert;
 

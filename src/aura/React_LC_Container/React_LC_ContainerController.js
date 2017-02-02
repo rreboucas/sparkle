@@ -1,30 +1,35 @@
 ({
     doInit : function(component, event, helper) {
         
-        console.log("TwitterPictureController.doInit: entered");
+        console.log("React_LC_ContainerController.doInit: entered");
         
 
-        helper.getTwitterPicture(component);
+        //helper.getTwitterPicture(component);
 
-        console.log("TwitterPictureController.doInit: exit");
+        console.log("React_LC_ContainerController.doInit: exit");
         
     },
     
     handleApplicationEvent : function(component, event, helper) {
         
-        console.log("TwitterPictureController.handleApplicationEvent: entered");
+        console.log("React_LC_ContainerController.handleApplicationEvent: entered");
         
         var params = event.getParams();
         component.set("v.recordId", params.recordId);
 
-        console.log("TwitterPictureController: ltng:SelectSobject - recordID = " + params.recordId);
-        console.log("TwitterPictureController: ltng:SelectSobject - channel = " + params.channel);
-                
-                
-        helper.getTwitterPicture(component);
+        console.log("React_LC_ContainerController: ltng:SelectSobject - recordID = " + params.recordId);
+        console.log("React_LC_ContainerController: ltng:SelectSobject - channel = " + params.channel);
+        
+        // Send message to Lightning Container App:        
+        
+        var msg = {
+            name: "Record ID Passed by LC",
+            value: component.get("v.recordId")
+        };
+        component.find("ReactApp").message(msg);
         
 
-        console.log("TwitterPictureController.handleApplicationEvent: exit");
+        console.log("React_LC_ContainerController.handleApplicationEvent: exit");
         
     },
     

@@ -28,10 +28,11 @@ global class Sparkle_After_Install implements InstallHandler {
            	   Name = 'Candidate A',
                testautonumdata__First_Name__c = 'Candidate',
                testautonumdata__City__c = 'San Francisco',
-               testautonumdata__E_mail__c = 'r@r.com',
+               testautonumdata__E_mail__c = 'rreboucas@salesforce.com',
                testautonumdata__Last_Name__c = 'A',
                testautonumdata__State__c = 'CA',
-               testautonumdata__Twitter_ID__c = '@roreb'
+               testautonumdata__Twitter_ID__c = '@roreb',
+			   testautonumdata__Position__c = positionA.id 'a3a41000000TaAzAAK'
 
            );
        Database.UpsertResult urList3 = Database.upsert(candidateA, true);

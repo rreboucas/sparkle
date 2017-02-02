@@ -21,9 +21,9 @@
                             
                                 
                                     <span class="slds-avatar slds-avatar--circle slds-avatar--medium " style="width: 32px; height: 32px; background-color: #5ba8df;">
-                                    <img src="{!$Resource.lightningicons + '/lightningicons/images/twitterwhite.png'}" style=""/>
+                                    <img src="{!$Resource.lightningicons + '/lightningicons/images/reactlogo.png'}" style=""/>
                                 </span>
-                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">Twitter Pic</h1>
+                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">React Lightning Container</h1>
                             
                             
 
@@ -36,12 +36,16 @@
                 </div>
                 
                 <!-- End of Header  -->
+			<div class="tokenPadding">
 
-        <div class="tokenPadding">
-        <span class="slds-avatar slds-avatar--circle slds-avatar--large"   >
-            <img src="{!v.rec.pictureUrl}" alt="Placeholder"/>
-        </span>
-        </div>
+			<lightning:container aura:id="ReactApp"
+                             src="{!$Resource.Build + '/index.html'}"
+                             onmessage="{!c.handleMessage}"
+                             onerror="{!c.handleError}"/> 
+        
+
+            </div>
+
     
     
     </div>
