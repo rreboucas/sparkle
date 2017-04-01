@@ -19,4 +19,5 @@
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>Invoice__c</tab>
+    <tab>CustomQuote__c</tab>
 </CustomApplication>
