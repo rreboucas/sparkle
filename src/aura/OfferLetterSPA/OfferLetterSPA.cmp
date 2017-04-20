@@ -1,0 +1,105 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:LightningQuickActionWithoutHeader,forceCommunity:availableForAllPageTypes" access="global" 
+                controller="OfferLetterCompController">
+    
+	
+    <aura:attribute name="candidateName" type="String" access="global" />
+    <aura:attribute name="positionName" type="String" access="global" />
+    <aura:attribute name="positionId" type="String" access="global" />
+    <aura:attribute name="email" type="String" access="global" />
+    <aura:attribute name="offerId" type="String" access="global" />
+    <aura:attribute name="offerName" type="String" access="global" />  
+    <aura:attribute name="offerText" type="String" access="global" />  
+    <aura:attribute name="offerSubject" type="String" access="global" /> 
+    <aura:attribute name="sendResult" type="String" access="global" />  
+
+    
+    <aura:registerEvent name="DetailEventEvent" type="c:CandidateDetailEvent"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="bubblingEvent" event="c:OfferSPANotifierEvent" action="{!c.handleBubbling}"/>
+    <!--<aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/> -->
+    
+    
+    <div class="c-container">
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <h3 class="slds-section-title--divider">Send Offer</h3>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                
+                <!-- Progress Bar-->
+                        <div class="slds-grid">
+                          <div class="slds-tabs--path" role="application">
+                            <ul class="slds-tabs--path__nav" role="tablist">
+                              <li aura:id="detailsIndicator" class="slds-tabs--path__item slds-is-current" role="presentation">
+                                <a class="slds-tabs--path__link" id="tabs-path-2326" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+                                  <span class="slds-tabs--path__stage">
+                                    <lightning:icon iconName="utility:check  " size="x-small" alternativeText="Indicates approval"/>
+                                  </span>
+                                  <span class="slds-tabs--path__title">Details</span>
+                                </a>
+                              </li>
+                              <li aura:id="templateIndicator" class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+                                <a class="slds-tabs--path__link" id="tabs-path-2327" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+                                  <span class="slds-tabs--path__stage">
+                                    <lightning:icon iconName="utility:check  " size="x-small" alternativeText="Indicates approval"/>
+                                  </span>
+                                  <span class="slds-tabs--path__title">Edit</span>
+                                </a>
+                              </li>
+                              <li aura:id="previewIndicator" class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+                                <a class="slds-tabs--path__link" id="tabs-path-2328" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+                                  <span class="slds-tabs--path__stage">
+                                    <lightning:icon iconName="utility:check  " size="x-small" alternativeText="Indicates approval"/>
+                                  </span>
+                                  <span class="slds-tabs--path__title">Review</span>
+                                </a>
+                              </li>
+                              <li aura:id="confirmIndicator" class="slds-tabs--path__item slds-is-incomplete" role="presentation">
+                                <a class="slds-tabs--path__link" id="tabs-path-2328" aria-controls="content-path-1" aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);" aria-live="assertive">
+                                  <span class="slds-tabs--path__stage">
+                                    <lightning:icon iconName="utility:check  " size="x-small" alternativeText="Indicates approval"/>
+                                  </span>
+                                  <span class="slds-tabs--path__title">Result</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                
+                
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!-- Offer Details LC (1st to display) - Start -->
+	<div  aura:id="detailsDiv">
+        <c:OfferDetails candidateId="{!v.recordId}" aura:id="details"/>   
+    </div>
+    <!-- Offer Details LC (1st to display) - End -->
+    
+    <!-- Offer Template LC (2nd to display) - Start -->
+	<div aura:id="templateDiv">
+        <c:OfferTemplate aura:id="template"/>   
+    </div>
+    <!-- Offer Template LC (2nd to display) - End -->
+    
+    <!-- Offer Preview LC (3rd to display) - Start -->
+	<div aura:id="previewDiv">
+        <c:OfferPreview aura:id="preview"/>   
+    </div>
+    <!-- Offer Preview LC (3rd to display) - End -->
+    <!-- Offer Confirm LC (4th to display) - Start -->
+	<div aura:id="confirmDiv">
+        <c:OfferConfirm aura:id="confirm"/>   
+    </div>
+    <!-- Offer Confirm LC (4th to display) - End -->
+    
+    
+</aura:component>

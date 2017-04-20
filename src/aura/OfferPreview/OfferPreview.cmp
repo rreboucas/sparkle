@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="OfferLetterCompController">
+	<aura:attribute name="templateVal" type="String" access="global" />
+    <aura:attribute name="templateSubjectVal" type="String" />
+    <aura:attribute name="offerId" type="String" access="global" />
+    <aura:attribute name="email" type="String" access="global" />
+    <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+    <aura:registerEvent name="bubblingEvent" type="c:OfferSPANotifierEvent" /> 
+    <ltng:require styles="{!$Resource.sendofferReadOnly}"/>
+    <div>
+    
+    <div>    
+
+           <div class="sendofferReadOnly"> 
+                <lightning:input disabled="true" readonly="true"  label="Subject" name="myname" aura:id="txtSubject" value="{!v.templateSubjectVal}" />
+                <br/>
+                <lightning:textarea disabled="true"  readonly="true" name="myTextArea" aura:id="txtArea" value="{!v.templateVal}" 
+            label="Offer Text" />
+          </div> 
+    </div>    
+    <br/>
+    <div>    
+        <lightning:buttonGroup >
+            <lightning:button label="Back" onclick="{!c.goBack}" />
+            <lightning:button label="Confirm and Send" onclick="{!c.goNext}" />
+        </lightning:buttonGroup>
+    </div>
+    </div>
+</aura:component>

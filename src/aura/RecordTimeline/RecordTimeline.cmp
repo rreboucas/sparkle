@@ -1,0 +1,95 @@
+<aura:component controller="RecordTimelineServerController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+  <aura:attribute name="lstRecords" type="RecordTimelineServerController" access="global"/>
+    <aura:attribute name="listName" type="String" default="History Timeline" access="global"/>
+    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+  <aura:attribute name="objectApiName" type="String" default="Interview__c" access="global"/>
+    <aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
+    <aura:attribute name="parentObjectIDFieldName" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="objectDateFieldName" type="String" default="Interview_Date__c" access="global"/>
+    <aura:attribute name="objectDateDisplayFieldName" type="String" default="Date__c" access="global"/>
+    <aura:attribute name="detail1Header" type="String" default="Location:" access="global"/>
+    <aura:attribute name="detail1FieldAPIName" type="String" default="Name" access="global"/>
+    <aura:attribute name="detail2Header" type="String" default="Status:" access="global"/>
+    <aura:attribute name="detail2FieldAPIName" type="String" default="Status__c" access="global"/>
+    <aura:attribute name="titleFieldAPIName" type="String" default="Interview_Type__c" access="global"/>
+    <aura:attribute name="subtitleFieldAPIName" type="String" access="global"/>
+    <ltng:require styles="/resource/testautonumdata__SLDS0101/assets/styles/salesforce-lightning-design-system-ltng.css" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+    
+    <div class="slds">
+        
+        <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+
+                            
+                                
+                                    <span class="slds-avatar slds-avatar--circle slds-avatar--medium slds-icon-action-defer " style="width: 32px; height: 32px;">
+                                    <img src="{!$Resource.SLDS0103 + '/assets/icons/action/defer_120.png'}" style=""/>
+                                </span>
+                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">{!v.listName}</h1>
+                            
+                            
+
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info">{!v.listSize} items</p>
+                </div>
+                
+                <!-- End of Header  -->
+        <!-- Start of Timneline  -->
+        <div style="padding-top: 2%">
+          
+            <ul class="timeline">
+                
+                 
+                
+                <aura:iteration items="{!v.lstRecords}" var="rec">
+                    
+                    
+                    <li class="slds-timeline__item">
+                      <span class="slds-assistive-text">Event</span>
+                          <div class="slds-media slds-media--timeline slds-timeline__media--event" >
+                            <div class="slds-media__figure">
+                                <c:svg class="slds-icon slds-icon-standard-task slds-timeline__icon" xlinkHref="/resource/testautonumdata__SLDS0103/assets/icons/standard-sprite/svg/symbols.svg#event" />
+                            </div>
+                            <div class="slds-media__body" style="">
+                              <p>{!rec.dateValue} — {!rec.title}</p>
+                              <p class="slds-truncate">{!rec.subtitle}</p>
+                              <ul class="slds-list--horizontal slds-text-body--small">
+                                <li class="slds-list__item slds-m-right--large">
+                                  <span>{!v.detail1Header}</span>
+                                  <span class="slds-m-left--xx-small">{!rec.detail1}</span>
+                                </li>
+                                <li class="slds-list__item">
+                                  <span>{!v.detail2Header}</span>
+                                  <span class="slds-m-left--xx-small">{!rec.detail2}</span>
+                                </li>
+                              </ul>      
+                            </div>
+                          </div>
+</li> 
+                     
+   
+                </aura:iteration>
+        </ul>
+            
+            
+        
+        
+        
+        </div>
+    <!-- End of Timneline  -->        
+        
+    </div>
+  
+</aura:component>

@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes" access="global" controller="OfferLetterCompController" >
+    <aura:attribute name="candidateId" type="String" access="global" />
+    <aura:attribute name="offerId" type="String" access="global" />
+    <aura:attribute name="lstRecords" type="OfferLetterCompController" access="global"/>
+    <aura:attribute name="enteredSalary" type="Double" access="global"/>
+    <aura:attribute name="enteredBonus" type="Double" access="global" />
+    <aura:attribute name="selectedTemplateId" type="String" access="global" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="appEvent" type="c:CandidateDetailEvent"/>
+	<aura:registerEvent name="bubblingEvent" type="c:OfferSPANotifierEvent" />    
+    <div class="slds">
+        <div>
+          
+            <br/>
+         
+            
+            <lightning:input type="number" name="AnnualSalary" 
+            label="Annual Salary" formatter="currency" aura:id="salary" min="20000" max="500000" step="5000" placeholder="Example: 75,000.00"/>
+        
+            <lightning:input type="number" name="AnnualBonus" 
+                label="Annual Bonus" formatter="currency" aura:id="bonus" min="20000" max="150000" step="5000" placeholder="Example: 15,000.00" />
+            
+            
+            <lightning:select aura:id="templateSelect" name="select1" label="Select an Offer Template">
+                <option value="">choose one...</option>
+            
+                <aura:iteration items="{!v.lstRecords}"  var="rec">
+                    <option value="{!rec.emailTemplateID}" text="{!rec.emailTemplateName}"></option>
+                </aura:iteration>
+            </lightning:select>
+        
+    	</div>
+    
+        <br/>
+        <div>  
+            <lightning:button aura:id="button" label="Next" onclick="{!c.HandleNextClick}"/>
+        </div> 
+
+    </div>
+    
+	
+</aura:component>

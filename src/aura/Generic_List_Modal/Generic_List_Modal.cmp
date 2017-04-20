@@ -1,0 +1,94 @@
+<aura:component controller="Modal_Record_Detail_Controller" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="objectApiName" type="String" access="global"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="lstRecords" type="Modal_Record_Detail_Controller" access="global"/>
+    <aura:attribute name="hasRecords" type="Boolean" access="global"/>
+    <aura:attribute name="Modal_Name" default="Record Details" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_headertext" default="Column 1" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column2_headertext" default="Column 2" type="String" access="global"/>
+    <aura:attribute name="Modal_column2_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column3_headertext" default="Column 3" type="String" access="global"/>
+    <aura:attribute name="Modal_column3_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="Modal_column4_headertext" default="Column 4" type="String" access="global"/>
+    <aura:attribute name="Modal_column4_fieldapiname" type="String" access="global"/>
+    
+    <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
+    <!--EVENT LISTENER -->
+	<aura:handler event="c:displayrecdetails" action="{!c.showOppmodal}" />
+    <div class="slds">
+        
+
+        
+        
+        
+        <div aria-hidden="true" role="dialog" class="slds-modal slds-modal--large slds-fade-in-hide" aura:id="modaldialog">
+            
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">{!v.Modal_Name}</h2>
+                    <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="{!c.hideModal}">
+                        <c:svg class="slds-button__icon slds-button__icon--large" xlinkHref="/resource/SLDS0121/assets/icons/action-sprite/svg/symbols.svg#close"/>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+                <div class="slds-modal__content">
+                    <div>
+                        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked">
+                            <thead>
+                                <tr class="slds-text-heading--label">
+                                    <th class="slds-is-sortable" scope="col">
+                                        <span class="slds-truncate">{!v.Modal_column1_headertext}</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">{!v.Modal_column2_headertext}</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">{!v.Modal_column3_headertext}</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="slds-truncate">{!v.Modal_column4_headertext}</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.lstRecords}" var="rec">
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="opportunity-name" role="row"><a href="#" class="slds-truncate">{!rec.column1}</a></th>
+                                        <td data-label="account"><a href="#" class="slds-truncate">{!rec.column2}</a></td>
+                                        <td data-label="Close Date">
+                                            <span class="slds-truncate">{!rec.column3}</span>
+                                        </td>
+                                        <td data-label="amount">
+                                            <span class="slds-truncate">{!rec.column4}</span>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="slds-modal__footer">
+                    <div class="slds-x-small-buttons--horizontal">
+                        <button class="slds-button slds-button--neutral" onclick="{!c.hideModal}">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="slds-backdrop slds-backdrop--hide" aura:id="backdrop">
+            
+        </div>
+        
+        
+        
+        
+        
+    
+    
+    </div>
+	
+</aura:component>

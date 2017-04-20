@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="candidate" type="Candidate__c" />
+    
+    <force:recordPreview aura:id="candidateRecordLoader"
+      recordId="{!v.recordId}"
+      fields="Name,testautonumdata__Twitter_ID__c,testautonumdata__E_mail__c"
+      targetRecord="{!v.candidate}"
+      mode="EDIT"
+      />
+    
+</aura:component>

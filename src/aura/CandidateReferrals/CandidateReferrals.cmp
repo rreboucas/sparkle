@@ -1,0 +1,106 @@
+<aura:component controller="RelatedListServerController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="lstRecords" type="RelatedListServerController" access="GLOBAL"/>
+    <aura:attribute name="hasRecords" type="Boolean" default="false"/>
+
+    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+    <aura:attribute name="listName" type="String" default="Referrals" access="global"/>
+    <aura:attribute name="objectApiName" type="String" default="Referral__c" access="global"/>
+    <aura:attribute name="ParentObjectRelationshipField" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="ParentObjectFieldName" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="column1_headertext" type="String" default="User" access="global"/>
+    <aura:attribute name="column1_fieldapiname" type="String" default="OwnerId" access="global"/>
+    <aura:attribute name="RelFieldWithName" type="String" default="Owner" access="global"/>
+    <aura:attribute name="column2_headertext" type="String" default="Date" access="global"/>
+    <aura:attribute name="column2_fieldapiname" type="String" default="createddate" access="global"/>
+    <aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
+    <aura:attribute name="Modal_Name" default="Record Details" type="String" access="global"/>
+    <aura:attribute name="Modal_column1_headertext" type="String" default="Employee" access="global"/>
+    <aura:attribute name="Modal_column1_fieldapiname" type="String" default="Owner.Name" access="global"/>
+    <aura:attribute name="Modal_column2_headertext" type="String" default="Candidate" access="global"/>
+    <aura:attribute name="Modal_column2_fieldapiname" type="String" default="Candidate__r.Full_Name__c" access="global"/>
+    <aura:attribute name="Modal_column3_headertext" type="String" default="Date" access="global"/>
+    <aura:attribute name="Modal_column3_fieldapiname" type="String" default="CreatedDate" access="global"/>
+    <aura:attribute name="Modal_column4_headertext" type="String" default="Description" access="global"/>
+    <aura:attribute name="Modal_column4_fieldapiname" type="String" default="Referral_Message__c" access="global"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+    
+    <!--PUBLISHER -->
+    <aura:registerEvent name="showRecords" type="c:displayrecdetails" />
+    
+    <div class="slds" style="padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">
+        
+                <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+                          <h1 class="slds-page-header__title slds-truncate">{!v.listName}</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info">{!v.listSize} items</p>
+                </div>
+                
+                <!-- End of Header  -->
+        
+        
+        
+        <table class="slds-table slds-table--bordered">
+    <thead>
+      <tr class="slds-text-heading--label">
+        <th class="slds-cell-shrink">
+        </th>
+        <th class="slds-is-sortable" scope="col">
+          <div class="slds-truncate">Employee
+          </div>
+        </th>
+        <th class="slds-is-sortable" scope="col">
+          <div class="slds-truncate">Date
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <aura:iteration items="{!v.lstRecords}" var="rec">
+          <tr class="slds-hint-parent">
+            <td class="slds-cell-shrink" data-label="Select Row" >
+              <span class="slds-avatar slds-avatar--circle slds-avatar--medium" style="width: 32px; height: 32px;">
+                <img src="{!rec.iconUrl}" alt="Placeholder" />
+              </span>
+            </td>
+            <th class="slds-truncate" scope="row" data-label="Opportunity Name">
+                <a data-record="{!rec.recordID}" onclick="{!c.displayRecordsModal}">{!rec.OwnerName}</a>
+                
+            </th>
+            <td class="slds-truncate" data-label="Account Name">{!rec.column2}</td>
+          </tr>
+        </aura:iteration>
+    </tbody>
+  </table>
+    <!--<div aura:id="modal" aria-hidden="true">
+                    
+                    <c:Popover_Modal />
+                </div>    -->
+    
+        
+    </div>
+
+    <c:Generic_List_Modal Modal_Name="{!v.Modal_Name}"
+                          objectApiName="{!v.objectApiName}"
+                          Modal_column1_headertext="{!v.Modal_column1_headertext}"
+                          Modal_column1_fieldapiname="{!v.Modal_column1_fieldapiname}"
+                          Modal_column2_headertext="{!v.Modal_column2_headertext}"
+                          Modal_column2_fieldapiname="{!v.Modal_column2_fieldapiname}"
+                          Modal_column3_headertext="{!v.Modal_column3_headertext}"
+                          Modal_column3_fieldapiname="{!v.Modal_column3_fieldapiname}"
+                          Modal_column4_headertext="{!v.Modal_column4_headertext}"
+                          Modal_column4_fieldapiname="{!v.Modal_column4_fieldapiname}"
+    /> 
+
+</aura:component>

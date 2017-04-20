@@ -1,0 +1,26 @@
+<aura:component controller="GenericListMap_ServerController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="map" type="Object"/>
+    <aura:attribute name="markersList" type="Object[]"/>
+    <aura:attribute name="markers" type="Object"/>
+    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+    <aura:attribute name="lstRecords" type="GenericListMap_ServerController" access="global"/>
+    <aura:attribute name="lstRecordIDs" type="String" access="global"/>
+    <aura:attribute name="objectApiName" type="String" default="Candidate__c" access="global"/>
+    <aura:attribute name="latitudeFieldName" type="String" access="global"/>
+    <aura:attribute name="longitudeFieldName" type="String" access="global"/>
+    <aura:attribute name="geoLocationFieldApiName" type="String" default="Geolocation__c" access="global"/>
+    <aura:attribute name="nameFieldApiName" type="String" default="Name" access="global"/>
+    <aura:attribute name="cityFieldApiName" type="String" default="City__c" access="global"/>
+    <aura:attribute name="stateFieldApiName" type="String" default="State__c" access="global"/>
+    <aura:handler event="c:RecordListIdsEvent" action="{!c.handleRecordListEvent}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+    <ltng:require styles="/resource/leaflet/leaflet.css" />
+    <ltng:require scripts="/resource/leaflet/leaflet.js"
+             afterScriptsLoaded="{!c.jsLoaded}" />
+
+    <div aura:id="map"></div>
+    
+    
+</aura:component>
