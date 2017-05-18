@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	
+    <ltng:require scripts="{!join(',',
+    				$Resource.ChartJS23, 
+    				$Resource.OlympicDataService)}"
+					afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+    <aura:registerEvent name="chartEvent" type="c:ChartEvent"/>
+    
+    <div>
+		<div class="slds-text-heading--medium">Medals Timeline</div>
+	    <canvas aura:id="chart" height="380"></canvas>
+    </div>
+    
+</aura:component>

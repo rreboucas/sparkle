@@ -331,6 +331,98 @@ public with sharing class Twitter_Lightning_Controller {
         return returnRec;
     }
 
+    @AuraEnabled
+    public static List<String> getTwitterImages(String twitterID) {
+        
+        String oauthVersion = '1.0';
+        
+// Get the Twitter App Access token from the Twitter Users Custom Setting: 
+
+        Twitter_User__c myCS1 = Twitter_User__c.getValues('TwitterApp');
+        String oauthConsumerKey = myCS1.Token__c;        
+        String oauthConsumerSecret = myCS1.Token_Secret__c;
+        
+        String baseUrl = 'https://api.twitter.com';
+        String oauthSignatureMethod = 'HMAC-SHA1';
+        String strTwitterId = twitterID;
+        String pictureURL = '';
+        String twitterAcct = '';
+        List<String> picUrlsList = new List<String>();
+
+		twitterAcct = strTwitterId.remove('@');
+
+            
+            // Make a callout to Twitter
+            
+            String keyencoded = EncodingUtil.urlEncode(oauthConsumerKey, 'UTF-8');
+            String secretkeyencoded = EncodingUtil.urlEncode(oauthConsumerSecret, 'UTF-8');
+            
+            //Create Final Key String
+            String sFinal = keyencoded + ':' + secretkeyencoded;
+            //Convert to Blob
+            Blob headerValue = Blob.valueOf(sFinal);
+            
+            //Build Request
+            HttpRequest req = new HttpRequest();
+            req.setEndpoint('https://api.twitter.com/oauth2/token');
+            req.setMethod('POST');
+            
+            //Add Auth Header
+            String authorizationHeader = 'Basic ' + EncodingUtil.base64Encode(headerValue);
+            req.setHeader('Authorization', authorizationHeader);
+            
+            //You need to add this to the request - proved easy to miss in instructions...
+            req.setBody('grant_type=client_credentials');
+            
+            //Make request
+            Http http = new Http();
+            HTTPResponse res = http.send(req);
+            String responseBody = res.getBody();
+            System.debug('########## responseBody : ' + responseBody);
+            String stoken;
+            //Parse JSON for Bearer Token
+            JSONParser parser = JSON.createParser(res.getBody());
+            while (parser.nextToken() != null) 
+            {
+                if (parser.getCurrentToken() == JSONToken.FIELD_NAME && parser.getText() == 'access_token')
+                {
+                    parser.nextToken();
+                    stoken = parser.getText();
+                    System.debug('########## bearer token : ' + stoken);
+                }
+            }
+            
+            
+            // Make another request to twitter to get the user images:
+            
+            HttpRequest req2 = new HttpRequest();
+            //I actually store the endpoint in the same custom setting and build dynamically, but for purposes of demo:
+            req2.setEndpoint('https://api.twitter.com/1.1/search/tweets.json?q=%23from='+ twitterAcct + '&filter=images&tweet_mode=extended&result_type=mixed&count=24');
+            req2.setMethod('GET');
+        
+            //Call Bearer token Method
+            //Note - unless invalidated, I believe you can store this and keep using it indefinitely, but again, to demo concept
+            String authorizationHeader2 = 'Bearer ' + stoken;
+            req2.setHeader('Authorization', authorizationHeader2);
+        
+            Http http2 = new Http();
+            HTTPResponse res2 = http2.send(req2);
+            String sBody2 = res2.getBody();
+            String responseBody2 = res2.getBody();
+            System.debug('########## responseBody2 : ' + responseBody2);
+            
+
+            String pictureFullURL = Sparkle_Helper.getFieldValueFromJson(responseBody2, 'profile_image_url');
+            pictureURL = pictureFullURL.remove('_normal');
+
+            
+
+
+
+        
+        
+        return picUrlsList;
+    }
 
     @AuraEnabled
     public static Twitter_Lightning_Controller getTwitterUser(String twitterName, String firstName, String lastName, string companyName, String email) {

@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+	
+    <ltng:require scripts="{!join(',',
+    				$Resource.ChartJS23, 
+    				$Resource.OlympicDataService)}"
+					afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="candidate" type="Candidate__c" />
+    <aura:attribute name="year" type="String"/>
+    <aura:attribute name="country" type="String"/>
+    <aura:attribute name="title" type="String" default="Interview Scores"/>
+
+    <aura:handler event="c:ChartEvent" action="{!c.chartChange}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   
+    
+    <force:recordData aura:id="candidateRecordLoader" 
+                         recordId="{!v.recordId}"
+                         targetFields="{!v.candidate}" 
+                         fields="['Id','Name', 'testautonumdata__Technical_Interview_Score__c', 'testautonumdata__Recruiter_Interview_Score__c', 'testautonumdata__Management_Interview_Score__c']"
+                         mode="VIEW"
+                         recordUpdated="{!c.handleRecordChange}"/>
+    
+    <div>
+        <div class="slds-text-heading--medium">{!v.title} -  {!v.candidate.Name}</div>
+	    <canvas aura:id="chart" height="280"></canvas>
+    </div>
+    
+</aura:component>

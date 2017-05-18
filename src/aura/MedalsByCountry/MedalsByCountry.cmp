@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+	
+    <ltng:require scripts="{!join(',',
+    				$Resource.ChartJS23, 
+    				$Resource.OlympicDataService)}"
+					afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+	<aura:attribute name="title" type="String" default="Medal distribution by country"/>
+	<aura:attribute name="medalType" type="String" default="Gold"/>
+
+    <aura:handler event="c:ChartEvent" action="{!c.chartChange}"/>
+    
+    <div>
+		<div class="slds-text-heading--medium">{!v.title}</div>
+	    <canvas aura:id="chart" height="350"></canvas>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <ltng:require scripts="{!$Resource.ChartJS23}" afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+    <aura:attribute name="feedName" type="String"/>
+    
+	<div>
+	    <canvas aura:id="chart"></canvas>
+    </div>
+    
+</aura:component>
