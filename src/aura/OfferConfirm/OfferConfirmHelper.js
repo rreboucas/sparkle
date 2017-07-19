@@ -27,9 +27,7 @@
         // the server-side action returns
         action.setCallback(this, function(response) {
             var state = response.getState();
-            // This callback doesn’t reference cmp. If it did,
-            // you should run an isValid() check
-            //if (cmp.isValid() && state === "SUCCESS") {
+            
             if (state === "SUCCESS") {
                 cmp.set("v.sendResult", response.getReturnValue());
                 

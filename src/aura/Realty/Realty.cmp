@@ -19,7 +19,7 @@
         </aura:if>
     
         <lightning:container aura:id="ReactApp"
-                             src="{!$Resource.Archive + '/Archive/index.html?mainTitle=' + v.mainTitle}"
+                             src="{!$Resource.Realty + '/index.html?mainTitle=' + v.mainTitle}"
                              onmessage="{!c.handleMessage}"
                              onerror="{!c.handleError}"/>
     </div>

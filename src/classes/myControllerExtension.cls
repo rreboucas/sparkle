@@ -24,6 +24,11 @@ public with sharing class myControllerExtension {
         return options; 
     }
     
+    public PageReference nextPage() {
+
+        return Page.test;
+	}
+    
     public PageReference doSomething()
     {
         // Apex code for handling record from a Detail page goes here
@@ -36,7 +41,7 @@ public with sharing class myControllerExtension {
     public PageReference goToAnotherVFPage()
     {
         // Apex code for handling record from a Detail page goes here
-        PageReference pg = new PageReference('/apex/InterviewQuestionsLDS');
+        PageReference pg = new PageReference('/apex/SGT');
         pg.setRedirect(true);
         return pg; 
         

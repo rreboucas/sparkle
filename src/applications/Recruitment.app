@@ -7,4 +7,6 @@
     <tab>standard-Dashboard</tab>
     <tab>Position__c</tab>
     <tab>Sparkle_All_LCs</tab>
+    <tab>System_Events</tab>
+    <tab>DynamicLC</tab>
 </CustomApplication>

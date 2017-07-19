@@ -5,6 +5,9 @@
         
 
         //helper.getTwitterPicture(component);
+        
+        var aversion = ConfigAdapter.getAuraVersion();
+        component.set("v.auraVersion", aversion)
 
         console.log("React_LC_ContainerController.doInit: exit");
         

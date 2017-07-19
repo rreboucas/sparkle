@@ -60,8 +60,7 @@
         var arr = [];
         arr = lstRecs;
         if (arr != null && !component.get("v.isDoneRendering")){
-            /*var rec1 = arr[0].recordID ;
-            console.log("rec1: " + rec1); */
+
             var firstRow = component.find("firstRow");
 
             console.log("firstRow: " + firstRow);

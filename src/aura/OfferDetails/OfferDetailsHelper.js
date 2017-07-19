@@ -98,14 +98,7 @@
                 console.log("Offer ID Value: " + offerIdVal);    
         
         
-                // Fire Component (Bubbling) event to ask the OfferLetterSPA LC (Parent) to hide this child LC and unhide the Template child LC:
-                
-                var cmpEvent = cmp.getEvent("bubblingEvent");
-                console.log('cmpEvent: ' + cmpEvent);
-                
-                cmpEvent.setParams({"ComponentAction" : 'OfferDetails_Next' });
-        
-                cmpEvent.fire();
+               
                 
                 
                 var lstRecs = cmp.get("v.lstRecords");

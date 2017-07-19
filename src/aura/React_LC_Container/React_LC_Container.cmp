@@ -2,6 +2,7 @@
     
     <aura:attribute name="recordId" type="String" access="GLOBAL"/>
     <aura:attribute name="pictureURL" type="String" access="GLOBAL"/>
+    <aura:attribute name="auraVersion" type="String" access="GLOBAL"/>
     <aura:attribute name="rec" type="Twitter_Lightning_Controller" access="global"/>
     <aura:attribute name="twitterName" type="String" default="@twitter" access="GLOBAL"/>
     <aura:attribute name="objectApiName" type="String" default="Candidate__c" access="global"/>
@@ -38,13 +39,15 @@
                 <!-- End of Header  -->
 			<div class="tokenPadding">
 
+                <!--
 			<lightning:container aura:id="ReactApp"
                              src="{!$Resource.Build + '/index.html'}"
                              onmessage="{!c.handleMessage}"
-                             onerror="{!c.handleError}"/> 
+                             onerror="{!c.handleError}"/> -->
         
 
-            </div>
+                Aura Version: {!v.auraVersion}
+            </div> 
 
     
     

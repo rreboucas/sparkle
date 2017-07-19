@@ -16,7 +16,20 @@
     HandleNextClick : function(component, event, helper) {
         
         console.log("OfferDetailsController.CreateOffer: entered");
-		
+
+        
+        // Fire Component (Bubbling) event to ask the OfferLetterSPA LC (Parent) to hide this child LC and unhide the Template child LC:
+                
+        var cmpEvent = component.getEvent("bubblingEvent");
+        console.log('cmpEvent: ' + cmpEvent);
+        
+        cmpEvent.setParams({"ComponentAction" : 'OfferDetails_Next' });
+        
+        cmpEvent.fire(); 
+        
+        
+        
+        
         // Get the values from the form
 		var n1 = component.find("salary").get("v.value");
         console.log("Salary entered:" + n1);
@@ -33,7 +46,7 @@
         component.set("v.enteredBonus", n2);
         component.set("v.selectedTemplateId", t1);
         
-        // Create the Offer record and fire events for navigation
+        
         
         helper.createOfferAndNavigate(component);
         

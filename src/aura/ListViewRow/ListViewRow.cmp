@@ -1,0 +1,44 @@
+<aura:component >
+	
+    <aura:attribute name="rec" type="ListServerController" access="global"/>
+    <aura:attribute name="selectedRecordId" type="String" access="global"/>
+    <aura:attribute name="showButton" type="Boolean" default="True" access="global"/>
+    
+    <aura:attribute name="indexRow" type="Integer" access="global"/>
+    
+    <!-- Component Events -->
+    <aura:registerEvent name="bubblingSelectionEvent" type="c:ListRowBubbleEvent" />
+    <aura:registerEvent name="bubblingActionEvent" type="c:ListRowBubbleActionEvent" />
+    
+    <!-- Application Event -->
+    <aura:registerEvent name="stdAppEvent" type="ltng:selectSObject"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <tr class="slds-hint-parent" data-mainrec="{!v.rec.recordID}" data-record="{!v.rec.eventField}" onclick="{!c.fireRowClickEvents}">
+        <td class="slds-cell-shrink">
+        </td>
+        <th class="slds-truncate" scope="row">{!v.rec.column1}</th>
+        <td class="slds-truncate sizehidden" aura:id="col2Row">{!v.rec.column2}</td>
+        <td class="sizehidden" aura:id="col3Row" >{!v.rec.column3}</td>
+        <td class="sizehidden" aura:id="col4Row" >{!v.rec.column4}</td>
+        <aura:renderIf isTrue="{!v.showButton}">
+            
+            <td class="" aura:id="colButtonRow">                    
+                
+                <!-- Navigation Event -->
+                
+                <lightning:buttonMenu alternativeText="More options" onselect="{!c.handleListMenuClick }">
+                    <lightning:menuItem label="View" value="View" />
+                    <lightning:menuItem label="Edit" value="Edit" />
+                    <lightning:menuItem label="Remove" value="Remove" />
+                    
+                </lightning:buttonMenu>
+                
+            </td>
+        </aura:renderIf>
+        <td class="slds-cell-shrink" data-label="Actions">
+        </td>
+    </tr>
+    
+</aura:component>
