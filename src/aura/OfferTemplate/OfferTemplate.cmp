@@ -10,7 +10,9 @@
     <aura:attribute name="templateVal" type="String" access="global" />
     <ltng:require styles="{!$Resource.sendoffer}"/>
     <aura:attribute name="templateSubjectVal" type="String" />
+    
     <aura:handler event="c:CandidateDetailEvent" action="{!c.handleApplicationEvent}"/>
+    
     <aura:registerEvent name="bubblingEvent" type="c:OfferSPANotifierEvent" /> 
     
     <div class="sendoffer">

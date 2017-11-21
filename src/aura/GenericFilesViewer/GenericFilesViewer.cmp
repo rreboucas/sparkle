@@ -1,0 +1,84 @@
+<aura:component controller="FilesViewerServerController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+  <aura:attribute name="lstRecords" type="FilesViewerServerController" access="global"/>
+  <aura:attribute name="listName" type="String" default="Related Files" access="global"/>
+  <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+  <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+  <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+  <aura:attribute name="objectApiName" type="String" access="global"/>
+  
+  <!-- Aura:if attributes to control visibility -->
+    <aura:attribute name="fetchingRecords" type="Boolean" default="false"/>  
+    
+    
+  <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+
+  <aura:registerEvent name="stdAppEvent" type="lightning:openFiles"/>
+    
+    <div class="slds" style="position:relative">
+        
+        
+        <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-grid">
+                        <div class="slds-grid slds-type-focus slds-no-space">
+
+                            
+                                <lightning:icon iconName="custom:custom9" size="medium" alternativeText="Lightning Logo"/>
+                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">{!v.listName}</h1>
+                            
+                            
+
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="slds-text-body--small slds-page-header__info">{!v.listSize} items</p>
+                </div>
+                
+                <!-- End of Header  -->
+        <!-- Start of Files Viewer list  -->
+        <div style="padding-top: 2%; background: white">
+            
+            <ul class="slds-list--vertical slds-has-dividers--bottom-space slds-has-selection">
+               
+        	<aura:if isTrue="{!v.fetchingRecords}">
+                <lightning:spinner aura:id="mySpinner" />
+            </aura:if>
+                
+                
+              <aura:iteration items="{!v.lstRecords}" var="rec">
+                
+                
+              <li class="slds-list__item">
+                <div class="slds-media slds-tile">
+                  <div class="slds-media__figure">
+                      <c:svg class="{!'slds-icon icon-doctype-' + rec.fileExtension}" xlinkHref="{!'/resource/testautonumdata__SLDS0103/assets/icons/doctype-sprite/svg/symbols.svg#'+ rec.fileExtension}" />
+                  </div>
+                  <div class="slds-media__body">
+                    <p class="slds-tile__title slds-truncate"><a onclick="{!c.openFileViewer}" data-record="{!rec.fileID}">{!rec.fileName}</a></p>
+                    <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+                      <li class="slds-truncate slds-list__item">{!rec.fileCreatedDate}</li>
+                      <li class="slds-truncate slds-list__item">{!rec.fileSize}</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+                
+                
+                </aura:iteration>  
+                
+                
+            </ul>
+            
+            
+            
+        </div>
+        <!--<div aura:id="modal">
+          <c:Files_Modal_Previewer />        
+        </div> -->
+    </div>
+</aura:component>

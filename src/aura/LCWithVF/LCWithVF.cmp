@@ -1,0 +1,66 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId"
+                access="global">
+	
+    <aura:attribute name="recordId" type="String" access="GLOBAL"/>
+    
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="vfHost" type="String"
+            default="rrlightningout-dev-ed--testautonumdata.gus.visual.force.com"/>
+    
+    <!-- Aura:if attributes to control visibility -->
+    <aura:attribute name="fetchingRecords" type="Boolean" default="false"/>
+    
+    <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Application Event -->
+  <aura:registerEvent name="stdAppEvent" type="ltng:selectSObject"/>
+    
+    <div class="slds-page-header" role="banner">
+              <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                  <p class="slds-text-heading--label"></p>
+                  <div class="slds-grid">
+                    <div class="slds-grid slds-type-focus slds-no-space">
+                        	<img style="width:156px; height:67px" src="{!$Resource.vflogo}"/>
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-align-bottom">
+                  <div class="slds-grid">
+                    <div class="slds-button-space-left">
+                    </div>
+                    <div class="slds-button-group slds-button-space-left" role="group">
+                    </div>
+                    <div class="slds-button-group" role="group">
+                      <div class="slds-button--last">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="slds-text-body--small slds-page-header__info"></p>
+            </div>
+    
+    
+    <div class="slds-card">
+        
+        <lightning:card >
+            
+            
+            
+        <aura:set attribute="title">
+            
+        </aura:set>
+        
+        <p class="slds-p-horizontal--medium">
+            <iframe width="500" height="200" frameBorder="0" aura:id="vfFrame" src="{!'https://' + v.vfHost + '/apex/myvfpage'}"/>
+        </p>
+    </lightning:card>
+                
+        
+        
+    </div>
+</aura:component>

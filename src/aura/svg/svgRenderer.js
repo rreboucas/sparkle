@@ -6,6 +6,7 @@
     var ariaHidden = component.get("v.ariaHidden");
 
     //return an svg element w/ the attributes
+    console.log("SVRRenderer entered");
     var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute('class', classname);
     svg.setAttribute('aria-hidden', ariaHidden);

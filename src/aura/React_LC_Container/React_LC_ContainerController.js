@@ -6,8 +6,10 @@
 
         //helper.getTwitterPicture(component);
         
-        var aversion = ConfigAdapter.getAuraVersion();
-        component.set("v.auraVersion", aversion)
+        var cmpType = component.getType();
+        var namespace= cmpType.substr(0, cmpType.indexOf(':'));
+        console.log("namespace: " + namespace);
+        component.set("v.auraVersion", namespace)
 
         console.log("React_LC_ContainerController.doInit: exit");
         

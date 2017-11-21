@@ -11,46 +11,20 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="ltng:selectSObject" action="{!c.handleApplicationEvent}"/>
     
-    <div class="slds">
 
-        <div class="slds-page-header" role="banner">
-                  <div class="slds-grid">
-                    <div class="slds-col slds-has-flexi-truncate">
-                      <div class="slds-grid">
-                        <div class="slds-grid slds-type-focus slds-no-space">
-
-                            
-                                
-                                    <span class="slds-avatar slds-avatar--circle slds-avatar--medium " style="width: 32px; height: 32px; background-color: #5ba8df;">
-                                    <img src="{!$Resource.lightningicons + '/lightningicons/images/reactlogo.png'}" style=""/>
-                                </span>
-                                <h1 class="slds-page-header__title slds-truncate" style="padding-left:6px;">React Lightning Container</h1>
-                            
-                            
-
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="slds-text-body--small slds-page-header__info">{!v.rec.twitterName}</p>
-                </div>
-                
-                <!-- End of Header  -->
-			<div class="tokenPadding">
-
-                <!--
-			<lightning:container aura:id="ReactApp"
-                             src="{!$Resource.Build + '/index.html'}"
-                             onmessage="{!c.handleMessage}"
-                             onerror="{!c.handleError}"/> -->
-        
-
-                Aura Version: {!v.auraVersion}
-            </div> 
-
-    
-    
+    <div class="c-container" style="background-color:white">
+        <lightning:layout horizontalAlign="space" multipleRows="true">
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center">Header 1</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center">Header 2</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center" >Header 3</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center" >Header 4</lightning:layoutItem>
+      	<lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center">Row 1</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center" >Row 1</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center" >Row 1</lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" flexibility="grow" size="3" class="slds-align_absolute-center" >Row 1</lightning:layoutItem>
+    </lightning:layout>
     </div>
+
+        
     
 </aura:component>

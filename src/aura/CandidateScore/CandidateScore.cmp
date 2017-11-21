@@ -18,12 +18,12 @@
     <force:recordData aura:id="candidateRecordLoader" 
                          recordId="{!v.recordId}"
                          targetFields="{!v.candidate}" 
-                         fields="['Id','Name', 'testautonumdata__Technical_Interview_Score__c', 'testautonumdata__Recruiter_Interview_Score__c', 'testautonumdata__Management_Interview_Score__c']"
+                         layoutType="FULL"
                          mode="VIEW"
                          recordUpdated="{!c.handleRecordChange}"/>
     
-    <div>
-        <div class="slds-text-heading--medium">{!v.title} -  {!v.candidate.Name}</div>
+    <div style="background: white;">
+        <div  class="slds-text-heading--medium">{!v.title} -  {!v.candidate.Name}</div>
 	    <canvas aura:id="chart" height="280"></canvas>
     </div>
     

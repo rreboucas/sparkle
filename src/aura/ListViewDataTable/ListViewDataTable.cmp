@@ -1,0 +1,103 @@
+<aura:component controller="ListServerController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="mydata" type="Object" access="global"/>
+    <aura:attribute name="mycolumns" type="List" access="global"/>
+    
+    <aura:attribute name="runningUser" type="User" access="global"/>
+    <aura:attribute name="selectedRecordId" type="String" access="global"/>
+    <aura:attribute name="listSize" type="Integer" default="0" access="global"/>
+    <aura:attribute name="limitRows" type="String" default="8" access="global"/>
+    <aura:attribute name="objectName" type="String" default="Object Name" access="global"/>
+    <aura:attribute name="objectApiName" type="String" default="Account" access="global"/>
+    <aura:attribute name="eventIDField" type="String" default="Id" access="global"/>
+    <aura:attribute name="fireListRecordsEvent" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="listName" type="String" default="List Name" access="global"/>
+    <aura:attribute name="column1_headertext" type="String" default="Column 1" access="global"/>
+    <aura:attribute name="column1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column2_headertext" type="String" default="Column 2" access="global"/>
+    <aura:attribute name="column2_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column3_headertext" type="String" default="Column 3" access="global"/>
+    <aura:attribute name="column3_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="column4_headertext" type="String" default="Column 4" access="global"/>
+    <aura:attribute name="column4_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldapiname" type="String" access="global"/>
+    <aura:attribute name="filter1_fieldValue" type="String" access="global"/>
+    <aura:attribute name="sortFieldName" type="String" default="Name" access="global"/>
+    <aura:attribute name="sortDirection" type="String" access="global"/>
+    <aura:attribute name="lastSortFieldName" type="String" access="global"/>
+    <aura:attribute name="lastSortDirection" type="String" access="global"/>
+    <aura:attribute name="showButton" type="Boolean" default="True" access="global"/>
+    <aura:attribute name="buttonLabel" type="String" default="Start" access="global"/>
+    <aura:attribute name="buttonURL" type="String" access="global"/>
+    <aura:attribute name="buttonURLParameter" type="String" access="global"/>
+    <aura:attribute name="buttonURLParameter2" type="String" access="global"/>
+    <aura:attribute name="userIdParameterValue" type="Boolean" default="False" access="global"/>
+    <aura:attribute name="isDoneRendering" type="Boolean" default="false"/>
+    <aura:attribute name="lastSelectedRow" type="Object" access="global"/>
+    
+    
+    <!-- System Event -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+
+	
+    <!-- Bubble Event Handlers -->
+    <aura:handler name="bubblingSelectionEvent" event="c:ListRowBubbleEvent" action="{!c.handleBubblingSelection}" includeFacets="true"/>
+    <aura:handler name="bubblingActionEvent" event="c:ListRowBubbleActionEvent" action="{!c.handleBubblingAction}" includeFacets="true"/>
+
+<!-- Application Event -->
+  <aura:registerEvent name="stdAppEvent" type="ltng:selectSObject"/>
+
+
+    <aura:registerEvent name="recordListEvent" type="c:recordListEvent"/>
+    <div class="slds tokenPadding" style="">
+      <!-- List LC: Start -->  
+        <div class="slds-page-header" role="banner">
+              <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                  <p class="slds-text-heading--label">{!v.objectName}</p>
+                  <div class="slds-grid">
+                    <div class="slds-grid slds-type-focus slds-no-space">
+                      <h1 class="slds-page-header__title slds-truncate" title="My Leads (truncates)">{!v.listName}</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-align-bottom">
+                  <div class="slds-grid">
+                    <div class="slds-button-space-left">
+                    </div>
+                    <div class="slds-button-group slds-button-space-left" role="group">
+                    </div>
+                    <div class="slds-button-group" role="group">
+                      <div class="slds-button--last">
+
+                          
+                          
+                          
+                        <!-- Browser Event -->
+                          <lightning:button label="New" onclick="{! c.CreateNewRecord }" />
+                          
+                          
+                          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="slds-text-body--small slds-page-header__info">{!v.listSize} items</p>
+            </div>
+            
+            <!-- End of LC Top  -->
+            
+            
+            <lightning:datatable data="{! v.mydata }" 
+                columns="{! v.mycolumns }" 
+                keyField="id"
+                onrowselection="{! c.getSelectedName }"/>
+        
+        <!-- List LC: End --> 
+   
+        
+    </div>
+  
+</aura:component>

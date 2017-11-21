@@ -1,5 +1,13 @@
 public with sharing class myControllerExtension {
 
+    public String profileImageUrl { get; set; }
+    List<user> lstuser;
+    
+    public myControllerExtension () {
+         lstuser = [select FullPhotoUrl from User where Id =: UserInfo.getUserId()];
+         profileImageUrl=lstuser[0].FullPhotoUrl; 
+    }
+    
     private final testautonumdata__Interviewer__c interviewer;
     
     // The extension constructor initializes the private member

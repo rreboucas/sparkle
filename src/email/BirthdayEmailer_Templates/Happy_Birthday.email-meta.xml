@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Happy Birthday Email Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BirthdayEmailerLetterhead</letterhead>
+    <name>Happy Birthday</name>
+    <style>freeForm</style>
+    <subject>Happy Birthday from {!Organization.Name}</subject>
+    <textOnly>Dear {!Contact.Name},
+
+We just wanted to send you a Happy Birthday wish, from all of us at {!Organization.Name}.
+May you celebrate it with those most meaningful to you,
+
+Sincerely,
+{!Contact.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

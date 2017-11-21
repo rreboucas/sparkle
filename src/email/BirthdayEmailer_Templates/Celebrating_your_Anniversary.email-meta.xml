@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BirthdayEmailerLetterhead</letterhead>
+    <name>Celebrating your Anniversary</name>
+    <style>freeForm</style>
+    <subject>Nice to have you as a client</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+This is just a note to say thank you for your business with us over the years. 
+
+Believe it of not, today is the anniversary of when we started working together. I would like to setup a meeting to review how we are doing, and to ensure we are meeting your needs as they stand today. Would you be open to that?
+
+I look forward to talking to you soon.
+
+Sincerely,
+
+{!Contact.OwnerFullName}
+{!Contact.OwnerPhone}</textOnly>
+    <type>html</type>
+</EmailTemplate>

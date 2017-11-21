@@ -36,12 +36,16 @@
     
     
     <ltng:require styles="/resource/testautonumdata__SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    
     <!-- System Event -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
-    <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>
+    
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+
 	
     <!-- Bubble Event Handlers -->
     <aura:handler name="bubblingSelectionEvent" event="c:ListRowBubbleEvent" action="{!c.handleBubblingSelection}" includeFacets="true"/>
+    
     <aura:handler name="bubblingActionEvent" event="c:ListRowBubbleActionEvent" action="{!c.handleBubblingAction}" includeFacets="true"/>
 
 <!-- Application Event -->

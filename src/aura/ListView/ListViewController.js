@@ -54,8 +54,8 @@
         
     },
     
-    doneRendering : function(component, event, helper) {
-        console.log("ListViewController.doneRendering: entered");
+    onRender : function(component, event, helper) {
+        console.log("ListViewController.onRender: entered");
         var lstRecs = component.get("v.lstRecords");
         var arr = [];
         arr = lstRecs;
@@ -65,7 +65,9 @@
 
             console.log("firstRow: " + firstRow);
             $A.util.removeClass(firstRow, "slds-hint-parent");
+            
             $A.util.addClass(firstRow, "slds-is-selected"); 
+            
             component.set("v.isDoneRendering", true);
             
             
@@ -80,10 +82,26 @@
         
 
         
-		console.log("ListViewController.doneRendering: exit")
+		console.log("ListViewController.onRender: exit")
 
 
     },
+    
+    CreateNewRecord : function(component, event, helper) {
+        
+        console.log("ListViewController.CreateNewRecord: entered");
+        var objectAPIName = component.get("v.objectApiName");
+
+        var createRecordEvent = $A.get("e.force:createRecord");
+        createRecordEvent.setParams({
+            "entityApiName": objectAPIName
+        });
+        createRecordEvent.fire();
+
+        console.log("ListViewController.CreateNewRecord: exit");
+
+    },
+    
     
     handleBubblingSelection : function(component, event) {
         
@@ -172,20 +190,7 @@
     },
     
 
-    CreateNewRecord : function(component, event, helper) {
-        
-        console.log("ListViewController.CreateNewRecord: entered");
-        var objectAPIName = component.get("v.objectApiName");
-
-        var createRecordEvent = $A.get("e.force:createRecord");
-        createRecordEvent.setParams({
-            "entityApiName": objectAPIName
-        });
-        createRecordEvent.fire();
-
-        console.log("ListViewController.CreateNewRecord: exit");
-
-    },
+    
 
     
     

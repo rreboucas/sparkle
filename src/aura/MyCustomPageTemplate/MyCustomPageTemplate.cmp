@@ -1,0 +1,16 @@
+<aura:component implements="lightning:appHomeTemplate" description="This is the description info for My Custom Two-Column App Page Template. I can provide helpful information for my customers regarding my custom template, which regions it has etc.">
+
+    <aura:attribute name="left" type="Aura.Component[]" />
+    <aura:attribute name="right" type="Aura.Component[]" />
+    <div>
+    <lightning:layout horizontalAlign="spread">
+        <lightning:layoutItem flexibility="grow" class="slds-m-right_small">
+        {!v.left}
+        </lightning:layoutItem>
+        <lightning:layoutItem size="{! $Browser.isDesktop ? '4' : '6' }"
+        class="slds-m-left_small">
+        {!v.right}
+        </lightning:layoutItem>
+    </lightning:layout>
+    </div>
+</aura:component>

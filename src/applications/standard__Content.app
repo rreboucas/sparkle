@@ -5,6 +5,5 @@
     <tab>standard-Workspace</tab>
     <tab>standard-ContentSearch</tab>
     <tab>standard-ContentSubscriptions</tab>
-    <tab>standard-ContentFavorites</tab>
     <tab>Invoice__c</tab>
 </CustomApplication>

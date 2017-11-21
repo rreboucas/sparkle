@@ -6,8 +6,6 @@
 	<aura:attribute name="hasRecords" type="Boolean" default="false" access="global"/>    
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" access="global"/>
     <aura:handler event="c:TwitterRecordEvent" action="{!c.handleApplicationEvent}" access="global"/>
-    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
-    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
     <ltng:require styles="/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css" />
 
     <div class="slds slds-is-relative" style="padding-top: 0.5%;padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;">

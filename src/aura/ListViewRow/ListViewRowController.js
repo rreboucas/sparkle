@@ -25,7 +25,7 @@
         // Application Event - Fire standard ltng:selectSobject event to notify other LCs about the record id that was selected:
         var stdAppEvent = $A.get("e.ltng:selectSObject");
 
-        stdAppEvent.setParams({ "recordId": SelectedRecordID, "channel": "Project Sparkle Interview ListViewRow LC" });
+        stdAppEvent.setParams({ "recordId": SelectedRecordID, "channel": "ListViewRow LC" });
         stdAppEvent.fire();
         
         

@@ -41,10 +41,10 @@
                   <p class="slds-text-body--small slds-page-header__info">{!v.rec.twitterName}</p>
                 </div>
                 
-                <!-- End of Header  -->
+                <!-- End of Header    slds-card   background: white; -->
 
         <!-- Embed 2 components, 1 to show user Twitter details if there is a twitter id and if not show a component to enable the user to search for the right Twitter user -->
-        <div style="min-height: 150px;"> 
+        <div style="min-height: 150px; background: white;" class="slds-card"> 
             <div aura:id="userdetails" >
                 <c:TwitterUserDetails recordId="{!v.recordId}" rec="{!v.rec}"/>
             </div>

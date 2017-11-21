@@ -43,140 +43,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/aura/DynamicSearch/DynamicSearch.cmp",
-			"settings":
-			{
-				"buffer_size": 1845,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/DynamicSearch/DynamicSearchController.js",
-			"settings":
-			{
-				"buffer_size": 1276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "({\n    getListRecords : function(cmp) {\n    console.log(\"InterviewListHelper.getListRecords: entered\");\n    var action = cmp.get(\"c.getListRecords\");\n        action.setParams({ \n            rowsLimit : cmp.get(\"v.limitRows\"), \n            objectApiName : cmp.get(\"v.objectApiName\"),\n            filter1Field : cmp.get(\"v.filter1_fieldapiname\"),\n            filter1Value : cmp.get(\"v.filter1_fieldValue\"),\n            eventField : cmp.get(\"v.eventIDField\"),\n            column1 : cmp.get(\"v.column1_fieldapiname\"),\n            column2 : cmp.get(\"v.column2_fieldapiname\"),\n            column3 : cmp.get(\"v.column3_fieldapiname\"),\n            column4 : cmp.get(\"v.column4_fieldapiname\"),\n            sortField : cmp.get(\"v.sortFieldName\"),\n            sortDirection : cmp.get(\"v.sortDirection\")\n        });\n\n        // Create a callback that is executed after \n        // the server-side action returns\n        action.setCallback(this, function(response) {\n            var state = response.getState();\n            // This callback doesn’t reference cmp. If it did,\n            // you should run an isValid() check\n            //if (cmp.isValid() && state === \"SUCCESS\") {\n            if (state === \"SUCCESS\") {\n                cmp.set(\"v.lstRecords\", response.getReturnValue());\n                \n                var lstRecs = cmp.get(\"v.lstRecords\");\n                cmp.set(\"v.listSize\", lstRecs.length);\n                cmp.set(\"v.lastSortFieldName\", cmp.get(\"v.sortFieldName\"));\n                cmp.set(\"v.lastSortDirection\", cmp.get(\"v.sortDirection\"));\n                \n                \n                var lstRecs = cmp.get(\"v.lstRecords\");\n                console.log(\"InterviewListHelper: lstRecs\" + lstRecs); \n                // Put all record ids in a comma-delimetted string to pass to other components like a map using an application event\n                \n                var recordIdsString;\n                \n              \n                \n            }\n            //else if (cmp.isValid() && state === \"INCOMPLETE\") {\n            else if (state === \"INCOMPLETE\") {\n                // do something\n            }\n            //else if (cmp.isValid() && state === \"ERROR\") {\n            else if (state === \"ERROR\") {\n                var errors = response.getError();\n                if (errors) {\n                    if (errors[0] && errors[0].message) {\n                        console.log(\"Error message: \" + \n                                 errors[0].message);\n                    }\n                } else {\n                    console.log(\"Unknown error\");\n                }\n            }\n        });\n\n        // optionally set storable, abortable, background flag here\n\n        // A client-side action could cause multiple events, \n        // which could trigger other events and \n        // other server-side action calls.\n        // $A.enqueueAction adds the server-side action to the queue.\n        $A.enqueueAction(action);\n        \n        console.log(\"InterviewListHelper.getListRecords: exit\");\n    },\n\n    getRunningUser : function(cmp) {\n    console.log(\"InterviewListHelper.getRunningUser: entered\");\n    var action = cmp.get(\"c.getCurrentUser\");\n\n        // Create a callback that is executed after \n        // the server-side action returns\n        action.setCallback(this, function(response) {\n            var state = response.getState();\n            // This callback doesn’t reference cmp. If it did,\n            // you should run an isValid() check\n            //if (cmp.isValid() && state === \"SUCCESS\") {\n            if (state === \"SUCCESS\") {\n                cmp.set(\"v.runningUser\", response.getReturnValue());   \n                \n            }\n            //else if (cmp.isValid() && state === \"INCOMPLETE\") {\n            else if (state === \"INCOMPLETE\") {\n                // do something\n            }\n            //else if (cmp.isValid() && state === \"ERROR\") {\n            else if (state === \"ERROR\") {\n                var errors = response.getError();\n                if (errors) {\n                    if (errors[0] && errors[0].message) {\n                        console.log(\"Error message: \" + \n                                 errors[0].message);\n                    }\n                } else {\n                    console.log(\"Unknown error\");\n                }\n            }\n        });\n\n        // optionally set storable, abortable, background flag here\n\n        // A client-side action could cause multiple events, \n        // which could trigger other events and \n        // other server-side action calls.\n        // $A.enqueueAction adds the server-side action to the queue.\n        $A.enqueueAction(action);\n        \n        console.log(\"InterviewListHelper.getRunningUser: exit\");\n    }\n})",
-			"file": "src/aura/InterviewsList/InterviewsListHelper.js",
-			"file_size": 4746,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 4742,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/InterviewsList/InterviewsListController.js",
-			"settings":
-			{
-				"buffer_size": 12378,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/aura/InterviewsList/InterviewsList.cmp",
-			"settings":
-			{
-				"buffer_size": 10756,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<aura:component controller=\"Twitter_Lightning_Controller\" access=\"global\" >\n\t<aura:attribute name=\"recordId\" type=\"String\" access=\"GLOBAL\"/>\n    <aura:attribute name=\"fullName\" type=\"String\" access=\"GLOBAL\"/>\n\t<aura:attribute name=\"record\" type=\"Twitter_Lightning_Controller\" access=\"global\"/>\n\t<aura:attribute name=\"rec\" type=\"Twitter_Lightning_Controller\" access=\"global\"/>\n\t<aura:attribute name=\"hasRecords\" type=\"Boolean\" default=\"false\" access=\"global\"/>    \n    <aura:handler name=\"init\" value=\"{!this}\" action=\"{!c.doInit}\" access=\"global\"/>\n    <aura:handler event=\"c:TwitterRecordEvent\" action=\"{!c.handleApplicationEvent}\" access=\"global\"/>\n    <aura:handler event=\"aura:waiting\" action=\"{!c.showSpinner}\"/>\n    <aura:handler event=\"aura:doneWaiting\" action=\"{!c.hideSpinner}\"/>\n    <ltng:require styles=\"/resource/SLDS0103/assets/styles/salesforce-lightning-design-system-ltng.css\" />\n\n    <div class=\"slds slds-is-relative\" style=\"padding-top: 0.5%;padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;\">\n        <div aura:id=\"xi-spinner\" class=\"xc-hidden\" style=\"padding-top: 4px;\">\n        <div class=\"slds-spinner--brand slds-spinner slds-spinner--medium\" aria-hidden=\"false\" role=\"alert\">\n            <div class=\"slds-spinner__dot-a\"></div>\n            <div class=\"slds-spinner__dot-b\"></div>\n        </div>\n    </div>  \n\n\t<aura:if isTrue=\"{!v.hasRecords}\">\t\n        <div class=\"slds-grid slds-grid--align-left\">\n            <div class=\"smallFit info-mediumFit info-largeFit info-xlargeFit\" style=\"\">\n            \n                <div class=\"slds-media slds-media--responsive\" style=\"min-width: 70%; padding-top: 8px;\">\n                <div class=\"slds-media__figure\" style=\"padding-top: 2%;\">\n                  <img src=\"{!v.rec.pictureUrl}\" class=\"slds-avatar--large\" style=\"border-radius: 7px;\" alt=\"Placeholder\" />\n                </div>\n                <div class=\"slds-media__body\" style=\"min-width: 300px;\">\n                      <!--<p>{!v.rec.twitterName}</p> -->\n                    <div class=\"slds-grid\">\n                        <div class=\"iconsDiv\"> <img src=\"{!$Resource.SLDS0103 + '/assets/icons/utility/home_60.png'}\" style=\"width: 12px;height: 10px; padding-right:1px;\"/></div>\n                                                                                                                                                                                                 \n                        <div class=\"numberDiv\">{!v.rec.location}</div>\n                    </div>\n\n                    <div class=\"slds-grid\">\n                        <div class=\"iconsDiv\"><img src=\"{!$Resource.SLDS0103 + '/assets/icons/utility/people_60.png'}\" style=\"width: 12px;height: 10px; padding-right:1px;\"/></div>\n                        <div class=\"numberDiv\">Followers: {!v.rec.numFollowers} </div>\n                    </div>\n                    <div class=\"slds-grid\">\n                        <div class=\"iconsDiv\"><img src=\"{!$Resource.SLDS0103 + '/assets/icons/utility/adduser_60.png'}\" style=\"width: 12px;height: 10px; padding-right:1px;\"/> </div>\n                        <div class=\"numberDiv\"> Follows: {!v.rec.follows}</div>\n                    </div>\n                    \n                      \n                    </div>\n               </div>\n            \n            </div>\n            <div class=\"smallFit tweet-mediumFit tweet-largeFit tweet-xlargeFit\" style=\" max-width: 350px; padding-left: 2%;\">\n\n                    <div style=\"\" >\n                    \t<img src=\"{!$Resource.lightningicons + '/lightningicons/images/Twitter_logo_blue.png'}\" style=\"width: 12px;height: 10px; padding-right:1px;\"/>\n                    </div>\n                    <div style=\"\"> \n                        <div style=\"font-size: xx-small\">{!v.rec.tweetDate}</div>\n                </div>\n                <div class=\"slds-grid slds-grid--align-left\">\n                    <div class=\"slds-col slds-size--1-of-1\">\n                        \n                        <span style=\"padding-right:6px;\">\n                        <a  onclick=\"{!c.OpenTweet}\">{!v.rec.tweetText} </a></span>\n                    </div>\n                </div>\n                <!--<ui:button press=\"{!c.pressButton}\">\n                    <div auraid=\"myButton\" class=\"testClass\"> Click Me</div>\n                </ui:button> -->\n\n            </div>\n        </div>\n        </aura:if>\n    </div>\n\t\n\n\n\n\n</aura:component>",
-			"file": "src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
-			"file_size": 4400,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 4400,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": ".THIS .toggle {\n   display: none;\n}",
-			"file": "src/aura/Twitter_Explorer/Twitter_Explorer.css",
-			"file_size": 35,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 35,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<aura:component controller=\"Twitter_Lightning_Controller\" implements=\"flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes\" access=\"global\" >\n\n    <aura:attribute name=\"recordId\" type=\"String\" access=\"GLOBAL\"/>\n    <aura:attribute name=\"hasId\" type=\"Boolean\" access=\"global\"/>\n    <aura:attribute name=\"objectApiName\" type=\"String\" default=\"testautonumdata__Candidate__c\" access=\"global\"/>\n    <aura:attribute name=\"TwitterIDFieldApiName\" type=\"String\" default=\"testautonumdata__Twitter_ID__c\" access=\"global\"/>\n    <aura:attribute name=\"rec\" type=\"Twitter_Lightning_Controller\" access=\"global\"/>\n\n    <aura:attribute name=\"ObjectFirstNameAPIField\" type=\"String\" access=\"GLOBAL\"/>\n    <aura:attribute name=\"ObjectLastNameAPIField\" type=\"String\" access=\"GLOBAL\"/>\n    <aura:attribute name=\"ObjectCompanyNameAPIField\" type=\"String\" access=\"GLOBAL\"/>\n    <aura:attribute name=\"ObjectEmailAPIField\" type=\"String\" access=\"GLOBAL\"/>\n\n    \n    <aura:handler name=\"init\" value=\"{!this}\" action=\"{!c.doInit}\" />\n    <aura:handler event=\"ltng:selectSObject\" action=\"{!c.handleApplicationEvent}\"/>\n    <aura:registerEvent name=\"TwitterRecordEvent\" type=\"c:TwitterRecordEvent\"/>\n\n\n    <div class=\"slds\" style=\"padding-right: 0.5%;padding-bottom: 0.5%; padding-left: 0.5%;\">\n\n        <div class=\"slds-page-header\" role=\"banner\">\n                  <div class=\"slds-grid\">\n                    <div class=\"slds-col slds-has-flexi-truncate\">\n                      <div class=\"slds-grid\">\n                        <div class=\"slds-grid slds-type-focus slds-no-space\">\n\n                                \n                                <span class=\"slds-avatar slds-avatar--circle slds-avatar--medium \" style=\"width: 32px; height: 32px; background-color: #5ba8df;\">\n                                    <img src=\"{!$Resource.lightningicons + '/lightningicons/images/twitterwhite.png'}\" style=\"\"/>\n                                </span>\n                                <h1 class=\"slds-page-header__title slds-truncate\" style=\"padding-left:6px;\">Twitter Explorer</h1>\n                            \n                            \n\n                          \n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <p class=\"slds-text-body--small slds-page-header__info\">{!v.rec.twitterName}</p>\n                </div>\n                \n                <!-- End of Header  -->\n\n        <!-- Embed 2 components, 1 to show user Twitter details if there is a twitter id and if not show a component to enable the user to search for the right Twitter user -->\n        <div style=\"min-height: 150px;\"> \n            <div aura:id=\"userdetails\" >\n                <c:TwitterUserDetails recordId=\"{!v.recordId}\" rec=\"{!v.rec}\"/>\n            </div>\n\n            <div aura:id=\"searchusers\">\n                <c:TwitterUserSearch />     \n            </div>\n        </div>\n    \n    </div>\n    \n</aura:component>",
-			"file": "src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
-			"file_size": 2980,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 2980,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "({\n    doInit : function(component, event, helper) {\n        \n        console.log(\"TwitterExplorerController.doInit: entered\");\n        \n        // Hide both user details and User Search Components:\n\n        //var toggleText = component.find(\"userdetails\");\n        //$A.util.addClass(toggleText,'toggle');\n        var toggleText = component.find(\"searchusers\");\n        $A.util.addClass(toggleText,'toggle');\n\n        \n        helper.checkTwitterId(component);\n        \n\n        console.log(\"TwitterExplorerController.doInit: exit\");\n        \n    },\n    \n    handleApplicationEvent : function(component, event, helper) {\n        \n        console.log(\"TwitterExplorerController.handleApplicationEvent: entered\");\n        \n        var params = event.getParams();\n        component.set(\"v.recordId\", params.recordId);\n\n        console.log(\"Twitter Explorer: ltng:SelectSobject - recordID = \" + params.recordId);\n        console.log(\"Twitter Explorer: ltng:SelectSobject - channel = \" + params.channel);\n\n        var toggleText = component.find(\"userdetails\");\n        $A.util.addClass(toggleText,'toggle');\n        var toggleText = component.find(\"searchusers\");\n        $A.util.addClass(toggleText,'toggle');\n\n        \n        helper.checkTwitterId(component);\n        \n\n        console.log(\"TwitterExplorerController.handleApplicationEvent: exit\");\n        \n    }\n})",
-			"file": "src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
-			"file_size": 1366,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 1366,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<aura:component implements=\"flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes\" access=\"global\" controller=\"OfferLetterCompController\" >\n    <aura:attribute name=\"candidateId\" type=\"String\" access=\"global\" />\n    <aura:attribute name=\"offerId\" type=\"String\" access=\"global\" />\n    <aura:attribute name=\"lstRecords\" type=\"OfferLetterCompController\" access=\"global\"/>\n    <aura:attribute name=\"enteredSalary\" type=\"Double\" access=\"global\"/>\n    <aura:attribute name=\"enteredBonus\" type=\"Double\" access=\"global\" />\n    <aura:attribute name=\"selectedTemplateId\" type=\"String\" access=\"global\" />\n    \n    <aura:handler name=\"init\" value=\"{!this}\" action=\"{!c.doInit}\" />\n    <aura:registerEvent name=\"appEvent\" type=\"c:CandidateDetailEvent\"/>\n\t<aura:registerEvent name=\"bubblingEvent\" type=\"c:OfferSPANotifierEvent\" />    \n    <div class=\"slds\">\n        <div>\n          \n            <br/>\n         \n            \n            <lightning:input type=\"number\" name=\"AnnualSalary\" \n            label=\"Annual Salary\" formatter=\"currency\" aura:id=\"salary\" min=\"20000\" max=\"500000\" step=\"5000\" placeholder=\"Example: 75,000.00\"/>\n        \n            <lightning:input type=\"number\" name=\"AnnualBonus\" \n                label=\"Annual Bonus\" formatter=\"currency\" aura:id=\"bonus\" min=\"20000\" max=\"150000\" step=\"5000\" placeholder=\"Example: 15,000.00\" />\n            \n            \n            <lightning:select aura:id=\"templateSelect\" name=\"select1\" label=\"Select an Offer Template\">\n                <option value=\"\">choose one...</option>\n            \n                <aura:iteration items=\"{!v.lstRecords}\"  var=\"rec\">\n                    <option value=\"{!rec.emailTemplateID}\" text=\"{!rec.emailTemplateName}\"></option>\n                </aura:iteration>\n            </lightning:select>\n        \n    \t</div>\n    \n        <br/>\n        <div>  \n            <lightning:button aura:id=\"button\" label=\"Next\" onclick=\"{!c.HandleNextClick}\"/>\n        </div> \n\n    </div>\n    \n\t\n</aura:component>",
-			"file": "src/aura/OfferDetails/OfferDetails.cmp",
-			"file_size": 2026,
-			"file_write_time": 131371947180000000,
-			"settings":
-			{
-				"buffer_size": 2026,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/rreboucas/Documents/quickactionsComponentCode.txt",
-			"settings":
-			{
-				"buffer_size": 1669,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "<aura:component implements=\"flexipage:availableFor"
-			}
-		},
-		{
-			"contents": "global with sharing class CandidateController {\n    Private final Candidate__c rec;\n    public CandidateController(ApexPages.StandardController stdController) {\n        this.rec = (Candidate) stdController.getRecord();\n    }\n    //For Javascript button\n    webservice static String sendSMS(Id CandidateId, String Phone, String Message){\n        if(sendSMSViaTwilio(CandidateId, Phone, Message) != null) {\n            return 'SMS was sent successfully!';\n        }\n        return 'SMS was NOT sent successfully!';\n    }\n    \n    //For LC\n    //Need to fetch Phone number\n    @AuraEnabled\n    public static Boolean sendSMS(Id CandidateId, String Message){\n        try{\n            List<Candidate> a = [Select Id, Phone__c  from Candidate__c where Id=:CandidateId limit 1];\n            if(a.size() > 0){\n                if(sendSMSViaTwilio(CandidateId, a[0].Phone__c , message) != null){\n                    return true;\n                }\n            }\n        }catch(Exception e){}\n        return false;\n    }\n\n    public static String sendSMSViaTwilio(Id CandidateId, String Phone, String Message){\n        String ret = null;\n        try{\n            String Candidate = 'ACb6d4b22484fe90c2bf1d939a42545897';\n            String token = 'd73786bbe77fb16c507c5b25fd4b631a';\n            TwilioRestClient client = new TwilioRestClient(Candidate, token);\n\n            Map<String,String> params = new Map<String,String> {\n                    'To'   => Phone,\n                    'From' => '+1 6137040291 ',\n                    'Body' => message\n            };\n            TwilioSMS sms = client.getCandidate().getSMSMessages().create(params);\n            System.debug(sms);\n            ret = sms.getStatus();\n            System.debug(ret);\n        }catch(Exception e){System.debug('Exception: ' + e.getMessage());}\n        return ret;\n    }\n}",
-			"settings":
-			{
-				"buffer_size": 1834,
-				"line_ending": "Unix",
-				"name": "global with sharing class CandidateController {"
-			}
-		},
-		{
-			"file": "src/classes/Twitter_Lightning_Controller.cls",
-			"settings":
-			{
-				"buffer_size": 24295,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/classes/ListServerController.cls",
-			"settings":
-			{
-				"buffer_size": 5700,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -239,23 +105,35 @@
 	[
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes"
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateScore"
 	],
 	"file_history":
 	[
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearchController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListHelper.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.css",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/OfferDetails/OfferDetails.cmp",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateScore/CandidateScore.cmp",
+		"/Users/rreboucas/Documents/quickactionsComponentCode.txt",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Twitter_Lightning_Controller.cls",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/ListServerController.cls",
+		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearch.cmp",
 		"/Users/rreboucas/Downloads/Realty/index.html",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/pages/InterviewQuestionsLDS.page",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/OfferLetterSPA/OfferLetterSPA.cmp",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearchController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferralsController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.design",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_Modal.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_ModalController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Modal_Record_Detail_Controller.cls",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Twitter_Lightning_Controller.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/ReferralsServerController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/displayrecdetails/displayrecdetails.evt",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/CandidateReferrals/CandidateReferrals.css",
@@ -267,22 +145,15 @@
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Generic_List_Modal/Generic_List_ModalHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/DynamicSearchController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.svg",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_ExplorerHelper.js",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.css",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.design",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/Twitter_Explorer/Twitter_Explorer.svg",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails/TwitterUserDetailsController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails/TwitterUserDetailsHelper.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/TwitterUserDetails/TwitterUserDetails.css",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/ListServerController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/Sparkle_Helper.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.design",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsListController.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/DynamicSearch/DynamicSearch.design",
-		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/InterviewsList/InterviewsList.cmp",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/classes/ContactController.cls",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearchRenderer.js",
 		"/users/rreboucas/documents/MavensMateProjects/DevconLightning/src/aura/LightningSearch/LightningSearch.css",
@@ -356,11 +227,11 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
-		"height": 99.0,
+		"height": 100.0,
 		"where_history":
 		[
 			""
@@ -420,434 +291,14 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/aura/DynamicSearch/DynamicSearch.cmp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1845,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								167
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/aura/DynamicSearch/DynamicSearchController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								540,
-								540
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/aura/InterviewsList/InterviewsListHelper.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4742,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1248,
-								1273
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 167.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/aura/InterviewsList/InterviewsListController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4203,
-								4222
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/aura/InterviewsList/InterviewsList.cmp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10756,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3062,
-								2997
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/aura/TwitterUserDetails/TwitterUserDetails.cmp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3227,
-								3227
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 456.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/aura/Twitter_Explorer/Twitter_Explorer.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 35,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/aura/Twitter_Explorer/Twitter_Explorer.cmp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2980,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2654,
-								2682
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 16.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/aura/Twitter_Explorer/Twitter_ExplorerController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1357,
-								1357
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/aura/OfferDetails/OfferDetails.cmp",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2026,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/rreboucas/Documents/quickactionsComponentCode.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1669,
-								1669
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<aura:component implements=\"flexipage:availableFor",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1834,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								187,
-								187
-							]
-						],
-						"settings":
-						{
-							"auto_name": "global with sharing class CandidateController {",
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/classes/Twitter_Lightning_Controller.cls",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 3.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "src/classes/ListServerController.cls",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5700,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								163,
-								171
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 11.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -896,7 +347,7 @@
 	"project": "DevconLightning.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 68.0
 	},
 	"save_all_on_build": true,
 	"select_file":
